@@ -1,0 +1,5 @@
+# Never commit secrets or local env
+*.env
+.env
+parallel.env
+secrets*
