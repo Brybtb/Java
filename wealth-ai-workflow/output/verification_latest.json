@@ -1,0 +1,1002 @@
+{
+  "generated_utc": "20260602T171533Z",
+  "processor": "base",
+  "results": [
+    {
+      "id": "c2_63pct",
+      "footnote": "2,9",
+      "claim": "63% of independent RIAs now use AI in some capacity, more than double the rate since 2023, per a 2026 Schwab Advisor Services study of 533 advisors.",
+      "original_source": "Schwab Advisor Services / Logica Research (533 RIAs, Oct 2025)",
+      "run_id": "trun_7a8708d6a86843dc86ad129d0fa2cb95",
+      "status": "completed",
+      "verdict": "supported",
+      "verified_figure": "63% of independent RIAs use AI, more than double the rate since 2023",
+      "primary_source": "http://aboutschwab.com/advisor-ai-in-action-2026",
+      "source_type": "primary",
+      "notes": "The claim that 63% of independent RIAs use AI, more than doubling since 2023, is supported by the 2026 Schwab Advisor Services study.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "2026 RIA & AI Research Study: Advisor AI in Action",
+              "url": "http://aboutschwab.com/advisor-ai-in-action-2026",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The source is an original research study published by Schwab Advisor Services, which is the issuer of the study. Therefore, it is considered a primary source.",
+          "confidence": "high"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "2026 RIA & AI Research Study: Advisor AI in Action",
+              "url": "http://aboutschwab.com/advisor-ai-in-action-2026",
+              "excerpts": [
+                "Schwab study reveals RIA AI adoption more than doubles - but most firms still in early stages"
+              ]
+            }
+          ],
+          "reasoning": "The provided URL is directly from Schwab Advisor Services, the entity that published the research study, making it the most authoritative source.",
+          "confidence": "high"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "2026 RIA & AI Research Study: Advisor AI in Action",
+              "url": "http://aboutschwab.com/advisor-ai-in-action-2026",
+              "excerpts": [
+                "Schwab study reveals RIA AI adoption more than doubles - but most firms still in early stages"
+              ]
+            }
+          ],
+          "reasoning": "The provided evidence directly confirms both the percentage of RIAs using AI and the statement that this represents more than double the rate since 2023.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "2026 RIA & AI Research Study: Advisor AI in Action",
+              "url": "http://aboutschwab.com/advisor-ai-in-action-2026",
+              "excerpts": [
+                "Schwab study reveals RIA AI adoption more than doubles - but most firms still in early stages"
+              ]
+            }
+          ],
+          "reasoning": "The evidence precisely matches the claim, stating the exact percentage of AI usage and confirming that adoption has more than doubled.",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "2026 RIA & AI Research Study: Advisor AI in Action",
+              "url": "http://aboutschwab.com/advisor-ai-in-action-2026",
+              "excerpts": [
+                "Schwab study reveals RIA AI adoption more than doubles - but most firms still in early stages"
+              ]
+            }
+          ],
+          "reasoning": "The notes summarize the verdict, confirming the claim is supported by the primary source and mentioning the key details of the study.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c2_1in10",
+      "footnote": "2,9",
+      "claim": "Only about one in ten RIAs using AI have fully integrated it into their core business strategy (per the 2026 Schwab study).",
+      "original_source": "Schwab Advisor Services",
+      "run_id": "trun_7a8708d6a86843dc8ad3303160af0a89",
+      "status": "completed",
+      "verdict": "supported",
+      "verified_figure": "Only about one in ten RIAs using AI have fully integrated it into their core business strategy",
+      "primary_source": "http://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+      "source_type": "primary",
+      "notes": "The claim is supported by a Charles Schwab press release dated January 22, 2026, which details findings from a study conducted in late 2025.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages",
+              "url": "http://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The source is a press release from Charles Schwab & Co., Inc. detailing a study they commissioned, making it a primary source from the issuing company.",
+          "confidence": "high"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages",
+              "url": "http://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The provided URL is a press release from Charles Schwab & Co., Inc., which is the issuer of the study and the most authoritative source for its findings.",
+          "confidence": "high"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages",
+              "url": "http://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The claim directly matches the information presented in the Charles Schwab press release, which is identified as the primary source for the 2026 Schwab study.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages",
+              "url": "http://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The evidence directly supports the claim that 'only about one in ten RIAs using AI have fully integrated it into their core business strategy.'",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages",
+              "url": "http://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The verdict is 'supported' by the primary source, which is a press release from January 22, 2026, detailing a study conducted in late 2025.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c3_cambridge",
+      "footnote": "3",
+      "claim": "81% of financial-services firms are adopting AI at some level and 40% are at advanced ('Scaling' or 'Transforming') maturity, per the Cambridge Judge Business School 2026 Global AI in Financial Services Report.",
+      "original_source": "Cambridge Judge Business School (CCAF), May 2026",
+      "run_id": "trun_7a8708d6a86843dc94f970f9840f1589",
+      "status": "completed",
+      "verdict": "supported",
+      "verified_figure": "81% of financial services firms are adopting AI at some level, and 40% of industry respondents have reached an advanced AI adoption maturity level ('Scaling' or 'Transforming').",
+      "primary_source": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+      "source_type": "primary",
+      "notes": "The claim is fully supported by the primary source, the '2026 Global AI in Financial Services Report' published by Cambridge Centre for Alternative Finance (CCAF) on April 28, 2026.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The claim refers to a report published by the Cambridge Centre for Alternative Finance (CCAF) at the University of Cambridge Judge Business School. This is an original study, making it a primary source.",
+          "confidence": "high"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The most authoritative source is the original report itself, which is directly linked and published by the Cambridge Judge Business School.",
+          "confidence": "high"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The claim states '81% of financial-services firms are adopting AI at some level and 40% are at advanced ('Scaling' or 'Transforming') maturity'. The primary source confirms these exact figures and categories, and the attribution and date align.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The claim specifies two figures: '81% of financial-services firms are adopting AI at some level' and '40% are at advanced ('Scaling' or 'Transforming') maturity'. The primary source confirms these exact figures and categories.",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The claim is fully supported by the primary source, which is the report from Cambridge Judge Business School. The figures and attribution match, and the report's publication date aligns with the claimed attribution date.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c3_agentic",
+      "footnote": "3",
+      "claim": "Agentic AI is already in active adoption among 52% of financial-services industry respondents (Cambridge Judge 2026 report).",
+      "original_source": "Cambridge Judge Business School (CCAF)",
+      "run_id": "trun_7a8708d6a86843dc819142b0160aa9a2",
+      "status": "completed",
+      "verdict": "supported",
+      "verified_figure": "Agentic AI is already in active adoption among 52% of financial-services industry respondents.",
+      "primary_source": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+      "source_type": "primary",
+      "notes": "The claim that Agentic AI is in active adoption among 52% of financial-services industry respondents is supported by the 2026 Global AI in Financial Services Report from Cambridge Judge Business School.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The source is a report from the Cambridge Centre for Alternative Finance (CCAF) at Cambridge Judge Business School, which is an academic institution. This makes it an original study and thus a primary source.",
+          "confidence": "high"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The provided URL points directly to the official report from the Cambridge Centre for Alternative Finance (CCAF) at Cambridge Judge Business School, which is the original study cited for the claim.",
+          "confidence": "high"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The provided primary source directly states the claim that 'agentic AI is already in active adoption among 52% of industry respondents', matching the figure and attribution.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The primary source explicitly states that 'agentic AI is already in active adoption among 52% of industry respondents', which is the figure presented in the claim.",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "The 2026 Global AI in Financial Services Report",
+              "url": "https://www.jbs.cam.ac.uk/wp-content/uploads/2026/04/ccaf-2026-04-28-global-ai-in-financial-services-report.pdf",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The verdict is 'supported', and the primary source is the Cambridge Judge Business School report. The note summarizes this finding.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c1_fed",
+      "footnote": "1",
+      "claim": "Work-related generative-AI adoption reached about 41% of the U.S. workforce as of November 2025, per a Federal Reserve FEDS Note.",
+      "original_source": "Federal Reserve FEDS Notes",
+      "run_id": "trun_7a8708d6a86843dc902c3de824008544",
+      "status": "completed",
+      "verdict": "supported",
+      "verified_figure": "Work-related Generative AI adoption reported in the Real-Time Population Survey: about 41% of the labor force as of November 2025.",
+      "primary_source": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+      "source_type": "primary",
+      "notes": "Supported \u2014 the Board of Governors FEDS Note attributes an RPS November 2025 estimate of ~41% work-related GenAI adoption; note that this is an individual-level survey (RPS) and other surveys in the same note give different estimates (e.g., BTOS firm-level 18%, SBU employment-weighted 78%).",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "The Fed - Monitoring AI Adoption in the US Economy",
+              "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The source is a FEDS Note published by the Federal Reserve, which is a primary source (regulator).",
+          "confidence": "high"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "The Fed - Monitoring AI Adoption in the US Economy",
+              "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "This URL points directly to the FEDS Note published by the Federal Reserve, which is the original and most authoritative source for the reported data.",
+          "confidence": "high"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "The Fed - Monitoring AI Adoption in the US Economy",
+              "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The claim states that work-related generative-AI adoption reached about 41% of the U.S. workforce as of November 2025, per a Federal Reserve FEDS Note. The primary source confirms this figure and attribution.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "The Fed - Monitoring AI Adoption in the US Economy",
+              "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The FEDS Note explicitly states the figure of \"about 41 percent\" for work-related Generative AI adoption by individuals in the Real-Time Population Survey as of November 2025.",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "The Fed - Monitoring AI Adoption in the US Economy",
+              "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The verdict is supported because the primary source confirms the claim. The note adds a crucial caveat about different estimates from other surveys mentioned in the same source.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c21_hours",
+      "footnote": "21,22",
+      "claim": "AI advisor copilots Jump and Zocks report saving advisors 10+ hours per week; Equitable Advisors pilot participants reported saving 10+ hours/week in heavy client periods.",
+      "original_source": "InvestmentNews / Zocks (vendor + trade press)",
+      "run_id": "trun_7a8708d6a86843dc89f675404f5d7c18",
+      "status": "completed",
+      "verdict": "supported",
+      "verified_figure": "AI advisor copilots Jump and Zocks report saving advisors 10+ hours per week; Equitable Advisors pilot participants reported saving 10+ hours/week during heavy client periods.",
+      "primary_source": "http://zocks.io/press/zocks-and-creativeone-form-strategic-partnership-deepening-commitment-to-advisor-centered-innovation",
+      "source_type": "vendor",
+      "notes": "The claim is supported by vendor-provided metrics and pilot participant reports, with the understanding that these are self-interested figures.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "Zocks and CreativeOne Form Strategic Partnership, Deepening Commitment to Advisor-Centered Innovation",
+              "url": "http://zocks.io/press/zocks-and-creativeone-form-strategic-partnership-deepening-commitment-to-advisor-centered-innovation",
+              "excerpts": [
+                "Zocks is the AI Assistant for financial advisors. Its privacy-first platform saves financial advisors 10+ hours a week by automating administrative tasks"
+              ]
+            },
+            {
+              "title": "Equitable Advisors Selects Jump as Its AI Operating System",
+              "url": "https://jump.ai/blog/equitable-advisors-on-jump",
+              "excerpts": [
+                "Advisors in the pilot felt the results right away, reporting having saved 10 or more hours per week during heavy client periods."
+              ]
+            },
+            {
+              "title": "Jump - Advisor AI | LinkedIn",
+              "url": "https://www.linkedin.com/company/jump-app-ai",
+              "excerpts": [
+                "Advisors who use Jump are saving double-digit hours every week"
+              ]
+            }
+          ],
+          "reasoning": "The claim is supported by information directly from the companies (Zocks and Jump) that offer the AI advisor copilots, and from a pilot program involving Equitable Advisors and Jump. These are self-interested metrics provided by the vendors themselves.",
+          "confidence": "medium"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "Zocks and CreativeOne Form Strategic Partnership, Deepening Commitment to Advisor-Centered Innovation",
+              "url": "http://zocks.io/press/zocks-and-creativeone-form-strategic-partnership-deepening-commitment-to-advisor-centered-innovation",
+              "excerpts": [
+                "Zocks is the AI Assistant for financial advisors. Its privacy-first platform saves financial advisors 10+ hours a week by automating administrative tasks"
+              ]
+            },
+            {
+              "title": "Equitable Advisors Selects Jump as Its AI Operating System",
+              "url": "https://jump.ai/blog/equitable-advisors-on-jump",
+              "excerpts": [
+                "Advisors in the pilot felt the results right away, reporting having saved 10 or more hours per week during heavy client periods."
+              ]
+            },
+            {
+              "title": "Jump - Advisor AI | LinkedIn",
+              "url": "https://www.linkedin.com/company/jump-app-ai",
+              "excerpts": [
+                "Advisors who use Jump are saving double-digit hours every week"
+              ]
+            }
+          ],
+          "reasoning": "The claim involves multiple entities (Jump, Zocks, Equitable Advisors pilot). The most authoritative sources for each part of the claim are vendor-provided. The Zocks press release is chosen as the primary source as it is an official company announcement detailing the '10+ hours a week' saving metric for Zocks. Other vendor sources support the remaining parts of the claim.",
+          "confidence": "medium"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "Zocks and CreativeOne Form Strategic Partnership, Deepening Commitment to Advisor-Centered Innovation",
+              "url": "http://zocks.io/press/zocks-and-creativeone-form-strategic-partnership-deepening-commitment-to-advisor-centered-innovation",
+              "excerpts": [
+                "Zocks is the AI Assistant for financial advisors. Its privacy-first platform saves financial advisors 10+ hours a week by automating administrative tasks"
+              ]
+            },
+            {
+              "title": "Equitable Advisors Selects Jump as Its AI Operating System",
+              "url": "https://jump.ai/blog/equitable-advisors-on-jump",
+              "excerpts": [
+                "Advisors in the pilot felt the results right away, reporting having saved 10 or more hours per week during heavy client periods."
+              ]
+            },
+            {
+              "title": "Jump - Advisor AI | LinkedIn",
+              "url": "https://www.linkedin.com/company/jump-app-ai",
+              "excerpts": [
+                "Advisors who use Jump are saving double-digit hours every week"
+              ]
+            }
+          ],
+          "reasoning": "The web evidence directly supports the claim that AI advisor copilots Jump and Zocks report saving advisors 10+ hours per week, and that Equitable Advisors pilot participants reported saving 10+ hours/week during heavy client periods. Specific claims are found in vendor releases and blog posts.",
+          "confidence": "medium"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "Zocks and CreativeOne Form Strategic Partnership, Deepening Commitment to Advisor-Centered Innovation",
+              "url": "http://zocks.io/press/zocks-and-creativeone-form-strategic-partnership-deepening-commitment-to-advisor-centered-innovation",
+              "excerpts": [
+                "Zocks is the AI Assistant for financial advisors. Its privacy-first platform saves financial advisors 10+ hours a week by automating administrative tasks"
+              ]
+            },
+            {
+              "title": "Equitable Advisors Selects Jump as Its AI Operating System",
+              "url": "https://jump.ai/blog/equitable-advisors-on-jump",
+              "excerpts": [
+                "Advisors in the pilot felt the results right away, reporting having saved 10 or more hours per week during heavy client periods."
+              ]
+            },
+            {
+              "title": "Jump - Advisor AI | LinkedIn",
+              "url": "https://www.linkedin.com/company/jump-app-ai",
+              "excerpts": [
+                "Advisors who use Jump are saving double-digit hours every week"
+              ]
+            }
+          ],
+          "reasoning": "The provided web sources directly support the exact figures and attributions mentioned in the claim. Zocks claims '10+ hours a week', Jump claims 'double-digit hours every week', and the Equitable Advisors pilot reported '10 or more hours per week during heavy client periods'.",
+          "confidence": "medium"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "Zocks and CreativeOne Form Strategic Partnership, Deepening Commitment to Advisor-Centered Innovation",
+              "url": "http://zocks.io/press/zocks-and-creativeone-form-strategic-partnership-deepening-commitment-to-advisor-centered-innovation",
+              "excerpts": [
+                "Zocks is the AI Assistant for financial advisors. Its privacy-first platform saves financial advisors 10+ hours a week by automating administrative tasks"
+              ]
+            },
+            {
+              "title": "Equitable Advisors Selects Jump as Its AI Operating System",
+              "url": "https://jump.ai/blog/equitable-advisors-on-jump",
+              "excerpts": [
+                "Advisors in the pilot felt the results right away, reporting having saved 10 or more hours per week during heavy client periods."
+              ]
+            },
+            {
+              "title": "Jump - Advisor AI | LinkedIn",
+              "url": "https://www.linkedin.com/company/jump-app-ai",
+              "excerpts": [
+                "Advisors who use Jump are saving double-digit hours every week"
+              ]
+            }
+          ],
+          "reasoning": "The verdict is 'supported' because the claim is directly stated by the companies and pilot participants. The note highlights that these are vendor-provided metrics, which is a key caveat.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "c27_funding",
+      "footnote": "21,27",
+      "claim": "Zocks raised a $45M Series B in January 2026 (co-led by Lightspeed and QED), bringing lifetime funding to $65M, and is used by more than 5,000 financial firms.",
+      "original_source": "InvestmentNews",
+      "run_id": "trun_7a8708d6a86843dc86a966342b432d3a",
+      "status": "completed",
+      "verdict": "supported",
+      "verified_figure": "Zocks raised a $45M Series B in January 2026 (co-led by Lightspeed and QED), bringing lifetime funding to $65M, and is used by more than 5,000 financial firms.",
+      "primary_source": "https://www.zocks.io/press/zocks-raises-45m-series-b-to-accelerate-ai-powered-automation-for-financial-advisors",
+      "source_type": "primary",
+      "notes": "The claim is supported by Zocks' press release and other data sources, confirming the funding details and customer base as of January 2026.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "Zocks Raises $45M Series B to Accelerate AI-Powered Automation for Financial Advisors",
+              "url": "https://www.zocks.io/press/zocks-raises-45m-series-b-to-accelerate-ai-powered-automation-for-financial-advisors",
+              "excerpts": [
+                "Co-led by Lightspeed Venture Partners and QED Investors, new round brings total funding to $65M"
+              ]
+            }
+          ],
+          "reasoning": "The most authoritative sources identified are the company's press release and customer page, which are considered primary sources.",
+          "confidence": "high"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "Zocks Raises $45M Series B to Accelerate AI-Powered Automation for Financial Advisors",
+              "url": "https://www.zocks.io/press/zocks-raises-45m-series-b-to-accelerate-ai-powered-automation-for-financial-advisors",
+              "excerpts": [
+                "Co-led by Lightspeed Venture Partners and QED Investors, new round brings total funding to $65M"
+              ]
+            }
+          ],
+          "reasoning": "The company's press release is the most direct and authoritative source for information about its funding rounds and operations.",
+          "confidence": "high"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "Zocks Raises $45M Series B to Accelerate AI-Powered Automation for Financial Advisors",
+              "url": "https://www.zocks.io/press/zocks-raises-45m-series-b-to-accelerate-ai-powered-automation-for-financial-advisors",
+              "excerpts": [
+                "Co-led by Lightspeed Venture Partners and QED Investors, new round brings total funding to $65M"
+              ]
+            }
+          ],
+          "reasoning": "The evidence directly supports all components of the claim: the funding amount, the co-leads, the total lifetime funding, the date of the Series B round, and the number of financial firms using the platform.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "Zocks Raises $45M Series B to Accelerate AI-Powered Automation for Financial Advisors",
+              "url": "https://www.zocks.io/press/zocks-raises-45m-series-b-to-accelerate-ai-powered-automation-for-financial-advisors",
+              "excerpts": [
+                "Co-led by Lightspeed Venture Partners and QED Investors, new round brings total funding to $65M"
+              ]
+            }
+          ],
+          "reasoning": "The evidence directly supports the entire claim as stated, including the funding amount, co-leads, total funding, date, and customer base.",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "Zocks Raises $45M Series B to Accelerate AI-Powered Automation for Financial Advisors",
+              "url": "https://www.zocks.io/press/zocks-raises-45m-series-b-to-accelerate-ai-powered-automation-for-financial-advisors",
+              "excerpts": [
+                "Co-led by Lightspeed Venture Partners and QED Investors, new round brings total funding to $65M"
+              ]
+            }
+          ],
+          "reasoning": "The notes summarize the verdict and mention the supporting sources and the relevant date.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c24_merrill",
+      "footnote": "24",
+      "claim": "Merrill and Bank of America Private Bank launched an AI meeting solution they say can save advisors up to four hours per meeting across millions of meetings annually.",
+      "original_source": "Bank of America newsroom",
+      "run_id": "trun_7a8708d6a86843dc83ec3cc9a42f706b",
+      "status": "completed",
+      "verdict": "supported",
+      "verified_figure": "Merrill and Bank of America Private Bank launched an AI meeting solution that can save financial advisors up to four hours per meeting across millions of meetings annually.",
+      "primary_source": "http://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html",
+      "source_type": "primary",
+      "notes": "The claim is fully supported by a Bank of America press release dated March 26, 2026.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "Merrill and Bank of America Private Bank Launch AI- ...",
+              "url": "http://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html",
+              "excerpts": [
+                "Merrill and Bank of America Private Bank Launch AI-Powered Meeting Journey",
+                "New capability can save financial advisors up to four hours per meeting across millions of meetings annually"
+              ]
+            }
+          ],
+          "reasoning": "The source is a press release from Bank of America's official newsroom, which is the issuer of the information, making it a primary source.",
+          "confidence": "high"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "Merrill and Bank of America Private Bank Launch AI- ...",
+              "url": "http://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html",
+              "excerpts": [
+                "Merrill and Bank of America Private Bank Launch AI-Powered Meeting Journey",
+                "New capability can save financial advisors up to four hours per meeting across millions of meetings annually"
+              ]
+            }
+          ],
+          "reasoning": "The provided URL is a direct press release from Bank of America's newsroom, which is the most authoritative source for this claim.",
+          "confidence": "high"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "Merrill and Bank of America Private Bank Launch AI- ...",
+              "url": "http://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html",
+              "excerpts": [
+                "Merrill and Bank of America Private Bank Launch AI-Powered Meeting Journey",
+                "New capability can save financial advisors up to four hours per meeting across millions of meetings annually"
+              ]
+            }
+          ],
+          "reasoning": "The claim is directly and explicitly supported by the content of the Bank of America press release.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "Merrill and Bank of America Private Bank Launch AI- ...",
+              "url": "http://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html",
+              "excerpts": [
+                "Merrill and Bank of America Private Bank Launch AI-Powered Meeting Journey",
+                "New capability can save financial advisors up to four hours per meeting across millions of meetings annually"
+              ]
+            }
+          ],
+          "reasoning": "The press release explicitly states the figure and context mentioned in the claim.",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "Merrill and Bank of America Private Bank Launch AI- ...",
+              "url": "http://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html",
+              "excerpts": [
+                "Merrill and Bank of America Private Bank Launch AI-Powered Meeting Journey",
+                "New capability can save financial advisors up to four hours per meeting across millions of meetings annually"
+              ]
+            }
+          ],
+          "reasoning": "The claim is directly supported by a press release from Bank of America dated March 26, 2026.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c34_cost",
+      "footnote": "34",
+      "claim": "Building custom wealth-management software costs roughly $40K-$600K+ up front and takes 12-36 months, versus $50K-$500K and 3-6 months to deploy an off-the-shelf platform, with custom maintenance running 15-20% of dev cost annually.",
+      "original_source": "Appinventiv (vendor/dev-shop blog)",
+      "run_id": "trun_7a8708d6a86843dcae297fc2e583cf60",
+      "status": "completed",
+      "verdict": "supported",
+      "verified_figure": "Building custom wealth-management software costs roughly $40K-$600K+ up front and takes 12-36 months, versus $50K-$500K and 3-6 months to deploy an off-the-shelf platform, with custom maintenance running 15-20% of dev cost annually.",
+      "primary_source": "https://appinventiv.com/blog/guide-to-wealth-management-software-development",
+      "source_type": "vendor",
+      "notes": "The claim is fully supported by the provided vendor source, which details costs and timelines for wealth management software development as of January 27, 2026.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "A Guide to Wealth Management Software Development ...",
+              "url": "https://appinventiv.com/blog/guide-to-wealth-management-software-development",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The provided source is from Appinventiv, a software development company, which classifies it as a vendor. Vendor sources are typically self-interested and provide estimates or benchmarks rather than independent industry data.",
+          "confidence": "medium"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "A Guide to Wealth Management Software Development ...",
+              "url": "https://appinventiv.com/blog/guide-to-wealth-management-software-development",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The provided URL is directly from Appinventiv, the entity to which the claim is attributed, making it the primary source for this specific claim.",
+          "confidence": "medium"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "A Guide to Wealth Management Software Development ...",
+              "url": "https://appinventiv.com/blog/guide-to-wealth-management-software-development",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The claim is directly and fully supported by the provided source from Appinventiv, which matches the figures and timelines for both custom and off-the-shelf wealth management software development.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "A Guide to Wealth Management Software Development ...",
+              "url": "https://appinventiv.com/blog/guide-to-wealth-management-software-development",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The provided source from Appinventiv explicitly states the cost ranges and timelines for both custom and off-the-shelf wealth management software development, including the annual maintenance percentage for custom solutions.",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "A Guide to Wealth Management Software Development ...",
+              "url": "https://appinventiv.com/blog/guide-to-wealth-management-software-development",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The notes summarize the verdict (supported), the nature of the source (vendor), and the date of the information, providing a concise overview of the findings.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c32_overrun",
+      "footnote": "32",
+      "claim": "About 70% of software projects exceed their initial budgets, by an average of 27%.",
+      "original_source": "The Wealth Mosaic / Docupace (citing Acquaint Softtech)",
+      "run_id": "trun_7a8708d6a86843dcba5146907c8a1daf",
+      "status": "completed",
+      "verdict": "unsupported",
+      "verified_figure": "",
+      "primary_source": "",
+      "source_type": "vendor",
+      "notes": "The claim is not supported by primary research evidence, as the specific figures are not substantiated by original studies or authoritative sources.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "Buy vs. build: why leading wealth management firms choose to buy - The Wealth Mosaic",
+              "url": "https://www.thewealthmosaic.com/vendors/docupace/insights/buy-vs-build-why-leading-wealth-management-firms-c/",
+              "excerpts": []
+            },
+            {
+              "title": "Software Development Partner & Staff Augmentation | Acquaint ...",
+              "url": "https://acquaintsoft.com/",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The claim originates from a vendor-promoted insight article on The Wealth Mosaic platform, citing data from Acquaint Softtech, a software development vendor.",
+          "confidence": "medium"
+        },
+        {
+          "field": "primary_source",
+          "citations": [],
+          "reasoning": "The provided text explicitly states that no original study, regulator filing, or authoritative primary source was found to verify the claim.",
+          "confidence": "low"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "Buy vs. build: why leading wealth management firms choose to buy - The Wealth Mosaic",
+              "url": "https://www.thewealthmosaic.com/vendors/docupace/insights/buy-vs-build-why-leading-wealth-management-firms-c/",
+              "excerpts": []
+            },
+            {
+              "title": "Software Development Partner & Staff Augmentation | Acquaint ...",
+              "url": "https://acquaintsoft.com/",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The provided text explicitly states that the claim is not supported by primary research evidence and that the specific figures are not substantiated by primary data.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [],
+          "reasoning": "The provided text explicitly states that no primary source was found to verify the specific figures (70% exceedance rate, 27% average budget overrun) of the claim.",
+          "confidence": "low"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "Buy vs. build: why leading wealth management firms choose to buy - The Wealth Mosaic",
+              "url": "https://www.thewealthmosaic.com/vendors/docupace/insights/buy-vs-build-why-leading-wealth-management-firms-c/",
+              "excerpts": []
+            },
+            {
+              "title": "Software Development Partner & Staff Augmentation | Acquaint ...",
+              "url": "https://acquaintsoft.com/",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The note summarizes the verdict that the claim is unsupported due to a lack of primary evidence for the specific figures.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c60_multiples",
+      "footnote": "60",
+      "claim": "RIA EV/EBITDA multiples run roughly 8-11x for firms under $500M AUM, 10-15x for $500M-$3B, high-teens for $3B-$20B, and low-20s+ for $20B+; industry average ~10x.",
+      "original_source": "Family Wealth Report (Advisor Growth Strategies & DeVoe)",
+      "run_id": "trun_7a8708d6a86843dca22ed124051d02b8",
+      "status": "completed",
+      "verdict": "unsupported",
+      "verified_figure": "",
+      "primary_source": "",
+      "source_type": "unknown",
+      "notes": "The claim regarding RIA EV/EBITDA multiples could not be verified with public evidence, as the specific figures and attribution were not found in available search results.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [],
+          "reasoning": "The claim is attributed to the Family Wealth Report, which cites Advisor Growth Strategies and DeVoe. These are entities that provide consulting and analysis in the financial advisory space. However, the provided answer states that no public evidence or primary source documents were found to support the exact figures. Without access to the original report or confirmation of its primary nature for these specific figures, and given the lack of verifiable evidence, the nature of the most authoritative source for this claim remains unknown.",
+          "confidence": "low"
+        },
+        {
+          "field": "primary_source",
+          "citations": [],
+          "reasoning": "The answer explicitly states that 'no public evidence or primary source documents were found to support these exact figures.' Therefore, no primary source URL can be provided, and the confidence in finding a primary source is low.",
+          "confidence": "low"
+        },
+        {
+          "field": "verdict",
+          "citations": [],
+          "reasoning": "The answer clearly states, 'no public evidence or primary source documents were found to support these exact figures.' This directly indicates the claim is not supported by the available evidence, leading to an 'unsupported' verdict.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [],
+          "reasoning": "The answer states that the exact figures were not found, and 'no public evidence or primary source documents were found to support these exact figures.' Therefore, no specific figure or fact can be verified, and the 'verified_figure' field should be an empty string.",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [],
+          "reasoning": "The answer explains that despite targeted searches for specific multiples and AUM brackets attributed to recognized authorities, no public evidence was found to support the exact figures. This necessitates a note explaining the lack of verification.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "c57_organic",
+      "footnote": "54,57",
+      "claim": "A firm growing ~12% organically could command an EBITDA multiple more than double that of a firm with no organic growth, and organic growth has surpassed M&A as the top priority for most advisory firms (per Cerulli, cited by Mercer Capital).",
+      "original_source": "Mercer Capital (citing Cerulli)",
+      "run_id": "trun_7a8708d6a86843dca5c9d7b93ad875c5",
+      "status": "completed",
+      "verdict": "partially_supported",
+      "verified_figure": "Organic growth has surpassed M&A as the top priority for a majority of advisory firms (Source: Cerulli). A firm growing 12% organically could have an EBITDA multiple over twice that of firms without any organic growth (Source: Mercer Capital).",
+      "primary_source": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium",
+      "source_type": "primary",
+      "notes": "The 12% growth/EBITDA multiple figure is an analysis from Mercer Capital, whereas the priority shift is a finding from Cerulli.",
+      "basis": [
+        {
+          "field": "source_type",
+          "citations": [
+            {
+              "title": "Organic Growth Is the New Scarcity Premium - Mercer Capital",
+              "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium",
+              "excerpts": [
+                "Organic growth has surpassed M&A as the top priority for a majority of advisory firms for the first time in several years, according to Cerulli."
+              ]
+            }
+          ],
+          "reasoning": "The information is derived from research reports by Cerulli and financial analysis by Mercer Capital. Both are considered primary sources for their respective findings. The provided citation is a blog post from Mercer Capital, which serves as a primary source for their analysis and also references Cerulli's primary research.",
+          "confidence": "high"
+        },
+        {
+          "field": "primary_source",
+          "citations": [
+            {
+              "title": "Organic Growth Is the New Scarcity Premium - Mercer Capital",
+              "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium",
+              "excerpts": [
+                "Organic growth has surpassed M&A as the top priority for a majority of advisory firms for the first time in several years, according to Cerulli."
+              ]
+            }
+          ],
+          "reasoning": "The provided answer explicitly lists the URL `https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium` as the supporting citation. This URL is from Mercer Capital, a financial advisory firm, and contains the information relevant to the claim.",
+          "confidence": "high"
+        },
+        {
+          "field": "verified_figure",
+          "citations": [
+            {
+              "title": "Organic Growth Is the New Scarcity Premium - Mercer Capital",
+              "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium",
+              "excerpts": [
+                "Organic growth has surpassed M&A as the top priority for a majority of advisory firms for the first time in several years, according to Cerulli."
+              ]
+            }
+          ],
+          "reasoning": "The answer precisely states the two key figures/facts supported by the evidence: the priority shift (attributed to Cerulli) and the EBITDA multiple relationship (attributed to Mercer Capital).",
+          "confidence": "high"
+        },
+        {
+          "field": "verdict",
+          "citations": [
+            {
+              "title": "Organic Growth Is the New Scarcity Premium - Mercer Capital",
+              "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium",
+              "excerpts": [
+                "Organic growth has surpassed M&A as the top priority for a majority of advisory firms for the first time in several years, according to Cerulli."
+              ]
+            }
+          ],
+          "reasoning": "The verdict is 'Partially Supported' because while both components of the claim are supported by evidence, the attribution of the EBITDA multiple analysis to Cerulli (as implied by the original claim structure) is incorrect; it is attributed to Mercer Capital.",
+          "confidence": "high"
+        },
+        {
+          "field": "notes",
+          "citations": [
+            {
+              "title": "Organic Growth Is the New Scarcity Premium - Mercer Capital",
+              "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium",
+              "excerpts": [
+                "Organic growth has surpassed M&A as the top priority for a majority of advisory firms for the first time in several years, according to Cerulli."
+              ]
+            }
+          ],
+          "reasoning": "The notes field should summarize the verdict, noting any discrepancy or caveat. The provided answer explicitly states the correction: 'The 12% growth/EBITDA multiple figure is an analysis from Mercer Capital, whereas the priority shift is a finding from Cerulli.'",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

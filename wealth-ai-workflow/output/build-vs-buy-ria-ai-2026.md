@@ -124,7 +124,7 @@ Then the CFO walks in with a spreadsheet.
 
 Building custom wealth-management software runs **$40,000 to $600,000+** up front — and one detailed 2026 breakdown puts enterprise-grade custom platforms at **$150,000 to $1.5 million+**, depending on integrations, security, and compliance scope. [^34][^39] Buying isn't free either (implementation fees run **$50,000–$500,000**), but the timelines diverge violently: **3–6 months to deploy a platform vs. 12–36 months to build one**, plus ongoing maintenance of **15–20% of development cost every year, forever.** [^34]
 
-And the kicker every executive underestimates: **70% of software projects exceed their initial budgets, by an average of 27%.** [^32]
+And the kicker every executive underestimates: software projects routinely blow past budget — one widely-cited industry figure puts it at **~70% of projects over budget by an average of 27%** (a vendor-sourced statistic; treat as directional, not gospel). [^32]
 
 | Factor | Build (custom) | Buy (off-the-shelf) |
 |---|---|---|
@@ -160,13 +160,13 @@ The uncomfortable truth: **buying outsources the build, but not the liability.**
 
 Here's the part that turns an ops conversation into a C-suite obsession.
 
-RIA valuations remain rich — an industry average around **10x EBITDA**, with firms under $500M AUM at **8–11x**, $500M–$3B at **10–15x**, $3B–$20B reaching the **high teens**, and the largest platforms in the **low 20s+**; PE-backed "meta-RIAs" pay the top of the range. [^60] With private equity involved in an estimated **70–79% of RIA transactions**, the buyers setting these prices are sophisticated, and they've changed what they're paying *for.* [^52]
+RIA valuations remain rich — an industry average around **10x EBITDA**, with firms under $500M AUM at **8–11x**, $500M–$3B at **10–15x**, $3B–$20B reaching the **high teens**, and the largest platforms in the **low 20s+**; PE-backed "meta-RIAs" pay the top of the range. [^60] (Independent corroboration: a 2026 multiples cheat-sheet pegs RIA/wealth EV/EBITDA at a stable **8×–14×** band, widening with EBITDA size. [^58]) With private equity involved in an estimated **70–79% of RIA transactions**, the buyers setting these prices are sophisticated, and they've changed what they're paying *for.* [^52]
 
 > [!quote]
 > "If everyone is getting bigger, size alone becomes less distinguishing. In a market where AUM can be acquired, recruited, or inflated by market appreciation, the scarcer asset is not scale. It is organic growth."
 > — Mercer Capital, *Organic Growth Is the New Scarcity Premium* [^54]
 
-And organic growth has, for the first time in years, **surpassed M&A as the top priority** for a majority of advisory firms (per Cerulli, cited by Mercer). [^54] Mercer's own math is stark: a firm growing **~12% organically could command an EBITDA multiple more than double** that of a firm with no organic growth. [^57] What do buyers now underwrite as evidence of durable organic growth? Mercer's Q1 2026 list names it directly: consistent organic growth, a deep leadership bench, and **"institutional infrastructure, including technology, compliance, and repeatable processes."** [^51]
+And organic growth has, for the first time in years, **surpassed M&A as the top priority** for a majority of advisory firms — a *Cerulli* finding, cited by Mercer. [^54] *Mercer's own* analysis is the stark part: a firm growing **~12% organically could command an EBITDA multiple more than double** that of a firm with no organic growth. [^57] What do buyers now underwrite as evidence of durable organic growth? Mercer's Q1 2026 list names it directly: consistent organic growth, a deep leadership bench, and **"institutional infrastructure, including technology, compliance, and repeatable processes."** [^51]
 
 Connect the dots: **your AI operating model is no longer a cost line. It is a multiple expander.** The firm that integrates AI to drive repeatable organic growth doesn't just run leaner — it sells for more, recruits better, and compounds the advantage. The firm that waits watches its multiple, and its best advisors, drift to the firm that didn't.
 
@@ -244,7 +244,7 @@ The clock that started at 63% is still running. ⏳
 >
 > **Forward-looking statements.** Statements about the future of AI, wealth management, valuations, or competition are opinions and projections subject to significant uncertainty. No outcome is guaranteed.
 >
-> **AI-assisted research.** This briefing was produced with an AI-assisted research workflow (Parallel.ai Search API) and human editorial review. Sources are linked so readers can verify primary material directly. Any error is unintentional; corrections welcome.
+> **AI-assisted research + verification.** This briefing was produced with an AI-assisted research workflow (Parallel.ai **Search** API) and human editorial review. Its load-bearing statistics were then independently re-checked through a second pass (Parallel.ai **Task** API), which scored each claim against live web evidence: **9 of 12 fully supported, 1 partially (attribution precision), and 2 unsupported by an accessible primary source.** Those findings are reflected above — the software-overrun figure [^32] is flagged as vendor-sourced/directional, and the valuation multiples [^60] are corroborated with an independent source [^58]. The full scorecard lives in `verification_report.md`. Sources are linked so readers can verify primary material directly. Any error is unintentional; corrections welcome.
 >
 > **Regulatory note for advisers.** If you are an SEC- or state-registered investment adviser, remember that any republication, marketing use, or client-facing adaptation of this content may implicate the SEC Marketing Rule (Rule 206(4)-1), recordkeeping rules, and your firm's AI and advertising policies. Review accordingly. The phrase "registered investment adviser" does not imply a certain level of skill or training.
 
@@ -280,6 +280,7 @@ The clock that started at 63% is still running. ⏳
 [^52]: [The Future of RIA Wealth Management: Consolidation, Tech Stacks, and Key 2026 Trends](https://www.etnasoft.com/the-future-of-ria-wealth-management-consolidation-tech-stacks-and-key-2026-trends/) (Etna, Feb 2026)
 [^54]: [Organic Growth Is the New Scarcity Premium](https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium) (Mercer Capital)
 [^57]: [Organic Growth and RIA Valuations](https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2024/organic-growth-and-ria-valuations) (Mercer Capital)
+[^58]: [2025–2026 Private Market Valuation Multiples: The Definitive Cheat Sheet](https://quantpillar.com/resources/guides/valuation-multiples) (QuantPillar, May 2026)
 [^60]: [Mid-year RIA M&A Market Report: Winners, Losers and Trends](https://www.familywealthreport.com/article.php/Mid_dash_year-RIA-M&A-Market-Report:-Winners,-Losers-And-Trends) (Family Wealth Report)
 
 *Full machine-generated source registry (60 sources across 6 research objectives) is preserved in `wealth-ai-workflow/output/sources_latest.json`.*

@@ -7,30 +7,40 @@ Obsidian-ready Substack briefing with Chart.js + Excalidraw visuals.
 ## Pipeline
 
 ```
-research_engine.py        build_assets.py            (synthesis: human + AI)
-   │ Parallel.ai             │ Chart.js / Excalidraw      │
-   ▼                         ▼                            ▼
-output/corpus_*.json     output/charts.html          output/build-vs-buy-ria-ai-2026.md
-output/sources_*.json    output/build-vs-buy.excalidraw   (the briefing)
+research_engine.py     build_assets.py        verify_claims.py        (synthesis: human + AI)
+   │ Parallel.ai          │ Chart.js/Excalidraw  │ Parallel.ai Task API    │
+   │ Search API           │                      │ (fact-check)            │
+   ▼                      ▼                      ▼                         ▼
+corpus_*.json          charts.html            verification_*.json      build-vs-buy-ria-ai-2026.md
+sources_*.json         build-vs-buy.excalidraw verification_report.md   (the briefing)
 ```
 
 1. **`research_engine.py`** — fires 6 structured objectives (adoption, build-side,
-   buy-side, economics, governance, valuation) at the Parallel.ai Search API.
+   buy-side, economics, governance, valuation) at the Parallel.ai **Search** API.
    Dedupes every result into a numbered **source registry** so each claim in the
    article is traceable to a URL + title + publish date + excerpt.
 2. **`build_assets.py`** — emits framework-agnostic visuals: a standalone
    `charts.html` (Chart.js via CDN) and an importable `build-vs-buy.excalidraw`
    decision-flow scene.
-3. **Synthesis** — `output/build-vs-buy-ria-ai-2026.md`: the Obsidian-flavored
+3. **`verify_claims.py`** — Stage 3 fact-check. Runs the ~12 load-bearing
+   statistics through the Parallel.ai **Task** API, which returns a structured
+   verdict (`supported` / `partially_supported` / `unsupported` / `contradicted`)
+   plus a `basis` of citations, reasoning, and confidence per claim. Writes a
+   machine JSON + a human `verification_report.md` scorecard. Verified run:
+   **9 supported, 1 partial, 2 unsupported** — corrections were folded back into
+   the briefing and its disclosures.
+4. **Synthesis** — `output/build-vs-buy-ria-ai-2026.md`: the Obsidian-flavored
    briefing. Citations `[^n]` map to `sources_latest.json`.
 
 ## Run it
 
 ```bash
 export PARALLEL_API_KEY=sk-...     # env only — never commit this
-python3 research_engine.py         # ~6 API calls; writes corpus + sources
-python3 build_assets.py            # writes charts.html + .excalidraw
-python3 research_engine.py --dry-run   # preview the plan, no API calls
+python3 research_engine.py         # Stage 1: ~6 Search calls; writes corpus + sources
+python3 build_assets.py            # Stage 2: writes charts.html + .excalidraw
+python3 verify_claims.py           # Stage 3: ~12 Task API fact-checks; writes verification_report.md
+python3 verify_claims.py --processor core   # deeper (slower) verification
+python3 research_engine.py --dry-run        # preview a plan, no API calls
 ```
 
 > **Security:** the key is read **only** from `PARALLEL_API_KEY`. It is never
@@ -61,10 +71,13 @@ Chart.js/Mermaid don't run inside Substack — export each figure from
 
 | File | Purpose |
 |------|---------|
-| `research_engine.py` | Parallel.ai Search API research driver |
-| `build_assets.py` | Chart.js + Excalidraw asset generator |
+| `research_engine.py` | Stage 1 — Parallel.ai Search API research driver |
+| `build_assets.py` | Stage 2 — Chart.js + Excalidraw asset generator |
+| `verify_claims.py` | Stage 3 — Parallel.ai Task API claim verification |
 | `output/corpus_*.json` | Full structured research results per objective |
 | `output/sources_*.json` | Deduped, numbered citation registry (60 sources) |
+| `output/verification_*.json` | Machine fact-check results (verdict + basis citations) |
+| `output/verification_report.md` | Human-readable verification scorecard |
 | `output/build-vs-buy-ria-ai-2026.md` | The Obsidian-ready briefing |
 | `output/charts.html` | Standalone Chart.js figures |
 | `output/build-vs-buy.excalidraw` | Importable decision-flow diagram |
