@@ -1,0 +1,485 @@
+{
+  "generated_utc": "20260602T163948Z",
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+      "title": "The Fed - Monitoring AI Adoption in the US Economy",
+      "domain": "federalreserve.gov",
+      "publish_date": "2026-03-04",
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 2,
+      "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+      "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages | Charles Schwab",
+      "domain": "pressroom.aboutschwab.com",
+      "publish_date": null,
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 3,
+      "url": "https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/2026-global-ai-in-financial-services-report/",
+      "title": "2026 Global AI in Financial Services Report \u2013 Adoption, Impact and Risks - CCAF publications - Cambridge Judge Business School",
+      "domain": "jbs.cam.ac.uk",
+      "publish_date": "2026-05-28",
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 4,
+      "url": "https://www.structuredretailproducts.com/insights/82442/rias-ai-adoption-more-than-doubles-but-still-in-early-stages-schwab-study",
+      "title": "RIA's AI adoption more than doubles but still in early stages: Schwab study | Structured Retail Products ",
+      "domain": "structuredretailproducts.com",
+      "publish_date": null,
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 5,
+      "url": "https://ventionteams.com/solutions/ai/adoption-statistics",
+      "title": "AI Adoption Statistics Q1 2026: All Figures - Vention",
+      "domain": "ventionteams.com",
+      "publish_date": null,
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 6,
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era",
+      "title": "Responsible AI: Overcoming adoption barriers and risks | McKinsey & Company",
+      "domain": "mckinsey.com",
+      "publish_date": null,
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 7,
+      "url": "https://wislawjournal.com/2026/02/27/ai-adoption-surges-across-legal-industry-survey-finds",
+      "title": "AI adoption surges across legal industry, survey finds",
+      "domain": "wislawjournal.com",
+      "publish_date": "2026-02-27",
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 8,
+      "url": "https://401kspecialistmag.com/ai-adoption-doubles-since-2023",
+      "title": "RIA AI Adoption Doubles as Advisors Cut Admin Work",
+      "domain": "401kspecialistmag.com",
+      "publish_date": "2026-01-30",
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 9,
+      "url": "https://www.investmentnews.com/ria-news/independent-ria-ai-use-soars-but-most-firms-still-at-the-start-of-the-journey/264944",
+      "title": "Independent RIA AI use soars, but most firms still at the start of the journey - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2026-01-23",
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 10,
+      "url": "https://blog.platinumids.com/blog/ai-adoption-inflection-legal-2026",
+      "title": "The AI Adoption Inflection Point: How Legal Technology Crossed from Experimentation to Infrastructure in 2026 | PlatinumIDS Blog",
+      "domain": "blog.platinumids.com",
+      "publish_date": "2026-04-02",
+      "first_seen_topic": "RIA AI adoption baseline & pace"
+    },
+    {
+      "n": 11,
+      "url": "https://wealthtechtoday.com/2025/06/30/the-silent-revolution-how-ai-in-ria-operations-is-eating-your-tech-stack/",
+      "title": "The Silent Revolution: How AI in RIA Operations Is Eating Your Tech Stack",
+      "domain": "wealthtechtoday.com",
+      "publish_date": "2025-06-28",
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 12,
+      "url": "https://www.wealthmanagement.com/artificial-intelligence/ai-trends-reshaping-wealth-management-in-2026",
+      "title": "AI Trends Transforming Wealth Management Platforms",
+      "domain": "wealthmanagement.com",
+      "publish_date": "2026-04-17",
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 13,
+      "url": "https://advizorpro.com/post/best-ria-databases",
+      "title": "Best RIA Databases 2026",
+      "domain": "advizorpro.com",
+      "publish_date": null,
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 14,
+      "url": "https://www.ziprecruiter.com/Jobs/Ria-Recruiting/--in-Florida",
+      "title": "Ria Recruiting Jobs in Florida (NOW HIRING) May 26",
+      "domain": "ziprecruiter.com",
+      "publish_date": null,
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 15,
+      "url": "http://arraycorp.com/about",
+      "title": "Redesigning How Work Works",
+      "domain": "arraycorp.com",
+      "publish_date": null,
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 16,
+      "url": "https://advisorservices.schwab.com/ria-talent/recruiting",
+      "title": "Recruiting Talent | RIA Talent Advantage - Schwab Advisor Services",
+      "domain": "advisorservices.schwab.com",
+      "publish_date": null,
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 17,
+      "url": "https://www.kitces.com/blog/the-latest-in-financial-advisortech-june-2026-altruist-corporate-ria-flourish-taxstatus-risr/",
+      "title": "The Latest In Financial #AdvisorTech (June 2026)",
+      "domain": "kitces.com",
+      "publish_date": "2026-05-29",
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 18,
+      "url": "https://neurons-lab.com/top-ai-co-pilots-for-wealth-management-teams/",
+      "title": "Top AI Co-Pilots for Wealth Management Teams - Neurons Lab",
+      "domain": "neurons-lab.com",
+      "publish_date": "2026-04-23",
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 19,
+      "url": "https://www.onevest.com/blog/ria-ma-integration-agentic-ai",
+      "title": "RIA M&A Integration Challenges and How Agentic AI Solves Them | OneVest",
+      "domain": "onevest.com",
+      "publish_date": "2026-05-21",
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 20,
+      "url": "https://interexy.com/build-vs-buy-ai-agent-platform",
+      "title": "Build vs Buy: AI Agent Platform for Financial Services \u2013 A Strategic Decision Framework | Interexy",
+      "domain": "interexy.com",
+      "publish_date": "2026-06-01",
+      "first_seen_topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet"
+    },
+    {
+      "n": 21,
+      "url": "https://www.investmentnews.com/fintech/zocks-jump-expand-advisor-reach-with-new-enterprise-integrations/266805",
+      "title": "Zocks, Jump expand advisor reach with new enterprise ...",
+      "domain": "investmentnews.com",
+      "publish_date": "2026-05-29",
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 22,
+      "url": "https://www.zocks.io/blog/how-ai-saves-financial-advisors-10-hours-per-week",
+      "title": "How AI Saves Financial Advisors 10+ Hours Per Week",
+      "domain": "zocks.io",
+      "publish_date": "2026-04-01",
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 23,
+      "url": "https://www.youtube.com/watch?v=YS0w1F4QW5Y",
+      "title": "Zocks: The AI Assistant for Financial Advisors - YouTube",
+      "domain": "youtube.com",
+      "publish_date": "2025-07-18",
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 24,
+      "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html",
+      "title": "Merrill and Bank of America Private Bank Launch AI-Powered Meeting Journey  | Press Releases | Newsroom | Bank of America",
+      "domain": "newsroom.bankofamerica.com",
+      "publish_date": null,
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 25,
+      "url": "http://prnewswire.com/news-releases/datadasher-and-bento-engine-announce-strategic-partnership-to-maximize-data-driven-advice-opportunities-for-financial-professionals-302573339.html",
+      "title": "DataDasher and Bento Engine Announce Strategic Partnership to Maximize Data-Driven Advice Opportunities for Financial Professionals",
+      "domain": "prnewswire.com",
+      "publish_date": "2025-10-02",
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 26,
+      "url": "https://www.investmentnews.com/equities/the-ai-spending-boom-is-alive-and-well-this-is-why-it-matters-to-advisors/266801",
+      "title": "The AI spending boom is alive and well. This is why it matters to advisors - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2026-05-29",
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 27,
+      "url": "https://www.investmentnews.com/fintech/zocks-raises-45m-in-continued-push-for-ai-as-an-advisor-growth-driver/264970",
+      "title": "Zocks raises $45M in continued push for AI as advisor growth driver - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2026-01-26",
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 28,
+      "url": "http://marketplace.zoom.us/apps/VEtTdiMORQK89fyCiQ9Hlg",
+      "title": "FinMate AI - Zoom App Marketplace",
+      "domain": "marketplace.zoom.us",
+      "publish_date": null,
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 29,
+      "url": "https://www.myaifrontdesk.com/blogs/revolutionize-your-practice-top-ai-notetaker-solutions-for-financial-advisors-in-2026",
+      "title": "Revolutionize Your Practice: Top AI Notetaker Solutions for\u2026",
+      "domain": "myaifrontdesk.com",
+      "publish_date": "2026-02-26",
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 30,
+      "url": "https://orion.com/2026-wealthtech-outlook",
+      "title": "2026 Wealthtech Outlook | Orion",
+      "domain": "orion.com",
+      "publish_date": null,
+      "first_seen_topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals"
+    },
+    {
+      "n": 31,
+      "url": "https://smartasset.com/advisor-resources/ria-custodian-fees",
+      "title": "What Are the Typical RIA Custodian Fees?",
+      "domain": "smartasset.com",
+      "publish_date": "2025-03-07",
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 32,
+      "url": "https://www.thewealthmosaic.com/vendors/docupace/blogs/why-wealth-management-firms-win-by-buying-technolo/",
+      "title": "Why wealth management firms win by buying technology, not building it - The Wealth Mosaic",
+      "domain": "thewealthmosaic.com",
+      "publish_date": null,
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 33,
+      "url": "https://smartasset.com/advisor-resources/ria-startup-costs",
+      "title": "Guide to RIA Startup Costs",
+      "domain": "smartasset.com",
+      "publish_date": "2026-01-30",
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 34,
+      "url": "https://appinventiv.com/blog/guide-to-wealth-management-software-development",
+      "title": "A Guide to Wealth Management Software Development in 2026",
+      "domain": "appinventiv.com",
+      "publish_date": "2026-01-27",
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 35,
+      "url": "https://geniusee.com/wealth-management-software",
+      "title": "Wealth management software development company | Geniusee",
+      "domain": "geniusee.com",
+      "publish_date": "2026-05-22",
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 36,
+      "url": "https://masttro.com/wealth-management-software",
+      "title": "Wealth Management Software | RIA Portfolio ... Masttro https://masttro.com \u203a wealth-ma...",
+      "domain": "masttro.com",
+      "publish_date": null,
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 37,
+      "url": "https://www.ideas2it.com/blogs/buy-vs-build-healthcare-software",
+      "title": "Build vs Buy Software: Pros, Cons & Decision Framework",
+      "domain": "ideas2it.com",
+      "publish_date": null,
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 38,
+      "url": "https://www.perfectiongeeks.com/blogs/wealth-management-software-cost-2026",
+      "title": "Wealth Management Software Cost Guide for 2026",
+      "domain": "perfectiongeeks.com",
+      "publish_date": null,
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 39,
+      "url": "https://www.scnsoft.com/investment/wealth-management",
+      "title": "Custom Wealth Management Software Development ScienceSoft https://www.scnsoft.com \u203a wealth-...",
+      "domain": "scnsoft.com",
+      "publish_date": null,
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 40,
+      "url": "https://www.appdirect.com/blog/build-vs-buy-software-how-ai-enabled-software-development-and-vibe-coding-are-changing-the-game",
+      "title": "Build vs Buy Software: Pros & Cons and How to Choose - AppDirect",
+      "domain": "appdirect.com",
+      "publish_date": "2026-05-01",
+      "first_seen_topic": "Build vs. buy economics & cost framework"
+    },
+    {
+      "n": 41,
+      "url": "https://www.ncontracts.com/nsight-blog/investment-advisers-artificial-intelligence",
+      "title": "AI Compliance for Firms and RIAs in 2026 - Ncontracts",
+      "domain": "ncontracts.com",
+      "publish_date": "2026-04-02",
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 42,
+      "url": "https://www.aima.org/article/impact-of-the-sec-s-new-marketing-rule-on-private-fund-advisors.html",
+      "title": "title: Impact of the SEC's new marketing rule on private fund advisors",
+      "domain": "aima.org",
+      "publish_date": null,
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 43,
+      "url": "https://itsynergy.com/managing-ai-in-financial-services-ensuring-compliance-with-ai-usage-policies-in-your-ria",
+      "title": "Managing AI in Financial Services: Ensuring Compliance with AI Usage Policies in Your RIA - itSynergy",
+      "domain": "itsynergy.com",
+      "publish_date": "2025-08-21",
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 44,
+      "url": "https://www.mirrorweb.com/blog/the-secs-new-marketing-rule-how-to-stay-compliant-and-avoid-big-fines",
+      "title": "SEC Marketing Rule: How to Stay Compliant And Avoid Big Fines",
+      "domain": "mirrorweb.com",
+      "publish_date": "2026-01-07",
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 45,
+      "url": "https://www.mofo.com/resources/insights/251015-ai-compliance-tips-for-advisers",
+      "title": "AI Compliance Tips for Investment Advisers | Morrison Foerster",
+      "domain": "mofo.com",
+      "publish_date": "2025-10-15",
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 46,
+      "url": "https://wealthreach.ai/blog/ai-compliance-finra-sec-financial-advisors",
+      "title": "AI Compliance for Financial Advisors: How to Use AI Without Violating FINRA or SEC Rules | WealthReach",
+      "domain": "wealthreach.ai",
+      "publish_date": "2026-03-23",
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 47,
+      "url": "https://iqeq.com/insights/social-media-and-secs-new-marketing-rule",
+      "title": "Social media and the SEC's new marketing rule - IQ-EQ",
+      "domain": "iqeq.com",
+      "publish_date": "2024-08-07",
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 48,
+      "url": "https://www.smarsh.com/blog/thought-leadership/ai-compliance-financial-services",
+      "title": "AI Governance in Financial Services Framework | Smarsh",
+      "domain": "smarsh.com",
+      "publish_date": "2026-05-21",
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 49,
+      "url": "https://www.chapman.com/publication-SEC-Rule-Marketing-Registered-Investment-Advisers",
+      "title": "SEC Adopts Amended Rule 206(4)-1 Addressing Marketing Activities by Registered Investment Advisers: Chapman and Cutler LLP",
+      "domain": "chapman.com",
+      "publish_date": null,
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 50,
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/marketing-compliance-frequently-asked-questions",
+      "title": "Marketing Compliance - Frequently Asked Questions - SEC.gov",
+      "domain": "sec.gov",
+      "publish_date": null,
+      "first_seen_topic": "Compliance, SEC scrutiny & AI governance risk"
+    },
+    {
+      "n": 51,
+      "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/ria-ma-update-q1-2026/",
+      "title": "RIA M&A Update: Q1 2026",
+      "domain": "mercercapital.com",
+      "publish_date": null,
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    },
+    {
+      "n": 52,
+      "url": "https://www.etnasoft.com/the-future-of-ria-wealth-management-consolidation-tech-stacks-and-key-2026-trends/",
+      "title": "The Future of RIA Wealth Management: 2026 Trends %%sep%% %%sitename%%",
+      "domain": "etnasoft.com",
+      "publish_date": "2026-02-05",
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    },
+    {
+      "n": 53,
+      "url": "https://www.sicafletcher.com/post/ria-valuation-multiples-scf",
+      "title": "RIA Valuation Multiples: 2024 Report",
+      "domain": "sicafletcher.com",
+      "publish_date": "2025-10-24",
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    },
+    {
+      "n": 54,
+      "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium",
+      "title": "Organic Growth Is the New Scarcity Premium - Mercer Capital",
+      "domain": "mercercapital.com",
+      "publish_date": null,
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    },
+    {
+      "n": 55,
+      "url": "https://eqvista.com/ebitda-multiples-by-industry",
+      "title": "EBITDA Multiples Across Industries (2026) - Eqvista",
+      "domain": "eqvista.com",
+      "publish_date": "2026-04-29",
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    },
+    {
+      "n": 56,
+      "url": "http://vastadvisor.ai/",
+      "title": "VastAdvisor | AI Client Acquisition for Wealth Managers & RIAs",
+      "domain": "vastadvisor.ai",
+      "publish_date": null,
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    },
+    {
+      "n": 57,
+      "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2024/organic-growth-and-ria-valuations",
+      "title": "Organic Growth and RIA Valuations - Mercer Capital",
+      "domain": "mercercapital.com",
+      "publish_date": null,
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    },
+    {
+      "n": 58,
+      "url": "https://quantpillar.com/resources/guides/valuation-multiples",
+      "title": "2025-2026 Private Market Valuation Multiples: The Definitive Cheat Sheet + Free Online Calculator | QuantPillar | QuantPillar",
+      "domain": "quantpillar.com",
+      "publish_date": "2026-05-22",
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    },
+    {
+      "n": 59,
+      "url": "https://www.milemarker.co/articles/organic-growth-holy-grail-rias",
+      "title": "Why Organic Growth Is the Holy Grail for RIAs | Milemarker",
+      "domain": "milemarker.co",
+      "publish_date": null,
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    },
+    {
+      "n": 60,
+      "url": "https://www.familywealthreport.com/article.php/Mid_dash_year-RIA-M&A-Market-Report:-Winners,-Losers-And-Trends",
+      "title": "Mid-year RIA M&A Market Report: Winners, Losers And Trends",
+      "domain": "familywealthreport.com",
+      "publish_date": "2024-07-16",
+      "first_seen_topic": "Valuation, M&A & the strategic stakes"
+    }
+  ]
+}

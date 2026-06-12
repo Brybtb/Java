@@ -1,0 +1,593 @@
+{
+  "generated_utc": "20260602T163948Z",
+  "corpus": [
+    {
+      "id": "adoption_baseline",
+      "topic": "RIA AI adoption baseline & pace",
+      "objective": "Find the most recent (2025-2026) statistics on how many RIA and financial advisory firms are adopting AI, what share have formal AI policies, and how mature that adoption is. Prefer Schwab, Orion, Kitces, and named industry surveys with specific percentages.",
+      "search_id": "search_803d403dc82a40dc8fefec678da4550b",
+      "results": [
+        {
+          "citation": 1,
+          "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+          "title": "The Fed - Monitoring AI Adoption in the US Economy",
+          "publish_date": "2026-03-04",
+          "excerpts": [
+            "# Board of Governors of the Federal Reserve System _The Federal Reserve, the central bank of the United States, provides the nation with a safe, flexible, and stable monetary and financial system._\n## FEDS Notes\n### Monitoring AI Adoption in the US Economy\n#### Estimated AI Adoption Rates\n##### Figure 2. Trends in AI Adoption\nWhile the firm-level BTOS focuses on AI adoption in general, the individual-level RPS asks about GenAI, specifically. The right panel of figure 2 shows that work-related GenAI adoption reported in the RPS stands at about 41 percent of the workforce, and non-work-related usage at about 50 percent of the population as of the latest survey in November 2025. These metrics grew by about 31 percent (9.7 percentage points) and 26 percent (10.4 percentage points), respectively, for the year ending in November. The most recent quarter saw the strongest growth in work-related adoption over the course of the RPS series."
+          ]
+        },
+        {
+          "citation": 2,
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+          "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages | Charles Schwab",
+          "publish_date": null,
+          "excerpts": [
+            "# Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages\nWESTLAKE, Texas--(BUSINESS WIRE)-- AI adoption among independent registered investment advisors (RIAs) has more than doubled since 2023, with 63% now using AI tools in some capacity, according to a [new study](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fadvisorservices.schwab.com%2Fresource%2Fadvisor-AI-in-action&esheet=54401733&newsitemid=20260122602006&lan=en-US&anchor=new+study&index=1&md5=f130b71a0b1e289e384ccab805092d3c) released today by Schwab Advisor Services\u2122. The study also reveals that most firms remain in the early stages of adoption, with use cases concentrated on administrative tasks like notetaking and email drafting. In addition, of advisors that are using AI, only about one in ten are fully integrating AI into their business strategy.\n\n...\n\nAmong the 533 RIAs surveyed, 82% of current AI users report relying on generative AI tools\u2014most often through individual experimentation rather than firm-wide systems. Early adopters cite measurable benefits, including time savings, workflow improvements, and faster client meeting prep.\nExpectations are rising. Nearly six in ten advisors (59%) believe AI will have a direct, measurable impact on client relationships within the next year. More than two-thirds (68%) expect AI to be transformative to the future of financial advice within three years. Interest in intelligent agents\u2014AI systems that can act autonomously on behalf of users\u2014is growing as firms look to personalize service and simplify complex workflows, though adoption remains low.\n\n...\n\nThe RIA and AI Research Study is an online study conducted for Charles Schwab & Co., Inc. by Logica Research, an independent research firm. The study was conducted from October 7 to October 26, 2025, among 533 advisors who custody at Schwab. Participation was voluntary and uncompensated. The study is available [here](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fadvisorservices.schwab.com%2Fresource%2Fadvisor-AI-in-action&esheet=54401733&newsitemid=20260122602006&lan=en-US&anchor=here&index=2&md5=927828bcd45abac752a6828479b415cc) .\n**About Charles Schwab**"
+          ]
+        },
+        {
+          "citation": 3,
+          "url": "https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/2026-global-ai-in-financial-services-report/",
+          "title": "2026 Global AI in Financial Services Report \u2013 Adoption, Impact and Risks - CCAF publications - Cambridge Judge Business School",
+          "publish_date": "2026-05-28",
+          "excerpts": [
+            "# 2026 Global AI in Financial Services Report \u2013 Adoption, Impact and Risks\n## Highlights from the report\n### Adoption\n#### Financial services industry ahead of regulators in AI adoption while fintechs outpace incumbents\nThe financial services industry is ahead of regulators in AI adoption, and fintechs are ahead of incumbents. Eighty-one per cent of surveyed financial services firms are adopting AI at some level, with 40% of industry respondents reporting advanced AI adoption (\u2018Scaling\u2019 or \u2018Transforming\u2019 stages), more than double that of regulators (with only 20% reporting having advanced AI adoption).\n\n...\n\n##### GenAI and agentic AI emerge as the most accessible AI frontiers\nGenAI and agentic AI are the clearest frontiers with lower barriers for adoption than traditional machine learning methods. AI adoption remains highest for classical machine learning (75%) and genAI (71%) (despite only gaining traction since 2022), among surveyed industry respondents.\nHowever, agentic AI is already in active adoption among 52% of industry respondents, demonstrating rapid uptake in a relatively short period of time. Twenty-three per cent of industry respondents are at more mature stages (Scaling or Transforming) of adopting agentic AI, while 29% remain in piloting. Fintechs are again ahead of traditional financial institutions (traditional FIs) in agentic AI adoption (57% versus 45%)."
+          ]
+        },
+        {
+          "citation": 4,
+          "url": "https://www.structuredretailproducts.com/insights/82442/rias-ai-adoption-more-than-doubles-but-still-in-early-stages-schwab-study",
+          "title": "RIA's AI adoption more than doubles but still in early stages: Schwab study | Structured Retail Products ",
+          "publish_date": null,
+          "excerpts": [
+            "# RIA's AI adoption more than doubles but still in early stages: Schwab study\n03 Feb 2026 | International\nVikramaditya Shrivastava\nShare\nThe study found that most firms remained in the early stages of artificial intelligence (AI) adoption, with use cases concentrated on administrative tasks like note-taking and email drafting.\nSchwab Advisor Services, part of Texas-based Charles Schwab Corp, has found in a study that AI adoption among registered investment advisers (RIAs) has more than doubled since 2023, with 63% now using AI tools in some capacity. Most firms remained in the early stages of AI adoption The study titled \u2018Schwab Advisor AI in Action: AI\u2019s transformative impact on RIAs\u2019 involved 533 RIAs, who were surveyed. The findings were released on 22 January. The study revealed that most fi\n\n## Continue reading with a subscription to the SRP market intelligence platform\nRequest Demo\nAlready a subscriber?"
+          ]
+        },
+        {
+          "citation": 5,
+          "url": "https://ventionteams.com/solutions/ai/adoption-statistics",
+          "title": "AI Adoption Statistics Q1 2026: All Figures - Vention",
+          "publish_date": null,
+          "excerpts": [
+            "# AI adoption statistics by industries and countries: 2026 snapshot\n## Contact us\n[Linkedin](https://www.linkedin.com/company/ventionteams/) [Instagram](https://www.instagram.com/ventionteams/) [X](https://x.com/ventionteams) [Youtube](https://www.youtube.com/@VentionTeams)\nSubscribe to our newsletter to stay in touch with the latest!\nI agree to the [Privacy Policy](https://ventionteams.com/privacy-policy) and give my permission to process my personal data for the purposes specified in the Privacy Policy.\nSubscribe\nPrivacy Policy\nVention logo footer\nMoon\nSun\nLight mode\nPrivacy Policy"
+          ]
+        },
+        {
+          "citation": 6,
+          "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era",
+          "title": "Responsible AI: Overcoming adoption barriers and risks | McKinsey & Company",
+          "publish_date": null,
+          "excerpts": [
+            "# State of AI trust in 2026: Shifting to the agentic era\n## Looking ahead: Trust as the enabler of scale\nAs AI systems become more autonomous and embedded in critical workflows, gaps in governance and risk management will become increasingly costly. Organizations that fail to establish clear accountability, robust controls, and effective monitoring mechanisms risk slower adoption, higher incident impact, and diminished stakeholder trust.\nConversely, organizations that treat AI trust as a core business capability, rather than as a compliance requirement, are better positioned to scale AI adoption to its full potential. These capabilities are not something that you can buy and install but rather require a concerted combination of policies, processes, people, and technology to build the foundations needed for agents, robots, and people to work together in new ways . Building a trustworthy innovation engine early will define those who capture long-term value from AI in the agentic era."
+          ]
+        },
+        {
+          "citation": 7,
+          "url": "https://wislawjournal.com/2026/02/27/ai-adoption-surges-across-legal-industry-survey-finds",
+          "title": "AI adoption surges across legal industry, survey finds",
+          "publish_date": "2026-02-27",
+          "excerpts": [
+            "# AI adoption surges across legal industry, survey finds\n## DIGITAL EDITIONS\n[](https://wisconsinlawjournal-wi.newsmemory.com/)\nSubscribe for access to the latest digital and special editions.\nUse of this website is subject to its [Terms of Use](https://bridgetowermedia.com/subscriber-agreement/) | [Privacy Policy](https://bridgetowermedia.com/privacy-policy/) | [Your California Privacy Rights/Privacy Policy](https://bridgetowermedia.com/ccpa/) | [Do Not Sell My Info/Cookie Policy](https://bridgetowermedia.com/cookie-policy/)\nManage Consent\nFunctional Functional Always active\nThe technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network. Preferences Preferences"
+          ]
+        },
+        {
+          "citation": 8,
+          "url": "https://401kspecialistmag.com/ai-adoption-doubles-since-2023",
+          "title": "RIA AI Adoption Doubles as Advisors Cut Admin Work",
+          "publish_date": "2026-01-30",
+          "excerpts": [
+            "# AI Adoption Doubles Since 2023\nRIAs are mainly utilizing the tool for administrative tasks like notetaking and email drafting, finds Schwab Advisor Services\n[by Amanda Umpierrez](https://401kspecialistmag.com/author/amanda-umpierrez/ \"View all posts by Amanda Umpierrez\")\nJanuary 22, 2026\n2 minute read\nRIA AI adoption Image Credit: \u00a9 BiancoBlue | Dreamstime.com\n[](https://www.linkedin.com/shareArticle?mini=true&url=https://401kspecialistmag.com/ai-adoption-doubles-since-2023/)\n[](https://x.com/share?&text=AI%20Adoption%20Doubles%20Since%202023&via=401kspecmag&url=https://401kspecialistmag.com/ai-adoption-doubles-since-2023/)\n[](https://www.facebook.com/sharer.php?u=https://401kspecialistmag.com/ai-adoption-doubles-since-2023/)\n[](http://www.reddit.com/submit?url=https://401kspecialistmag.com/ai-adoption-doubles-since-2023/)\nArtificial intelligence (AI) technology adoption among independent registered investment advisors (RIAs) continues to ramp up as professionals look to reduce administrative burden.\nA [study by Schwab](https://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx) Advisor Services found that AI adoption among this group has more than doubled since 2023, with 63% of independent RIAs now utilizing AI tools in some role. This group has mainly used the technology for administrative tasks like notetaking and email drafting, while only one in 10 have fully integrated AI into their business strategy, Schwab reports.\n**_[RELATED \u2013 Billion-Dollar RIAs Drive Expansion with AI](https://401kspecialistmag.com/billion-dollar-rias-drive-expansion-with-ai/)_**\nThe study, which surveyed 533 RIAs, found that 82% of AI users utilize generative AI tools. Early adopters of the tools were likely to use AI for time savings, workflow improvements, and faster client meeting preparation, Schwab reports.\n\u201cAI is here, and adoption matters,\u201d said Lisa Salvi, head of Business Consulting and Education at Schwab Advisor Services. \u201cFirms that set a clear vision and invest in upskilling their talent and building strong data foundations will be better positioned to turn AI from a curiosity into a huge competitive advantage.\u201d\nAdvisors expect AI momentum to continue growing, with 59% who believe it will have a \u201cdirect, measurable impact on client relationships\u201d within the coming year. Another two-thirds (68%) predict the tool will be \u201ctransformative\u201d to financial advice within three years.\nAmong the AI features advisors seek are intelligent agents, a tool that allows firms to personalize service and streamline workflows."
+          ]
+        },
+        {
+          "citation": 9,
+          "url": "https://www.investmentnews.com/ria-news/independent-ria-ai-use-soars-but-most-firms-still-at-the-start-of-the-journey/264944",
+          "title": "Independent RIA AI use soars, but most firms still at the start of the journey - InvestmentNews",
+          "publish_date": "2026-01-23",
+          "excerpts": [
+            "# Independent RIA AI use soars, but most firms still at the start of the journey\nIndependent RIA AI use soars, but most firms still at the start of the journey\nNew research finds AI utilization more than doubled but deeper integration still lags.\nJAN 23, 2026\nBy Steve Randall\nSteve Randall\nAI adoption among independent [RIAs](https://www.investmentnews.com/ria-news) is accelerating rapidly, but most firms remain in the early phases of implementation, according to a new study.\nThe research, conducted in late 2025 with 533 RIAs, found that 63% of firms now use AI in some capacity. That figure represents more than double the adoption rate reported just two years earlier, underscoring how quickly AI tools have entered advisory firm operations.\nHowever, widespread use does not yet equate to deep integration. The research from Schwab Advisor Services found that only about one in ten firms report that AI is embedded into their core business strategy. For most advisors, current applications remain tactical such as handling administrative work such as meeting notes, email drafting, and basic workflow support, rather than driving major strategic [transformation](https://www.investmentnews.com/transformation) .\n\u201cAI is here, and adoption matters,\u201d said Lisa Salvi, Head of Business Consulting and Education at Schwab Advisor Services. \u201cFirms that set a clear vision and invest in upskilling their talent and building strong data foundations will be better positioned to turn AI from a curiosity into a huge competitive advantage.\u201d"
+          ]
+        },
+        {
+          "citation": 10,
+          "url": "https://blog.platinumids.com/blog/ai-adoption-inflection-legal-2026",
+          "title": "The AI Adoption Inflection Point: How Legal Technology Crossed from Experimentation to Infrastructure in 2026 | PlatinumIDS Blog",
+          "publish_date": "2026-04-02",
+          "excerpts": [
+            "# The AI Adoption Inflection Point: How Legal Technology Crossed from Experimentation to Infrastructure in 2026\n## The adoption gap: where institutions fail their people\nHere is the part of the story that keeps me up at night.\nIndividual lawyers have embraced AI at a pace that exceeds almost every industry forecast. But the institutions they work for -- the law firms, the corporate legal departments, the bar associations -- have largely failed to provide the training, governance, and infrastructure that responsible AI adoption requires.\nThe numbers are stark:\n* **46% of law firms have adopted general-purpose AI tools** (rising to 58% among firms with 20 or more lawyers), but that still means more than half of smaller firms have no institutional AI strategy at all. [[1]]()\n* **54% of firms provide NO AI training and have no plans to provide any.** [[1]]()\n* **43% of firms have no formal AI policy.** [[1]]()\n* **Only 9% of firms have an actively enforced AI policy.** [[7]]()\n\n...\n\n### The governance crisis\nThe good news -- if you squint -- is that change is coming. Gartner projects that **80% of organizations will formalize AI policies by the end of 2026** . [[5]]() That would be a dramatic acceleration from the current 57% rate. But formalization is not the same as enforcement. Writing a policy is the easy part. Building the training programs, monitoring systems, and cultural norms that make a policy meaningful -- that is the hard work, and most firms have not started it.\nThomson Reuters' research adds another dimension: **only 22% of legal organizations currently have what analysts would call strategic clarity about their AI deployments** . [[5]]() The rest are in various stages of reactive adoption -- buying tools because competitors are buying tools, without a coherent vision for how AI fits into their service delivery model, pricing structure, or client relationships."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "build_side",
+      "topic": "The build case \u2014 proprietary AI as a moat & recruiting magnet",
+      "objective": "Find evidence that some RIAs are BUILDING proprietary AI technology in-house and using it as a recruiting and growth advantage. Look for funding rounds, AUM growth, headcount growth, and quantified efficiency gains (e.g. percent of back-office time saved).",
+      "search_id": "search_7f9c4549f0d84b4abd3793117f8741e4",
+      "results": [
+        {
+          "citation": 11,
+          "url": "https://wealthtechtoday.com/2025/06/30/the-silent-revolution-how-ai-in-ria-operations-is-eating-your-tech-stack/",
+          "title": "The Silent Revolution: How AI in RIA Operations Is Eating Your Tech Stack",
+          "publish_date": "2025-06-28",
+          "excerpts": [
+            "# The Silent Revolution: How AI in RIA Operations Is Eating Your Tech Stack\nPanelists **Ted Hovivian** ( [iCapital](http://iCapital.com) ), **Bill Mann** ( [Motley Fool Asset Management](https://fooletfs.com/) ), and **Brian Huckstep** ( [Advyzon Investment Management](http://Advyzon.com) ) didn\u2019t gush about quantum portfolios. They talked about gritty operational realities and where artificial intelligence is _actually_ pulling its weight today. For owners and executives wrestling with an overloaded **wealth management tech stack** , their insights cut straight to the point: AI is less about finding the next Tesla\u2014more about giving your team the capacity to serve twice as many households without doubling payroll.\n**_TL;DR \u2013 What You Will Learn From This Article_**\n\n...\n\n## AI in RIA Operations: Not Beating Benchmarks, But Beating Spreadsheets\nThese aren\u2019t flashy front-office features, but they pay off quickly.\nFor an RIA COO, this is where AI creates real operational leverage. It shortens onboarding timelines. It reduces training costs. It prevents small errors that escalate into compliance problems. And it frees up senior team members to focus on revenue-driving work\u2014like client segmentation, workflow design, or advisor recruiting.\nIn short, AI isn\u2019t building better portfolios. It\u2019s building better firms.\nAnd that\u2019s the part too many advisors are missing while they wait for a robot to outperform the S&P. (See [The Rapid Shift From Notetakers to Intelligent Agents \u2014 How AI Will Rewire WealthTech Workflows](https://wealthtechtoday.com/2025/06/18/the-rapid-shift-from-notetakers-to-intelligent-agents-how-ai-will-rewire-wealthtech-workflows/) )\n\n...\n\n## Final Thoughts: AI in RIA Operations Is Already Here\u2014Are You Ready?\n### _Related_\n#### Top Posts & Pages\n342: The Death of the AI Notetaker: How Agentic OS Is Taking Over Wealth Management with Jean Sullivan, Ezra Group](https://wealthtechtoday.com/2026/05/20/ep-342-the-death-of-the-ai-notetaker-how-agentic-os-is-taking-over-wealth-management-with-jean-sullivan-ezra-group/ \"Ep. 342: The Death of the AI Notetaker: How Agentic OS Is Taking Over Wealth Management with Jean Sullivan, Ezra Group\")\n* [](https://wealthtechtoday.com/2026/05/08/ai-notetakers-financial-advisors-2026/ \"AI Notetakers & Agentic OS for Financial Advisors: The 2026 Strategic Buyer's Guide\")\n[AI Notetakers & Agentic OS for Financial Advisors: The 2026 Strategic Buyer's Guide](https://wealthtechtoday.com/2026/05/08/ai-notetakers-financial-advisors-2026/ \"AI Notetakers & Agentic OS for Financial Advisors: The 2026 Strategic Buyer's Guide\")"
+          ]
+        },
+        {
+          "citation": 12,
+          "url": "https://www.wealthmanagement.com/artificial-intelligence/ai-trends-reshaping-wealth-management-in-2026",
+          "title": "AI Trends Transforming Wealth Management Platforms",
+          "publish_date": "2026-04-17",
+          "excerpts": [
+            "# AI in WealthTech for the Middle and Back Office: Our Top Three Predictions for 2026\nAI is revolutionizing wealth management, from replacing manual data entry to enhancing back-office roles and enabling scalable infrastructure\nPicture of Louis Retief Picture of Richard Thoeny\nLouis Retief, Richard Thoeny\nApril 17, 2026\n4 Min Read\n\n...\n\nThe latest advances in AI have the wealth management industry\u2014particularly the executives in the home office\u2014rethinking the platforms that handle jobs both great and small. They understand the future of their firm will be molded by the decisions they make today. They also perceive the enormous advantages of AI, but only if wealth management as an industry knows how to wield it wisely. With the largest LLM players like Anthropic launching Claude CoWork plug-ins for the industry, new developments could disrupt wealth-specific capabilities and the growing ecosystem of AI \u201cmiddleware\u201d startups building custom automation for RIAs.\n\n...\n\n## What Comes Next\nThe reality is that none of us can predict exactly how this space will evolve, even when we feel strongly about our forecasts. Keeping up with AI alone can feel like a full-time job, and in many ways, it is. Even some of the most capable professionals in our industry have remarked on how quickly the landscape is evolving, highlighting just how dynamic and opportunity-rich this environment has become.\nAdvisory firms are uniquely positioned to scale because of the AUM revenue model. Investing in technical resources today may be the smartest strategic decision a firm can make. The fastest-growing and most profitable firms of the future will be the ones that hired one or two software engineers in 2026 and empowered them to build the infrastructure needed for an AI-enabled operating model.\nAI is an enormous advantage, but only if we know how to wield it wisely. Firms that invest early will compound that advantage. Those that wait risk being left behind."
+          ]
+        },
+        {
+          "citation": 13,
+          "url": "https://advizorpro.com/post/best-ria-databases",
+          "title": "Best RIA Databases 2026",
+          "publish_date": null,
+          "excerpts": [
+            "# Top RIA Databases for 2026: Compare the Leading Advisor Data Platforms\n## **What Makes a Great RIA Database?**\n### **Best for Distribution, Marketing, and Advisor Recruitment**\n* **Coverage** : RIAs, broker-dealers, wealth teams, insurance producers, family offices, and banks/trust companies.\n* **Differentiators** :\n+ AI-powered natural language search and lead scoring\n+ Built on a proprietary AI engine - not dependent on large offshore research teams - enabling deeper insights, faster updates, and better scalability\n+ Real-time website visitor tracking with TrafficIQ\n+ Pre-tagged data on custodians, TAMP, tech stack, investment themes, and risk flags\n+ CRM integrations built for asset managers and wealthtechs (Salesforce, HubSpot, Dynamics, and more)\n+ Dedicated onboarding & client support team\n* **Top Use Cases** : market & territory planning; account targeting & prioritization; pipeline generation; advisor/team recruiting; TAMP/OCIO & platform penetration; ABM & field marketing (events); CRM enrichment & cleanup; competitive & share-of-wallet intelligence."
+          ]
+        },
+        {
+          "citation": 14,
+          "url": "https://www.ziprecruiter.com/Jobs/Ria-Recruiting/--in-Florida",
+          "title": "Ria Recruiting Jobs in Florida (NOW HIRING) May 26",
+          "publish_date": null,
+          "excerpts": [
+            "# Job Seekers ## Small & Medium Businesses ## Enterprise Businesses ## Partner with Us ## Company\n## No jobs found\n### Suggested searches\nVideo Game Tester Game Tester Appointment Setter Apple Home Advisor Proofreader Voice Actor Truck Dispatcher Cannabis Grower Psychic Flight Attendant"
+          ]
+        },
+        {
+          "citation": 15,
+          "url": "http://arraycorp.com/about",
+          "title": "Redesigning How Work Works",
+          "publish_date": null,
+          "excerpts": [
+            "# Our Mission\n## Array was founded to address a decades-long stagnation in frontline productivity.\n### We believed there was a better way.\n* Acquired **HH Staffing** and **Conde Group** , strengthening property management, energy, and technical labor verticals\n* Acquired **GoToro** , a strategic technology platform powering Array\u2019s proprietary recruitment advantage\n2025\n* Acquired **Onaroll** , a rewards platform serving QSR industry\n* Surpassed **100K+ frontline workers deployed** since inception\n* Operating across **50 states** with a national footprint and local delivery model\nA System Built on\nThree Beliefs\nTalent deserves visibility and agency"
+          ]
+        },
+        {
+          "citation": 16,
+          "url": "https://advisorservices.schwab.com/ria-talent/recruiting",
+          "title": "Recruiting Talent | RIA Talent Advantage - Schwab Advisor Services",
+          "publish_date": null,
+          "excerpts": [
+            "RIA Talent Advantage \u00ae"
+          ]
+        },
+        {
+          "citation": 17,
+          "url": "https://www.kitces.com/blog/the-latest-in-financial-advisortech-june-2026-altruist-corporate-ria-flourish-taxstatus-risr/",
+          "title": "The Latest In Financial #AdvisorTech (June 2026)",
+          "publish_date": "2026-05-29",
+          "excerpts": [
+            "# Altruist Plans To Launch A New Corporate RIA (And More Of The Latest In Financial #AdvisorTech \u2013 June 2026)\n## AI 'Vibe Coding' Tools Are Making The AdvisorTech Map Bigger, Not Smaller\nBut just in the last year or so, however, the economics of building and developing software \u2013 especially smaller, niche-ier point solutions \u2013 have shifted significantly. The [emergence of AI 'vibe-coding' tools](https://www.kitces.com/blog/vibe-coding-for-financial-advisors-replit-ai-tools-bot-custom-technology-solutions-developer/) like Replit, Bolt, and Canva Code, which write the code for a software tool based on natural language prompt, means that an advisor without coding or software development expertise can build a workable software prototype in an afternoon \u2013 and that an entrepreneur who wants to build an actual saleable product can do so with a fraction of the time and engineering resources needed for creating software in the traditional way.\nThe drastic reduction in the upfront cost needed to create viable software has led to many predictions that the AdvisorTech landscape will be upended in short order - that there's no reason to spend thousands of dollars each year on off-the-shelf software subscriptions when it's possible to build a decent replica in a few days' time, and so the major software providers will be wiped out when advisors flock to their own homebuilt solutions instead."
+          ]
+        },
+        {
+          "citation": 18,
+          "url": "https://neurons-lab.com/top-ai-co-pilots-for-wealth-management-teams/",
+          "title": "Top AI Co-Pilots for Wealth Management Teams - Neurons Lab",
+          "publish_date": "2026-04-23",
+          "excerpts": [
+            "# Top AI Co-Pilots for Wealth Management Teams\n* 23 Apr 2026\n* 7min\nThe top AI co-pilots for [wealth management](https://neurons-lab.com/article/ai-wealth-management/) teams are Neurons Lab, TIFIN, Envestnet, InvestCloud, RavenPack, and additiv.\nAI co-pilots (also known as **digital wealth assistants, advisor copilots** , or **AI-powered tools for financial advisors** ) are intelligent systems designed to assist wealth managers, relationship managers, and investment professionals.\nThey help with everything from client prep and market analysis to compliance, onboarding, and personalized advisory. These tools don\u2019t replace human advisors \u2014 they augment them, offering real-time support, tailored insights, and workflow automation that improves both service quality and operational efficiency.\nIn this article, we explore the top AI co-pilots shaping wealth management today, each offering unique capabilities across different parts of the advisor workflow.\n\n...\n\n## 2. TIFIN\nTIFIN is a leading player in the AI-for-financial-services space, serving wealth managers, RIAs, family offices, and asset managers with modular AI platforms. They\u2019ve launched several AI-powered tools for advisors, including:\n* **TIFIN.AI** , a platform that enhances advisor workflows\n* **TIFIN AXIS** , a new suite of AI agents designed to act as co-pilots for multiple wealth management personas\nTIFIN AXIS is described as a human-in-the-loop collaboration platform that allows wealth firms to enhance productivity using intelligent agents. These agents support use cases like client engagement, proposal generation, and personalization \u2014 giving advisors an always-on digital assistant that supports, rather than replaces, the human advisor.\n\n...\n\n## 6. additiv\nadditiv offers an **Advisor Copilot** that\u2019s tightly integrated into its broader digital wealth orchestration platform. This tool is designed to give wealth advisors instant recall of client data, investment positions, and market perspectives \u2014 all within a compliant, auditable environment.\nThe Advisor Copilot supports real-time Q&A, proposal generation, and client conversations with a strong focus on regulatory alignment. By embedding AI directly into the advisor\u2019s daily workflow, additiv helps wealth firms deliver consistent, high-quality client experiences across every touchpoint."
+          ]
+        },
+        {
+          "citation": 19,
+          "url": "https://www.onevest.com/blog/ria-ma-integration-agentic-ai",
+          "title": "RIA M&A Integration Challenges and How Agentic AI Solves Them | OneVest",
+          "publish_date": "2026-05-21",
+          "excerpts": [
+            "# RIA M&A Integration Challenges and How Agentic AI Solves Them\n## **Technology Is Now a Recruiting Asset, Not Just an Operational One**\nA firm with a fragmented, manual-heavy operational environment is asking advisors to trade a known platform for one that will slow them down. A firm with modern, integrated technology infrastructure is offering something different: the ability to spend more time on client relationships and less time managing operational noise. For high-producing advisor teams with real leverage in the negotiation, that distinction can be the deciding factor.\nThis means that RIA tech stack modernization is not just about internal efficiency. It is a competitive differentiator in the market for advisor talent. Firms that have invested in their operational platform are not just running more efficiently. They are winning deals that firms with legacy infrastructure are losing, because the best advisor teams have choices and they choose environments where they can produce.\n\n...\n\n## Keep Reading\nFirms without automated reconciliation will face meaningful competitive disadvantages in reporting speed and data integrity as the industry continues to evolve. What Operational Efficiency Gains Can Firms Realistically Expect? The operational efficiency gains from wealth ops automation are well-documented in 2026. Here is what firms report after 12 months of systematic automation implementation. Advisor capacity increases meaningfully as administrative tasks are removed from their plates. Back-office headcount requirements drop without reducing service quality. Client onboarding time falls from days to hours. Billing error rates decline sharply. Compliance reporting time drops substantially. These outcomes represent conservative industry expectations. Firms with legacy system complexity may see slower initial gains. Firms with modern infrastructure report results at the higher end of these ranges. How Do Ops Managers Build the Business Case for Automation?"
+          ]
+        },
+        {
+          "citation": 20,
+          "url": "https://interexy.com/build-vs-buy-ai-agent-platform",
+          "title": "Build vs Buy: AI Agent Platform for Financial Services \u2013 A Strategic Decision Framework | Interexy",
+          "publish_date": "2026-06-01",
+          "excerpts": [
+            "# Build Vs Buy: AI Agent Platform for Financial Services \u2013 a Strategic Decision Framework\n## FAQ\nPrice vendor lock-in as a 12\u201318 month switching cost in your head. Not a procurement footnote. If keeping the option to switch matters \u2014 for regulatory, commercial or strategic reasons \u2014 either build the high-value layers in-house, or run a composable architecture where the vendor only owns the inference and orchestration slots.\n8. What are the hidden costs of buying an AI agent platform for wealth management? arrow square right\nFive hidden costs show up repeatedly in wealth-management deployments. First, token-volume passthrough at production scale: agent workloads consume 4\u20138x the tokens of chatbot workloads, and the bill scales fast. Second, model risk management overhead: you still own the validation work even though the vendor built the agent. Third, suitability-engine integration: vendors rarely ship a suitability rules engine that maps to your firm\u2019s policies, so you build that yourself.\n\n...\n\n## Bottom line\nBuild vs buy in AI agent platforms is not a procurement decision. It\u2019s a decision about where you place regulatory liability, how much engineering capacity you\u2019re willing to lock into agent operations, and what you believe is core to your fintech\u2019s value proposition over the next five years.\nFor most mid-market financial services firms, the right answer in 2026 is composable hybrid. Buy the inference layer. Buy or open-source the orchestration. Build everything that touches customer data, regulator visibility, or proprietary modelling. This gives you a defensible regulatory posture, manageable engineering burden, and meaningful optionality across the AI vendor landscape, which will continue to consolidate and reshape over the next 18\u201324 months."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "buy_side",
+      "topic": "The buy case \u2014 vendor copilots, time saved, enterprise deals",
+      "objective": "Find evidence on the BUY side: third-party AI copilots/notetakers for advisors (e.g. Jump, Zocks and peers), how much time they save, their funding, and enterprise/RIA adoption deals. Include quantified hours saved and number of firms onboarded.",
+      "search_id": "search_a5ee654a6e1d4176a5da614ff321f84c",
+      "results": [
+        {
+          "citation": 21,
+          "url": "https://www.investmentnews.com/fintech/zocks-jump-expand-advisor-reach-with-new-enterprise-integrations/266805",
+          "title": "Zocks, Jump expand advisor reach with new enterprise ...",
+          "publish_date": "2026-05-29",
+          "excerpts": [
+            "# Zocks, Jump expand advisor reach with new enterprise integrations\n## Time savings as the key metric\nBoth partnerships lean heavily on the same selling point: hours returned to advisors each week. Participants in a pilot program at Equitable Advisors reported saving 10 or more hours per week during heavy client periods, which they reinvested into planning conversations and client outreach.\nZocks has cited the same benchmark for its broader user base, with the company reporting that its platform is used by more than 5,000 financial firms and saves advisors more than 10 hours per week.\n[A study by Fidelity](https://www.investmentnews.com/practice-management/how-advisors-can-reclaim-time-to-drive-revenue-by-270k-according-to-fidelity/262575) determined that time savings are valuable fuel for advisors' growth engines, with the most productive practices reclaiming much-needed hours from outsourcing certain functions or reliable technology.\n**Read more:** [How are tech-boosted advisors spending their \"time tax refund\"?](https://www.investmentnews.com/practice-management/how-are-tech-boosted-advisors-spending-their-time-tax-refund/260253)\n\n## Enterprise momentum for both platforms\nZocks hasn't been letting moss grow under its feet this year. In January, [it announced a 2026 Series B funding round](https://www.investmentnews.com/fintech/zocks-raises-45m-in-continued-push-for-ai-as-an-advisor-growth-driver/264970) , raising $45 million from a consortium co-led by Lightspeed Venture Partners and QED Investors, which brought its total lifetime funding to $65 million. In March, the company inked a strategic relationship with Cetera, making Zocks available to Cetera's network of approximately 12,000 financial professionals and institutions."
+          ]
+        },
+        {
+          "citation": 22,
+          "url": "https://www.zocks.io/blog/how-ai-saves-financial-advisors-10-hours-per-week",
+          "title": "How AI Saves Financial Advisors 10+ Hours Per Week",
+          "publish_date": "2026-04-01",
+          "excerpts": [
+            "Zocks launches MCP\u2014 see how it works\nZocks logo\nFeatures\nreach logo\n\"When it comes to ease of use, integration, and ROI, y **ou will NOT find a better piece of tech out there for an advisory practice.\"**\nMichael Kelly CFA, CFP\u00ae\nMichael Kelly CFA, CFP\u00ae\nPartner & Chief Investment Officer\nzocks ornament\nCustomers\nResources\nBlog\nWebinars\nConferences\nPress\nZocks Academy\nTalk to our product experts\nAny questions? We are happy to help you.\nBook a demo\nRecent blogs\nMay 2026 Product Update May 28, 2026 May 2026 Product Update\nHow Life Insurance Agents Use AI to Place More Policies May 19, 2026 How Life Insurance Agents Use AI to Place More Policies\nExplore more insights\nDive deeper into expert perspectives, tips, and industry trends\u2014read our latest blogs now!\nRead our blogs\nWebinars\nHow Zocks MCP + Claude Does Real Work for Advisors June 10, 2026 13:00 ET How Zocks MCP + Claude Does Real Work for Advisors\n\n...\n\n# How AI Saves Financial Advisors 10+ Hours Per Week\n## AI Tools Financial Advisors are Actually Using\nThe right tool depends on your firm's size, existing tech stack integration, and compliance requirements.\n* **Meeting Intelligence and Note-Taking:**\nZocks, Jump, Pulse360, FinMate AI, and Fireflies lead the advisor-specific category. Kitces Research found that industry-specific tools like Zocks lead in [advisor satisfaction](https://www.kitces.com/blog/ai-notetakers-client-meeting-for-financial-advisors-adoption-satisfaction-trends-research-productivity/) .\n* **AI Writing and Communication Assistance:**\nMicrosoft Copilot and ChatGPT (Enterprise version) help with drafting and research. Consumer versions of these tools are not built for regulated industries like financial services and may pose significant risk.\n* **Financial Planning Software With AI Features:**\neMoney Advisor, MoneyGuidePro, and RightCapital are adding AI capabilities to accelerate plan creation and data synchronization.\n* **CRM Platforms With AI Capabilities:**\n\n...\n\n## Frequently Asked Questions\n### How much time can AI realistically save a financial advisor?\nZocks and Jump report 10+ hours per week, but that depends on your integration depth, configuration, and the number of use cases you adopt."
+          ]
+        },
+        {
+          "citation": 23,
+          "url": "https://www.youtube.com/watch?v=YS0w1F4QW5Y",
+          "title": "Zocks: The AI Assistant for Financial Advisors - YouTube",
+          "publish_date": "2025-07-18",
+          "excerpts": [
+            "# Zocks: The AI Assistant for Financial Advisors\nZocks\nZocks 211 subscribers\nSubscribe Subscribed\n15 Share\nSave Download Download\n4K views 10 months ago\n4,057 views \u2022 Jul 18, 2025 Meet Zocks, the AI assistant for financial advisors. Zocks saves advisors 10+ hours a week by automating your meeting notes, intake forms, client emails and more. With Zocks, you can: \u2026 ...more\n...more\n\n...\n\n## Comments ## In this video\n15 Likes 4,057 Views Jul 18 2025 Meet Zocks, the AI assistant for financial advisors. Zocks saves advisors 10+ hours a week by automating your meeting notes, intake forms, client emails and more. With Zocks, you can: Focus on your client while AI takes notes Zocks automatically preps you for every meeting, takes detailed notes, updates your CRM & financial planning tool, and writes a follow up email. Instantly fill out forms like client intake & account openings Zocks automatically fills out intake, fact finder, account forms & more \u2014 so you can close more prospects and provide a better client experience. Reply to client emails in seconds Zocks instantly writes detailed replies to client emails so you can give clients fast, personal service. Get detailed reporting on your client conversations Zocks shows you which topics have the most impact on your firm, helps you spend time with the right clients, improves your meetings & more.\nLearn more and start your free trial at: [https://www.zocks.io/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbjhEZmsyd2cwQWpTMjlKenM3NTBKQ1RBWFNId3xBQ3Jtc0tsNkpIcDBrQ2U4Y09NN0NwekJwZWdqMDdBLW1DdXh4RnZpN0JRb1hzemZBWC02RDlzTC1oS3JvYUkxd21xN00tU3VKSF9PaVd6RFlubzJHb2NFcUZMVE5rem8tWndfdWZHeDNJNWc2bzQ0TWh5YTlPMA&q=https%3A%2F%2Fwww.zocks.io%2F&v=YS0w1F4QW5Y) Transcript\n\n...\n\n### One A.I. Tool For Financial Advisors - Parker Ence, CEO of Jump AI\nStreamline My Practice: For Financial Advisors\n5K views \u2022 1 year ago 8:22\n\n...\n\n### Zocks + PreciseFP Integration Webinar: Turning Conversations into Operational Velocity\nZocks\n300 views \u2022 9 months ago 20:32"
+          ]
+        },
+        {
+          "citation": 24,
+          "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/03/merrill-and-bank-of-america-private-bank-launch-ai-powered-meeti.html",
+          "title": "Merrill and Bank of America Private Bank Launch AI-Powered Meeting Journey  | Press Releases | Newsroom | Bank of America",
+          "publish_date": null,
+          "excerpts": [
+            "# Merrill and Bank of America Private Bank Launch AI-Powered Meeting Journey\nAI solution modernizes the full lifecycle of client engagement\nNew capability can save financial advisors up to four hours per meeting across millions of meetings annually\n\n## Key Points\n* **Merrill and Bank of America Private Bank introduce an AI-powered meeting solution** to transform the advisor-client experience.\n* **The solution\u2019s intelligent workflow tools** help deliver meeting prep materials, summaries, and actionable next steps.\n* **This capability expands the firm\u2019s growing suite of tech\u2011enabled workflows** as Bank of America accelerates its enterprise\u2011wide deployment of purpose\u2011built AI.\n* **Merrill and Bank of America Private Bank introduce an AI-powered meeting solution** to transform the advisor-client experience.\n* **The solution\u2019s intelligent workflow tools** help deliver meeting prep materials, summaries, and actionable next steps.\n* **This capability expands the firm\u2019s growing suite of tech\u2011enabled workflows** as Bank of America accelerates its enterprise\u2011wide deployment of purpose\u2011built AI.\n\n...\n\nAI solution modernizes the full lifecycle of client engagement\nNew capability can save financial advisors up to four hours per meeting across millions of meetings annually"
+          ]
+        },
+        {
+          "citation": 25,
+          "url": "http://prnewswire.com/news-releases/datadasher-and-bento-engine-announce-strategic-partnership-to-maximize-data-driven-advice-opportunities-for-financial-professionals-302573339.html",
+          "title": "DataDasher and Bento Engine Announce Strategic Partnership to Maximize Data-Driven Advice Opportunities for Financial Professionals",
+          "publish_date": "2025-10-02",
+          "excerpts": [
+            "# DataDasher and Bento Engine Announce Strategic Partnership to Maximize Data-Driven Advice Opportunities for Financial Professionals\n## Share this article\n\"Bento's mission is to empower advisors to scale impactful advice during key 'Moments That Matter' on the financial life journeys of their clients,\" said Bento Engine CEO Philipp Hecker. \"By partnering with DataDasher, we are moving directly from signal to action so that wealth management professionals can more easily advise more clients, all within the flow of their daily work.\"\nDataDasher AI offers a unified client context, ensuring every professional touchpoint is captured, organized and actionable. Utilizing proprietary AI technology, DataDasher helps financial professionals save 15+ hours each week by streamlining meeting prep, client interactions and follow-ups with tools for meeting transcription and note-taking, real-time data queries, task detection and automated email drafting.\n\n...\n\n**About DataDasher AI\n** DataDasher is an AI-powered platform designed specifically for financial services professionals. Based in San Francisco, DataDasher helps users save 15+ hours per week by automating workflows, reducing administrative work and turning every interaction into organized, actionable insights so that the focus can be on what matters most: building stronger client relationships and delivering tailored advice at scale. To learn more about how DataDasher can help users move from siloed data to trusted, actionable intelligence, professionals can book a tailored demo or request a sandbox trial environment by visiting [www.datadasher.ai/demo](https://edge.prnewswire.com/c/link/?t=0&l=en&o=4524147-1&h=1072826066&u=http%3A%2F%2Fwww.datadasher.ai%2Fdemo&a=www.datadasher.ai%2Fdemo) ."
+          ]
+        },
+        {
+          "citation": 26,
+          "url": "https://www.investmentnews.com/equities/the-ai-spending-boom-is-alive-and-well-this-is-why-it-matters-to-advisors/266801",
+          "title": "The AI spending boom is alive and well. This is why it matters to advisors - InvestmentNews",
+          "publish_date": "2026-05-29",
+          "excerpts": [
+            "# The AI spending boom is alive and well. This is why it matters to advisors\n## Latest News\nManaging taxes is no longer a seasonal exercise. It is central to portfolio construction\nAs advisors focus more on after-tax outcomes, tax efficiency is evolving from a year-end exercise into a year-round investment discipline.\nZocks, Jump expand advisor reach with new enterprise integrations\nZocks, Jump expand advisor reach with new enterprise integrations\nZocks has inked an exclusive partnership with mega-RIA Hightower, while Jump becomes the choice AI operating system for Equitable Advisors' field force."
+          ]
+        },
+        {
+          "citation": 27,
+          "url": "https://www.investmentnews.com/fintech/zocks-raises-45m-in-continued-push-for-ai-as-an-advisor-growth-driver/264970",
+          "title": "Zocks raises $45M in continued push for AI as advisor growth driver - InvestmentNews",
+          "publish_date": "2026-01-26",
+          "excerpts": [
+            "# Zocks raises $45M in continued push for AI as advisor growth driver\nZocks positions itself as a privacy-focused AI system that turns advisor-client conversations and other unstructured information into structured data. The company says advisors already save more than 10 hours a week on administrative work as the platform pulls details from meetings and emails into CRM, planning, tax and portfolio tools, then automates workflows like onboarding, account openings and post-meeting follow-up.\n\n...\n\n\u201cThis past year has shown just how fast AI is advancing and, with it, how quickly client expectations are changing,\u201d Mark Gilbert, CEO and co-founder of Zocks, said in a statement Monday. \u201cClients want highly personalized service where advisors are anticipating their needs. Zocks is both a system of work for advisors, and now also a system of insight for advisors and firms.\u201d\nMore than 5,000 financial firms use Zocks, according to the company, including enterprise clients such as Ameritas, [Carson Group](https://www.investmentnews.com/ria-news/carson-group-taps-zocks-for-ai-powered-client-insights/259303) , [Commonwealth](https://www.investmentnews.com/fintech/fintech-bytes-zocks-lands-commonwealth-partnership-visory-powers-cybersecurity-for-modern-wealth/260680) , and Osaic."
+          ]
+        },
+        {
+          "citation": 28,
+          "url": "http://marketplace.zoom.us/apps/VEtTdiMORQK89fyCiQ9Hlg",
+          "title": "FinMate AI - Zoom App Marketplace",
+          "publish_date": null,
+          "excerpts": [
+            "# FinMate AI\nRate this app\nFinmate AI\nHow it works: FinMate AI\nHow it works: FinMate AI\nHow it works: FinMate AI\nHow it works: FinMate AI\nCategories:\nFinancial Services\n+3\nOverview\nFinMate is a notetaker made for financial advisors that automatically generates clients details, saving 1-2 hours a day.\nBy adding FinMate App on Zoom, advisors can talk to clients via Zoom with FinMate in the meeting. FinMate will then summarize the client information based on the conversation. Its not just a generic summary, FinMate summarizes it in a structured output made for advisors.\nthe summarized outputs are categorized into background, Income, liquid assets, etc... and it seamlessly integrates in to your CRM, such as Redtail.\nA Financial Advisors notetaker made for financial advisors, made by former financial advisors.\nhttps://www.linkedin.com/company/finmate-ai/\nDeveloper resources\n[Documentation](https://finmate.ai/zoom)\n[Privacy Policy](https://www.finmate.ai/privacy)"
+          ]
+        },
+        {
+          "citation": 29,
+          "url": "https://www.myaifrontdesk.com/blogs/revolutionize-your-practice-top-ai-notetaker-solutions-for-financial-advisors-in-2026",
+          "title": "Revolutionize Your Practice: Top AI Notetaker Solutions for\u2026",
+          "publish_date": "2026-02-26",
+          "excerpts": [
+            "# Revolutionize Your Practice: Top AI Notetaker Solutions for Financial Advisors in 2026\n## 1. Jump #\n> The real win here is reclaiming time. If Jump can genuinely shave hours off your weekly admin, that\u2019s time you can spend with clients, developing strategies, or just not staring at a screen.\nJump integrates with your existing CRM and other tools, which is a big deal. Nobody wants another system that doesn\u2019t talk to anything else. They\u2019re trying to make it fit into your current setup, not force you into a new one. For advisors looking to dip their toes into AI without a massive overhaul, Jump seems like a solid starting point. You can check out how it works by [scheduling a demo](https://www.myaifrontdesk.com/2026-centralization-report-leveraging-ai-to-centralize-operations) .\nKey features include:"
+          ]
+        },
+        {
+          "citation": 30,
+          "url": "https://orion.com/2026-wealthtech-outlook",
+          "title": "2026 Wealthtech Outlook | Orion",
+          "publish_date": null,
+          "excerpts": [
+            "* Advisor Tech\n- Portfolio Accounting Portfolio Accounting Billing, reporting, and trading at scale.\n- Redtail Redtail CRM Get the industry's leading CRM\n- Trading Trading Tax-intelligent trading at scale.\n- Compliance Compliance Get your firm exam-ready with ease.\n- Risk Management Risk Intelligence Understand risk and uncover opportunity.\n- Orion Planning Icon Planning Connect client goals to performance.\n- Client Portal Client Portal Create unforgettable client experiences.\n- Advisor Portal Advisor Portal One platform for the full wealth process.\n- Summit Experience A premier client and firm experience.\n- Strategic Insights Transform key data into growth insights.\n- Denali Data Layer Connect cross-system data.\n- Denali AI Enterprise AI That Amplifies Advisor Impact\n+ Recommended\nWhitepaper\nScale at Every Size: The Benefits of Most-in-One Technology\nView Whitepaper\nData\n2025 Wealthtech and Investor Surveys\nView Data\nWhitepaper"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "topic": "Build vs. buy economics & cost framework",
+      "objective": "Find cost and tradeoff data for building custom wealth-management software in-house versus buying a platform: development cost ranges, implementation fees, the AUM threshold where building starts to pay off, and operational tradeoffs (speed, control, compliance burden).",
+      "search_id": "search_1df922ec8c314896abc276805f13b493",
+      "results": [
+        {
+          "citation": 31,
+          "url": "https://smartasset.com/advisor-resources/ria-custodian-fees",
+          "title": "What Are the Typical RIA Custodian Fees?",
+          "publish_date": "2025-03-07",
+          "excerpts": [
+            "# What Are the Typical RIA Custodian Fees?\n## How Are RIA Custodian Fees Calculated?\n### Build a Better RIA\nDrive growth with automation, not headcount using the all-in-one advisor marketing platform.\nGet Started\nBuild a Better RIA"
+          ]
+        },
+        {
+          "citation": 32,
+          "url": "https://www.thewealthmosaic.com/vendors/docupace/blogs/why-wealth-management-firms-win-by-buying-technolo/",
+          "title": "Why wealth management firms win by buying technology, not building it - The Wealth Mosaic",
+          "publish_date": null,
+          "excerpts": [
+            "# If you wish, you can further refine your search by also selecting the relevant marketplace, business need and resource type\n## Why wealth management firms win by buying technology, not building it\n### An extract from The Wealth Mosaic\u2019s recently published US RIA Toolkit 2026, exploring the challenges and opportunities facing Registered Investment Advisors in the United States.\nDocupace\u2019s [**\u201cBuy vs. Build Guide\u201d**](https://www.docupace.com/buy-vs-build-guide-for-wealth-management-leaders/) outlines the evidence that wealth management firms gain far more by buying technology than by building it internally.\n**1. Cost Control: Managing the Hidden Expenses of Building**\nAt first glance, building seems cheaper. But under the surface, development costs spiral quickly. **[Research indicates](https://acquaintsoft.com/blog/software-development-budget-overruns-facts-statistics?utm_source=chatgpt.com)** that 70 percent of software projects exceed their initial budgets by an average of 27 percent.\nBuying, on the other hand, provides cost predictability and allows firms to tap into an existing proven infrastructure without the burden of ongoing updates or staffing.\n\n...\n\nTechnology-savvy advisors (those who leverage automation, CRM integration and analytics) report higher assets under management (AUM) growth and new client acquisition rates. By deploying proven technology sooner, firms can amplify these outcomes.\n_Buying advantage:_ Rapid implementation enables faster advisor adoption and measurable client impact.\n**3. Built-In compliance: reducing risk automatically**\nCompliance is one of the most resource-intensive aspects of wealth management operations. Frequent regulatory changes, from FINRA updates to SEC audits, demand constant vigilance."
+          ]
+        },
+        {
+          "citation": 33,
+          "url": "https://smartasset.com/advisor-resources/ria-startup-costs",
+          "title": "Guide to RIA Startup Costs",
+          "publish_date": "2026-01-30",
+          "excerpts": [
+            "# Guide to RIA Startup Costs\n## **RIA Startup Costs By the Numbers**\n### **Technology ($0 \u2013 $10,000)**\nYou'll want to factor technology solutions into your RIA startup costs.\nTech tools can make it easier to start and grow an RIA. If you\u2019re working with a limited startup budget, it\u2019s important to consider which ones make the most sense to add to your [tech stack](https://smartasset.com/advisor-resources/ria-tech-stack) .\nAt a minimum, you\u2019ll need:\n* A good [customer relationship management (CRM) software](https://smartasset.com/advisor-resources/choose-the-right-crm-for-your-advisory-practice)\n* Accounting software\n* Financial planning and [portfolio management software](https://smartasset.com/investing/8-best-portfolio-management-software)\nYou may invest in an email marketing service if you plan to begin building a newsletter from day one. Cloud storage tools can help you organize and manage files, while collaboration tools can make it easier to communicate with members of your team.\nCompliance software is another smart investment. You\u2019ll need to name a [Chief Compliance Officer (CCO)](https://smartasset.com/advisor-resources/what-does-a-chief-compliance-officer-do) for your firm, and having compliance software can make their job easier.\nIn addition to software, you may need to purchase computers, printers or scanners to outfit your office space. If you\u2019re starting an RIA with employees, you\u2019ll need desks, chairs and basic supplies, as well.\n\n...\n\n### Build a Better RIA\nDrive growth with automation, not headcount using the all-in-one advisor marketing platform.\nGet Started\nBuild a Better RIA\n\n...\n\n## **Frequently Asked Questions (FAQs)**\n### **What Is the Minimum AUM to Start an RIA?**\nThere is no formal minimum assets under management (AUM) requirement to start an RIA. Advisors can legally launch an RIA with zero client assets, as long as they meet registration, compliance and licensing requirements. This flexibility allows advisors to start a firm while building their client base over time rather than waiting to hit a specific asset threshold."
+          ]
+        },
+        {
+          "citation": 34,
+          "url": "https://appinventiv.com/blog/guide-to-wealth-management-software-development",
+          "title": "A Guide to Wealth Management Software Development in 2026",
+          "publish_date": "2026-01-27",
+          "excerpts": [
+            "# A Complete Business Guide To Wealth Management Software Development\n## Build vs Buy Wealth Management Software: Making the Right Decision\n### Off-the-shelf solutions make sense if:\nYour requirements align reasonably well with existing platforms. You want faster time-to-value and lower capital investment. You prefer not managing ongoing technology maintenance. Your budget is constrained. You want to leverage innovations developed by specialized vendors serving hundreds of institutions.\nHere is a brief table outlining the key differences between off-the-shelf and custom wealth management software:\n\n...\n\n| Factor | Custom Development | Off-the-Shelf Solutions |\n| Initial Cost | $40K-$600K+ depending on complexity | $50K-$500K implementation fees |\n| Time to Launch | 12-36 months for enterprise implementations | 3-6 months typical deployment |\n| Customization | Complete flexibility; tailor to exact workflows | Limited; must adapt processes to platform |\n| Competitive Differentiation | High\u2014unique features competitors can\u2019t replicate | Low\u2014competitors may use identical system |\n| Ongoing Maintenance | Your responsibility; 15-20% of dev costs annually | Vendor manages all updates and patches |\n| Regulatory Compliance | Flexible\u2014you adapt code for new regulations | May lag regulatory changes; vendor dependent |\n| Learning Curve | Customized to your workflows; steeper initially | Standardized interface; easier adoption |\n| Vendor Lock-in Risk | Low\u2014you own the code | High\u2014dependent on vendor\u2019s viability |\n\n...\n\n## The Costs of Wealth Management Software Development\nAnyone who gives you a flat price for a custom development without a deep discovery phase is just guessing. It\u2019s like asking, \u201cHow much does a house cost?\u201d Remember, a beach-front mansion is different from a starter home.\nTypically, the costs of wealth management software development are driven by three factors:\n1. **Complexity:** A simple portfolio tracker is 10x cheaper than a multi-custodial platform with an AI analytics engine.\n2. **Integrations:** Every third-party API (custodian, market data, etc.) adds time and complexity.\n3. **Security & Compliance:** Building to meet SEC/FCA standards, with full audit trails and pen-testing, is a non-negotiable (and significant) cost."
+          ]
+        },
+        {
+          "citation": 35,
+          "url": "https://geniusee.com/wealth-management-software",
+          "title": "Wealth management software development company | Geniusee",
+          "publish_date": "2026-05-22",
+          "excerpts": [
+            "# Wealth management software services\nIf your back office runs on spreadsheets, your client portal feels dated, or launching a new feature takes 6 months \u2014 that\u2019s not a technology problem. It\u2019s a business risk.\nAt Geniusee, we build custom wealth management software for financial institutions, asset managers, advisory firms, and fintech startups. We combine deep [fintech expertise](https://geniusee.com/fintech) with end-to-end product delivery \u2014 from discovery to post-launch support. Whether you need to modernize a legacy system, add [AI-powered automation](https://geniusee.com/ai-in-edtech) to your advisory workflows, or launch a mobile wealth app, we build it around your business model, not a generic template.\nBook a strategy call with our fintech team\n\n...\n\n## ****Who we build for****\n### ******Independent advisors and RIAs******\nOnboarding a new client means paperwork. Quarterly reviews mean hours of prep. Compliance means more paperwork. We help advisors automate the routine parts: client onboarding flows, fee billing, rebalancing alerts, and audit trails. The result is financial planning software that gives your team time back for actual client relationship management.\n\n...\n\n## **Special solutions for every market player**\nWe build wealth management apps and software for different types of businesses, addressing your specific pain points:\n\n...\n\n## Visit our blog\n[](https://geniusee.com/single-blog/benefits-of-custom-software-development)\nbenefits-of-custom-software-development\nThe benefits of custom software development\nTaras Tymoshchuk 30.09.2024\n[](https://geniusee.com/single-blog/features-of-the-finance-applications-development)\nFeatures of the FinTech Application Development | Geniusee\nFeatures of the FinTech Application Development\nNazariy Hazdun 13.11.2023\n[](https://geniusee.com/single-blog/defi-vs-cefi)\nA Concise Comparison of DeFi vs. CeFi | Geniusee\nDeFi vs. CeFi: A Concise Comparison of Centralized vs. Decentralized Finance\nTaras Tymoshchuk 01.06.2023\n[](https://geniusee.com/single-blog/banking-cloud-security-how-safe-is-it)\nBanking Cloud Security: How Safe Is It? | Geniusee\nBanking Cloud Security: How Safe Is It to Store Your Data In the Cloud?\nNazariy Hazdun 17.01.2023\n[](https://geniusee.com/single-blog/building-bnpl-solutions-what-they-mean-and-how-to-make-one)\nBuilding BNPL Solutions | Geniusee"
+          ]
+        },
+        {
+          "citation": 36,
+          "url": "https://masttro.com/wealth-management-software",
+          "title": "Wealth Management Software | RIA Portfolio ... Masttro https://masttro.com \u203a wealth-ma...",
+          "publish_date": null,
+          "excerpts": [
+            "# Schedule an intro\nBook a demo to see why over 400 leading family offices in 40+ countries choose Masttro:\n* 700+ custodial connections for a complete view of wealth, with no blind spots.\n* Automated data and document ingestion that eliminates manual collection and reconciliation.\n* Built for complexity, with one secure system for assets, entities, and reporting.\n* Fixed pricing, not AUM-based, so growth does not trigger higher platform costs or hidden fees."
+          ]
+        },
+        {
+          "citation": 37,
+          "url": "https://www.ideas2it.com/blogs/buy-vs-build-healthcare-software",
+          "title": "Build vs Buy Software: Pros, Cons & Decision Framework",
+          "publish_date": null,
+          "excerpts": [
+            "# Buy vs Build Software: How to Make the Right Choice for Your Business\n## TL;DR\n**Should You Build or Buy Software?**\n* **Buy** if speed, lower upfront cost, and standard functionality matter.\n* **Build** if your business needs unique workflows, long-term control, or deep integration.\n* **Hybrid** if you need speed now with customization later.\n\u200d"
+          ]
+        },
+        {
+          "citation": 38,
+          "url": "https://www.perfectiongeeks.com/blogs/wealth-management-software-cost-2026",
+          "title": "Wealth Management Software Cost Guide for 2026",
+          "publish_date": null,
+          "excerpts": [
+            "# **How Much Does It Cost to Build Wealth Management Software in 2026?**\n## **Must-Have Features That Influence Development Cost**\nFeatures play a major role in determining the wealth management software development cost. The more advanced the functionality, the higher the investment.\n\n...\n\n## **How to Choose the Right Wealth Management Software Development Company**\nSelecting the right partner is critical for controlling your fintech app development cost and ensuring quality.\n\n...\n\n## Frequently Asked Questions\n### Q.1 How much does it cost to build wealth management software?\nThe cost usually ranges from $20,000 to $300,000+ depending on features, complexity, and scale. A basic MVP costs less, while enterprise-level platforms with AI and integrations require higher investment.\n\n...\n\n## Conclusion\nBuilding [wealth management](https://www.perfectiongeeks.com/best-wealth-management-tools) software in 2026 requires careful planning, the right features, and a clear understanding of costs. The total investment depends on your business goals, complexity, and scalability requirements. By understanding the wealthtech development cost, evaluating features, and working with a reliable wealthtech software solutions provider, you  can build a high-performing platform that delivers long-term value.\nA smart approach\u2014starting with an MVP, optimizing features, and choosing the right partner\u2014can help you control your fintech app development cost while maximizing ROI.\nShrey Bhardwaj\nDirector & Founder \u2013 PerfectionGeeks Technologies\n\n...\n\n## Netherlands\nHarlindestraat 17, 6101DS Echt, The Netherlands\n+31 6 23465811"
+          ]
+        },
+        {
+          "citation": 39,
+          "url": "https://www.scnsoft.com/investment/wealth-management",
+          "title": "Custom Wealth Management Software Development ScienceSoft https://www.scnsoft.com \u203a wealth-...",
+          "publish_date": null,
+          "excerpts": [
+            "# Custom Wealth Management Software Development Services\n_In investment IT since 2007, ScienceSoft engineers_ _secure and compliant wealth management solutions that streamline financial planning,_ _enhance risk management, and enable high-yield wealth decisions._\nCheck our services Get a cost estimate\nCustom Wealth Management Software Development Services - ScienceSoft\nCustom Wealth Management Software Development Services - ScienceSoft\n**Custom wealth management software development** is aimed at building digital solutions tailored to the needs of wealth advisors, investment analysts, portfolio managers, account managers, and wealth management compliance experts.\nScienceSoft applies 37 years of experience in [custom software development](https://www.scnsoft.com/software-development/custom) and 19 years in investment IT to engineer accurate and secure solutions that help wealth management firms improve operational efficiency, elevate customer experiences, and minimize risks.\n\n...\n\n## Costs of Wealth Management Software Development\nDeveloping custom wealth management software may cost **from $150,000 to $1,500,000+** , depending on the solution\u2019s functional scope, the number and complexity of integrations, UX/UI specificity, and the requirements for performance, scalability, security, and compliance.\nHere are ScienceSoft\u2019s ballpark cost ranges:\n$150,000\u2013$250,000\nA wealth management client portal of average complexity. The portal covers self-service features for individual and institutional wealth owners and integrates with back-office wealth management systems for automated data sharing.\n$250,000\u2013$700,000+\nA solution that provides rule-based and ML-supported automation of a particular wealth management operational area, e.g., financial modeling and forecasting, investment order management, or fund accounting.\n$700,000\u2013$1,500,000+\n\n...\n\n## Learn the Cost of Your Wealth Management Solution\n100\u20131,000\n1,000\u201310,000\n10,000\u2013100,000\n100,000\u20131,000,000\nOver 1,000,000\nHow many organizations are you planning to target, approximately?\nUp to 100\n100\u20131,000\n1,000\u201310,000\n10,000\u2013100,000\nOver 100,000\n*How many end users (both corporate and individual users) will use your software, approximately?\nUp to 100\n100\u20131,000\n1,000\u201310,000\n10,000\u2013100,000\n100,000\u20131,000,000\nOver 1,000,000\n*Which platforms do you plan to support, or want a cost estimate for?\nWeb (available via browser)\nDesktop (installed on users' PCs)\nMobile\n*For which software version(s) do you need a cost estimate?\nA full-featured version\nMVP (first usable version with essential features)\nPoC (to validate the core idea)\nAre there any compliance requirements for your planned solution? Select all that apply.\nNo requirements\nAML/CFT and OFAC\nSEC\nFINRA\nFATCA\nNYDFS\nGDPR\nCMA\nI need your advice on compliance\n*Do you have any preferences for the deployment model?\nOn-premises\nCloud"
+          ]
+        },
+        {
+          "citation": 40,
+          "url": "https://www.appdirect.com/blog/build-vs-buy-software-how-ai-enabled-software-development-and-vibe-coding-are-changing-the-game",
+          "title": "Build vs Buy Software: Pros & Cons and How to Choose - AppDirect",
+          "publish_date": "2026-05-01",
+          "excerpts": [
+            "# Build vs Buy Software\u2014How AI-enabled Software Development and Vibe Coding are Changing the Game\n## When to build your own software\nBuilding software in-house has traditionally been a strategic choice when customization, control, and differentiation are paramount. The rise of vibe coding in 2026 has made building faster, more accessible, and more cost-effective, expanding the situations where building is advantageous.\nCompanies typically choose to build software to:\n* Deliver proprietary capabilities or competitive advantages that off-the-shelf solutions cannot match\n* Support unique workflows, internal business productivity needs or customer experiences critical to their business model\n* Meet demands for strict control over data privacy, security, and compliance, especially in regulated sectors like fintech or healthcare\n* Ensure agility to iterate and innovate quickly in response to market changes\n* Reduce costs by enabling teams to build their own apps to meet their specific needs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "topic": "Compliance, SEC scrutiny & AI governance risk",
+      "objective": "Find what the SEC and compliance experts are saying about RIA use of AI in 2025-2026: examiner focus on AI governance, the marketing rule and AI-washing, vendor/third-party data risk, Reg S-P deadlines, and the human-review documentation expectation. Prefer SEC, Kitces, and named compliance sources.",
+      "search_id": "search_39f543a630ff4c3c902ce26f4c33fd36",
+      "results": [
+        {
+          "citation": 41,
+          "url": "https://www.ncontracts.com/nsight-blog/investment-advisers-artificial-intelligence",
+          "title": "AI Compliance for Firms and RIAs in 2026 - Ncontracts",
+          "publish_date": "2026-04-02",
+          "excerpts": [
+            "# AI Compliance for Wealth Management Firms and RIAs: What to Know in 2026\n### **Marketing and advertising** Last year, the SEC [took action](https://www.sec.gov/newsroom/press-releases/2024-36) against two firms that claimed to use AI-enabled investment models in their marketing when they weren\u2019t using such technology \u2014 an example of AI washing. The SEC found the advisers violated the Marketing Rule, which prohibits registered investment advisers (RIAs) from releasing untrue or unsubstantiated advertisements. While former acting SEC Chairman Mark Uyeda cautioned against heavily regulated rules that might hinder AI innovation, investment advisers should still be wary and precise in their AI-related marketing and outreach.\nTake action now : In December 2025, the SEC issued a [Marketing Rule risk alert](https://www.sec.gov/files/exams-riskalert-mrkt-rule-2512-508.pdf) flagging missing disclosures on testimonials and endorsements, third-party ratings used without due diligence, and advisers whose policies reflected the rule, but whose practices didn't. If your firm uses testimonials, influencers, referral programs, or third-party ratings, make sure what you do matches what your policies say. ### **Vendor and service provider management** When monitoring your firm\u2019s internal AI, you should also assess how your vendors use it. What systems are they deploying? What services are they supporting? Go beyond traditional vendors and consider service providers, such as marketing firms, portfolio management sub-advisers, and AI tool providers that process meeting notes or emails. This includes affiliates."
+          ]
+        },
+        {
+          "citation": 42,
+          "url": "https://www.aima.org/article/impact-of-the-sec-s-new-marketing-rule-on-private-fund-advisors.html",
+          "title": "title: Impact of the SEC's new marketing rule on private fund advisors",
+          "publish_date": null,
+          "excerpts": [
+            "# Impact of the SEC's new marketing rule on private fund advisors\nThe Marketing Rule introduces the term, \u2018promoters\u2019, which replaces \u2018solicitors\u2019. Because the Marketing Rule now applies to the solicitation of private fund investors, placement agents, consultants, capital introduction groups, and other parties involved in marketing a private fund will likely be viewed as promoters.\n\u2018Promoter\u2019 also refers to a person providing a testimonial or endorsement, whether compensated or uncompensated. An RIA that uses testimonials or endorsements must oversee compliance with the Marketing Rule. The RIA must also enter into a written agreement with promoters unless the promoter is an affiliate or receives de minimis compensation, which is defined as US$1,000 or less, or the equivalent value in non-cash compensation during the preceding twelve months.\n\n...\n\nThe Marketing Rule does not require review or preapproval of advertisements by a designated employee. Nevertheless, internal pre-review and approval can serve as an effective component of an advisor\u2019s compliance programme. Another option is to spot-check advertisements, including social media, and conduct periodic reviews. Private fund advisors may wish to mandate preapproval until personnel are fully trained and all policies and procedures have been implemented. The compliance date for the rule is 4 November 2022.\n[[1]](#%5Fftnref1)[ https://www.sec.gov/files/Private%20Fund%20Risk%20Alert_0.pdf](https://www.sec.gov/files/Private%20Fund%20Risk%20Alert%5F0.pdf)"
+          ]
+        },
+        {
+          "citation": 43,
+          "url": "https://itsynergy.com/managing-ai-in-financial-services-ensuring-compliance-with-ai-usage-policies-in-your-ria",
+          "title": "Managing AI in Financial Services: Ensuring Compliance with AI Usage Policies in Your RIA - itSynergy",
+          "publish_date": "2025-08-21",
+          "excerpts": [
+            "# Managing AI in Financial Services: Ensuring Compliance with AI Usage Policies in Your RIA\n## **Regulatory Expectations for AI Use in the Financial Sector**\nThe [US Securities and Exchange Commission](https://www.sec.gov/) (SEC) requires advisers to maintain clear, enforceable policies for technology use, particularly when client data is involved. The [Financial Industry Regulatory Authority](https://www.finra.org/rules-guidance) (FINRA) also evaluates how technology affects compliance and market integrity. Both agencies emphasize transparency, fairness, and protection against errors or misuse.\nAI governance for investment advisers requires data privacy, client suitability, and recordkeeping. Recent SEC [amendments to Regulation S-P](https://www.sec.gov/newsroom/press-releases/2024-58) expand the obligations for protecting client information and notifying clients of security incidents. These standards apply directly to AI-powered systems that collect, process, or store personal data.\nThe SEC has also flagged the risk of [\u201cblack box\u201d AI models](https://www.techtarget.com/whatis/definition/black-box-AI) . If an RIA cannot explain how an algorithm produces recommendations, it may be unable to demonstrate compliance with fiduciary duties. Regulators expect advisers to understand the logic, inputs, and outputs of their AI tools, and to maintain adequate documentation to support oversight."
+          ]
+        },
+        {
+          "citation": 44,
+          "url": "https://www.mirrorweb.com/blog/the-secs-new-marketing-rule-how-to-stay-compliant-and-avoid-big-fines",
+          "title": "SEC Marketing Rule: How to Stay Compliant And Avoid Big Fines",
+          "publish_date": "2026-01-07",
+          "excerpts": [
+            "# SEC Marketing Rule: How to Stay Compliant And Avoid Big Fines\n## Table of Contents\nCalling their bluff or pleading ignorance appears a foolish course of action. The Investment Adviser Association's [2022 survey](https://investmentadviser.org/wp-content/uploads/2022/06/2022_IMCT_Results.pdf) , conducted ahead of the deadline, showed that compliance staff at 425 investment advisor firms prioritized implementing the Marketing Rule as their number one worry. 78% of respondees cited advertising/marketing as the 'hottest compliance topic for 2022', reflecting the significance of these requirements. Today, maintaining compliance with the Marketing Rule remains a critical priority for RIA compliance teams. But what does the new Marketing Rule mean, and what must RIAs do differently? We\u2019ll summarize the key points below. ### **1.\n\n...\n\n2. Includes unsubstantiated material statements of fact\n3. Includes untrue or misleading implications or inferences\n4. Fails to provide fair and balanced treatment of material risks or material limitations\n5. Fails to present specific investment advice in a fair and balanced manner\n6. Cherry-picks performance results or otherwise presents performance in a manner that is not fair and balanced\n7. Is materially misleading\nThe principles place a higher burden of proof on advisers, requiring them to maintain evidence to back up their claims. In a nutshell, advisers will be required to catalog \u2018advertisements\u2019 to prove their adherence to the above stipulations. This also applies to any communication/documentation that has informed their understanding of whether the content _within_ the advertisement is true, and the same applies for testimonials and endorsements."
+          ]
+        },
+        {
+          "citation": 45,
+          "url": "https://www.mofo.com/resources/insights/251015-ai-compliance-tips-for-advisers",
+          "title": "AI Compliance Tips for Investment Advisers | Morrison Foerster",
+          "publish_date": "2025-10-15",
+          "excerpts": [
+            "# Accuracy and Oversight: Managing the Risk of AI \u201cHallucinations\u201d\n## Confidentiality Considerations: Vendor Terms, Confidentiality, and Data Retention\n### Advisers Act Compliance and Disclosure Considerations\nInvestment advisers should avoid \u201cAI-washing\u201d or overstating AI capabilities in offering materials and investor communications. References to AI in marketing or other public communications must comply with Rule 206(4)-1 under the Advisers Act and may draw heightened scrutiny from SEC examination staff. The SEC has recently charged investment advisers for making false or misleading statements about their AI capabilities. [[2]]() RIAs should adopt policies and procedures requiring enhanced review of materials discussing any AI-related capabilities. As noted in the SEC\u2019s [2025 Exam Priorities](https://www.sec.gov/files/2025-exam-priorities.pdf) , examinations may closely assess investment advisers\u2019 AI-related compliance policies and procedures and disclosures to investors.\n* **Compliance Program** .\n\n...\n\n#### Conclusion\n[[2]]() _See_ \u201c [SEC Charges Two Investment Advisers with Making False and Misleading Statements About Their Use of Artificial Intelligence](https://www.sec.gov/newsroom/press-releases/2024-36) ,\u201d (SEC Press Rel. No. 2024-36).\nStephanie C. Thomas\nStephanie C. Thomas\nChair of Global Private Funds Group\nKelley A. Howes\nKelley A. Howes\nChair of Investment Management Group\nSarah Y. Hanni\nSarah Y. Hanni\nAssociate\nPractices\n* Investment Management\n* Private Funds\nIndustries + Issues"
+          ]
+        },
+        {
+          "citation": 46,
+          "url": "https://wealthreach.ai/blog/ai-compliance-finra-sec-financial-advisors",
+          "title": "AI Compliance for Financial Advisors: How to Use AI Without Violating FINRA or SEC Rules | WealthReach",
+          "publish_date": "2026-03-23",
+          "excerpts": [
+            "# AI Compliance for Financial Advisors: How to Use AI Without Violating FINRA or SEC Rules\nWealthReach Team \u00b7 September 29, 2025 \u00b7 Updated March 23, 2026\ncompliance AI prospecting financial regulations\nAI compliance for financial advisors refers to the practice of using artificial intelligence tools for marketing and prospecting while adhering to FINRA Rule 2210 and the SEC Marketing Rule. It encompasses automated content archiving, audit trail generation, and supervisory controls that keep AI-driven outreach within regulatory boundaries.\nAdvisors who get compliance right don't just avoid enforcement risk \u2014 they unlock the full speed and scale of AI-powered prospecting. Here's how to build AI workflows that satisfy regulators and accelerate growth.\n\n## Why is AI compliance critical for financial advisors?\nEvery marketing message an advisor sends falls under regulatory scrutiny. FINRA Rule 2210 governs communications with the public, requiring disclosures, fair-balance language, and supervisory approval. The SEC Marketing Rule demands factual accuracy, prohibits misleading performance claims, and requires complete recordkeeping.\nAI multiplies communication volume. An advisor using AI-powered outreach might send hundreds of personalized messages per week \u2014 each one subject to these rules. Without compliance infrastructure, that volume creates proportional risk.\nThe good news: AI systems can enforce compliance rules more consistently than manual processes. The same automation that scales outreach can also scale oversight.\n\n...\n\n## What AI marketing mistakes trigger FINRA and SEC reviews?\nEach of these risks is preventable with the right system design. Advisors who automate prospecting with AI should treat compliance as a feature requirement, not an afterthought."
+          ]
+        },
+        {
+          "citation": 47,
+          "url": "https://iqeq.com/insights/social-media-and-secs-new-marketing-rule",
+          "title": "Social media and the SEC's new marketing rule - IQ-EQ",
+          "publish_date": "2024-08-07",
+          "excerpts": [
+            "# Social media and the SEC\u2019s new marketing rule\n## Key points for advisers to consider\n* If an influencer or other third party posts about the adviser on their social media account, it will be considered the adviser\u2019s marketing if the adviser was involved in preparing the content (entanglement), or if the adviser explicitly or implicitly endorsed or approved the content (adoption). Both entanglement and adoption concepts are a \u2018facts and circumstances\u2019 determination\n* Merely permitting the use of \u2018like,\u2019 \u2018share\u2019 or \u2018endorse\u2019 features on social media platforms would not implicate the rule. However, if the adviser does things like edit the comments, prepare the comments or modify the presentation of comments so that positive comments are prioritized, then the comments will be attributed to the adviser\n* Advisers are accountable for third-party content linked by the adviser\u2019s social media page\n\n...\n\n## It\u2019s time to take action\nThe following is a list of action items that CCOs can complete to prepare for the compliance deadline:\n* Conduct a thorough review of the firm\u2019s marketing and investor relations efforts. For example, mapping out direct vs indirect; existing vs prospective clients; clients vs private fund investors; existing services vs offering of new advisory services; one-on-one vs more than one; contains hypothetical performance or not; oral vs written; the medium utilized for marketing; materials used; how materials are disseminated, etc.\n* Refine policies and procedures to incorporate additional compliance measures where applicable, and provide specific training to the marketing team\n* Meet with the marketing team to determine the social media platforms in use (e.g."
+          ]
+        },
+        {
+          "citation": 48,
+          "url": "https://www.smarsh.com/blog/thought-leadership/ai-compliance-financial-services",
+          "title": "AI Governance in Financial Services Framework | Smarsh",
+          "publish_date": "2026-05-21",
+          "excerpts": [
+            "# AI Governance in Financial Services Framework\n## How financial institutions implement AI governance\n### Inventory and monitor AI systems\nFirms should maintain a current inventory of all AI tools in use, including third-party and vendor-provided systems, and establish a review process for evaluating new tools before deployment. Any AI-assisted process involving regulated activity or client-facing communications should retain a human review component.\n\n...\n\n## Frequently asked questions\n### Is AI-generated client data secure and compliant with financial regulations?\n* [Managing Generative and Agentic AI Compliance Risk in Financial Services](https://www.smarsh.com/blog/thought-leadership/agentic-ai-compliance-risk-financial-services/) - April 3, 2026\n* [AI Governance in Financial Services Framework](https://www.smarsh.com/blog/thought-leadership/ai-compliance-financial-services) - April 3, 2026\n* [RIA Communications Compliance Requirements and SEC Rules for Advisers](https://www.smarsh.com/blog/thought-leadership/ria-communications-compliance-requirements/) - March 30, 2026"
+          ]
+        },
+        {
+          "citation": 49,
+          "url": "https://www.chapman.com/publication-SEC-Rule-Marketing-Registered-Investment-Advisers",
+          "title": "SEC Adopts Amended Rule 206(4)-1 Addressing Marketing Activities by Registered Investment Advisers: Chapman and Cutler LLP",
+          "publish_date": null,
+          "excerpts": [
+            "# SEC Adopts Amended Rule 206(4)-1 Addressing Marketing Activities by Registered Investment Advisers\n## Definition of \u201cAdvertisement\u201d\n### Use of Testimonials, Endorsements and Third\u2011Party Ratings\nA _third\u2011party rating_ is defined by the Commission a \u201crating or ranking of an investment adviser provided by a person who is not a \u201crelated person\u201d \u2074 and such person provides such ratings or rankings in the ordinary course of its business.\u201d Generally, the Marketing Rule prohibits the use of third\u2011party ratings in an advertisement unless the adviser provides disclosures and satisfies certain criteria pertaining to the preparation of the rating such as having a reasonable basis for believing that any questionnaire or survey used in the preparation of the third\u2011party rating meets certain criteria and provides certain disclosures."
+          ]
+        },
+        {
+          "citation": 50,
+          "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/marketing-compliance-frequently-asked-questions",
+          "title": "Marketing Compliance - Frequently Asked Questions - SEC.gov",
+          "publish_date": null,
+          "excerpts": [
+            "# Marketing Compliance - Frequently Asked Questions\n## Updated Jan. 15, 2026\n### _Portfolio or Investment Characteristics_ (posted March 19, 2025)\nHowever, in the staff\u2019s view, when an adviser prominently displays the gross and net performance of the total portfolio calculated pursuant to the requirements of the marketing rule and presented in a manner that is not otherwise materially misleading, and provides appropriate accompanying information about the characteristic and how it is calculated, there is little risk that prospective clients and prospective investors will be misled about the impact of fees and expenses on their returns when viewing such a characteristic."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "valuation",
+      "topic": "Valuation, M&A & the strategic stakes",
+      "objective": "Find 2026 data on RIA valuations and M&A: EBITDA multiples by firm size, why organic growth and differentiation (not just scale) now drive multiples, and how technology/operating-model capability factors into enterprise value. Prefer Mercer Capital and named deal trackers.",
+      "search_id": "search_cbb9eaa3a0a340dba122299bc3f7269c",
+      "results": [
+        {
+          "citation": 51,
+          "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/ria-ma-update-q1-2026/",
+          "title": "RIA M&A Update: Q1 2026",
+          "publish_date": null,
+          "excerpts": [
+            "* Industries Industry context matters. Business models, risks, and value drivers vary widely across sectors. Mercer Capital applies rigorous valuation and financial analysis grounded in long-standing industry specialization, delivering independent conclusions informed by how businesses operate within their markets.\nMain Menu\nIndustries\nIndustry context matters. Business models, risks, and value drivers vary widely across sectors. Mercer Capital applies rigorous valuation and financial analysis grounded in long-standing industry specialization, delivering independent conclusions informed by how businesses operate within their markets.\nSee all industries\n* About Mercer Capital is a valuation and advisory firm.\nFor more than forty years, we have served as a trusted and independent resource for owners, boards, management teams, fiduciaries, and professional advisors on matters such as valuing a company, evaluating a transaction, resolving a dispute, planning for succession, or assessing the financial aspects of strategic decisions.\nMain Menu\nAbout\nMercer Capital is a valuation and advisory firm. For more than forty years, we have served as a trusted and independent resource for owners, boards, management teams, fiduciaries, and professional advisors on matters such as valuing a company, evaluating a transaction, resolving a dispute, planning for succession, or assessing the financial aspects of strategic decisions.\nMore about us\n\n...\n\n# RIA M&A Update: Q1 2026\n## Private Equity and Valuations: Still Driving the Bus\n* **Consistent organic growth** , not just market-driven AUM expansion\n* **A deep leadership bench** , reducing key-person risk\n* **Institutional infrastructure** , including technology, compliance, and repeatable processes\n* **Expanded service capabilities** , particularly in tax, estate, retirement, and family office solutions\n* **Strong client retention and recurring revenue visibility**\nDeal structure also continues to matter. Equity rollovers, earnouts, and incentive alignment remain common, and in many cases, are necessary to bridge valuation expectations. Equity participation is increasingly viewed less as a concession and more as an opportunity \u2013 particularly when sellers believe in the long-term growth of the platform they are joining.\nPut differently: headline multiples still make for good conversation, but structure is where deals actually get done."
+          ]
+        },
+        {
+          "citation": 52,
+          "url": "https://www.etnasoft.com/the-future-of-ria-wealth-management-consolidation-tech-stacks-and-key-2026-trends/",
+          "title": "The Future of RIA Wealth Management: 2026 Trends %%sep%% %%sitename%%",
+          "publish_date": "2026-02-05",
+          "excerpts": [
+            "# The Future of RIA Wealth Management: Consolidation, Tech Stacks, and Key 2026 Trends\nimg\nTable of contents\nThe [RIA](https://www.etnasoft.com/building-a-scalable-ria-practice-in-2025-your-readiness-checklist/) industry is scaling up fast. SEC\u2011registered advisers now manage roughly $144.6 trillion for 68.4 million clients, with the number of firms and clients both growing mid\u2011single digits annually. At the same time, RIA industry consolidation has accelerated to record levels, fueled by private equity, aging founders, and the rising cost of staying competitive.\u200b\nFor principals and COOs, the strategic question is no longer _whether_ consolidation is reshaping the landscape, but whether your firm\u2019s technology and operating model are built to thrive in a market dominated by larger, tech-forward competitors.\nThis article outlines three pillars of staying future\u2011proof:\n\n...\n\n## **The Great RIA Consolidation Wave: Drivers and Dynamics**\n### **Segmentation and Key Players in the RIA M&A Landscape**\n| **Acquirer Type** | **Primary Motivation** | **Typical Target Size (AUM)** | **Key Challenge** |\n| PE\u2011Backed Aggregators / \u201cMeta\u2011RIAs\u201d | Build enterprise\u2011scale platforms, roll up revenue and EBITDA, and arbitrage valuation multiples.\u200b | $500M\u2013$5B+, increasingly mid\u2011market $500M\u2013$1B.\u200b | Integration at scale: culture, investment philosophy, and fragmented tech stacks. |\n| Custodial / Platform Providers | Lock in assets, capture trading/clearing economics, deepen share of advisor wallet.\u200b | Wide range; RIAs and teams that can scale on their platform. | Avoiding channel conflict, delivering a differentiated advisor experience vs. other platforms. |\n\n...\n\n### **Tailwinds Driving M&A Growth**\n1. **Aging advisor demographics and succession gaps\n** Many founders are in or approaching retirement, and succession within the firm is often underfunded or non\u2011existent. External buyers offer liquidity, continuity for clients, and institutional infrastructure.\u200b\n2. **Search for a scale to fund technology and compliance\n** Technology spending and compliance overhead have risen steadily. Larger firms can amortize investments in integrated RIA platform solutions, cyber, and RegTech over a broader revenue base, boosting margins and enterprise value.\u200b\n3. **Private equity capital and cheaper debt\n** Rate cuts and abundant PE dry powder have reignited dealmaking. At times, PE has been directly or indirectly involved in 70\u201379% of RIA transactions, either backing aggregators or investing directly in RIAs.\u200b\n4. **Client expectations for a broader, more sophisticated offering"
+          ]
+        },
+        {
+          "citation": 53,
+          "url": "https://www.sicafletcher.com/post/ria-valuation-multiples-scf",
+          "title": "RIA Valuation Multiples: 2024 Report",
+          "publish_date": "2025-10-24",
+          "excerpts": [
+            "# 2025 Update: RIA Valuation Multiples\n* Oct 24, 2025\n* 6 min read\n\n...\n\n## Growth Potential\nAlthough buyers look at several factors affecting the growth potential of an RIA, the biggest element is the balance between your _organic_ (e.g., growth from relationships with existing and new customers) and _inorganic growth_ (e.g., growth from acquisitions, mergers, or partnerships with other RIAs).\nIdeally, buyers want to see high organic growth, as it indicates a higher degree of quality and customer satisfaction that will facilitate a transition. That amount does change, however, as the size of an RIA increases:\n\n### Organic vs. Inorganic Growth: RIA Benchmarks\n| **Small** | **MidMarket** | **Large** |\n|  |  |  |\nBy the time an RIA reaches enterprise status, they have access to a steady enough revenue stream that buyers are likely to be less concerned with organic growth (they still want a healthy amount of it, to be sure) and more concerned with larger figures like overall AUM and revenue."
+          ]
+        },
+        {
+          "citation": 54,
+          "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2026/organic-growth-is-the-new-scarcity-premium",
+          "title": "Organic Growth Is the New Scarcity Premium - Mercer Capital",
+          "publish_date": null,
+          "excerpts": [
+            "# Organic Growth Is the New Scarcity Premium\n## Key Takeaways\nAUM has grown. Consolidators have consolidated. Private capital has continued to show interest in wealth management. Firms that once measured themselves in hundreds of millions now measure themselves in billions. Larger platforms have broader capabilities, deeper management teams, and more institutional infrastructure than the independent advisory firms of a generation ago.\nAll of that matters. But it also creates a problem. If everyone is getting bigger, size alone becomes less distinguishing.\nIn a market where AUM can be acquired, recruited, or inflated by market appreciation, the scarcer asset is not scale. It is organic growth.\nOrganic growth has surpassed M&A as the top priority for a majority of advisory firms for the first time in several years, according to Cerulli. In part this is because buyers are placing a premium on firms with robust client acquisition systems.\n\n...\n\n## Why Buyers Care\nValuation, at its core, is about cash flow, risk, and growth. Organic growth touches all three.\nA firm that consistently adds net new assets and revenue has a different forward-looking profile than one whose growth depends primarily on market appreciation. Market-driven growth can be welcome, but it is not proprietary. It says more about the environment than the enterprise. Organic growth, by contrast, suggests that the firm has some ability to create its own momentum.\nThat momentum can also make the growth story more credible. If new business is being generated across multiple advisors, referral sources, client segments, and market environments, buyers are more likely to view it as durable. The growth is not simply a function of one founder\u2019s relationships, one strong market cycle, or one acquisition that may or may not integrate well."
+          ]
+        },
+        {
+          "citation": 55,
+          "url": "https://eqvista.com/ebitda-multiples-by-industry",
+          "title": "EBITDA Multiples Across Industries (2026) - Eqvista",
+          "publish_date": "2026-04-29",
+          "excerpts": [
+            "# EBITDA Multiples by Industry (2026)\n## EBITDA Multiples for Various Industries\n**\u2018Multiple\u2019** as such means a factor of one value to another. In the context of company valuation, valuation multiples represent one finance metric as a ratio of another. These multiples are widely categorized into three types \u2013 **equity multiples** , **enterprise value multiples** , and **revenue multiples** . This article focuses on EBITDA multiples valuation which is a type of enterprise value multiple.\n\n...\n\n## EBITDA Multiple formula\n### What is EV?\n**EV** = Equity Value \u2013 Non-Operating Assets + Liability and other minority stakes\nAs seen in the formula, enterprise value does not depend on the **capital structure of a company** . Thus, it can be safely used to compare companies with varying cap structures for a takeover. As a result, being part of the EBITDA multiple valuations, the enterprise value as an entity lends this character to the multiple as well. An EBITDA multiple is thus a reliable valuation tool while comparing companies with varying cap structures."
+          ]
+        },
+        {
+          "citation": 56,
+          "url": "http://vastadvisor.ai/",
+          "title": "VastAdvisor | AI Client Acquisition for Wealth Managers & RIAs",
+          "publish_date": null,
+          "excerpts": [
+            "top of page\nStay Up to Date\nEmail *\nYes, subscribe me to your newsletter.\nSubmit\ninfo@vastadvisor.ai\n10727 Domain Drive,\nAustin, TX 78758\n* [](https://x.com/iankarnell)\n* [](https://www.youtube.com/@vastadvisor)\n* [](https://www.facebook.com/profile.php?id=61563971942910#)\n* [](https://www.linkedin.com/company/vastadvisor/)\n[Terms & Conditions](https://www.vastadvisor.ai/vastadvisor-terms-conditions)\n[Privacy Policy](https://www.vastadvisor.ai/vastadvisor-privacy-policy)\n[AI Safety & Transparency Statement](https://www.vastadvisor.ai/vastadvisor-ai-safety-statement)\n[AI Ethics Policy](https://www.vastadvisor.ai/vastadvisor-ai-ethics-policy)\n[Accessibility Statement](https://www.vastadvisor.ai/vastadvisor-accessibility-statement)\nbottom of page"
+          ]
+        },
+        {
+          "citation": 57,
+          "url": "https://mercercapital.com/insights/blogs/ria-valuation-insights-blog/2024/organic-growth-and-ria-valuations",
+          "title": "Organic Growth and RIA Valuations - Mercer Capital",
+          "publish_date": null,
+          "excerpts": [
+            "# Organic Growth and RIA Valuations\nWhy then should firms focus on organic growth, when it\u2019s often insignificant relative to market movements?  The answer is that while markets may be the most important factor guiding changes in AUM from year-to-year, they\u2019re not a factor that RIAs have any real influence over.  Some firms may have clients with asset allocations that perform better or worse in a particular year, but, generally speaking, all firms are along for the ride.  Unlike market growth, organic growth is not outside of the control of RIA owners, and thus it becomes a real differentiator between firms over time.  If market growth is the tide that lifts (or lowers) all boats, organic growth is the engine on the boat.\n\n...\n\nThe result is that a firm growing at 12% organically would (in theory) command an EBITDA multiple of more than double that of a firm without any organic growth."
+          ]
+        },
+        {
+          "citation": 58,
+          "url": "https://quantpillar.com/resources/guides/valuation-multiples",
+          "title": "2025-2026 Private Market Valuation Multiples: The Definitive Cheat Sheet + Free Online Calculator | QuantPillar | QuantPillar",
+          "publish_date": "2026-05-22",
+          "excerpts": [
+            "# 2025 vs 2026 Valuation Multiples by Sector:\n## Financial Services\n| Sub-Sector | Primary Multiple | Typical Range | Trend | Key Driver |\n| Insurance Brokerages | EV/EBITDA | 8\u00d7\u201314\u00d7 | \u2014 Stable | Organic growth, retention ratio, 90%+ renewal rates |\n| RIA / Wealth Management | EV/EBITDA | 8\u00d7\u201314\u00d7 | \u2014 Stable | AUM growth, fee structure, advisor retention |\n| Fintech (B2B) | EV/Revenue | 5\u00d7\u201315\u00d7 | \u2014 Stable | Transaction volume, profitability path |\n| Accounting / CPA Firms | EV/EBITDA | 4\u00d7\u20138\u00d7 | \u25b2 Expanding | Advisory vs compliance mix, talent pipeline |\n| Payment Processing | EV/EBITDA | 8\u00d7\u201314\u00d7 | \u2014 Stable | Transaction volume, merchant retention |\n| Large-Cap Banks | P/TBV | 0.7\u00d7\u20132.6\u00d7 | \u2014 Stable | ROE vs cost of equity |\nInsurance and wealth firms get bid up by 50+ buyers \u2014 but only if your numbers are diligence-ready. Initial Capital Readiness Review\nSector Deep Dive\n\n...\n\n## The Size Premium: How EBITDA Level Affects Your Multiple\nSize is the single most predictable driver of EBITDA multiples across every industry. A $20M EBITDA business commands a 30\u201360% higher multiple than a $3M EBITDA business in the same sector. The size premium spread is 2.8\u00d7 between the smallest and largest deal brackets.\n| EBITDA Band | Typical Multiple | Buyer Universe |\n| Under $1M | 2\u00d7\u20134\u00d7 | Owner-dependent. Individuals, small search funds. Valued on SDE. |\n| $1M\u2013$3M | 4\u00d7\u20136\u00d7 | Lower middle market. Beginning institutional interest. |\n| $3M\u2013$5M | 5\u00d7\u20138\u00d7 | Sweet spot for lower-middle-market PE. Supports institutional debt. |\n| $5M\u2013$10M | 6\u00d7\u201310\u00d7 | Core PE target range. Deep buyer competition. |\n| $10M\u2013$25M | 8\u00d7\u201312\u00d7 | Upper middle market. 1.5\u00d7\u20132.0\u00d7 premium over $3\u20135M tier. |\n| $25M\u2013$50M | 9\u00d7\u201314\u00d7 | Institutional quality. Multiple PE firms competing. |\n| $50M+ | 10\u00d7\u201316\u00d7+ | Large-cap. Billion-dollar deals comprised 33% of 2025 acquisitions. |\nCritical Factor"
+          ]
+        },
+        {
+          "citation": 59,
+          "url": "https://www.milemarker.co/articles/organic-growth-holy-grail-rias",
+          "title": "Why Organic Growth Is the Holy Grail for RIAs | Milemarker",
+          "publish_date": null,
+          "excerpts": [
+            "# Why Organic Growth Is the Holy Grail for RIAs\n## March 10, 2026\nBunch is leading what he calls Allworth's \"third generation\" \u2014 a strategic shift from acquisition-led growth to a model built around evolving the firm's capabilities, elevating its advisors, and executing on organic channels. It's a playbook worth studying, whether you run a $500M practice or a $50B enterprise.\n\n...\n\n## The math has changed on M&A\nThe firms that will command premium valuations going forward are the ones that can demonstrate sustainable organic growth \u2014 new clients, new assets, expanding relationships \u2014 on top of whatever they add through acquisitions. The firms that can only point to acquisition-driven growth will find themselves in an increasingly difficult position as multiples compress and capital becomes more discerning."
+          ]
+        },
+        {
+          "citation": 60,
+          "url": "https://www.familywealthreport.com/article.php/Mid_dash_year-RIA-M&A-Market-Report:-Winners,-Losers-And-Trends",
+          "title": "Mid-year RIA M&A Market Report: Winners, Losers And Trends",
+          "publish_date": "2024-07-16",
+          "excerpts": [
+            "# Mid-year RIA M&A Market Report: Winners, Losers And Trends\n**How are valuations holding up?**\n\u201cValuations have remained high and stable for several years now,\u201d\naccording to DeVoe. \u201cThe private equity backed \u2018meta\u2019 RIAs are\npaying the highest valuations.\u201d Levitt said \u201ca lot of our sellers\nare receiving very attractive deal terms now in the 15 to 20\ntimes EBITDA multiple range.\u201d\nOverall industry average for multiples was around 10 times EBITDA\nlast year, according to research by Advisor Growth Strategies and\n\u201cdemand remains elevated this year,\u201d Kawal said.\nMultiple range for RIAs under $500 million AUM  are rising,\nand now range from approximately 8 to 11 times EBITDA, according\nto Kawal.\nRIAs with between $500 million and $3 billion in assets appear to\ncommand an estimated valuation of approximately 10 to 15 times\nEBITDA, while multiples for advisory firms with $3 to $5 billion\nto $20 billion AUM can reach the high teens. Fast growing wealth\nmanagers with over $20 billion in assets should see valuations in\nthe low 20s and possibly higher, depending on size and quality.\nPrint (subject to copyright) Request Reprint Rights"
+          ]
+        }
+      ]
+    }
+  ]
+}
