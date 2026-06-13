@@ -1,0 +1,565 @@
+{
+  "generated_utc": "20260613T145246Z",
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://github.com/cline/cline/issues/8910",
+      "title": "OpenAI Codex provider returns \"usage limit reached\" with ChatGPT Plus subscription \u00b7 Issue #8910 \u00b7 cline/cline",
+      "domain": "github.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 2,
+      "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
+      "title": "Codex rate card | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 3,
+      "url": "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
+      "title": "Using Codex with your ChatGPT plan | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 4,
+      "url": "http://developers.openai.com/codex/cli",
+      "title": "CLI \u2013 Codex | OpenAI Developers",
+      "domain": "developers.openai.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 5,
+      "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+      "title": "About ChatGPT Pro tiers | OpenAI Help Center",
+      "domain": "help.openai.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 6,
+      "url": "https://tokenlimits.app/blog/codex-cli-token-limit",
+      "title": "Codex CLI Token Limit: Plans, Resets & Fixes [2026] \u2014 Token Limits \u2014 Token Limits",
+      "domain": "tokenlimits.app",
+      "publish_date": "2026-04-14",
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 7,
+      "url": "https://codex.danielvaughan.com/2026/04/10/codex-cli-complete-pricing-guide-subscription-tokens-cost-optimization",
+      "title": "The Complete Codex CLI Pricing Guide: Subscriptions, Tokens ...",
+      "domain": "codex.danielvaughan.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 8,
+      "url": "http://developers.openai.com/api/docs/models/gpt-5.1-codex",
+      "title": "GPT-5.1 Codex Model | OpenAI API",
+      "domain": "developers.openai.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 9,
+      "url": "http://openai.com/business/chatgpt-pricing",
+      "title": "OpenAI Pricing and Business Codex Overview",
+      "domain": "openai.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 10,
+      "url": "http://community.openai.com/t/chatgpt-plus-user-limits-valid-for-2025/1149656",
+      "title": "ChatGPT Plus User Limits, valid for 2025 - ChatGPT - OpenAI Developer Community",
+      "domain": "community.openai.com",
+      "publish_date": "2025-09-21",
+      "first_seen_topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits"
+    },
+    {
+      "n": 11,
+      "url": "https://platform.minimax.io/subscribe/token-plan",
+      "title": "Token Plan - MiniMax API Platform",
+      "domain": "platform.minimax.io",
+      "publish_date": null,
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 12,
+      "url": "https://pricepertoken.com/pricing-page/model/minimax-minimax-m2.7",
+      "title": "MiniMax M2.7 API Pricing 2026 - Costs, Performance & Providers",
+      "domain": "pricepertoken.com",
+      "publish_date": null,
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 13,
+      "url": "https://thomas-wiegold.com/blog/minimax-m-2-7-review-is-it-worth-the-hype/",
+      "title": "MiniMax M2.7 Review: Is It Worth the Hype? | Thomas Wiegold Blog",
+      "domain": "thomas-wiegold.com",
+      "publish_date": "2026-03-25",
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 14,
+      "url": "https://ai.sulat.com/minimax-coding-plan-mcp-in-claude-code-search-vision-in-one-server-1ac0fc9150d3",
+      "title": "MiniMax Coding Plan MCP in Claude Code: search + vision in one server | by JP Caparas | AI @ Sulat.com",
+      "domain": "ai.sulat.com",
+      "publish_date": "2026-04-17",
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 15,
+      "url": "https://ai.sulat.com/claude-code-but-cheaper-and-snappy-minimax-m2-1-with-a-tiny-wrapper-7d910db93383",
+      "title": "Claude Code, but cheaper (and snappy): MiniMax M2.1 with a tiny wrapper | by JP Caparas | AI @ Sulat.com",
+      "domain": "ai.sulat.com",
+      "publish_date": "2026-04-17",
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 16,
+      "url": "https://www.morphllm.com/ai-coding-costs",
+      "title": "AI Coding Costs (2026): Claude vs Codex vs Gemini, Real Monthly Spend From Token Math ($20 to $1,000+)",
+      "domain": "morphllm.com",
+      "publish_date": "2026-06-09",
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 17,
+      "url": "https://platform.minimax.io/docs/token-plan/claude-code",
+      "title": "Claude Code - Models - MiniMax API Docs",
+      "domain": "platform.minimax.io",
+      "publish_date": null,
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 18,
+      "url": "https://www.morphllm.com/best-ai-model-for-coding",
+      "title": "Best AI Model for Coding (June 2026): 12 Models Ranked by SWE-bench Pro Score and Cost per Task",
+      "domain": "morphllm.com",
+      "publish_date": "2026-06-09",
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 19,
+      "url": "https://x.com/MiniMax__AI/status/1986815058249408541",
+      "title": "MiniMax (official) on X: \"Mini Price, Max Performance: affordable M2 API Pricing, Coding Plan and Agent Plans\" / X",
+      "domain": "x.com",
+      "publish_date": null,
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 20,
+      "url": "https://platform.minimax.io/docs/guides/pricing-token-plan",
+      "title": "Token Plan - Models - MiniMax API Docs",
+      "domain": "platform.minimax.io",
+      "publish_date": null,
+      "first_seen_topic": "MiniMax coding plan (M2) token quota"
+    },
+    {
+      "n": 21,
+      "url": "https://pricepertoken.com/pricing-page/model/xiaomi-mimo-v2-pro",
+      "title": "MiMo v2 Pro API Pricing 2026 - Costs, Performance & Providers",
+      "domain": "pricepertoken.com",
+      "publish_date": null,
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 22,
+      "url": "https://www.buildfastwithai.com/blogs/xiaomi-mimo-v2-5-pro-review-2026",
+      "title": "Xiaomi MiMo-V2.5-Pro: Full Review & Benchmarks (2026)",
+      "domain": "buildfastwithai.com",
+      "publish_date": "2026-04-23",
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 23,
+      "url": "https://www.reddit.com/r/opencodeCLI/comments/1toblqe/xiaomi_is_giving_41b_credits_for_528mo_and_49b/",
+      "title": "r/opencodeCLI on Reddit: Xiaomi is giving 4.1B credits for $5.28/mo and 49B credits $63.36/yr",
+      "domain": "reddit.com",
+      "publish_date": null,
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 24,
+      "url": "https://www.aipricing.guru/news/xiaomi-mimo-v2-5-api-price-cut-may-2026/",
+      "title": "title: \"Xiaomi MiMo Price Cut: Pricing Impact (May 2026) | AI Pricing Guru\" description: \"Xiaomi cut MiMo-v2.5 API pricing by up to 99%. See new overseas rates, old vs new costs, and who should test it now.\" image: \"https://www.aipricing.guru/og/news/xiaomi-mimo-v2-5-api-price-cut-may-2026.png\"",
+      "domain": "aipricing.guru",
+      "publish_date": null,
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 25,
+      "url": "https://platform.xiaomimimo.com/docs/tokenplan/subscription",
+      "title": "Xiaomi MiMo Api Open Platform - Token Plan Global Launch",
+      "domain": "platform.xiaomimimo.com",
+      "publish_date": null,
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 26,
+      "url": "https://platform.xiaomimimo.com/docs/en-US/pricing",
+      "title": "Pricing and Rate Limits - Xiaomi MiMo API Open Platform",
+      "domain": "platform.xiaomimimo.com",
+      "publish_date": null,
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 27,
+      "url": "https://pricepertoken.com/pricing-page/model/xiaomi-mimo-v2-flash",
+      "title": "MiMo V2 Flash API Pricing 2026 - Costs, Performance & Providers",
+      "domain": "pricepertoken.com",
+      "publish_date": null,
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 28,
+      "url": "https://mimo.mi.com/",
+      "title": "Xiaomi MiMo Api Open Platform - Token Plan Global Launch",
+      "domain": "mimo.mi.com",
+      "publish_date": null,
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 29,
+      "url": "https://openrouter.ai/xiaomi/mimo-v2.5-pro",
+      "title": "MiMo-V2.5-Pro - API Pricing & Benchmarks | OpenRouter",
+      "domain": "openrouter.ai",
+      "publish_date": null,
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 30,
+      "url": "https://codingplans.com/plans/xiaomi-mimo-token-plan",
+      "title": "Xiaomi MiMo Token Plan \u2014 CodingPlans",
+      "domain": "codingplans.com",
+      "publish_date": null,
+      "first_seen_topic": "Xiaomi MiMo token/credit plan"
+    },
+    {
+      "n": 31,
+      "url": "https://www.bitdoze.com/opencode-go-plan/",
+      "title": "OpenCode Go: 14 AI Models for $10/Month (2026 Pricing & Limits)",
+      "domain": "bitdoze.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 32,
+      "url": "https://www.reddit.com/r/opencodeCLI/comments/1r09do1/zen_pricing_token_counts/",
+      "title": "r/opencodeCLI on Reddit: Zen - pricing, token counts?",
+      "domain": "reddit.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 33,
+      "url": "https://opencode.ai/docs/go/",
+      "title": "Go | OpenCode",
+      "domain": "opencode.ai",
+      "publish_date": null,
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 34,
+      "url": "https://computingforgeeks.com/setup-opencode-ai-coding-agent",
+      "title": "Setup OpenCode AI Coding Agent [Complete Guide]",
+      "domain": "computingforgeeks.com",
+      "publish_date": "2026-06-04",
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 35,
+      "url": "http://opencode.ai/go",
+      "title": "OpenCode Go | Low cost coding models for everyone",
+      "domain": "opencode.ai",
+      "publish_date": null,
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 36,
+      "url": "https://llm24.net/provider/opencode",
+      "title": "OpenCode Zen - Models & Pricing - LLM24",
+      "domain": "llm24.net",
+      "publish_date": null,
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 37,
+      "url": "https://www.morphllm.com/comparisons/opencode-vs-claude-code",
+      "title": "OpenCode vs Claude Code (June 2026): Open Source Freedom vs Anthropic Polish",
+      "domain": "morphllm.com",
+      "publish_date": "2026-06-08",
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 38,
+      "url": "https://ohaiknow.com/reviews/opencode",
+      "title": "OpenCode Review 2026: Terminal AI Coding Agent, Pricing & Pros",
+      "domain": "ohaiknow.com",
+      "publish_date": "2026-05-14",
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 39,
+      "url": "https://opencode.ai/zen",
+      "title": "OpenCode Zen | A curated set of reliable optimized models for coding agents",
+      "domain": "opencode.ai",
+      "publish_date": null,
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 40,
+      "url": "https://www.morphllm.com/ai-coding-agent",
+      "title": "Best AI Coding Agent (2026): Ranked by Terminal-Bench, Price, and Source",
+      "domain": "morphllm.com",
+      "publish_date": "2026-06-09",
+      "first_seen_topic": "OpenCode (and OpenCode Zen / GO) $10 plan"
+    },
+    {
+      "n": 41,
+      "url": "https://openrouter.ai/models",
+      "title": "Models | OpenRouter",
+      "domain": "openrouter.ai",
+      "publish_date": null,
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 42,
+      "url": "https://openrouter.ai/docs/guides/best-practices/prompt-caching",
+      "title": "Prompt Caching | Reduce AI Model Costs with OpenRouter | OpenRouter | Documentation",
+      "domain": "openrouter.ai",
+      "publish_date": null,
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 43,
+      "url": "https://pricepertoken.com/endpoints/compare/openrouter-vs-together",
+      "title": "OpenRouter vs Together AI Pricing 2026 \u2014 Model & Cost Comparison | Price Per Token",
+      "domain": "pricepertoken.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 44,
+      "url": "https://pricepertoken.com/endpoints/openrouter/free",
+      "title": "OpenRouter Free Tier 2026 \u2014 Free Models, Credits & Limits | Price Per Token",
+      "domain": "pricepertoken.com",
+      "publish_date": null,
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 45,
+      "url": "https://tickerr.ai/limits/openrouter",
+      "title": "OpenRouter Rate Limits & Usage Caps 2026 | Tickerr",
+      "domain": "tickerr.ai",
+      "publish_date": null,
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 46,
+      "url": "https://apicents.com/provider/openrouter",
+      "title": "OpenRouter API Pricing 2026: All Models & Costs | APICents",
+      "domain": "apicents.com",
+      "publish_date": "2026-03-10",
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 47,
+      "url": "https://openrouter.ai/pricing",
+      "title": "Pricing | OpenRouter",
+      "domain": "openrouter.ai",
+      "publish_date": null,
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 48,
+      "url": "https://docs.openclaw.ai/reference/prompt-caching",
+      "title": "Prompt caching \u00b7 OpenClaw",
+      "domain": "docs.openclaw.ai",
+      "publish_date": null,
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 49,
+      "url": "https://eliteai.tools/agent-skills/openrouter-cost-controls",
+      "title": "openrouter-cost-controls - AI Agent skill",
+      "domain": "eliteai.tools",
+      "publish_date": null,
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 50,
+      "url": "https://docs.roocode.com/providers/openrouter",
+      "title": "Using OpenRouter With Roo Code | Roo Code Documentation",
+      "domain": "docs.roocode.com",
+      "publish_date": "2026-05-15",
+      "first_seen_topic": "OpenRouter prepaid $20/month for coding"
+    },
+    {
+      "n": 51,
+      "url": "https://felloai.com/deepseek-pricing/",
+      "title": "DeepSeek Pricing 2026: API Cost, Free Tier & Plans Guide",
+      "domain": "felloai.com",
+      "publish_date": null,
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 52,
+      "url": "https://www.morphllm.com/swe-bench-pro",
+      "title": "SWE-bench Pro Leaderboard (2026): Every Model Score, Claude Fable 5 Leads at 80.3%",
+      "domain": "morphllm.com",
+      "publish_date": "2026-06-09",
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 53,
+      "url": "https://api-docs.deepseek.com/quick_start/pricing-details-usd",
+      "title": "pricing-details-usd | DeepSeek API Docs",
+      "domain": "api-docs.deepseek.com",
+      "publish_date": null,
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 54,
+      "url": "https://www.datalearner.com/en/leaderboards/category/code",
+      "title": "LLM Coding Leaderboard - SWE-bench / LiveCodeBench / SWE-Bench Pro [2026-06] - Live Rankings & Guide | DataLearnerAI",
+      "domain": "datalearner.com",
+      "publish_date": "2026-06-10",
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 55,
+      "url": "https://tokenmix.ai/blog/deepseek-api-pricing",
+      "title": "DeepSeek API Pricing 2026: V4 Costs, Cache Hits, R1 Changes - TokenMix Blog",
+      "domain": "tokenmix.ai",
+      "publish_date": null,
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 56,
+      "url": "https://devtk.ai/en/blog/deepseek-api-pricing-guide-2026/",
+      "title": "Current DeepSeek API Pricing 2026: V4 Flash & Pro Cost per 1M Tokens - DevTk.AI",
+      "domain": "devtk.ai",
+      "publish_date": null,
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 57,
+      "url": "https://deploybase.ai/articles/deepseek-api-pricing",
+      "title": "DeepSeek API Pricing 2026: Model Costs, Discounts, and Cost Scenarios | DeployBase",
+      "domain": "deploybase.ai",
+      "publish_date": null,
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 58,
+      "url": "https://chat-deep.ai/pricing",
+      "title": "DeepSeek API Pricing: V4 Flash, V4 Pro, Cache Hit, Cache Miss & Output Costs",
+      "domain": "chat-deep.ai",
+      "publish_date": "2026-04-28",
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 59,
+      "url": "https://akitaonrails.com/en/2026/04/24/llm-benchmarks-parte-3-deepseek-kimi-mimo",
+      "title": "LLM Coding Benchmark (May 2026): DeepSeek v4, Kimi v2.6, Grok 4.3, GPT 5.5 \u2013 AkitaOnRails.com",
+      "domain": "akitaonrails.com",
+      "publish_date": "2026-04-24",
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 60,
+      "url": "https://wavespeed.ai/blog/posts/deepseek-v4-cost-per-million-tokens",
+      "title": "DeepSeek V4 Cost per Million Tokens: Full Calculator | WaveSpeedAI Blog",
+      "domain": "wavespeed.ai",
+      "publish_date": "2026-03-02",
+      "first_seen_topic": "DeepSeek API direct \u2014 price & caching"
+    },
+    {
+      "n": 61,
+      "url": "https://github.com/musistudio/claude-code-router",
+      "title": "GitHub - musistudio/claude-code-router: Use Claude Code as the foundation for coding infrastructure, allowing you to decide how to interact with the model while enjoying updates from Anthropic. \u00b7 GitHub",
+      "domain": "github.com",
+      "publish_date": null,
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    },
+    {
+      "n": 62,
+      "url": "https://aicostcheck.com/blog/ai-prompt-caching-cost-savings",
+      "title": "Prompt Caching: Cut Your AI API Bill by 90% (Real Savings Math Inside) | AI Cost Check",
+      "domain": "aicostcheck.com",
+      "publish_date": "2026-04-03",
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    },
+    {
+      "n": 63,
+      "url": "https://docs.litellm.ai/docs/tutorials/claude_non_anthropic_models",
+      "title": "Use Claude Code with Non-Anthropic Models | liteLLM",
+      "domain": "docs.litellm.ai",
+      "publish_date": null,
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    },
+    {
+      "n": 64,
+      "url": "https://www.morphllm.com/llm-api",
+      "title": "LLM API Providers (2026): 12 APIs Compared by Price per 1M Tokens, Rate Limits, and Context",
+      "domain": "morphllm.com",
+      "publish_date": "2026-06-09",
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    },
+    {
+      "n": 65,
+      "url": "https://futureagi.com/blog/understanding-prompt-caching-for-faster-ai-responses/",
+      "title": "Prompt Caching in 2026: Speed Up AI & Reduce LLM Costs | Future AGI Blog",
+      "domain": "futureagi.com",
+      "publish_date": "2025-01-26",
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    },
+    {
+      "n": 66,
+      "url": "https://guozheng-ge.medium.com/set-up-claude-code-using-third-party-coding-models-glm-4-7-minimax-2-1-kimi-k2-5a3cdf38c261",
+      "title": "Set up Claude Code using Third Party Coding Models (GLM 4.7, MiniMax 2.1, Kimi K2) | by Guozheng Ge | Medium",
+      "domain": "guozheng-ge.medium.com",
+      "publish_date": "2026-01-05",
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    },
+    {
+      "n": 67,
+      "url": "https://docs.claude-mem.ai/configuration/custom-anthropic-backends",
+      "title": "Custom Anthropic-Compatible Backends - Claude-Mem",
+      "domain": "docs.claude-mem.ai",
+      "publish_date": null,
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    },
+    {
+      "n": 68,
+      "url": "https://tokenmix.ai/blog/prompt-caching-guide",
+      "title": "Prompt Caching Guide 2026: Save 50-95% on AI API Costs with OpenAI, Anthropic, and Google Caching - TokenMix Blog",
+      "domain": "tokenmix.ai",
+      "publish_date": "2026-04-29",
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    },
+    {
+      "n": 69,
+      "url": "http://syncfusion.com/blogs/post/top-llm-api-comparison-2026",
+      "title": "Best LLM APIs\u00a0in 2026: Comparing OpenAI, Claude, Gemini, Azure, Bedrock, Mistral & DeepSeek | Syncfusion Blogs",
+      "domain": "syncfusion.com",
+      "publish_date": "2026-04-08",
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    },
+    {
+      "n": 70,
+      "url": "https://blog.laozhang.ai/en/posts/claude-code-api-configuration",
+      "title": "Claude Code API Configuration: Keys, Settings, Models, and Gateways | LaoZhang AI Blog",
+      "domain": "blog.laozhang.ai",
+      "publish_date": "2026-04-21",
+      "first_seen_topic": "Prompt caching economics + Claude Code provider routing"
+    }
+  ]
+}
