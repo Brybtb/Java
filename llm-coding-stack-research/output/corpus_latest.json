@@ -1,0 +1,698 @@
+{
+  "generated_utc": "20260613T145246Z",
+  "corpus": [
+    {
+      "id": "openai_codex",
+      "topic": "OpenAI ChatGPT Plus / Codex $20 plan \u2014 coding limits",
+      "objective": "Find the current (2026) usage limits, rate limits, and model access for the OpenAI ChatGPT Plus $20/month plan and the Codex CLI / Codex coding agent. How many messages/requests, which models (GPT-5/Codex), weekly or 5-hour caps, and any token quotas. Is heavy coding agent use viable on Plus vs needing Pro/Business?",
+      "search_id": "search_d29809d2e3ba4aa79c8a6eec516c92da",
+      "results": [
+        {
+          "citation": 1,
+          "url": "https://github.com/cline/cline/issues/8910",
+          "title": "OpenAI Codex provider returns \"usage limit reached\" with ChatGPT Plus subscription \u00b7 Issue #8910 \u00b7 cline/cline",
+          "publish_date": null,
+          "excerpts": [
+            "# OpenAI Codex provider returns \"usage limit reached\" with ChatGPT Plus subscription #8910\nNew issue\nCopy link\nNew issue\nCopy link\nOpen\nOpen\nOpenAI Codex provider returns \"usage limit reached\" with ChatGPT Plus subscription #8910\nCopy link\nLabels\n[Bot Responded Issue has received an automated response](https://github.com/cline/cline/issues?q=state%3Aopen%20label%3A%22Bot%20Responded%22) Issue has received an automated response [Needs User Input Waiting for more information from the reporter](https://github.com/cline/cline/issues?q=state%3Aopen%20label%3A%22Needs%20User%20Input%22) Waiting for more information from the reporter [VS Code Issues specific to VS Code](https://github.com/cline/cline/issues?q=state%3Aopen%20label%3A%22VS%20Code%22) Issues specific to VS Code\n[@TurtleOld](https://github.com/TurtleOld)\n\n## Description\n[@TurtleOld](https://github.com/TurtleOld)\n[TurtleOld](https://github.com/TurtleOld)\nopened [on Jan 28, 2026](https://github.com/cline/cline/issues/8910)\nIssue body actions\n\n### Plugin Type\nVSCode Extension\n\n...\n\n### What happened?\nI expected either:\n* a clearer error indicating the type of limit (rate, concurrency, model quota), or\n* graceful handling such as retry/backoff or a warning that ChatGPT Plus has soft limits when used via Codex providers.\n\n### Steps to reproduce\n1. Enable provider: OpenAI Codex (ChatGPT Plus)\n2. Select model: gpt-5.2 or gpt-5.2-codex\n3. Start a coding task involving multiple steps or file analysis\n4. Send several prompts in succession (either manually or via agent workflow)\n5. Receive: \"Codex API error: The usage limit has been reached\"\n\n### Provider/Model\nopenai-codex (ChatGPT Plus)/gpt-5.2/gpt-5.2-codex\n\n...\n\n## Metadata\n### Labels\n[Bot Responded Issue has received an automated response](https://github.com/cline/cline/issues?q=state%3Aopen%20label%3A%22Bot%20Responded%22) Issue has received an automated response [Needs User Input Waiting for more information from the reporter](https://github.com/cline/cline/issues?q=state%3Aopen%20label%3A%22Needs%20User%20Input%22) Waiting for more information from the reporter [VS Code Issues specific to VS Code](https://github.com/cline/cline/issues?q=state%3Aopen%20label%3A%22VS%20Code%22) Issues specific to VS Code"
+          ]
+        },
+        {
+          "citation": 2,
+          "url": "https://help.openai.com/en/articles/20001106-codex-rate-card",
+          "title": "Codex rate card | OpenAI Help Center",
+          "publish_date": null,
+          "excerpts": [
+            "This article outlines the current credit rates for Codex, under the flexible pricing structure for Plus, Pro, Business, Enterprise, Edu, Health, and Gov plans. Learn more about credits in ChatGPT Plus and Pro. Learn more about credits in ChatGPT Business, Enterprise, and Edu. Note: On April 2, 2026, we updated Codex pricing to align with API token usage, instead of per-message pricing."
+          ]
+        },
+        {
+          "citation": 3,
+          "url": "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan",
+          "title": "Using Codex with your ChatGPT plan | OpenAI Help Center",
+          "publish_date": null,
+          "excerpts": [
+            "# Using Codex with your ChatGPT plan\nHow to access and get started with Codex\nUpdated: 14 hours ago\n_**Note:**_ This article provides an overview of Codex, our coding agent. For additional technical details, please view our [Codex page](https://developers.openai.com/codex/) .\n_For information on ChatGPT features such as Sora, ChatGPT Images, or Voice mode, please refer to other articles in our Help Center._\n_Codex is included across Free, Go, Plus, Pro, Business, Edu, and Enterprise plans. Usage limits and credit options vary by plan._\n\n...\n\n# Getting started\n## How to connect Codex with your ChatGPT account\nTo start using Codex with your ChatGPT plan:\nCodex is included in eligible ChatGPT plans, including Free. Usage limits vary by plan.\nFor more information, including higher-usage options for individuals and Codex credit plans for business users, visit [**chatgpt.com/pricing**](https://chatgpt.com/pricing) .\n* [Codex app](http://developers.openai.com/codex/app)\n* [Codex CLI](https://developers.openai.com/codex/cli)\n* [Codex IDE extension](http://developers.openai.com/codex/ide)\n* [Codex web](https://chatgpt.com/codex)\n* Requires connecting ChatGPT to your GitHub account\n\n...\n\n# Usage limits by plan\nCodex usage limits depend on your plan and count toward your agentic usage limit. Usage from Codex, ChatGPT for Excel, and Workspace Agents counts toward agentic usage. The number of Codex messages you can send within these limits varies based on the size and complexity of your coding tasks, and where you execute tasks. Small scripts or simple functions may only consume a fraction of your allowance, while larger codebases, long running tasks, or extended sessions that require Codex to hold more context will use significantly more per message.\nIf you are nearing or have reached your Codex limit, check the Codex usage page or the limit banner for the options available on your plan. Some Plus and Pro users can add credits to continue using Codex; other users may need to upgrade or wait for the limit to reset.\nFor a full list of Codex limits, rates, and credit options, refer to the [**pricing page**](https://developers.openai.com/codex/pricing) on the OpenAI developer website."
+          ]
+        },
+        {
+          "citation": 4,
+          "url": "http://developers.openai.com/codex/cli",
+          "title": "CLI \u2013 Codex | OpenAI Developers",
+          "publish_date": null,
+          "excerpts": [
+            "# Codex CLI\nPair with Codex in your terminal\nCopy Page\nCodex CLI is OpenAI\u2019s coding agent that you can run locally from your terminal. It can read, change, and run code on your machine in the selected directory.\nIt\u2019s [open source](https://github.com/openai/codex) and built in Rust for speed and efficiency.\nChatGPT Plus, Pro, Business, Edu, and Enterprise plans include Codex. Learn more about what\u2019s included ."
+          ]
+        },
+        {
+          "citation": 5,
+          "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+          "title": "About ChatGPT Pro tiers | OpenAI Help Center",
+          "publish_date": null,
+          "excerpts": [
+            "Both Pro tiers include the same core capabilities. The main difference is usage allowance: Pro $100 unlocks 5x higher usage than Plus, while <strong>Pro $200 unlocks 20x usage than Plus</strong>."
+          ]
+        },
+        {
+          "citation": 6,
+          "url": "https://tokenlimits.app/blog/codex-cli-token-limit",
+          "title": "Codex CLI Token Limit: Plans, Resets & Fixes [2026] \u2014 Token Limits \u2014 Token Limits",
+          "publish_date": "2026-04-14",
+          "excerpts": [
+            "# Codex CLI Token Limit: Plans, Resets & Fixes [2026]\nApril 14, 2026 \u2014 Token Limits Team \u2014 6 min read\nCodex CLI runs GPT models in the terminal for code generation and execution. Your token usage limit comes from your ChatGPT subscription (Plus, Pro, Teams). Limits reset weekly. The config option model_auto_compact_token_limit lets you trigger compression automatically when context reaches a threshold. But manual compression in Codex is limited\u2014install Token Limits MCP for 60-90% compression on every command and tool output.\nCodex CLI is a terminal interface to OpenAI models, typically GPT-4o or GPT-4.1. Your token usage is tied to your ChatGPT subscription plan, not your Codex subscription. Higher ChatGPT plans get higher usage limits. Codex resets usage weekly, usually on Monday UTC. When you hit your limit, Codex stops accepting new commands until the reset.\n\n## Token limits by ChatGPT plan\n| Plan | Model Access | Usage Limit | Reset Frequency |\n| Free | GPT-3.5-turbo | Limited (1M tokens/month) | Monthly |\n| ChatGPT Plus | GPT-4o | Higher (see OpenAI docs) | Weekly |\n| ChatGPT Pro | GPT-4o, o1 | Even higher | Weekly |\n| ChatGPT Teams | Shared pool | Varies | Weekly |\n| Enterprise | Custom | Custom | Custom |\nExact limits vary. Check your ChatGPT plan details or the OpenAI pricing page for current thresholds.\n\n## What consumes your Codex CLI limit?\n* \u2713 Your command prompt: 50-500 tokens depending on length\n* \u2713 File reads: 1,000-20,000 tokens per file read\n* \u2713 Terminal output: Command results, logs, errors returned to context\n* \u2713 Conversation history: Codex keeps messages for the session\n* \u2713 Response generation: Claude's code suggestions and explanations\n\n...\n\n## Real example: Codex session with compression\nYou run Codex in a terminal for 30 minutes, executing 20 commands. Without compression: 150k-250k tokens consumed. With Token Limits: 30k-60k tokens (80% reduction). Same session, same work, 3-5x more runway before hitting your weekly limit.\n\n...\n\n## FAQ\n### Does Codex CLI have the same token limit as ChatGPT web?\nYes. Your Codex CLI token usage counts toward your ChatGPT plan limit. Exceeding your plan limit stops both Codex and ChatGPT.\n\n### What happens when I hit my Codex token limit?\nCodex returns an error saying you have exceeded usage limits. You can wait for the weekly reset (Monday UTC) or upgrade your ChatGPT plan.\n\n...\n\n### Is $5/month Token Limits worth it for Codex?\nIf you hit limits weekly, yes. You save money by not upgrading your ChatGPT plan and get 3-5x more work per week.\n\u2190 Back to blog"
+          ]
+        },
+        {
+          "citation": 7,
+          "url": "https://codex.danielvaughan.com/2026/04/10/codex-cli-complete-pricing-guide-subscription-tokens-cost-optimization",
+          "title": "The Complete Codex CLI Pricing Guide: Subscriptions, Tokens ...",
+          "publish_date": null,
+          "excerpts": [
+            "# 301 Moved Permanently\nnginx"
+          ]
+        },
+        {
+          "citation": 8,
+          "url": "http://developers.openai.com/api/docs/models/gpt-5.1-codex",
+          "title": "GPT-5.1 Codex Model | OpenAI API",
+          "publish_date": null,
+          "excerpts": [
+            "# Search the API docs\n## Suggested\nresponses create reasoning_effort realtime prompt caching\nModels\ngpt-5.1-codex\nGPT-5.1 Codex\nDefault\nA version of GPT-5.1 optimized for agentic coding in Codex.\nA version of GPT-5.1 optimized for agentic coding in Codex.\nCompare\nReasoning\nHigher\nSpeed\nMedium\nPrice\n$1.25 \u2022 $10\nInput \u2022 Output\nInput\nText, image\nOutput\nText\nGPT-5.1-Codex is a version of GPT-5 optimized for agentic coding tasks in [Codex](https://developers.openai.com/codex) or similar environments.\nIt's available in the Responses API only and the underlying model snapshot will be regularly updated.\nIf you want to learn more about prompting GPT-5-Codex, refer to our dedicated guide\n400,000 context window\n128,000 max output tokens\nSep 30, 2024 knowledge cutoff\nReasoning token support\nPricing\nPricing is based on the number of tokens used, or other metrics based on the model type. For tool-specific models, like search and computer use, there\u2019s a fee per tool call. See details in the pricing page .\n\n...\n\nSnapshots let you lock in a specific version of the model so that performance and behavior remain consistent. Below is a list of all available snapshots and aliases for GPT-5.1 Codex.\ngpt-5.1-codex\ngpt-5.1-codex\ngpt-5.1-codex\nDeprecated\ngpt-5.1-codex\nRate limits\nRate limits ensure fair and reliable access to the API by placing specific caps on requests, tokens, audio duration, or other usage within a given time period. Your usage tier determines how high these limits are set and automatically increases as you send more requests and spend more on the API.\n| Tier | RPM | TPM | Batch queue limit |\n| Free | Not supported |  |  |\n| Tier 1 | 500 | 500,000 | 1,500,000 |\n| Tier 2 | 5,000 | 1,000,000 | 3,000,000 |\n| Tier 3 | 5,000 | 2,000,000 | 100,000,000 |\n| Tier 4 | 10,000 | 4,000,000 | 200,000,000 |\n| Tier 5 | 15,000 | 40,000,000 | 15,000,000,000 |\nAsk AI"
+          ]
+        },
+        {
+          "citation": 9,
+          "url": "http://openai.com/business/chatgpt-pricing",
+          "title": "OpenAI Pricing and Business Codex Overview",
+          "publish_date": null,
+          "excerpts": [
+            "# Pricing\n## Business Codex\nA plan for development-focused teams with pay-as-you-go pricing\nUsage pricing\nNo fixed seat fee. Pay as you go based on usage.\n[Get started (opens in a new window)](https://chatgpt.com/explore/codex_team?openaicom-did=e7e517dc-bd60-4c8b-bf33-3295cc1ced5c&openaicom_referred=true)\nWhat's included:\n* AI-powered software engineering\n* Automated code and security reviews\n* Automate tasks on your computer\n* Take action across your documents, tools, and codebases\n* Built-in worktrees and cloud environments for multi-agent workflows\n* No fixed seat fee; pay as you go based on usage\n* A secure, dedicated workspace with essential admin controls, SAML SSO, and MFA\n* No training on your data; SAML security\n* Support for compliance with GDPR, CCPA, and other privacy laws. Aligned with CSA STAR\u2060 and SOC 2 Type 2\n\n### Business ChatGPT & Codex\nA secure, collaborative workspace for startups and growing businesses\n$20\n/ user / month\n[Get started (opens in a new window)](https://chatgpt.com/team-sign-up?openaicom-did=e7e517dc-bd60-4c8b-bf33-3295cc1ced5c&openaicom_referred=true)\nWhat's included:\n* Everything in ChatGPT Plus and Business Codex plans\n* Unlimited core chat and access to the best models for work\n* 60+ apps that bring your tools and data into ChatGPT \u2014 like Slack, Google Drive, SharePoint, GitHub, Atlassian, and more\n* Business features like apps, data analysis, record mode, canvas, shared projects, and custom workspace GPTs\n* Easy member, role, & billing management\n* A secure, dedicated workspace with essential admin controls, SAML SSO, and MFA\n* No training on your data; SAML security\n* Support for compliance with GDPR, CCPA, and other privacy laws. Aligned with CSA STAR\u2060 and SOC 2 Type 2\n*2+ users, billed annually. $25.00 per user per month when billed monthly. Unlimited subject to abuse guardrails. [Learn more\u2060 (opens in a new window)](https://help.openai.com/en/articles/8792828-what-is-chatgpt-team)\n\n...\n\n### Looking for personal plans?\nVisit ChatGPT.com for consumer pricing\n[Learn more (opens in a new window)](https://chatgpt.com/pricing/?openaicom-did=e7e517dc-bd60-4c8b-bf33-3295cc1ced5c&openaicom_referred=true)\n\n...\n\n## Compare features across plans\n### Features\n#### Advanced voice\n##### Advanced voice with video\n###### Codex agent\nPlan: Business, Feature: Codex agent, Yes\nFlexible** Plan: Enterprise, Feature: Codex agent, Flexible**"
+          ]
+        },
+        {
+          "citation": 10,
+          "url": "http://community.openai.com/t/chatgpt-plus-user-limits-valid-for-2025/1149656",
+          "title": "ChatGPT Plus User Limits, valid for 2025 - ChatGPT - OpenAI Developer Community",
+          "publish_date": "2025-09-21",
+          "excerpts": [
+            "# ChatGPT Plus User Limits, valid for 2025\n## post by hugebelts on Mar 22, 2025\nhugebelts speech_balloon\n2\nMar 2025\nWhat\u2019s the limits now, for all the plus users? I\u2019ve started to create a table. Let\u2019s add all the limits that apply for 2025 until now. Thanks.\nLet\u2019s correct. Where did I note down wrong?\n| Model / Service | Limit Period | Plus\u2011tier Limit |\n| **GPT\u20114o** | 3 hours | ~150 messages / 3 hrs |\n| **GPT\u20114o mini** | \u2013 (auto\u2011throttle) | Included in GPT\u20114o cap; auto\u2011downgrades when cap is hit |\n| **GPT\u20114.5** | 7 days | ~50 messages per week |\n| **GPT\u20114.1 / GPT\u20114.1 mini** | TBD | Replacing GPT\u20114.5 in API (from July 14, 2025); limits not published yet |\n| **o3\u2011mini\u2011high** | 1 day | 50/day for Plus; Pro is unlimited |\n| **o3** | \u2013 | Same auto\u2011management; Pro is unlimited |\n| **o3\u2011pro** | \u2013 | Pro only; unlimited for high\u2011reliability tasks |\n| **Deep Research** | 1 month | 25 queries/month (15 lightweight); Free users get 5 lightweight |\nAdditional Notes:\n\n...\n\n## post by Ethiventure on Mar 27, 2025\nDeep research limit seems real, I got through that very quickly. I can\u2019t use o3 models inside Projects but that doesn\u2019t seem to be a rate limiting type of issue?\nThe information I got was:\nGPT-4: 40 messages every 3 hours (includes custom GPTs).\n\u2022 GPT-4o: 80 messages every 3 hours.\n\u2022 GPT-4.5: 50 messages per week.\n\u2022 GPT-4o mini: Unlimited usage.\n\u2022 o3-mini: 150 messages per day.\n\u2022 o3-mini-high: 50 messages per day.\n\u2022 o1-preview: 50 messages per week.\n\u2022 DALL-E 3 (image generation): 40 prompts every 3 hours, up to 200 images daily.\n\u2022 Deep Research Tool: 10 queries per month.\n\u2022 Projects: Up to 20 projects with 20 files each (512MB/file, 2M tokens total). Saw this on Threads\n[IMG_0730 IMG_0730 1668\u00d71278 174 KB](https://us1.discourse-cdn.com/openai1/original/4X/2/4/2/2427d7a8c66db860f8458e9321db705996f3c45a.jpeg \"IMG_0730\")\nheart\n1\n\u200b\n\u200b\n\n...\n\n## post by hugebelts on Sep 21, 2025\n### Related topics\n| Topic | Replies | Views | Activity |\n| What is the latest GPT 4o limits for plus users as of Feb 24? |  |  |  |\nCommunity\n* chatgpt |3 |3.9k |Aug 2025 |\n  |Usage Limits of Codex within Cursor\nCodex\n* codex ,\n* gpt-5 |15 |16.3k |Jan 23 |\n  |What are GPT 4o prompts limits for free users?\nCommunity\n* gpt-4o |7 |49.1k |Jun 2024 |\n  |GPT Builder and the limitations of messages per hour\nGPT builders\n* gpt-builder |7 |4.6k |Jan 2024 |\n  |Introducing GPT-4o mini in the API\nAnnouncements\n* gpt-4o-mini |62 |33.1k |Jul 2024 |\nDeveloper Community\nConnect with other developers building with the OpenAI Platform.\nHelp\n* [Support](https://help.openai.com/en/articles/6614161-how-can-i-contact-support)\nDeveloper Resources\n* [API Documentation](https://platform.openai.com/overview)\n* [Service status](https://status.openai.com)\n* [Cookbook](https://github.com/openai/openai-cookbook)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minimax",
+      "topic": "MiniMax coding plan (M2) token quota",
+      "objective": "Find MiniMax's coding subscription / token plan details in 2026: the MiniMax M2 model, any '1.7 billion tokens per month' style plan, price, rate limits, Claude Code / coding-agent compatibility, and coding benchmark quality vs Claude/GPT.",
+      "search_id": "search_0f47b695e2a24d28bcb80f71f3958d53",
+      "results": [
+        {
+          "citation": 11,
+          "url": "https://platform.minimax.io/subscribe/token-plan",
+          "title": "Token Plan - MiniMax API Platform",
+          "publish_date": null,
+          "excerpts": [
+            "Built for individual developers, Coding users, and daily productivity \u2014 a shared multimodal quota at the lowest unit price, perfect for long-running, high-frequency text and code workloads. ... MiniMax Code (the official AI agent) runs directly on your Token Plan. Works right out of the box, no API keys needed. ... Grab your sk-cp key and drop it into OpenClaw / Claude Code / Cline \u2014 or any OpenAI-compatible tool \u2014 to integrate into your workflow.Get API Key"
+          ]
+        },
+        {
+          "citation": 12,
+          "url": "https://pricepertoken.com/pricing-page/model/minimax-minimax-m2.7",
+          "title": "MiniMax M2.7 API Pricing 2026 - Costs, Performance & Providers",
+          "publish_date": null,
+          "excerpts": [
+            "50k devs visit Price Per Token every month. Become a sponsor\nPrice Per Token Price Per Token\nPricing\nRankings\nTools\nExplore\nBenchmarks Discussion [Newsletter](https://newsletter.pricepertoken.com)\n| Follow: [](https://x.com/pricepertoken) [](https://bsky.app/profile/pricepertoken.bsky.social) [](https://www.threads.com/@pricepertoken)\nMinimax\n\n...\n\n# MiniMax M2.7 API Pricing 2026\n## Overview\nMiniMax M2.7 was released on **March 18, 2026** . Pricing starts at **$0.279 per million input tokens** and **$1.20 per million output tokens** . The model supports a context window of up to **205K tokens** . API access is available through Minimax.\nContext Window\n205K\ntokens\nPricing\nInput $0.279\nOutput $1.20\nCached $0.055\nper 1M tokens\nSpeed\nOutput 68 tok/s\nTTFT 1.32s\nmedian latency\nCapabilities\nTools Caching\n\n...\n\n## Current Pricing (per 1M tokens)\n1 models\nColumns\n| Provider | Model | Input $/M | Output $/M | Coding | MMLU | GPQA | Context | Actions |\n| MM |  |  |  |  |  |  |  |  |\nMinimax |MiniMax M2.7 |$0.279 |$1.200 |\u2014 |\u2014 |87.4 |204,800 |Try\nVote |\n* Some models use tiered pricing based on prompt length. Displayed prices are for prompts \u2264 200k tokens.\n\n...\n\n## Cost vs. Quality\nCompare MiniMax M2.7's benchmark performance against all models.\nX-axis: Mmlu Pro Gpqa Math Hard Livecodebench Aime Aider Ifeval Bbh Context Length Tokens per Second Time to First Token\nY-axis:\nInput Price Output Price\nLoading chart...\nOther models\n\n### Detailed Benchmark Scores\nIntelligence\n49.6 (96th pct)\nCoding\n41.9 (92th pct)\nMath\n-\nMMLU Pro\n-\nGPQA\n87.4 (95th pct)\nLiveCodeBench\n-\nAIME\n-\nAider\n-\nBenchmark data from Artificial Analysis and HuggingFace Open LLM Leaderboard"
+          ]
+        },
+        {
+          "citation": 13,
+          "url": "https://thomas-wiegold.com/blog/minimax-m-2-7-review-is-it-worth-the-hype/",
+          "title": "MiniMax M2.7 Review: Is It Worth the Hype? | Thomas Wiegold Blog",
+          "publish_date": "2026-03-25",
+          "excerpts": [
+            "M2.7 scores 56.22% on SWE-Pro, which nearly matches Claude Opus 4.6 at roughly 57%. <strong>On SWE-Bench Verified it hits 78%, which actually outperforms Opus&#x27;s 55% on that particular benchmark</strong>."
+          ]
+        },
+        {
+          "citation": 14,
+          "url": "https://ai.sulat.com/minimax-coding-plan-mcp-in-claude-code-search-vision-in-one-server-1ac0fc9150d3",
+          "title": "MiniMax Coding Plan MCP in Claude Code: search + vision in one server | by JP Caparas | AI @ Sulat.com",
+          "publish_date": "2026-04-17",
+          "excerpts": [
+            "# MiniMax Coding Plan MCP in Claude Code: search + vision in one server\n## The MiniMax Coding Plan MCP is an absolute must-have for Claude Code users; it\u2019s already part of what you pay for.\n[JP Caparas](https://jp.sulat.com/?source=post_page---byline--1ac0fc9150d3---------------------------------------)\n[JP Caparas](https://jp.sulat.com/?source=post_page---byline--1ac0fc9150d3---------------------------------------)\n6 min read\n\u00b7\nJan 2, 2026\n[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Freading-sh%2F1ac0fc9150d3&operation=register&redirect=https%3A%2F%2Fai.sulat.com%2Fminimax-coding-plan-mcp-in-claude-code-search-vision-in-one-server-1ac0fc9150d3&user=JP+Caparas&userId=8af100df272&source=---header_actions--1ac0fc9150d3---------------------clap_footer------------------)\n--\n\n...\n\n[MiniMax M2.1](https://platform.minimax.io/subscribe/coding-plan?code=9q4C7vlJyI) + [Claude Code](https://claude.com/product/claude-code) is [**a superb combo**](https://blog.devgenius.io/claude-code-but-cheaper-and-snappy-minimax-m2-1-with-a-tiny-wrapper-7d910db93383) , but if you want built-in web search and image analysis in the same session, you need an MCP server. [MiniMax\u2019s Coding Plan MCP](https://platform.minimax.io/docs/guides/coding-plan-mcp-guide) fills that gap with two tools \u2014 `web_search` and `understand_image` \u2014 so your agent can look up docs, analyse screenshots, and keep moving inside Claude Code.\nThis guide is Claude Code-specific and assumes you already know MCP basics. It focuses on setup, verification, and the patterns that make this MCP server worth keeping in your toolbelt.\nWhat you\u2019ll learn:\n\n...\n\n## Related reading\n* [Claude Code but cheaper and snappy: MiniMax M2.1 with a tiny wrapper](https://jpcaparas.medium.com/claude-code-but-cheaper-and-snappy-minimax-m2-1-with-a-tiny-wrapper-7d910db93383) \u2014 the wrapper pattern and cost/perf notes.\n* [Claude Code but cheaper: GLM 4.7 on Z.ai with a tiny wrapper](https://blog.devgenius.io/claude-code-but-cheaper-glm-4-7-on-z-ai-with-a-tiny-wrapper-9ad98adffc29) \u2014 setup flow and pricing context.\n* [Fixing GLM 4.7 image parsing in Claude Code](https://jpcaparas.medium.com/fixing-glm-4-7-image-parsing-in-claude-code-add-the-z-ai-vision-mcp-server-f1c275d7cf3f) \u2014 why MCP servers unlock full vision.\n* [Claude Code with Z.ai Vision MCP: master the full toolbelt](https://jpcaparas.medium.com/claude-code-with-z-ai-vision-mcp-master-the-full-toolbelt-4447c2f953a0) \u2014 advanced vision prompts and workflows."
+          ]
+        },
+        {
+          "citation": 15,
+          "url": "https://ai.sulat.com/claude-code-but-cheaper-and-snappy-minimax-m2-1-with-a-tiny-wrapper-7d910db93383",
+          "title": "Claude Code, but cheaper (and snappy): MiniMax M2.1 with a tiny wrapper | by JP Caparas | AI @ Sulat.com",
+          "publish_date": "2026-04-17",
+          "excerpts": [
+            "# Claude Code, but cheaper (and snappy): MiniMax M2.1 with a tiny wrapper\n## What\u2019s new in MiniMax M2.1 (vendor-reported)\nBenchmarks in the announcement are vendor-reported. They describe a lift over M2 across software engineering leaderboards, plus a new **\u201cVIBE\u201d** benchmark for full-stack, interactive output. The blog calls out a VIBE aggregate score of 88.6, with strong results in web and Android subsets. Treat these numbers as directional and validate against your own tasks.\nOpenRouter\u2019s model listing also repeats a couple of benchmark figures (49.4% on Multi-SWE-Bench and 72.5% on SWE-bench Multilingual). I treat these as secondary signals rather than proof. The point is that MiniMax is pushing M2.1 as a high-throughput coding model with agent-friendly behaviour and low latency.\n\n...\n\n## Costs, benchmarks, and expectations\nMiniMax\u2019s Coding Plan is subscription-based and designed for high-frequency coding. Their docs describe prompt-based usage on a rolling five-hour window and the option to switch to pay-as-you-go if you hit limits. Pricing varies by plan, and in my experience it sits between GLM and Claude Code \u2014 cheaper than Claude Code, but not always as aggressive as GLM.\nBenchmarks are useful context, but the real test is your own codebase. I do two quick checks before I switch a project:\n1. A small refactor with tests passing and a clean diff.\n2. A single hard task I already know Claude handles well.\nIf both look good, I move the rest of the work over.\n\n...\n\n## References\n* MiniMax M2.1 announcement (vendor blog, highlights and benchmarks):\n  https://www.minimax.io/news/minimax-m21\n* MiniMax Coding Plan overview (subscription model and usage limits):\n  https://platform.minimax.io/docs/coding-plan/intro\n* MiniMax guide for AI coding tools (Claude Code config and Anthropic-compatible endpoint):\n  https://platform.minimax.io/docs/guides/text-ai-coding-tools\n* OpenRouter model listing for MiniMax M2.1 (secondary benchmark references):\n  https://openrouter.ai/minimax/minimax-m2.1\n* Original guide used as format reference:\n  https://jpcaparas.medium.com/claude-code-but-cheaper-glm-4-7-on-z-ai-with-a-tiny-wrapper-9ad98adffc29\n[Minimax](https://medium.com/tag/minimax?source=post_page-----7d910db93383---------------------------------------)\n[Vibe Coding](https://medium.com/tag/vibe-coding?source=post_page-----7d910db93383---------------------------------------)"
+          ]
+        },
+        {
+          "citation": 16,
+          "url": "https://www.morphllm.com/ai-coding-costs",
+          "title": "AI Coding Costs (2026): Claude vs Codex vs Gemini, Real Monthly Spend From Token Math ($20 to $1,000+)",
+          "publish_date": "2026-06-09",
+          "excerpts": [
+            "# AI Coding Costs (2026): Claude vs Codex vs Gemini, Real Monthly Spend From Token Math\n## Cost Per Token: Every Major Coding Model (June 2026)\nVendors publish prices per million tokens (MTok). One table, all current official rates, sourced from Anthropic, OpenAI, Google, DeepSeek, Moonshot, Z.AI, MiniMax, and Alibaba Cloud pricing docs as of June 9, 2026:\n\n...\n\nPrice does not track capability linearly. On SWE-bench Verified (llm-stats, June 2026): Claude Fable 5 scores 95.0% at $50/M output, Opus 4.8 scores 88.6% at $25/M, while DeepSeek V4 Pro Max scores 80.6% at $0.87/M output and MiniMax M3 scores 80.5% at $1.20/M. The last 7-15 points of benchmark performance cost 20-50x more per output token. See DeepSeek V4 for the open-weights side of that tradeoff."
+          ]
+        },
+        {
+          "citation": 17,
+          "url": "https://platform.minimax.io/docs/token-plan/claude-code",
+          "title": "Claude Code - Models - MiniMax API Docs",
+          "publish_date": null,
+          "excerpts": [
+            "# Claude Code\n> Use the latest MiniMax M-series models for AI programming in Claude Code.\n<div style={{background:\"#fffbeb\",borderLeft:\"4px solid #d97706\",padding:\"12px 16px\",borderRadius:\"6px\",margin:\"16px 0\"}}>[**Claude Code**](https://github.com/anthropics/claude-code) is Anthropic's official terminal-native coding agent powered by Claude.</div>"
+          ]
+        },
+        {
+          "citation": 18,
+          "url": "https://www.morphllm.com/best-ai-model-for-coding",
+          "title": "Best AI Model for Coding (June 2026): 12 Models Ranked by SWE-bench Pro Score and Cost per Task",
+          "publish_date": "2026-06-09",
+          "excerpts": [
+            "Home / Best AI Model for Coding (June 2026): 12 Models Ranked by SWE-bench Pro Score and Cost per Task\n\n...\n\n# Best AI Model for Coding (June 2026): 12 Models Ranked by SWE-bench Pro Score and Cost per Task\n## Claude Opus 4.8 vs GPT-5.5: The $5-Input Flagships\n### Head-to-Head: The Race Card\nOpus 4.8 wins repo-scale software engineering (69.2% vs 58.6% SWE-bench Pro on vendor harnesses) and knowledge work (1890 vs 1769 GDPval-AA Elo). GPT-5.5 wins terminal-native workflows (78.2% vs 74.6% Terminal-Bench 2.1) and ships through Codex, where a $20/mo Plus plan covers 15-80 messages per 5-hour window without per-token billing. If your work lives in a CLI agent, Codex pricing changes the math; if it lives in long-horizon repo edits, Opus 4.8 does."
+          ]
+        },
+        {
+          "citation": 19,
+          "url": "https://x.com/MiniMax__AI/status/1986815058249408541",
+          "title": "MiniMax (official) on X: \"Mini Price, Max Performance: affordable M2 API Pricing, Coding Plan and Agent Plans\" / X",
+          "publish_date": null,
+          "excerpts": [
+            "In response to requests for coding plans, we are offering three monthly subscription tiers at <strong>$10, $20, and $50</strong>, corresponding to the equivalent usage capacity of Claude Code Max Plan&#x27;s $100 and $200 packages respectively."
+          ]
+        },
+        {
+          "citation": 20,
+          "url": "https://platform.minimax.io/docs/guides/pricing-token-plan",
+          "title": "Token Plan - Models - MiniMax API Docs",
+          "publish_date": null,
+          "excerpts": [
+            "# Token Plan\n> MiniMax Token Plan Subscription Pricing\nToken Plan subscriptions provide a monthly usage quota and access to eligible resources through the Subscription Key. Usage is shown as a usage bar in the console. Supported text, image, speech, and music resources share one quota.\nPrepaid Credits packages are listed below. For team usage, see [Token Plan for Teams](/guides/pricing-token-plan-team).\n\n## Monthly\n[Subscribe Now](https://platform.minimax.io/subscribe/token-plan)\n|  | **Plus** | **Max** | **Ultra** |\n| **Price** | **$20 /month** | **$50 /month** | **$120 /month** |\n| **Best for** | Personal projects and prototyping | Daily coding with agents and multimodal work | Heavy Agent workflows and extended sessions |\n| **Quota windows** | 5-hour rolling and weekly windows | 5-hour rolling and weekly windows | 5-hour rolling and weekly windows |\n| **Agent usage** | 3-4 agents | 4-5 agents | 6-7 agents |\n| **Resource coverage** | All models on the API Platform | All models on the API Platform | All models on the API Platform |"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mimo",
+      "topic": "Xiaomi MiMo token/credit plan",
+      "objective": "Find details on Xiaomi MiMo (MiMo-7B / MiMo coding model) and any token or '11 billion credits' subscription plan in 2026: what a 'credit' equals vs a token, price, access method (API/CLI), rate limits, and coding quality. Distinguish credits from tokens explicitly.",
+      "search_id": "search_7edb16dedd0c4cd9a97affbfe5a62b28",
+      "results": [
+        {
+          "citation": 21,
+          "url": "https://pricepertoken.com/pricing-page/model/xiaomi-mimo-v2-pro",
+          "title": "MiMo v2 Pro API Pricing 2026 - Costs, Performance & Providers",
+          "publish_date": null,
+          "excerpts": [
+            "# MiMo v2 Pro API Pricing 2026\n## Current Pricing (per 1M tokens)\n1 models\nColumns\n| Provider | Model | Input $/M | Output $/M | Coding | MMLU | GPQA | Context | Actions |\n| X |  |  |  |  |  |  |  |  |\nXiaomi |MiMo v2 Pro |$1.000 |$3.000 |\u2014 |\u2014 |87.0 |- |Try\nVote |\n* Some models use tiered pricing based on prompt length. Displayed prices are for prompts \u2264 200k tokens.\n\n...\n\n## Cost vs. Quality\n### Detailed Benchmark Scores\nIntelligence\n49.2 (95th pct)\nCoding\n41.4 (91th pct)\nMath\n-\nMMLU Pro\n-\nGPQA\n87.0 (94th pct)\nLiveCodeBench\n-\nAIME\n-\nAider\n-\nBenchmark data from Artificial Analysis and HuggingFace Open LLM Leaderboard"
+          ]
+        },
+        {
+          "citation": 22,
+          "url": "https://www.buildfastwithai.com/blogs/xiaomi-mimo-v2-5-pro-review-2026",
+          "title": "Xiaomi MiMo-V2.5-Pro: Full Review & Benchmarks (2026)",
+          "publish_date": "2026-04-23",
+          "excerpts": [
+            "It is scored as a pass rate \u2014 the percentage of issues the model fully resolves. <strong>MiMo-V2.5-Pro scores 57.2%, placing it ahead of Claude Opus 4.6 (53.4%) and very close to GPT-5.4 (57.7%) and Kimi K2.6 (58.6%)</strong> as of April 2026."
+          ]
+        },
+        {
+          "citation": 23,
+          "url": "https://www.reddit.com/r/opencodeCLI/comments/1toblqe/xiaomi_is_giving_41b_credits_for_528mo_and_49b/",
+          "title": "r/opencodeCLI on Reddit: Xiaomi is giving 4.1B credits for $5.28/mo and 49B credits $63.36/yr",
+          "publish_date": null,
+          "excerpts": [
+            "<strong>After using 10M input (cache miss) tokens of MiMo-V2.5-Pro, it is equivalent to consuming 3000M Credits</strong>, and you can still enjoy 1100M Credits of MiMo-V2.5. You can view the quota and usage of the current plan in Subscription Management."
+          ]
+        },
+        {
+          "citation": 24,
+          "url": "https://www.aipricing.guru/news/xiaomi-mimo-v2-5-api-price-cut-may-2026/",
+          "title": "title: \"Xiaomi MiMo Price Cut: Pricing Impact (May 2026) | AI Pricing Guru\" description: \"Xiaomi cut MiMo-v2.5 API pricing by up to 99%. See new overseas rates, old vs new costs, and who should test it now.\" image: \"https://www.aipricing.guru/og/news/xiaomi-mimo-v2-5-api-price-cut-may-2026.png\"",
+          "publish_date": null,
+          "excerpts": [
+            "# title: \"Xiaomi MiMo Price Cut: Pricing Impact (May 2026) | AI Pricing Guru\"\ndescription: \"Xiaomi cut MiMo-v2.5 API pricing by up to 99%. See new overseas rates, old vs new costs, and who should test it now.\"\nimage: \"https://www.aipricing.guru/og/news/xiaomi-mimo-v2-5-api-price-cut-may-2026.png\" > My read\nThis is one of the sharper AI API pricing moves of May 2026. Xiaomi is moving MiMo-v2.5 into the low-cost frontier conversation with rates that directly challenge DeepSeek-style budget pricing while still advertising 1M context and advanced tool capabilities.\nThe right response is not an immediate production migration. It is a fast benchmark. If MiMo-v2.5 passes your quality and reliability bar, the new price table is low enough to justify adding Xiaomi to routing tests for summarization, coding assistants, research agents, support drafts, and long-context document workflows.\nSources: [Xiaomi MiMo-v2.5 price adjustment announcement](https://platform.xiaomimimo.com/docs/en-US/news/v2.5-price-update), [Xiaomi MiMo API pricing](https://platform.xiaomimimo.com/docs/en-US/price/pay-as-you-go), and [Xiaomi MiMo model limits](https://platform.xiaomimimo.com/docs/en-US/quick-start/model)."
+          ]
+        },
+        {
+          "citation": 25,
+          "url": "https://platform.xiaomimimo.com/docs/tokenplan/subscription",
+          "title": "Xiaomi MiMo Api Open Platform - Token Plan Global Launch",
+          "publish_date": null,
+          "excerpts": [
+            "Menu\nRefer & earn\nEnglish\nRefer & earn\nContact Us\nDocumentation\nToken Plan\nConsole\n[Blog](https://mimo.xiaomi.com)\nEnglish\n[](https://huggingface.co/XiaomiMiMo)\n1. Documentation\n3. Pricing\n5. Token Plan\n7. Subscription Instructions\n\n...\n\n# Subscription Instructions\n## Usage Quota\n### Monthly Package\n|  | **Lite** | **Standard** | **Pro** | **Max** |\n| **Pricing** | $6/month, \u00a539/month | $16/month, \u00a599/month | $50/month, \u00a5329/month | $100/month, \u00a5659/month |\n| **Monthly Fixed Credit Limit** | 4,100,000,000 \uff084.1B\uff09Credits | 11,000,000,000 \uff0811B\uff09Credits | 38,000,000,000 \uff0838B\uff09Credits | 82,000,000,000 \uff0882B\uff09Credits |\n\n#### Annual Package\n|  | **Lite** | **Standard** | **Pro** | **Max** |\n| **Pricing** | $63.36/year, \u00a5411.84/year | $168.96/year, \u00a51045.44/year | $528.00/year, \u00a53474.24/year | $1056.00/year, \u00a56959.04/year |\n| **Annual fixed Credit limit** | 49,200,000,000 \uff0849.2B\uff09Credits | 132,000,000,000 \uff08132B\uff09Credits | 456,000,000,000 \uff08456B\uff09Credits | 984,000,000,000 \uff08984B\uff09Credits |\n\n...\n\n#### Applicable Scenarios\n+ Nighttime Discount Rate: Off-peak hours (Beijing Time 0:00-8:00, i.e., UTC 16:00-24:00) with a consumption coefficient of 0.8x.\n* **Supported Models:** All packages support **mimo-v2.5-pro\u3001mimo-v2.5\u3001mimo-v2.5-asr\u3001mimo-v2.5-tts-voiceclone\u3001mimo-v2.5-tts-voicedesign\u3001mimo-v2.5-tts\u3001mimo-v2-pro\u3001mimo-v2-omni\u3001mimo-v2-tts** a total of 9 models.\n* **Quota Consumption: Language models deduct Credit quota based on the number of Tokens. Available models in the package are consumed in parallel at different ratios, not independently. TTS series models are free for a limited time and do not consume package Credit. ASR models deduct Credit quota based on the duration of the input audio (duration is counted accurately to the second and finally converted to hours for statistics). The following table lists the types of models cache, input, and output for each Token's corresponding package deduction quota .**\n**Note: mimo-v2-pro, mimo-v2-omni have auto-routed to V2.5 (consuming** **Credit** **according to the ratio of the V2.5 series) on June 1, 2026, 00:00 (GMT+8), and will be fully deprecated by June 30.** It is recommended to switch to the new model as soon as possible.\nLanguage Model\n| Model | Input (Cache Hit) Token | Input (missed cache ) Token | Output Token |\n| mimo-v2.5-pro | 2.5 Credits | 300 Credits | 600 Credits |\n| mimo-v2.5 | 2 Credits | 100 Credits | 200 Credits |\n| mimo-v2-pro | 2.5 Credits | 300 Credits | 600 Credits |\n| mimo-v2-omni | 2 Credits | 100 Credits | 200 Credits |\nASR Model\n| Model | Input audio duration (h) |\n| mimo-v2.5-asr | 30M Credits |\nTTS Series models are free for a limited time and do not consume package credits."
+          ]
+        },
+        {
+          "citation": 26,
+          "url": "https://platform.xiaomimimo.com/docs/en-US/pricing",
+          "title": "Pricing and Rate Limits - Xiaomi MiMo API Open Platform",
+          "publish_date": null,
+          "excerpts": [
+            "Documentation\n[Research](https://mimo.xiaomi.com/)\nModels\nUpdates\n[Contact Us](https://platform.xiaomimimo.com/contact)\nEnglish\n[Console](https://platform.xiaomimimo.com/console/balance)\nDocumentation\nPricing Pay\u2011As\u2011You\u2011Go API\nCtrl\nPay\u2011As\u2011You\u2011Go API\nToken Plan\nRefer & earn\n\n# API Pricing\n**Pay-as-you-go for the Xiaomi MiMo API uses the ordinary API Key of the Open Platform and consumes the account balance based on the actual Token usage, which is not interoperable with the Token Plan package quota.**\n**Billing Instructions**\n* Billing Unit: China\uff1aRMB / M tokens; Overseas: dollar / M tokens\n* Cache Hit: When the requested prefix content hits the Prompt Cache, it will be billed according to the cached hit price.\n* Cache Write: Limited-time Free\n* ASR series models are billed based on the duration of the input audio: duration statistics are accurate to the second, and ultimately converted to hourly billing\n* Internet search is billed independently based on the number of calls and is not included in the Token price\n\n...\n\n## Domestic Pricing of the Model\n### Table of Contents\nDomestic Pricing of the Model\nOverseas Pricing of the Model\nPricing for Web Search Plugins\nScroll to top\nWeChat QR Official Account\n[](https://github.com/XiaomiMiMo) [](https://huggingface.co/XiaomiMiMo) [](https://discord.gg/eVeBMmPM8v)\nOpen Platform WeChat Open Platform WeChat\nOpen Platform Feishu Open Platform Feishu\nToken Plan Token Plan\nWeChat Group\nToken Plan Token Plan\nFeishu Group"
+          ]
+        },
+        {
+          "citation": 27,
+          "url": "https://pricepertoken.com/pricing-page/model/xiaomi-mimo-v2-flash",
+          "title": "MiMo V2 Flash API Pricing 2026 - Costs, Performance & Providers",
+          "publish_date": null,
+          "excerpts": [
+            "# MiMo V2 Flash API Pricing 2026\n## Current Pricing (per 1M tokens)\n1 models\nColumns\n| Provider | Model | Input $/M | Output $/M | Coding | MMLU | GPQA | Context | Actions |\n| X |  |  |  |  |  |  |  |  |\nXiaomi |MiMo-V2-Flash |$0.100 |$0.300 |40.2 |74.4 |65.6 |262,144 |Try\nVote |\n* Some models use tiered pricing based on prompt length. Displayed prices are for prompts \u2264 200k tokens."
+          ]
+        },
+        {
+          "citation": 28,
+          "url": "https://mimo.mi.com/",
+          "title": "Xiaomi MiMo Api Open Platform - Token Plan Global Launch",
+          "publish_date": null,
+          "excerpts": [
+            "Xiaomi MiMO\n[Refer & earn Invite](https://platform.xiaomimimo.com/docs/promotions/refer)\n[Refer & earn Invite](https://platform.xiaomimimo.com/docs/promotions/refer)\n[Xiaomi MiMo API](https://platform.xiaomimimo.com/) [Xiaomi MiMo Studio](https://aistudio.xiaomimimo.com/#/) [Blog](https://mimo.xiaomi.com/)\nXiaomi MiMo-V2.5 Series Models Brand New Release\nToken Plan now supports monthly/annual subscriptions, fully covering V2.5 models.\nClaw\n\n...\n\n# Flagship Model Coverage\n## Models Introduction\n* **Bilingual & Dialects** \u2014 Supports Chinese, English, code-switching, and various regional dialects (Wu, Cantonese, Minnan, Sichuanese).\n* **Lyrics Transcription** \u2014 High-accuracy Chinese/English lyrics transcription in mixed vocal-instrumental tracks.\n* **Robust in Complex Audio** \u2014 Excels in challenging environments (high noise, far-field, multi-speaker).\n* **Knowledge-Intensive AI** \u2014 Pinpoint accuracy for classical poetry, jargon, and proper nouns, with auto-punctuation.\nInvite friends, get API credit\nInvite friends to MiMo \u2014 you both get $2 in API credits\nInstant on signup \u00b7 Credits valid 40 days\nInvite now \u2192\n[\u00a9 mi.com](https://www.mi.com/)"
+          ]
+        },
+        {
+          "citation": 29,
+          "url": "https://openrouter.ai/xiaomi/mimo-v2.5-pro",
+          "title": "MiMo-V2.5-Pro - API Pricing & Benchmarks | OpenRouter",
+          "publish_date": null,
+          "excerpts": [
+            "MiMo-V2.5-Pro is Xiaomi\u2019s flagship ... on benchmarks such as ClawEval, GDPVal, and SWE-bench Pro. <strong>$0.435 per million input tokens, $0.87 per million output</strong> ..."
+          ]
+        },
+        {
+          "citation": 30,
+          "url": "https://codingplans.com/plans/xiaomi-mimo-token-plan",
+          "title": "Xiaomi MiMo Token Plan \u2014 CodingPlans",
+          "publish_date": null,
+          "excerpts": [
+            "# Xiaomi MiMo Token Plan\n## \ud83d\udccb Description\nXiaomi MiMo Token Plan is a credit-based monthly subscription for the MiMo AI platform. It provides access to Xiaomi's flagship multimodal models (MiMo-V2-Pro, MiMo-V2-Omni) and speech synthesis (MiMo-V2-TTS). Credits are consumed by coding tools including OpenClaw, Claude Code, OpenCode, KiloCode, and other mainstream coding tools globally.\n\n## \ud83d\udcb0 Pricing\n* Lite: $5.28/month (~$6/mo regular) \u2014 60 Million Credits\n* Standard: $14.08/month (~$16/mo regular) \u2014 200 Million Credits\n* Pro: $44.00/month (~$50/mo regular) \u2014 700 Million Credits\n* Max: $88.00/month (~$100/mo regular) \u2014 1,600 Million Credits\n\n## \u26a1 Limits\n* Lite: 60,000,000 credits/month\n* Standard: 200,000,000 credits/month (3.3\u00d7 Lite Usage)\n* Pro: 700,000,000 credits/month (11.7\u00d7 Lite Usage)\n* Max: 1,600,000,000 credits/month (26.7\u00d7 Lite Usage)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kimi",
+      "topic": "Kimi (Moonshot) K2 'Moderato' plan",
+      "objective": "Find Moonshot Kimi coding subscription details in 2026, especially a plan tier called 'Moderato': price, token/request quota, the Kimi K2 model, Claude Code / Anthropic-compatible endpoint support, rate limits, and coding quality benchmarks.",
+      "search_id": "search_4def8e8594634739b0d1af545d8ff919",
+      "results": []
+    },
+    {
+      "id": "opencode",
+      "topic": "OpenCode (and OpenCode Zen / GO) $10 plan",
+      "objective": "Find what 'OpenCode GO' or OpenCode Zen is in 2026: the open-source OpenCode coding agent and any $10/month plan or hosted model gateway. Price, models included, token/request limits, and how it routes to providers.",
+      "search_id": "search_e6dba9ae6ecb4b948b1d864ef5fc3689",
+      "results": [
+        {
+          "citation": 31,
+          "url": "https://www.bitdoze.com/opencode-go-plan/",
+          "title": "OpenCode Go: 14 AI Models for $10/Month (2026 Pricing & Limits)",
+          "publish_date": null,
+          "excerpts": [
+            "# title: \"OpenCode Go: 12 AI Coding Models for $10/Month (Works with Any Agent)\"\ndescription: \"OpenCode Go bundles 12 open source models like DeepSeek V4, Qwen 3.6, GLM 5.1, and MiniMax M2.7 into a $10/month subscription. Use it with OpenCode, Hermes Agent, OpenClaw, or any AI coding tool.\"\ndate: 2026-05-21\ncategories: [\"AI\"]\ntags: [\"ai-tools\",\"opencode\",\"llm\"] > How it compares to managing your own keys\n<Accordion label=\"How does Go compare to OpenRouter?\" group=\"faq\">\nOpenRouter is a pay-per-token aggregator. You load credits and pay for what you use. Go is a flat monthly subscription with usage caps. If you use a lot of tokens, Go is cheaper. If you use very few tokens, OpenRouter might be cheaper. Go also includes models from providers that are not on OpenRouter.\n</Accordion>\n<Accordion label=\"Can I use Go with tools other than OpenCode?\" group=\"faq\">\nYes. The Go endpoint is OpenAI-compatible. Any tool that supports custom OpenAI-compatible endpoints can use it. This includes Hermes Agent, OpenClaw, Pi Agent, and others. Set the base URL to `https://opencode.ai/zen/go/v1/chat/completions` and use your Go API key.\n</Accordion>\ndescription: \"OpenCode Go bundles 12 open source models like DeepSeek V4, Qwen 3.6, GLM 5.1, and MiniMax M2.7 into a $10/month subscription. Use it with OpenCode, Hermes Agent, OpenClaw, or any AI coding tool.\"\ndate: 2026-05-21\ncategories: [\"AI\"]\ntags: [\"ai-tools\",\"opencode\",\"llm\"] > How it compares to managing your own keys\n<Accordion label=\"What happens if I hit the usage limits?\" group=\"faq\">\nRequests get blocked until the limit resets. The 5-hour limit resets on a rolling basis. If you have credits on your Zen balance, you can enable the \"Use balance\" option to keep going after hitting Go limits.\n</Accordion>\n<Accordion label=\"Is my code used for training?\" group=\"faq\">\nNo. The providers in Go follow a zero-retention policy. Your code is not stored or used for model training.\n</Accordion>\n\n...\n\ndescription: \"OpenCode Go bundles 12 open source models like DeepSeek V4, Qwen 3.6, GLM 5.1, and MiniMax M2.7 into a $10/month subscription. Use it with OpenCode, Hermes Agent, OpenClaw, or any AI coding tool.\"\ndate: 2026-05-21\ncategories: [\"AI\"]\ntags: [\"ai-tools\",\"opencode\",\"llm\"] > Related articles\n- [OpenCode Setup Guide: Install and Configure on a VPS](/opencode-setup-guide/) \u2014 full installation walkthrough\n- [OpenCode vs Pi Agent: Which Terminal Coding Agent to Use](/opencode-vs-pi-agent/) \u2014 side-by-side comparison\n- [Best Cheap Models for AI Coding Agents](/best-cheap-models-hermes-agent/) \u2014 model pricing and benchmarks\n- [GitHub Copilot Alternatives After the June 2026 Pricing Change](/github-copilot-alternatives-2026/) \u2014 what to switch to"
+          ]
+        },
+        {
+          "citation": 32,
+          "url": "https://www.reddit.com/r/opencodeCLI/comments/1r09do1/zen_pricing_token_counts/",
+          "title": "r/opencodeCLI on Reddit: Zen - pricing, token counts?",
+          "publish_date": null,
+          "excerpts": [
+            "I also recommend the Kimi Coding plan for the <strong>40$ per month</strong>. I use that and the z.ai coding plan to get GLM. ... My stack has been Kimi plan using k2.5 for the logic and heavy lifting, then handing off to antigravity/gemini for implementation"
+          ]
+        },
+        {
+          "citation": 33,
+          "url": "https://opencode.ai/docs/go/",
+          "title": "Go | OpenCode",
+          "publish_date": null,
+          "excerpts": [
+            "# Go\nLow cost subscription for open coding models.\nOpenCode Go is a low cost subscription \u2014 **$5 for your first month** , then **$10/month** \u2014 that gives you reliable access to popular open coding models.\nGo works like any other provider in OpenCode. You subscribe to OpenCode Go and\nget your API key. It\u2019s **completely optional** and you don\u2019t need to use it to\nuse OpenCode.\nIt is designed primarily for international users, with models hosted in the US, EU, and Singapore for stable global access.\n\n...\n\n## Goals\nWe created OpenCode Go to:\n1. Make AI coding **accessible** to more people with a low cost subscription.\n2. Provide **reliable** access to the best open coding models.\n3. Curate models that are **tested and benchmarked** for coding agent use.\n4. Have **no lock-in** by allowing you to use any other provider with OpenCode as well.\n[Edit page](https://github.com/anomalyco/opencode/edit/dev/packages/web/src/content/docs/go.mdx) [Found a bug? Open an issue](https://github.com/anomalyco/opencode/issues/new) [Join our Discord community](https://opencode.ai/discord) Select language English \u0627\u0644\u0639\u0631\u0628\u064a\u0629 Bosanski Dansk Deutsch Espa\u00f1ol Fran\u00e7ais Italiano \u65e5\u672c\u8a9e \ud55c\uad6d\uc5b4 Norsk Bokm\u00e5l Polski Portugu\u00eas (Brasil) \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0e44\u0e17\u0e22 T\u00fcrk\u00e7e \u7b80\u4f53\u4e2d\u6587 \u7e41\u9ad4\u4e2d\u6587\n\u00a9 [Anomaly](https://anoma.ly)\nLast updated: Jun 12, 2026"
+          ]
+        },
+        {
+          "citation": 34,
+          "url": "https://computingforgeeks.com/setup-opencode-ai-coding-agent",
+          "title": "Setup OpenCode AI Coding Agent [Complete Guide]",
+          "publish_date": "2026-06-04",
+          "excerpts": [
+            "# Setup and Customize OpenCode \u2013 The Open Source AI Coding Agent\n[Josphat Mutai](https://computingforgeeks.com/author/mutai-josphat/) Updated Jun 4, 2026 \u00b7 15 min read\nOpenCode is an open source AI coding agent that runs in your terminal. It connects to over 75 AI providers \u2013 from Anthropic and OpenAI to local models via Ollama \u2013 and gives you file editing, code generation, shell access, and project understanding through a single Go binary. With 11,500+ GitHub stars, built-in free models, and a privacy-first design where your code never gets stored, OpenCode is the most flexible terminal-based AI coding tool available today.\nOriginal content from computingforgeeks.com - post 163421\n\n...\n\n## Step 4: Configure AI Providers\n### Authenticate with a provider\nTo use premium models like Claude Sonnet 4, GPT-4.1, or Gemini 2.5 Pro, authenticate with your provider:\n```\nopencode auth login\n```\nThis presents a list of all supported providers:\n* **OpenCode Zen** \u2013 OpenCode\u2019s own managed service\n* **Anthropic** \u2013 Claude models (Sonnet 4, Opus 4, Haiku)\n* **GitHub Copilot** \u2013 use your existing Copilot subscription\n* **OpenAI** \u2013 GPT-4.1, o3, o4-mini\n* **Google** \u2013 Gemini 2.5 Pro, Flash\n* **Azure OpenAI** \u2013 enterprise Azure deployments\n* **Amazon Bedrock** \u2013 AWS-hosted models\n* **Groq** \u2013 ultra-fast inference\n* **Together AI** \u2013 open source model hosting\n* **OpenRouter** \u2013 multi-provider routing\n* **Ollama** \u2013 local models on your machine\n* **LM Studio** \u2013 local model management\nOpenCode auth login showing available AI providers including Anthropic OpenAI Google and local models"
+          ]
+        },
+        {
+          "citation": 35,
+          "url": "http://opencode.ai/go",
+          "title": "OpenCode Go | Low cost coding models for everyone",
+          "publish_date": null,
+          "excerpts": [
+            "# Low cost coding models for everyone\nGo brings agentic coding to programmers around the world. Offering generous limits and reliable access to the most capable open-source models, so you can build with powerful agents without worrying about cost or availability.\nSubscribe to Go $10/month $5 first month\nUse with any agent. $5 first month, then $10/month. Top up credit if needed. Cancel any time.\nFree Go\n1x 5x 10x 25x 50x 100x\n200 Big Pickle and free models 880 GLM-5.1 950 Qwen3.7 Max 1,150 Kimi K2.6 3,200 MiniMax M3 3,250 MiMo-V2.5-Pro 3,300 Qwen3.6 Plus 3,400 MiniMax M2.7 3,450 DeepSeek V4 Pro 4,300 Qwen3.7 Plus 30,100 MiMo-V2.5 31,650 DeepSeek V4 Flash\nRequests per 5 hour Usage limits\n\n## What problem is Go solving?\nWe're focused on bringing the OpenCode experience to as many people as possible. OpenCode Go is a low cost subscription: $5 for your first month, then $10/month. It provides generous limits and reliable access to the most capable open source models.\n* [*] Low cost subscription pricing\n* [*] Generous limits and reliable access\n* [*] Built for as many programmers as possible\n* [*] Includes GLM-5.1, GLM-5, Kimi K2.5, Kimi K2.6, MiMo-V2.5-Pro, MiMo-V2.5, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.6 Plus, MiniMax M2.5, MiniMax M2.7, MiniMax M3, DeepSeek V4 Pro, and DeepSeek V4 Flash"
+          ]
+        },
+        {
+          "citation": 36,
+          "url": "https://llm24.net/provider/opencode",
+          "title": "OpenCode Zen - Models & Pricing - LLM24",
+          "publish_date": null,
+          "excerpts": [
+            "# OpenCode Zen\nopencode\nChat Code\nUpdated 34 minutes ago\nOpenCode Zen is an AI-powered code editor and development platform that provides access to leading large language models optimized for software development tasks. The platform offers frontier models from major providers including Anthropic (Claude), OpenAI (GPT), Google (Gemini), xAI (Grok), and others, with features designed for agentic coding workflows. OpenCode Zen focuses on providing AI-assisted development with models featuring reasoning, tool use, vision capabilities, and extended context windows for complex programming tasks.\n[Visit Website](https://opencode.ai/zen) LLMs.txt\nBrowse **48** LLM models available from OpenCode Zen. Compare prices and features.\n\n...\n\n## Models (48)\n|  | Organization | Model Name | Original Model | Input | Output | Free |  |  |\n| Anthropic | Anthropic | Claude Fable 5 | `claude-fable-5` | $10.00 | $50.00 |  |  | View |\n| Anthropic | Anthropic | Claude Opus 4.8 | `claude-opus-4-8` | $5.00 | $25.00 |  |  | View |\n| xAI | xAI | xAI: Grok Build 0.1 | `grok-build-0.1` | $1.00 | $2.00 |  |  | View |\n| Minimax | Minimax | MiniMax M3 | `minimax-m3-free` | $0.00 | $0.00 | Free |  | View |\n| BaseTen | BaseTen | Nemotron 3 Super | `nemotron-3-super-free` | $0.00 | $0.00 | Free |  | View |\n| Nvidia | Nvidia | Nemotron 3 Ultra | `nemotron-3-ultra-free` | $0.00 | $0.00 | Free |  | View |\n| Cohere | Cohere | North Mini Code | `north-mini-code-free` | $0.00 | $0.00 | Free |  | View |"
+          ]
+        },
+        {
+          "citation": 37,
+          "url": "https://www.morphllm.com/comparisons/opencode-vs-claude-code",
+          "title": "OpenCode vs Claude Code (June 2026): Open Source Freedom vs Anthropic Polish",
+          "publish_date": "2026-06-08",
+          "excerpts": [
+            "# OpenCode vs Claude Code: 161K Stars, Agent View, and the Provider War (June 2026)\n## GitHub Stars: The 161K vs 124K Battle\n### The Anthropic OAuth Block: The Watershed Moment\nOn January 9, 2026, Anthropic silently blocked OpenCode from using Claude via consumer OAuth tokens. OpenCode removed Claude Pro/Max support from the codebase, citing \"anthropic legal requests.\" The developer backlash on Hacker News was immediate and fierce.\nOpenCode responded by launching Black ($200/mo, sold out), Zen (pay-as-you-go curated gateway), and most recently Go ($10/mo for open-weight models like GLM-5.1, Kimi K2.5, DeepSeek V4). OpenAI publicly welcomed third-party tools as counter-positioning.\nThis event split the community. Developers who valued provider freedom rallied around OpenCode. Developers who wanted the tightest possible model integration stayed with Claude Code. Five months later, both sides doubled down: OpenCode shipped background subagents and a Scout agent for external research, while Claude Code shipped Agent View, /goal autonomy, and Opus 4.7.\n\n...\n\n## The Pricing Reality\n### Post-OAuth Block Pricing Landscape (June 2026)\nOpenCode now has three gateway tiers: Go ($10/mo for open-weight models like GLM-5.1, Kimi K2.5, DeepSeek V4), Zen (pay-as-you-go curated gateway at pass-through pricing), and Black ($200/mo for Anthropic + OpenAI + open-weight, sold out). Users can also bring their own API keys, use free tiers, or run local models via Ollama (streaming v2 reduces first-token latency by 40%). Claude Code requires $20/month Claude Pro at minimum. Max 5x ($100/mo) and Max 20x ($200/mo) provide higher limits. Claude Code now also supports gateway `/v1/models` endpoints via `ANTHROPIC_BASE_URL` , giving some provider flexibility through compatible proxies. Installation via `brew install --cask claude-code` or curl (npm deprecated)."
+          ]
+        },
+        {
+          "citation": 38,
+          "url": "https://ohaiknow.com/reviews/opencode",
+          "title": "OpenCode Review 2026: Terminal AI Coding Agent, Pricing & Pros",
+          "publish_date": "2026-05-14",
+          "excerpts": [
+            "# OpenCode\nCoding Assistants & Copilots\nOpen-source AI coding agent for terminal-first, model-flexible development.\nScore 8.2 /10\nBest for: Developers who want a fast, terminal-first AI coding agent without model lock-in\nScore\n8.2 /10\n[Try OpenCode](https://opencode.ai/)\nPrice: Free; OpenCode Go is $5 first month, then $10/month; Zen is pay-as-you-go\nFree Plan\nReviewed: Mar 14, 2026\nUpdated: May 14, 2026\n[AI Agent Workflows](https://ohaiknow.com/use-case/ai-agent-workflows/) [Code Generation](https://ohaiknow.com/use-case/code-generation/) [Code Refactoring](https://ohaiknow.com/use-case/code-refactoring/)\nSpecs\nDeployment\nAPI Self-hosted Cloud Desktop\nTarget Audience\nIndividual Startup Business Enterprise\nComplexity Developer\nPricing\nFree Core $0\nOpenCode Go $5 first month, then $10/month\nOpenCode Zen Pay as you go\nEnterprise Custom per-seat pricing\n\n...\n\n## Pricing Plans\nFree Core Popular\n$0\n* Open-source coding agent\n* Terminal TUI and CLI install paths\n* Desktop beta and IDE clients\n* Connect supported providers or subscriptions\n* Use free models where available\n* MIT-licensed codebase\nOpenCode Go\n$5 first month, then $10/month\n* Subscription access to selected open coding models\n* Works like a provider in OpenCode\n* Usage limits by 5-hour, weekly, and monthly value\n* Includes models such as GLM, Kimi, MiniMax, Qwen, and DeepSeek variants\n* Currently in beta\nOpenCode Zen\nPay as you go\n* Curated models tested by the OpenCode team\n* Add balance and pay per request\n* Can be used with OpenCode or other agents\n* Spend controls and auto top-up options\n* Best for model-quality consistency\nEnterprise\nCustom per-seat pricing\n* Central configuration\n* SSO integration\n* Internal AI gateway support\n* Enterprise trial path\n* Custom implementation and pricing discussion"
+          ]
+        },
+        {
+          "citation": 39,
+          "url": "https://opencode.ai/zen",
+          "title": "OpenCode Zen | A curated set of reliable optimized models for coding agents",
+          "publish_date": null,
+          "excerpts": [
+            "# Reliable optimized models for coding agents\nZen gives you access to a curated set of AI models that OpenCode has tested and benchmarked specifically for coding agents. No need to worry about inconsistent performance and quality, use validated models that work.\nGet started with Zen\n**Add $20 Pay as you go balance** (+$1.23 card processing fee)\nUse with any agent. Set monthly spend limits. Cancel any time.\n\n...\n\n## What problem is Zen solving?\n### FAQ\n* What is OpenCode Zen?\n* What makes Zen more accurate?\n* Is Zen cheaper?\n* How much does Zen cost?\n* What about data and privacy?\n* Can I set spend limits?\n* Can I cancel?\n* Can I use Zen with other coding agents?"
+          ]
+        },
+        {
+          "citation": 40,
+          "url": "https://www.morphllm.com/ai-coding-agent",
+          "title": "Best AI Coding Agent (2026): Ranked by Terminal-Bench, Price, and Source",
+          "publish_date": "2026-06-09",
+          "excerpts": [
+            "# Best AI Coding Agent (2026): Ranked by Terminal-Bench, Price, and Source\n## Pricing, side by side\n| Agent | License / source | Entry price | How you pay for models |\n| Claude Code | Proprietary (repo for issues) | Pro $17/mo annual or $20/mo; Max from $100/mo | Bundled. 5-hour rolling window plus weekly cap shared across claude.ai and Claude Code |\n| OpenAI Codex CLI | Apache-2.0, 89,991 stars | ChatGPT Plus $20/mo; Pro from $100/mo (5x and 20x) | Bundled per 5-hour window, or BYO OpenAI API key at per-token rates |\n| Cursor | Proprietary IDE | Hobby $0; Pro $20/mo | Pro includes ~$20 of API-rate usage; Pro+ $60, Ultra $200; separate Auto + Composer pool |\n| GitHub Copilot | Proprietary | Free $0; Pro $10/mo | Credit-based since June 1, 2026; Pro = 1,500 credits ($15 value); 1 credit = $0.01 |\n| OpenCode | MIT, 172,198 stars | Free | BYOK across 75-plus providers; ChatGPT Plus / Copilot / GitLab Duo usable as backends |\n| Cline | Apache-2.0, 62,996 stars | Free | BYOK any provider, or local via Ollama / LM Studio; no markup |\n\n...\n\n## OpenCode\nThe most-starred open source coding agent. 75-plus providers.\n[anomalyco/opencode](https://github.com/anomalyco/opencode) (moved from sst/opencode) has 172,198 stars under MIT, ahead of Gemini CLI (105k) and OpenAI Codex (90k). Terminal-native, it supports 75-plus LLM providers via the AI SDK and the Models.dev catalog, plus local models through Ollama, LM Studio, and llama.cpp. OpenCode Zen is the team's curated, tested model list for agentic coding.\n172,198\nGitHub stars (MIT)\n75+\nModel providers\n$0\nTool cost (BYOK)\nlocal\nOllama / LM Studio / llama.cpp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openrouter",
+      "topic": "OpenRouter prepaid $20/month for coding",
+      "objective": "Find how OpenRouter pricing/credits work in 2026 for a capped ~$20/month prepaid budget on coding models: per-token pricing of top coding models (DeepSeek, Qwen, GLM, Kimi, MiniMax), prompt caching support and discounts, BYOK, rate limits, and the free-tier vs paid behavior.",
+      "search_id": "search_9b1f1e439eb049d2b2ea4b253a5d26cc",
+      "results": [
+        {
+          "citation": 41,
+          "url": "https://openrouter.ai/models",
+          "title": "Models | OpenRouter",
+          "publish_date": null,
+          "excerpts": [
+            "Browse models on OpenRouter"
+          ]
+        },
+        {
+          "citation": 42,
+          "url": "https://openrouter.ai/docs/guides/best-practices/prompt-caching",
+          "title": "Prompt Caching | Reduce AI Model Costs with OpenRouter | OpenRouter | Documentation",
+          "publish_date": null,
+          "excerpts": [
+            "# Prompt Caching\nTo save on inference costs, you can enable prompt caching on supported providers and models.\nMost providers automatically enable prompt caching, but note that some (see\nAlibaba and Anthropic below) require you to enable it on a per-message basis.\nWhen using caching (whether automatically in supported models, or via the `cache_control` property), OpenRouter uses provider sticky routing to maximize cache hits \u2014 see [Provider Sticky Routing](#provider-sticky-routing) below for details.\n\n...\n\n## Alibaba Qwen\nCaching price changes for explicit caching:\n* **Cache writes**: charged at {ALIBABA_CACHE_WRITE_MULTIPLIER}x the price of\n  the original input pricing\n* **Cache reads**: charged at {ALIBABA_CACHE_READ_MULTIPLIER}x the price of\n  the original input pricing\nAlibaba prompt caching requires explicit cache breakpoints. Add\n`cache_control: { \"type\": \"ephemeral\" }` to content blocks you want to\ncache, using the same syntax as Anthropic explicit caching. Cache writes use a\n5-minute TTL.\nAlibaba explicit caching is available on `deepseek/deepseek-v3.2`,\n`qwen/qwen3-max`, `qwen/qwen-plus`, `qwen/qwen3.6-plus`,\n`qwen/qwen3-coder-plus`, and `qwen/qwen3-coder-flash`. Snapshot endpoints,\nincluding `qwen/qwen3.5-plus-02-15` and `qwen/qwen3.5-flash-02-23`, do not\nsupport explicit caching.\n\n...\n\n## Anthropic Claude\n**Automatic caching** (top-level `cache_control`) is only supported when requests are routed to the **Anthropic** provider directly. Amazon Bedrock and Google Vertex AI currently do not support top-level `cache_control` \u2014 when it is present, OpenRouter will only route to the Anthropic provider and exclude Bedrock and Vertex endpoints. Explicit per-block `cache_control` breakpoints work across all Anthropic-compatible providers including Bedrock and Vertex.\n**Responses API support:** The [Responses API](/docs/api-reference/responses/create-a-model-response) only supports **automatic caching** via top-level `cache_control`. Explicit per-block cache breakpoints inside `input` items are **not** exposed through the Responses API \u2014 use the [Chat Completions](/docs/api-reference/chat/create-a-chat-completion) or [Anthropic Messages](/docs/api-reference/messages/create-a-message) API if you need fine-grained breakpoints.\n\n...\n\n## DeepSeek\nCaching price changes:\n* **Cache writes**: charged at the same price as the original input pricing\n* **Cache reads**: charged at {DEEPSEEK_CACHE_READ_MULTIPLIER}x the price of the original input pricing\nPrompt caching with DeepSeek is automated and does not require any additional configuration."
+          ]
+        },
+        {
+          "citation": 43,
+          "url": "https://pricepertoken.com/endpoints/compare/openrouter-vs-together",
+          "title": "OpenRouter vs Together AI Pricing 2026 \u2014 Model & Cost Comparison | Price Per Token",
+          "publish_date": null,
+          "excerpts": [
+            "Cogito v1 Preview Qwen 32B$\u2014/M \u00b7 DeepCoder 14B Preview$\u2014/M \u00b7 DeepSeek Coder 33B Instruct$0.800/M \u00b7 Devstral Small 2505$\u2014/M \u00b7 Facebook CWM$\u2014/M \u00b7 Gemma 2 9B$\u2014/M \u00b7 Gemma 2B$0.100/M \u00b7 Gemma 2B$0.100/M \u00b7 Gemma 3 1B$\u2014/M \u00b7 Gemma 3 1B (Pretrained)$\u2014/M \u00b7 Gemma 3 270M Instruct$\u2014/M \u00b7 Gemma 4 E2B IT$\u2014/M \u00b7 Gemma 4 E4B IT$\u2014/M \u00b7 Gemma 7B$0.200/M \u00b7 Gemma 7B Instruct$0.200/M \u00b7 GLM-5 FP4$\u2014/M \u00b7"
+          ]
+        },
+        {
+          "citation": 44,
+          "url": "https://pricepertoken.com/endpoints/openrouter/free",
+          "title": "OpenRouter Free Tier 2026 \u2014 Free Models, Credits & Limits | Price Per Token",
+          "publish_date": null,
+          "excerpts": [
+            "No. Free model IDs end with `:free`. Popular free models include DeepSeek V3, DeepSeek R1, Llama, and Qwen variants."
+          ]
+        },
+        {
+          "citation": 45,
+          "url": "https://tickerr.ai/limits/openrouter",
+          "title": "OpenRouter Rate Limits & Usage Caps 2026 | Tickerr",
+          "publish_date": null,
+          "excerpts": [
+            "# OpenRouter rate limits, context window & usage caps (2026)\nRate limits, context window, message limits, file upload caps and image generation limits - all OpenRouter plans compared.\nOpenRouter pricing \u2192 OpenRouter live status \u2192 Compare free tiers \u2192\n\n## OpenRouter usage limits by plan\nCredits Free\nView pricing \u2192\n| Free Models | Unlimited |  |\n| Rate Limit | 500 req/min | Higher limits with credits |\n| Paid Models | Unlimited | Pay per token |\n| Context | 2000000 tokens | Up to 2M on supported models |\nFree Free\nView pricing \u2192\n| Free Models | Unlimited | Access to 50+ free models |\n| Rate Limit | 20 req/min | Free tier rate limit |\n| Paid Models | Not available | Requires credits |\n| Context | 200000 tokens | Depends on model |\n\n...\n\n## More OpenRouter intelligence\nLive status \u2192 Check if rate limit errors are due to an active outage Pricing \u2192 Compare OpenRouter plan costs and API token pricing Free tier \u2192 Compare free limits across all AI tools\nLimits sourced from OpenRouter's official documentation. Updated when plan changes are announced."
+          ]
+        },
+        {
+          "citation": 46,
+          "url": "https://apicents.com/provider/openrouter",
+          "title": "OpenRouter API Pricing 2026: All Models & Costs | APICents",
+          "publish_date": "2026-03-10",
+          "excerpts": [
+            "Which OpenRouter models support vision / image inputs? 1 OpenRouter model support vision (image input): <strong>Amazon Nova 2 Lite</strong> (OpenRouter). These models can analyze images, charts, screenshots, and documents alongside text prompts."
+          ]
+        },
+        {
+          "citation": 47,
+          "url": "https://openrouter.ai/pricing",
+          "title": "Pricing | OpenRouter",
+          "publish_date": null,
+          "excerpts": [
+            "# Modality\n## Context length\n### Series\n[GPT](https://openrouter.ai/models?q=pricing&arch=GPT)\n[Claude](https://openrouter.ai/models?q=pricing&arch=Claude)\n[Gemini](https://openrouter.ai/models?q=pricing&arch=Gemini)\nMore\u2026\n\n...\n\n### Supported Parameters\n[tools](https://openrouter.ai/models?q=pricing&fmt=cards&order=newest&supported_parameters=tools)\n[temperature](https://openrouter.ai/models?q=pricing&fmt=cards&order=newest&supported_parameters=temperature)\n[top_p](https://openrouter.ai/models?q=pricing&fmt=cards&order=newest&supported_parameters=top_p)\nMore\u2026"
+          ]
+        },
+        {
+          "citation": 48,
+          "url": "https://docs.openclaw.ai/reference/prompt-caching",
+          "title": "Prompt caching \u00b7 OpenClaw",
+          "publish_date": null,
+          "excerpts": [
+            "summary: \"Prompt caching knobs, merge order, provider behavior, and tuning patterns\"\ntitle: \"Prompt caching\"\nread_when:\n- You want to reduce prompt token costs with cache retention\n- You need per-agent cache behavior in multi-agent setups\n- You are tuning heartbeat and cache-ttl pruning together\nPrompt caching means the model provider can reuse unchanged prompt prefixes (usually system/developer instructions and other stable context) across turns instead of re-processing them every time. OpenClaw normalizes provider usage into `cacheRead` and `cacheWrite` where the upstream API exposes those counters directly.\nStatus surfaces can also recover cache counters from the most recent transcript\nusage log when the live session snapshot is missing them, so `/status` can keep\nshowing a cache line after partial session metadata loss. Existing nonzero live\ncache values still take precedence over transcript fallback values.\nWhy this matters: lower token cost, faster responses, and more predictable performance for long-running sessions. Without caching, repeated prompts pay the full prompt cost on every turn even when most input did not change.\nThe sections below cover every cache-related knob that affects prompt reuse and token cost.\nProvider references:\n- Anthropic prompt caching: [https://platform.claude.com/docs/en/build-with-claude/prompt-caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)\n- OpenAI prompt caching: [https://developers.openai.com/api/docs/guides/prompt-caching](https://developers.openai.com/api/docs/guides/prompt-caching)\n- OpenAI API headers and request IDs: [https://developers.openai.com/api/reference/overview](https://developers.openai.com/api/reference/overview)\n- Anthropic request IDs and errors: [https://platform.claude.com/docs/en/api/errors](https://platform.claude.com/docs/en/api/errors)\n\n...\n\n# Primary knobs\n## Provider behavior\n### OpenRouter models\nFor `openrouter/anthropic/*` model refs, OpenClaw injects Anthropic\n`cache_control` on system/developer prompt blocks to improve prompt-cache\nreuse only when the request is still targeting a verified OpenRouter route\n(`openrouter` on its default endpoint, or any provider/base URL that resolves\nto `openrouter.ai`).\nFor `openrouter/deepseek/*`, `openrouter/moonshot*/*`, and `openrouter/zai/*`\nmodel refs, `contextPruning.mode: \"cache-ttl\"` is allowed because OpenRouter\nhandles provider-side prompt caching automatically. OpenClaw does not inject\nAnthropic `cache_control` markers into those requests.\nDeepSeek cache construction is best-effort and can take a few seconds. An\nimmediate follow-up may still show `cached_tokens: 0`; verify with a repeated\nsame-prefix request after a short delay and use `usage.prompt_tokens_details.cached_tokens`\nas the cache-hit signal."
+          ]
+        },
+        {
+          "citation": 49,
+          "url": "https://eliteai.tools/agent-skills/openrouter-cost-controls",
+          "title": "openrouter-cost-controls - AI Agent skill",
+          "publish_date": null,
+          "excerpts": [
+            "# OpenRouter Cost Controls\n## Overview\nOpenRouter provides per-key credit limits, a credit balance API, and per-generation cost queries. Combined with client-side budget middleware, you can enforce hard spending caps at the key level and soft caps in your application. This skill covers key-level limits, per-request cost tracking, budget enforcement middleware, and alert systems.\n\n...\n\n## Budget Enforcement Middleware\n```\n        # Representative rates (fetch from /models in production)\n        RATES = {\n            \"anthropic/claude-3.5-sonnet\": (3.0, 15.0),    # per 1M tokens\n            \"openai/gpt-4o\": (2.50, 10.0),\n            \"openai/gpt-4o-mini\": (0.15, 0.60),\n            \"meta-llama/llama-3.1-8b-instruct\": (0.06, 0.06),\n        }\n        prompt_rate, comp_rate = RATES.get(model, (3.0, 15.0))\n        return (prompt_tokens * prompt_rate / 1_000_000) + (max_tokens * comp_rate / 1_000_000)\n\n    def check_budget(self, model: str, prompt_tokens: int, max_tokens: int):\n        \"\"\"Raise if request would exceed budget.\"\"\"\n        self._reset_if_new_day()\n        estimated = self.estimate_cost(model, prompt_tokens, max_tokens)\n\n        if estimated > self.per_request_limit:\n            raise ValueError(\n                f\"Request estimated at ${estimated:.4f} exceeds per-request limit ${self.per_request_limit}\"\n            )\n```\n\n...\n\n## Error Handling\n| Error | Cause | Fix |\n| 402 Payment Required | Credits exhausted | Top up at openrouter.ai/credits or use `:free` model |\n| 402 Key limit reached | Per-key credit limit hit | Increase key limit or create new key |\n| Budget middleware rejects | Client-side limit exceeded | Increase limit or optimize prompt tokens |\n| Stale pricing data | Cached rates outdated | Refresh from `/api/v1/models` daily |\n\n...\n\n## References\n* Examples | Errors\n* [Credits](https://openrouter.ai/credits) | [Key Provisioning](https://openrouter.ai/docs/guides/overview/auth/provisioning-api-keys)"
+          ]
+        },
+        {
+          "citation": 50,
+          "url": "https://docs.roocode.com/providers/openrouter",
+          "title": "Using OpenRouter With Roo Code | Roo Code Documentation",
+          "publish_date": "2026-05-15",
+          "excerpts": [
+            "Pricing: OpenRouter charges based on the underlying model&#x27;s pricing. See the OpenRouter Models page for details. ... OpenRouter passes caching requests to underlying models that support it."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepseek",
+      "topic": "DeepSeek API direct \u2014 price & caching",
+      "objective": "Find DeepSeek API pricing in 2026: per-million-token input/output cost for the latest DeepSeek (V3.x / coder), the context-caching / cache-hit discount (cache hit vs miss price), off-peak discounts, rate limits, and coding benchmark quality. Emphasize the cache-hit price since the user is ~92% cache-hit.",
+      "search_id": "search_04c124defd7643e597ef3da7770a9432",
+      "results": [
+        {
+          "citation": 51,
+          "url": "https://felloai.com/deepseek-pricing/",
+          "title": "DeepSeek Pricing 2026: API Cost, Free Tier & Plans Guide",
+          "publish_date": null,
+          "excerpts": [
+            "# DeepSeek Pricing 2026: Complete Guide to API Costs, Free Tier and Plans\n## DeepSeek pricing 2026 (Free chat, V4 Flash at $0.14/$0.28, V4 Pro promo at $0.435/$0.87, V4 Pro at $1.74/$3.48)\n### DeepSeek V4 Pro at $1.74 / $3.48 per million tokens (regular)\nOnce the promo expires, **V4 Pro** reverts to its regular rate of **$1.74 per million input tokens** (cache miss), **$0.0145 per million cache hits** and **$3.48 per million output tokens** . That is still **roughly 8 to 15 times cheaper** than GPT-5.5 or Claude Opus 4.7 on output, while matching them on most reasoning benchmarks. Plan to migrate non-critical workloads to V4 Flash and reserve V4 Pro for tasks where the reasoning quality is worth the higher rate.\n\n...\n\n### DeepSeek per-million-token detail (cache miss vs cache hit)\n| Model | Input (cache miss) | Input (cache hit) | Output | Context | Notes |\n| **deepseek-v4-flash** | $0.14 | $0.0028 | $0.28 | 1M | Default low-cost model |\n| **deepseek-v4-pro** (promo until May 31, 2026) | $0.435 | $0.003625 | $0.87 | 1M | 75% off launch promo |\n| **deepseek-v4-pro** (regular) | $1.74 | $0.0145 | $3.48 | 1M | Flagship reasoning model |\n| V3 era launch pricing ( `deepseek-chat` ) | $0.27 | $0.07 | $1.10 | 64K | Historic, ID now routes to V4 Flash non-thinking |\n| R1 era launch pricing ( `deepseek-reasoner` ) | $0.55 | $0.14 | $2.19 | 64K | Historic, ID now routes to V4 Flash thinking |\nThe pre-V4 `deepseek-chat` and `deepseek-reasoner` model IDs still work, but they now route to V4 Flash non-thinking and thinking modes for backward compatibility, and DeepSeek has flagged them for deprecation. New projects should target the V4 IDs directly.\n\n...\n\n## How does DeepSeek pricing work?\nDeepSeek pricing has three layers and you save money on each one.\n1. **Tokens.** Every request is metered in input tokens (what you send) and output tokens (what the model generates). One million tokens is roughly 750,000 English words.\n2. **Cache hits.** If part of your prompt has been seen recently, DeepSeek serves it from cache at a steep discount (about **98% off** the cache-miss rate on V4 Flash). System prompts and shared context benefit the most.\n3. **Off-peak window.** DeepSeek has historically offered **50 to 75% off** during **16:30 to 00:30 UTC** for V3 and R1. The schedule may extend to V4 once the preview ends, so check the docs before relying on it.\nYou only pay for what you use. There is no minimum spend, no monthly fee, and no charge for context window length itself."
+          ]
+        },
+        {
+          "citation": 52,
+          "url": "https://www.morphllm.com/swe-bench-pro",
+          "title": "SWE-bench Pro Leaderboard (2026): Every Model Score, Claude Fable 5 Leads at 80.3%",
+          "publish_date": "2026-06-09",
+          "excerpts": [
+            "# SWE-bench Pro Leaderboard (2026): Every Model Score, Claude Fable 5 Leads at 80.3%\n## Score per Dollar: SWE-bench Pro Points per $1/M Output Tokens\nPrices: Anthropic, OpenAI, and Google official API price lists, June 2026. Note: Opus 4.7 and later (including Fable 5) use a tokenizer that can produce up to 35% more tokens for the same text than pre-4.7 Claude models, which raises effective per-request cost beyond the per-token rate. Full cost modeling in our LLM cost calculator ."
+          ]
+        },
+        {
+          "citation": 53,
+          "url": "https://api-docs.deepseek.com/quick_start/pricing-details-usd",
+          "title": "pricing-details-usd | DeepSeek API Docs",
+          "publish_date": null,
+          "excerpts": [
+            "DeepSeek API Docs Logo DeepSeek API Docs Logo **DeepSeek API Docs**\nEnglish\n* English\n* \u4e2d\u6587\uff08\u4e2d\u56fd\uff09\n[DeepSeek Platform](https://platform.deepseek.com/)\n\n# pricing-details-usd\n**|MODEL (1) |CONTEXT LENGTH |MAX COT TOKENS (2) |MAX OUTPUT TOKENS (3) |1M TOKENS\nINPUT PRICE\n(CACHE HIT) (4) |1M TOKENS\nINPUT PRICE\n(CACHE MISS) |1M TOKENS\nOUTPUT PRICE |\n| --- | --- | --- | --- | --- | --- | --- |\n|deepseek-chat |64K |- |8K |$0.07 |$0.27 |$1.10 |\n|deepseek-reasoner |64K |32K |8K |$0.14 |$0.55 |$2.19 (5) |\n**\nWeChat Official Account\n* WeChat QRcode\nCommunity\n* Email\n* [Discord](https://discord.gg/Tc7c45Zzu5)\n* [Twitter](https://twitter.com/deepseek_ai)\nMore\n* [GitHub](https://github.com/deepseek-ai)"
+          ]
+        },
+        {
+          "citation": 54,
+          "url": "https://www.datalearner.com/en/leaderboards/category/code",
+          "title": "LLM Coding Leaderboard - SWE-bench / LiveCodeBench / SWE-Bench Pro [2026-06] - Live Rankings & Guide | DataLearnerAI",
+          "publish_date": "2026-06-10",
+          "excerpts": [
+            "DataLearner logo DataLearnerAI Toggle navigation menu\nLatest AI Insights\nModel Leaderboards\nBenchmarks\nModel Directory\nModel Comparison\nResource Center\nTools\nLanguage English\n\u4e2d \u4e2d\u6587 EN English\nSearch blog\n\u4e2d EN\nDataLearner logo DataLearner AI\nA knowledge platform focused on LLM benchmarking, datasets, and practical instruction with continuously updated capability maps.\n[](https://x.com/DataLearnerAI)\nPrivacy policy Terms of service"
+          ]
+        },
+        {
+          "citation": 55,
+          "url": "https://tokenmix.ai/blog/deepseek-api-pricing",
+          "title": "DeepSeek API Pricing 2026: V4 Costs, Cache Hits, R1 Changes - TokenMix Blog",
+          "publish_date": null,
+          "excerpts": [
+            "TokenMix Research Lab \u00b7 2026-03-31\nDeepSeek API Pricing 2026: V4 Costs, Cache Hits, R1 Changes\n\n# DeepSeek API Pricing 2026: V4 Costs, Cache Hits, R1 Changes\nLast Updated: 2026-05-14\nAuthor: TokenMix Research Lab\nData checked: 2026-05-14\nDeepSeek API pricing changed materially in April 2026. [DeepSeek's official pricing table](https://api-docs.deepseek.com/quick_start/pricing) is now V4-first: DeepSeek-V4-Flash starts at $0.14 per 1M cache-miss input tokens and $0.28 per 1M output tokens, while DeepSeek-V4-Pro is discounted to $0.435 input and $0.87 output until 2026-05-31 15:59 UTC.\n\n...\n\n## Quick Pricing Table\nAll prices below are per 1M tokens from DeepSeek's official pricing page, checked on 2026-04-30.\n| Model | Cache-hit input | Cache-miss input | Output | Context | Current note |\n| deepseek-v4-flash | $0.0028 | $0.14 | $0.28 | 1M | Default economical V4 route |\n| deepseek-v4-pro | $0.003625 | $0.435 | $0.87 | 1M | 75% discount until 2026-05-31 15:59 UTC |\n| deepseek-v4-pro full listed price | $0.0145 | $1.74 | $3.48 | 1M | Shown as crossed-out official price |\n| deepseek-chat | Maps to V4-Flash non-thinking | Maps to V4-Flash non-thinking | Maps to V4-Flash non-thinking | 1M | Retires after 2026-07-24 15:59 UTC |\n| deepseek-reasoner | Maps to V4-Flash thinking | Maps to V4-Flash thinking | Maps to V4-Flash thinking | 1M | Retires after 2026-07-24 15:59 UTC |\nThe headline number is V4-Flash: $0.14 input and $0.28 output per 1M tokens, with cache hits almost free at $0.0028 per 1M tokens.\n\n...\n\n## FAQ\n### What is DeepSeek cache-hit pricing?\nCache-hit pricing applies when input tokens can reuse cached context. As of 2026-04-26 12:15 UTC, DeepSeek says cache-hit input prices across all models were reduced to one-tenth of launch price."
+          ]
+        },
+        {
+          "citation": 56,
+          "url": "https://devtk.ai/en/blog/deepseek-api-pricing-guide-2026/",
+          "title": "Current DeepSeek API Pricing 2026: V4 Flash & Pro Cost per 1M Tokens - DevTk.AI",
+          "publish_date": null,
+          "excerpts": [
+            "# Current DeepSeek API Pricing 2026: V4 Flash & Pro Cost per 1M Tokens\nThe important detail is cache pricing. DeepSeek splits input tokens into **cache hit** and **cache miss** buckets, and cache-hit input can be 50x cheaper than cache-miss input on V4 Flash.\nOfficial sources: [DeepSeek model pricing](https://api-docs.deepseek.com/quick_start/pricing) , [DeepSeek context caching](https://api-docs.deepseek.com/guides/kv_cache/) , and [DeepSeek Anthropic API compatibility](https://api-docs.deepseek.com/guides/anthropic_api) .\n\n...\n\n## Current DeepSeek V4 Pricing\nAll prices below are USD per 1 million tokens.\n| Model | Cached Input | Cache-Miss Input | Output | Context | Notes |\n| **deepseek-v4-flash** | **$0.0028** | **$0.14** | **$0.28** | 1M | Best default for most chat, coding, and agent workloads |\n| **deepseek-v4-pro** | **$0.003625** | **$0.435** | **$0.87** | 1M | Current 75% off price becomes the official 1/4-of-original price after 2026-05-31 15:59 UTC |\nDeepSeek says `deepseek-chat` and `deepseek-reasoner` are compatibility aliases for V4 Flash non-thinking and thinking modes, and those aliases are scheduled for deprecation on 2026-07-24. For new integrations, use `deepseek-v4-flash` or `deepseek-v4-pro` directly.\n\n## Why Real Bills Can Be Much Lower Than the Table Price\nDeepSeek\u2019s cost formula is:\n```\ncost =   prompt_cache_hit_tokens * cached_input_price / 1,000,000 + prompt_cache_miss_tokens * cache_miss_input_price / 1,000,000 + completion_tokens * output_price / 1,000,000\n```\nThe cache is enabled by default. You do not need to change application code to use it. DeepSeek exposes two usage fields so you can measure the effect:\n```\nusage.prompt_cache_hit_tokens usage.prompt_cache_miss_tokens\n```\nCache hits are best-effort, not guaranteed. They work best when requests reuse a stable prefix, such as the same system prompt, coding rules, repository summary, product spec, or previous conversation prefix."
+          ]
+        },
+        {
+          "citation": 57,
+          "url": "https://deploybase.ai/articles/deepseek-api-pricing",
+          "title": "DeepSeek API Pricing 2026: Model Costs, Discounts, and Cost Scenarios | DeployBase",
+          "publish_date": null,
+          "excerpts": [
+            "Articles / LLM Pricing / DeepSeek API Pricing 2026: Model Costs, Discounts, and Cost Scenarios\n\n...\n\n# DeepSeek API Pricing 2026: Model Costs, Discounts, and Cost Scenarios\n## Deepseek Api Pricing: DeepSeek Pricing Overview\nDeepSeek API pricing covers two primary models: V3 (general-purpose) and R1 (reasoning). V3 is the fastest and cheapest. R1 is slower but handles complex reasoning, code generation, and multi-step problem solving.\nOff-peak discounts (75% for R1, 50% for V3) apply during off-peak hours (16:30-00:30 GMT). Context caching (90% discount on cached inputs) enables bulk processing at minimal cost. Rate limits allow 30 requests/minute and 100K tokens/minute on Pro tier.\nAll prices are in USD. As of March 2026.\n| Model | Prompt $/MTok | Completion $/MTok | Use Case | Off-Peak Price |\n| DeepSeek V3 | $0.14 | $0.28 | General chat, fast inference | $0.07 / $0.14 |\n| DeepSeek V3.1 | $0.27 | $1.10 | General chat, improved quality | $0.135 / $0.55 |\n| DeepSeek R1 | $0.55 | $2.19 | Reasoning, code, math | $0.14 / $0.55 |\n| Context Caching (90% off) | $0.014 | $0.28 | Bulk document analysis | $0.0014 / $0.028 |\n| V3.2 (unified model) | $0.28 | $0.42 | Chat + reasoning combined | $0.14 / $0.21 |\nMTok = million tokens. Prices pulled from api-docs.deepseek.com, March 2026.\n\n...\n\n## Context Caching\nDeepSeek charges $0.014 per million cached input tokens (90% discount vs $0.14 standard for V3). The cache works across multiple requests: the first request with cached tokens pays full price, subsequent requests using the same cached tokens pay 10% of input cost.\nMinimum cache block: 1,024 tokens.\n**Use Case: Multi-Turn Conversation**\nConversation about a 100K-token document:\n* Turn 1 (user uploads doc, asks question):\n* Prompt: 100K document + 100 question = 100.1K tokens\n* Cached: 100K document tokens (future turns reuse)\n* Cost: (100K \u00d7 $0.014) + (100 \u00d7 $0.14) + (500 completion \u00d7 $0.28) = $1.40 + $0.014 + $0.14 = $1.554\n* Turn 2-10 (user asks follow-ups):\n* Prompt: 100K cached + 50 new tokens\n* Cache hit cost (cached tokens): $0 (already paid)\n* New token cost: 50 \u00d7 $0.14 = $0.007\n* Completion: 200 \u00d7 $0.28 = $0.056\n* Cost per turn: $0.063\n10-turn conversation: $1.554 (turn 1) + $0.063 \u00d7 9 = $1.554 + $0.567 = $2.121"
+          ]
+        },
+        {
+          "citation": 58,
+          "url": "https://chat-deep.ai/pricing",
+          "title": "DeepSeek API Pricing: V4 Flash, V4 Pro, Cache Hit, Cache Miss & Output Costs",
+          "publish_date": "2026-04-28",
+          "excerpts": [
+            "# DeepSeek API Pricing: V4 Flash, V4 Pro, Cache Hit, Cache Miss & Output Costs\n## Official DeepSeek API Pricing\n| Model | Input cache hit | Input cache miss | Output | Best for |\n| `deepseek-v4-flash` | $0.0028 / 1M tokens | $0.14 / 1M tokens | $0.28 / 1M tokens | Everyday chat, low-latency apps, routine coding help, summarization, extraction, classification, and cost-sensitive workloads. |\n| `deepseek-v4-pro` | **Current promo:** $0.003625 / 1M tokens |  |  |  |\n| Regular listed rate: $0.0145 / 1M tokens | **Current promo:** $0.435 / 1M tokens |  |  |  |\n| Regular listed rate: $1.74 / 1M tokens | **Current promo:** $0.87 / 1M tokens |  |  |  |\n| Regular listed rate: $3.48 / 1M tokens | Hard reasoning, complex coding, agentic workflows, long-context analysis, and higher-value production tasks. |  |  |  |\nPricing is listed per 1M tokens and was checked against the official DeepSeek Models & Pricing page on April 26, 2026 . DeepSeek may adjust prices over time, so confirm current rates before production use.\n\n...\n\n## How DeepSeek API Billing Works\nDeepSeek API billing is usage-based. The practical request-level formula is:\n```\nTotal cost =\n(cache-hit input tokens / 1,000,000 \u00d7 cache-hit rate) +\n(cache-miss input tokens / 1,000,000 \u00d7 cache-miss rate) +\n(output tokens / 1,000,000 \u00d7 output rate)\n```\nBecause all listed rates are per 1 million tokens, divide each token count by 1,000,000 before multiplying by the matching rate.\n| Billing line | What it means |\n| Input tokens, cache hit | Input tokens served from DeepSeek context caching at the lower cache-hit price. |\n| Input tokens, cache miss | Input tokens that require fresh processing and are billed at the higher cache-miss input price. |\n| Output tokens | Tokens generated by the model in the response and billed at the selected model\u2019s output rate. |"
+          ]
+        },
+        {
+          "citation": 59,
+          "url": "https://akitaonrails.com/en/2026/04/24/llm-benchmarks-parte-3-deepseek-kimi-mimo",
+          "title": "LLM Coding Benchmark (May 2026): DeepSeek v4, Kimi v2.6, Grok 4.3, GPT 5.5 \u2013 AkitaOnRails.com",
+          "publish_date": "2026-04-24",
+          "excerpts": [
+            "# LLM Coding Benchmark (May 2026): DeepSeek v4, Kimi v2.6, Grok 4.3, GPT 5.5\n## GPT via Codex: 5.4 and 5.5 at the top\n### A caveat on price\nThe ~$16/run for GPT 5.4 and ~$10/run for GPT 5.5 in the table are direct API token costs (pay-as-you-go). In April 2026, OpenAI [switched Codex to use the same API token accounting](https://chatgpt.com/codex/pricing/) inside the Plus, Pro, Business and Enterprise subscriptions. In practice, most Codex CLI users access it via [ChatGPT Plus ($20/mo) or Pro ($200/mo)](https://chatgpt.com/pricing/) , where Codex usage falls under the subscription quota (Pro gets [20\u00d7 Plus\u2019s limit](https://help.openai.com/en/articles/20001106-codex-rate-card) ). For a Pro subscriber already paying $200/month, a benchmark run adds no marginal cost until they saturate their monthly quota."
+          ]
+        },
+        {
+          "citation": 60,
+          "url": "https://wavespeed.ai/blog/posts/deepseek-v4-cost-per-million-tokens",
+          "title": "DeepSeek V4 Cost per Million Tokens: Full Calculator | WaveSpeedAI Blog",
+          "publish_date": "2026-03-02",
+          "excerpts": [
+            "# DeepSeek V4 Cost per Million Tokens: Full Calculator\nDeepSeek V4 real cost breakdown: input/output rates, cache hit savings (90% off), off-peak discounts, and a copy-paste calculator for your actual workload.\nMar 2, 2026 9 min read\nHey, guys. Dora here.\nI spent three weeks last month running **[DeepSeek](https://www.deepseek.com/en/)** V4 in production. My monthly bill came to $18. The same workload on GPT-4o would\u2019ve cost around $380. On Claude Opus 4.5, closer to $720.\nThat gap made me dig into the numbers properly \u2014 not to celebrate cheap compute, but to understand whether the pricing holds up under real use and where the hidden costs hide.\n\n## Published Pricing at Launch (verified table)\nDeepSeek V4\u2019s [official pricing](https://api-docs.deepseek.com/quick_start/pricing) went live:\n**Standard rates (per 1M tokens):**\n* Input tokens (cache miss): $0.30\n* Input tokens (cache hit): $0.03\n* Output tokens: $0.50\n**Off-peak rates (per 1M tokens):**\n* Input tokens (cache miss): $0.15\n* Input tokens (cache hit): $0.015\n* Output tokens: $0.25\nThe cache hit discount is 90%. That means if you structure your prompts with repeating elements \u2014 system instructions, tool definitions, document templates \u2014 the cost drops dramatically after the first request."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "caching_compat",
+      "topic": "Prompt caching economics + Claude Code provider routing",
+      "objective": "Find how prompt caching economics differ across providers in 2026 (Anthropic vs OpenAI vs DeepSeek vs OpenRouter vs Chinese labs) \u2014 cache write vs read pricing and discount sizes \u2014 and how to point coding agents like Claude Code at alternative Anthropic-compatible endpoints (ANTHROPIC_BASE_URL / proxies like LiteLLM, claude-code-router). Critical for a ~92% cache-hit workload.",
+      "search_id": "search_7d7c6cbeca784aaaa6a83ad7b7530897",
+      "results": [
+        {
+          "citation": 61,
+          "url": "https://github.com/musistudio/claude-code-router",
+          "title": "GitHub - musistudio/claude-code-router: Use Claude Code as the foundation for coding infrastructure, allowing you to decide how to interact with the model while enjoying updates from Anthropic. \u00b7 GitHub",
+          "publish_date": null,
+          "excerpts": [
+            "{ &quot;name&quot;: &quot;siliconflow&quot;, &quot;api_base_url&quot;: &quot;https://api.siliconflow.cn/v1/chat/completions&quot;, &quot;api_key&quot;: &quot;sk-xxx&quot;, &quot;models&quot;: [&quot;moonshotai/Kimi-K2-Instruct&quot;], &quot;transformer&quot;: { &quot;use&quot;: [ [ &quot;maxtoken&quot;, { &quot;max_tokens&quot;: 16384 } ] ] } } ... Anthropic:If you use only the Anthropic transformer, it will preserve the original request and response parameters(you can use it to connect directly to an Anthropic endpoint). deepseek: Adapts requests/responses for DeepSeek API."
+          ]
+        },
+        {
+          "citation": 62,
+          "url": "https://aicostcheck.com/blog/ai-prompt-caching-cost-savings",
+          "title": "Prompt Caching: Cut Your AI API Bill by 90% (Real Savings Math Inside) | AI Cost Check",
+          "publish_date": "2026-04-03",
+          "excerpts": [
+            "See how much prompt caching saves on OpenAI and Anthropic in 2026, with real monthly savings math, cache thresholds, break-even examples, and implementation tips."
+          ]
+        },
+        {
+          "citation": 63,
+          "url": "https://docs.litellm.ai/docs/tutorials/claude_non_anthropic_models",
+          "title": "Use Claude Code with Non-Anthropic Models | liteLLM",
+          "publish_date": null,
+          "excerpts": [
+            "<strong>ANTHROPIC_BASE_URL must point at a gateway that serves the Anthropic Messages API format</strong> \u2014 LiteLLM does this on /v1/messages. Discovery is opt-in. Without CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1, Claude Code will not query your proxy&#x27;s"
+          ]
+        },
+        {
+          "citation": 64,
+          "url": "https://www.morphllm.com/llm-api",
+          "title": "LLM API Providers (2026): 12 APIs Compared by Price per 1M Tokens, Rate Limits, and Context",
+          "publish_date": "2026-06-09",
+          "excerpts": [
+            "# LLM API Providers (2026): 12 APIs Compared by Price per 1M Tokens, Rate Limits, and Context\n## Pricing Table: Flagship and Cheapest Model per Provider\nNotes that change effective cost: Gemini 3.1 Pro rises to $4/$18 for prompts over 200K tokens. MiniMax M3 doubles to $0.60/$2.40 past 512K input. Qwen3.5-Plus rises to $0.50/$3.00 for the 256K-1M range. Anthropic charges the same per-token rate at any context length (a 900K-token request bills like a 9K one), but models from Opus 4.7 onward use a new tokenizer that can produce up to 35% more tokens for the same text, which inflates effective per-request cost in cross-provider comparisons.\nBatch and cache discounts: OpenAI cached input is 10x cheaper ($0.50/M on GPT-5.5). Anthropic batch is 50% off and cache reads are 0.1x base input. Gemini batch is half price. DeepSeek cache hits drop input to $0.0028/M, a 50x reduction. If your workload re-sends the same system prompt or file context, the cache column matters more than the headline price.\n\n...\n\n## Cost Calculator: Real Workloads\n### Support chatbot: 20M input / 5M output tokens per day\n#### The 89x gap on identical traffic\nThe same coding-agent workload costs $22,500/month on Claude Fable 5 and $252/month on DeepSeek V4 Flash. The production answer is rarely either extreme: route routine edits to a cheap model, escalate multi-file refactors to a frontier one, and cache aggressively (DeepSeek cache hits bill input at $0.0028/M; Anthropic cache reads are 0.1x and do not count against rate limits). Model the routing split with the LLM cost calculator .\n\n...\n\n## How to Choose an LLM API\n### Decision framework\nThe most common mistake is anchoring on one provider's flagship and never testing down. Five models clear 80% on SWE-bench Verified; only one of them costs $25/M output. The second most common is ignoring caching: at an 80% cache hit rate, Anthropic bills cached reads at 0.1x and exempts them from rate limits, and DeepSeek drops cached input to $0.0028/M. For long-context workloads, compare windows in detail at LLM context window comparison ."
+          ]
+        },
+        {
+          "citation": 65,
+          "url": "https://futureagi.com/blog/understanding-prompt-caching-for-faster-ai-responses/",
+          "title": "Prompt Caching in 2026: Speed Up AI & Reduce LLM Costs | Future AGI Blog",
+          "publish_date": "2025-01-26",
+          "excerpts": [
+            "<strong>Anthropic and DeepSeek price cache reads at roughly 10 percent of standard input; OpenAI prices cached input at a model dependent discount around 25 to 50 percent</strong>; Gemini bills cache storage by minute or hour rather than per cached token."
+          ]
+        },
+        {
+          "citation": 66,
+          "url": "https://guozheng-ge.medium.com/set-up-claude-code-using-third-party-coding-models-glm-4-7-minimax-2-1-kimi-k2-5a3cdf38c261",
+          "title": "Set up Claude Code using Third Party Coding Models (GLM 4.7, MiniMax 2.1, Kimi K2) | by Guozheng Ge | Medium",
+          "publish_date": "2026-01-05",
+          "excerpts": [
+            "# Set up Claude Code using Third Party Coding Models (GLM 4.7, MiniMax 2.1, Kimi K2)\nGuozheng Ge\nGuozheng Ge\n3 min read\n\u00b7\nJan 5, 2026\n[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F5a3cdf38c261&operation=register&redirect=https%3A%2F%2Fguozheng-ge.medium.com%2Fset-up-claude-code-using-third-party-coding-models-glm-4-7-minimax-2-1-kimi-k2-5a3cdf38c261&user=Guozheng+Ge&userId=51e035f181d9&source=---header_actions--5a3cdf38c261---------------------clap_footer------------------)\n--\n[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F5a3cdf38c261&operation=register&redirect=https%3A%2F%2Fguozheng-ge.medium.com%2Fset-up-claude-code-using-third-party-coding-models-glm-4-7-minimax-2-1-kimi-k2-5a3cdf38c261&source=---header_actions--5a3cdf38c261---------------------bookmark_footer------------------)\n[Listen](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2Fplans%3Fdimension%3Dpost_audio_button%26postId%3D5a3cdf38c261&operation=register&redirect=https%3A%2F%2Fguozheng-ge.medium.com%2Fset-up-claude-code-using-third-party-coding-models-glm-4-7-minimax-2-1-kimi-k2-5a3cdf38c261&source=---header_actions--5a3cdf38c261---------------------post_audio_button------------------)\nShare\nAnthropic [Claude Code](https://code.claude.com/docs/en/overview) is the most popular agentic coding tool (it is actually more than just coding) on the market. It also leads the innovations like MCP and skills.\nIt offers these plans, see details in \u201c [choosing a Claude Plan](https://support.claude.com/en/articles/11049762-choosing-a-claude-plan) \u201d:\nPress enter or click to view image in full size\n\n...\n\n## Option 1: Use Alternative Models: GLM 4.7, MiniMax 2.1, or Kimi\nThese are Chinese open source models. They provide API endpoints compatible with Anthropic API endpoints. You can find Chinese providers as well as US providers.\n\n...\n\n### Kimi K2\n```\n{  \n  \"env\": {  \n    \"ANTHROPIC_AUTH_TOKEN\": \"your_zai_api_key\",  \n    \"ANTHROPIC_BASE_URL\": \"https://api.z.ai/api/anthropic\",  \n    \"API_TIMEOUT_MS\": \"3000000\",  \n    \"ANTHROPIC_DEFAULT_SONNET_MODEL\": \"glm-4.7\",  \n    \"ANTHROPIC_DEFAULT_OPUS_MODEL\": \"glm-4.7\"  \n  }  \n}\n```\n4. Edit `~/.claude.json` , add this: `\"hasCompletedOnboarding\": true` , this will skip Claude Code onboarding process when you first run it, otherwise, it will ask you to auth using your Pro+ account.\n5. Start Claude Code by typing `claude` , and enjoy!\n[Claude Code](https://medium.com/tag/claude-code?source=post_page-----5a3cdf38c261---------------------------------------)"
+          ]
+        },
+        {
+          "citation": 67,
+          "url": "https://docs.claude-mem.ai/configuration/custom-anthropic-backends",
+          "title": "Custom Anthropic-Compatible Backends - Claude-Mem",
+          "publish_date": null,
+          "excerpts": [
+            "# Custom Anthropic-Compatible Backends\n> Point claude-mem at bridged or self-hosted Anthropic-compatible API endpoints with ANTHROPIC_BASE_URL\nWhen you use the `claude` provider, claude-mem talks to the Anthropic API through the Claude Agent SDK. By default, the SDK targets the official Anthropic endpoint, but it honors the standard `ANTHROPIC_BASE_URL` environment variable. That means you can route claude-mem at any Anthropic-protocol-compatible backend \u2014 for example a corporate gateway, a regional bridge, or a third-party provider that exposes an Anthropic-shaped API \u2014 without changing any claude-mem source code.\n<Note>\nThis page documents how to **persist a custom base URL** so claude-mem's worker uses it consistently. For OpenAI-compatible upstream providers, use a gateway such as LiteLLM and follow the [LiteLLM Gateway](litellm-gateway) guide.\n</Note>\n\n## When to Use This\nUse `ANTHROPIC_BASE_URL` if you need claude-mem's observation worker to talk to:\n* A **corporate Anthropic gateway** (proxy in front of `api.anthropic.com`)\n* A **regional Anthropic deployment** (e.g. AWS Bedrock or GCP Vertex via an Anthropic-compatible shim)\n* A **third-party provider** that bridges its API to the Anthropic protocol\nIf your provider only speaks the OpenAI chat-completions protocol, put a gateway such as LiteLLM in front of it and point claude-mem's Claude Agent SDK path at that gateway. See [LiteLLM Gateway](litellm-gateway) for the full routing model.\n\n## How the Plumbing Works\nThe flow is intentionally simple:\n1. **You write the credential** to `~/.claude-mem/.env`.\n2. **`EnvManager.loadClaudeMemEnv()`** reads that file (`src/shared/EnvManager.ts:67`).\n3. **`buildIsolatedEnv()`** copies `ANTHROPIC_BASE_URL` into the worker's spawn environment alongside explicit gateway or API credentials (`src/shared/EnvManager.ts:164`).\n4. **`ClaudeProvider.startSession()`** spawns the Claude Agent SDK with that isolated env (`src/services/worker/ClaudeProvider.ts:115`). The SDK reads `ANTHROPIC_BASE_URL` natively \u2014 claude-mem does not parse or rewrite it.\nBecause the variable is isolated to the worker process, your interactive Claude Code sessions are unaffected; only the background memory agent uses the override.\n\n...\n\n## Related\n* [Configuration](../configuration) \u2014 All claude-mem settings\n* [LiteLLM Gateway](litellm-gateway): Route the Claude Agent SDK path through LiteLLM\n* [OpenRouter Provider](../usage/openrouter-provider) \u2014 OpenAI-compatible bridge for non-Anthropic protocols\n* [Gemini Provider](../usage/gemini-provider) \u2014 Native Gemini API alternative"
+          ]
+        },
+        {
+          "citation": 68,
+          "url": "https://tokenmix.ai/blog/prompt-caching-guide",
+          "title": "Prompt Caching Guide 2026: Save 50-95% on AI API Costs with OpenAI, Anthropic, and Google Caching - TokenMix Blog",
+          "publish_date": "2026-04-29",
+          "excerpts": [
+            "| Discount Layer | GPT-5.4 Input/M | | --- | --- | | Standard | $2.50 | | Cache hit only | $1.25 (50% off) | | Batch only | $1.25 (50% off) | | **Cache hit + Batch** | **$0.625** (75% off) | <strong>OpenAI&#x27;s stacked discount reaches 75% off</strong> \u2014 significant,"
+          ]
+        },
+        {
+          "citation": 69,
+          "url": "http://syncfusion.com/blogs/post/top-llm-api-comparison-2026",
+          "title": "Best LLM APIs\u00a0in 2026: Comparing OpenAI, Claude, Gemini, Azure, Bedrock, Mistral & DeepSeek | Syncfusion Blogs",
+          "publish_date": "2026-04-08",
+          "excerpts": [
+            "# Best LLM APIs in 2026: Comparing OpenAI, Claude, Gemini, Azure, Bedrock, Mistral & DeepSeek\n## The real developer pain (what hits in production)\n* **Onboarding friction:** SDK maturity and example depth decide whether \u201cHello, world\u201d takes 10 minutes or half a day.\n* **Architecture trade** **\u2011offs:** Do you rely on `**1M\u2011token prompts**` or build a slim RAG layer? Your choice impacts latency, token spend, and maintainability.\n* **Latency-** **sensitive apps:** Streaming `**TTFT**` matters more than raw `**TPS**` ; caching helps TTFT, not generation speed.\n* **Cost unpredictability:** Learn the batch API and prompt caching knobs or pay `**40\u201360%**` more than you need.\n* **Vendor lock-** **in:** Proprietary caching keys, computer\u2011use runtimes, quota models can become hard dependencies; abstract early.\n* **Production reliability:** Watch rate limits, region availability, and model deprecation windows; build for churn.\n\n...\n\n## How we evaluated the top LLM APIs\n| **Factor** | **Why It Matters** |\n| Latency ( `**TTFT / TPS**` ) | `**Time-to-first-token**` and `**tokens-per-second**` . Critical for real-time UX. |\n| Pricing model | Per-token vs provisioned vs batch. The right model can cut costs by `**40-60%**` . |\n| Context window (Verified) | Accuracy can degrade at the upper end. |\n| SDK ecosystem | Official SDKs, community wrappers, and OpenAI API compatibility. |\n| Agentic/tool-calling Maturity | Multi-step tool use and computer use for autonomous agent apps. A primary selection criterion in 2026 for agentic workloads. |\n| Context caching | Prompt/input caching (available in Anthropic and OpenAI) reuses repeated system-prompt tokens across requests, significantly reducing cost and latency at scale. |\n| Structured outputs | Maturity in JSON mode, function calling, and tool use varies significantly. |\n| Multimodal support | Ability to process text, images, audio, and video (varies widely). |\n\n...\n\n## Provider-by-provider analysis\n### 2. Anthropic Claude\n**Models** : `**Claude Sonnet 4.6**` \u00b7 **`Claude Opus 4.6`**\n**Best for:** agentic workflows, code assistants, and complex instruction-following.\n**Why choose Claude**\n* Best-in-class coding abilities and multi-file reasoning.\n* Production-ready computer\u2011use capabilities.\n* `**1M-token**` context with high retrieval accuracy.\n* Prompt caching is extremely effective for long system prompts.\n**Where it struggles**\n* No fine\u2011tuning via the public API.\n* Smaller ecosystem vs OpenAI.\n* Enterprise compliance often runs through AWS Bedrock in practice.\n**Use when:** you\u2019re building agents or code copilots where reliability matters more than model variety."
+          ]
+        },
+        {
+          "citation": 70,
+          "url": "https://blog.laozhang.ai/en/posts/claude-code-api-configuration",
+          "title": "Claude Code API Configuration: Keys, Settings, Models, and Gateways | LaoZhang AI Blog",
+          "publish_date": "2026-04-21",
+          "excerpts": [
+            "Blog Logo LaoZhang AI Blog blog.laozhang.ai\nBlog [Docs](https://docs.laozhang.ai)\n\ud83c\udf4c Nano Banana Pro $0.05\n\ud83c\uddfa\ud83c\uddf8 EN\n1. Blog\n2. Claude Code\n3. Claude Code API Configuration: Keys, Settings, Models, and Gateways\n\n...\n\n# Claude Code API Configuration: Keys, Settings, Models, and Gateways\n## Choose The Claude Code Route Before You Configure Anything\nThe direct API route is `ANTHROPIC_API_KEY` . Use it when the session should deliberately use an Anthropic Console API key, such as a CI run, scripted agent, headless task, evaluation harness, or a local workflow you want billed and tracked as API usage. If your uncertainty is who pays for a session after an API key is present, route that decision to the Claude Code API key vs subscription billing guide .\nThe compatible gateway route is `ANTHROPIC_AUTH_TOKEN` plus `ANTHROPIC_BASE_URL` . Use it only when you understand the gateway's trust boundary, model naming, header behavior, and compatibility with Anthropic Messages, Bedrock InvokeModel, or Vertex rawPredict style APIs. A gateway can be useful infrastructure, but it is not the same contract as direct Anthropic API access.\n\n...\n\n## Gateway Or Proxy Setup\nA gateway setup has two moving parts: the token and the base URL. `ANTHROPIC_AUTH_TOKEN` is sent as a bearer token, while `ANTHROPIC_BASE_URL` changes the host Claude Code talks to. Those variables should be treated as a pair because the token is only meaningful inside the trust boundary of the service receiving it.\n```\nbash\n\n`export ANTHROPIC_AUTH_TOKEN = \" $YOUR_GATEWAY_TOKEN \" export ANTHROPIC_BASE_URL = \"https://gateway.example.com\" claude\n/status`\n```\nDo not call a gateway compatible just because it accepts a token. Claude Code's gateway documentation expects the service to expose compatible API shapes and preserve required version and beta headers. Model names may also need explicit environment variables because gateway aliases can differ from Anthropic's direct API names.\nGateway setup should pass four checks before real work:\n\n...\n\n## FAQ\n### Can I change the Claude Code base URL?\nYes, `ANTHROPIC_BASE_URL` can point Claude Code at a compatible gateway or proxy route. Verify the host, token, model names, header behavior, and data boundary before using it for real work."
+          ]
+        }
+      ]
+    }
+  ]
+}
