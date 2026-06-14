@@ -1,0 +1,8 @@
+# White-label branding for the PDF report. Point --brand at a copy of this file.
+firm_name: "Bonewitz Wealth Advisors"
+primary_color: "#173a5e"
+accent_color: "#3d7ea6"
+# logo_path: "/absolute/path/to/logo.png"   # optional; embedded as a data URI
+footer: "Bonewitz Wealth Advisors, LLC — Registered Investment Adviser"
+extra_disclosures:
+  - "Advisory services offered through Bonewitz Wealth Advisors, LLC, a Registered Investment Adviser. This material does not constitute a recommendation under SEC rules."

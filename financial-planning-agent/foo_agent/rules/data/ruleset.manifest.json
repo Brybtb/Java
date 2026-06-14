@@ -1,0 +1,8 @@
+{
+  "version": "2026.06.0",
+  "schema_version": "1.0.0",
+  "effective_date": "2026-01-01",
+  "title": "Financial Order of Operations — core ruleset",
+  "discipline_coverage": ["CFP", "CFA", "tax_attorney", "estate_attorney", "insurance", "banking_lending", "enrolled_agent"],
+  "notes": "Phase-1 core. Dollar parameters in jurisdiction/_us_federal.params.yaml are PLACEHOLDERS pending verification by research/verify_assumptions.py against IRS/SSA primary sources."
+}

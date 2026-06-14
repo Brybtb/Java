@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Client Financial Profile",
+  "type": "object",
+  "required": ["schema_version", "household", "income", "expenses"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "as_of": { "type": "string", "format": "date" },
+    "household": {
+      "type": "object",
+      "required": ["filing_status", "state", "primary_age"],
+      "properties": {
+        "filing_status": { "type": "string", "enum": ["single", "married_filing_jointly", "married_filing_separately", "head_of_household", "qualifying_widow"] },
+        "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "primary_age": { "type": "integer", "minimum": 0, "maximum": 120 },
+        "spouse_age": { "type": "integer", "minimum": 0, "maximum": 120 }
+      },
+      "additionalProperties": true
+    },
+    "income": {
+      "type": "object",
+      "required": ["gross_annual"],
+      "properties": {
+        "gross_annual": { "type": "number", "minimum": 0 },
+        "self_employment": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "expenses": {
+      "type": "object",
+      "required": ["monthly_essential"],
+      "properties": {
+        "monthly_essential": { "type": "number", "minimum": 0 },
+        "monthly_total": { "type": "number", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "debts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "balance", "apr"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "type": "string" },
+          "balance": { "type": "number", "minimum": 0 },
+          "apr": { "type": "number", "minimum": 0, "maximum": 2 },
+          "min_payment": { "type": "number", "minimum": 0 },
+          "federal": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "accounts": { "type": "object", "additionalProperties": true },
+    "contributions": { "type": "object", "additionalProperties": true },
+    "goals": { "type": "array", "items": { "type": "object" } },
+    "risk": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": true
+}

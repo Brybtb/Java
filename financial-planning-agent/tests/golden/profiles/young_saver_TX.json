@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "as_of": "2026-06-14",
+  "household": {
+    "filing_status": "married_filing_jointly",
+    "state": "TX",
+    "primary_age": 34,
+    "spouse_age": 33,
+    "has_dependents": true
+  },
+  "income": { "gross_annual": 180000, "self_employment": false },
+  "expenses": { "monthly_essential": 6000, "monthly_total": 8500 },
+  "debts": [
+    { "id": "cc1", "type": "credit_card", "balance": 9000, "apr": 0.2299, "min_payment": 270 },
+    { "id": "sl1", "type": "student_loan", "balance": 22000, "apr": 0.055, "federal": true }
+  ],
+  "accounts": {
+    "cash_emergency": { "balance": 8000 },
+    "employer_401k": { "balance": 40000, "match_offered": true, "match_rate": 0.5, "match_pct_cap": 0.06 },
+    "roth_ira": { "balance": 12000 },
+    "hsa": { "eligible": true, "coverage": "family", "balance": 1500 }
+  },
+  "contributions": {
+    "employer_401k": { "pct": 0.03 },
+    "roth_ira": { "annual": 0 },
+    "hsa": { "annual": 0 }
+  },
+  "goals": [ { "type": "retirement", "target_age": 60 } ],
+  "risk": { "tolerance": "moderate" }
+}

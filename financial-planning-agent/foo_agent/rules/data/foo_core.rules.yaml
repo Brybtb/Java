@@ -1,0 +1,130 @@
+# Canonical Financial Order of Operations — the deterministic spine.
+# Each rule fires on a condition over the profile/derived facts and delegates the
+# dollar math to a named calculator. Conditions use only the safe DSL. Every rule
+# carries at least one citation (enforced at load).
+rules:
+  - id: foo.emergency_fund.starter
+    title: "Build a starter emergency buffer before aggressive debt payoff"
+    order: 100
+    priority: 10
+    discipline: ["CFP"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "derived.emergency_starter_funded == false"
+    action: { type: recommend_cash_target, calculator: emergency_fund.starter, target_account: cash_emergency }
+    rationale_key: emergency_fund_prevents_debt_spiral
+    citations: [3]
+    confidence: high
+    assumptions: ["starter target = max(1 month essential expenses, $1,000)"]
+
+  - id: foo.employer_match.capture_full
+    title: "Raise contributions to capture the full employer match"
+    order: 200
+    priority: 10
+    discipline: ["CFP", "CFA"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "accounts.employer_401k.match_offered == true and contributions.employer_401k.pct < accounts.employer_401k.match_pct_cap"
+    action: { type: recommend_contribution, calculator: employer_match.capture_full, target_account: employer_401k }
+    rationale_key: employer_match_is_free_money
+    citations: [1, 8]
+    confidence: high
+    assumptions: ["match is non-discretionary", "employee stays through vesting"]
+
+  - id: foo.debt.high_interest
+    title: "Pay off high-interest debt (avalanche order)"
+    order: 300
+    priority: 10
+    discipline: ["CFP"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "derived.has_high_interest_debt == true"
+    action: { type: recommend_debt_payoff, calculator: debt.high_interest }
+    rationale_key: high_interest_debt_guaranteed_return
+    citations: [7]
+    confidence: high
+    assumptions: ["high-interest threshold from params (default APR > 8%)"]
+
+  - id: foo.emergency_fund.full
+    title: "Build the full emergency reserve (3-6 months of essentials)"
+    order: 400
+    priority: 10
+    discipline: ["CFP"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "derived.emergency_starter_funded == true and derived.has_high_interest_debt == false and derived.emergency_full_funded == false"
+    action: { type: recommend_cash_target, calculator: emergency_fund.full, target_account: cash_emergency }
+    rationale_key: full_reserve_covers_income_shock
+    citations: [3]
+    confidence: high
+    assumptions: ["target = 6 months essential expenses (tune by job stability)"]
+
+  - id: foo.hsa.max
+    title: "Max the HSA (triple tax advantage) if HSA-eligible"
+    order: 500
+    priority: 10
+    discipline: ["CFP", "CFA"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "accounts.hsa.eligible == true and derived.emergency_full_funded == true and derived.has_high_interest_debt == false and derived.hsa_maxed == false"
+    action: { type: recommend_contribution, calculator: contributions.hsa_max, target_account: hsa }
+    rationale_key: hsa_triple_tax_advantage
+    citations: [4]
+    confidence: high
+    assumptions: ["covered by an HSA-qualified HDHP all year"]
+
+  - id: foo.ira.max
+    title: "Max a Roth or Traditional IRA (routed by income)"
+    order: 600
+    priority: 10
+    discipline: ["CFP", "CFA"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "derived.emergency_full_funded == true and derived.has_high_interest_debt == false and (derived.hsa_maxed == true or derived.hsa_eligible == false) and derived.ira_maxed == false"
+    action: { type: recommend_contribution, calculator: contributions.ira_max, target_account: roth_ira }
+    rationale_key: ira_tax_advantaged_growth
+    citations: [2, 5]
+    confidence: high
+    assumptions: ["MAGI proxied by gross income in Phase 1"]
+
+  - id: foo.employer_plan.max
+    title: "Max the employer retirement plan up to the annual limit"
+    order: 700
+    priority: 10
+    discipline: ["CFP", "CFA"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "derived.emergency_full_funded == true and derived.has_high_interest_debt == false and derived.ira_maxed == true and derived.employer_plan_maxed == false"
+    action: { type: recommend_contribution, calculator: contributions.employer_plan_max, target_account: employer_401k }
+    rationale_key: maximize_tax_advantaged_space
+    citations: [1]
+    confidence: high
+    assumptions: []
+
+  - id: foo.taxable.hyper_accumulate
+    title: "Invest the surplus in a taxable brokerage account"
+    order: 800
+    priority: 10
+    discipline: ["CFP", "CFA"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "derived.ready_for_taxable == true"
+    action: { type: recommend_contribution, calculator: contributions.taxable_brokerage, target_account: taxable }
+    rationale_key: taxable_for_flexible_growth
+    citations: [6]
+    confidence: medium
+    assumptions: ["surplus = gross - essentials - current tax-advantaged contributions"]
+
+  - id: foo.protect.review_coverage
+    title: "Review protection: life/disability coverage and estate documents"
+    order: 900
+    priority: 10
+    discipline: ["CFP", "insurance", "estate_attorney"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "income.gross_annual > 0"
+    action: { type: recommend_review, calculator: protection.review }
+    rationale_key: protect_the_plan_against_shocks
+    citations: [9]
+    confidence: medium
+    assumptions: ["heuristic coverage targets; not a full needs analysis"]

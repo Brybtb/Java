@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Planning Result",
+  "type": "object",
+  "required": ["schema_version", "engine_version", "ruleset_version", "as_of", "input_hash", "requires_advisor_review", "recommendations", "trace", "disclosures"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "engine_version": { "type": "string" },
+    "ruleset_version": { "type": "string" },
+    "ruleset_checksum": { "type": "string" },
+    "cma_version": { "type": ["string", "null"] },
+    "mc_seed": { "type": ["integer", "null"] },
+    "as_of": { "type": "string", "format": "date" },
+    "input_hash": { "type": "string" },
+    "requires_advisor_review": { "type": "boolean" },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step", "rule_id", "headline", "citations"],
+        "properties": {
+          "step": { "type": "integer" },
+          "rule_id": { "type": "string" },
+          "headline": { "type": "string" },
+          "computed": { "type": "object" },
+          "rationale_key": { "type": "string" },
+          "citations": { "type": "array", "items": { "type": "integer" } },
+          "confidence": { "type": "string" },
+          "assumptions": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": true
+      }
+    },
+    "insights": { "type": "array", "items": { "type": "object" } },
+    "projection": { "type": ["object", "null"] },
+    "monte_carlo": { "type": ["object", "null"] },
+    "trace": { "type": "object" },
+    "disclosures": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "sources": { "type": "array", "items": { "type": "object" } }
+  },
+  "additionalProperties": true
+}

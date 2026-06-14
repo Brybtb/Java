@@ -1,0 +1,9 @@
+{
+  "id": "retire_at_67",
+  "label": "Work to 67 and save 12%",
+  "description": "Delay retirement to 67 and raise the 401(k) deferral to 12%.",
+  "deltas": [
+    { "path": "goals", "op": "set", "value": [{ "type": "retirement", "target_age": 67 }] },
+    { "path": "contributions.employer_401k.pct", "op": "set", "value": 0.12 }
+  ]
+}

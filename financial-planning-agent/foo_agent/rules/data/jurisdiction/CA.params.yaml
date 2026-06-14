@@ -1,0 +1,22 @@
+# California — progressive state income tax, community-property state, no state estate tax.
+versions:
+  - state: "CA"
+    effective_date: "2026-01-01"
+    expiry_date: null
+    income_tax:
+      has_income_tax: true
+      flat_rate: null
+      brackets:
+        - { up_to: 10756, rate: 0.01 }
+        - { up_to: 25499, rate: 0.02 }
+        - { up_to: 40245, rate: 0.04 }
+        - { up_to: 55866, rate: 0.06 }
+        - { up_to: 70606, rate: 0.08 }
+        - { up_to: 360659, rate: 0.093 }
+        - { up_to: 432787, rate: 0.103 }
+        - { up_to: 721314, rate: 0.113 }
+        - { up_to: null, rate: 0.123 }
+    community_property: true
+    homestead_exemption: 626400
+    estate_or_inheritance_tax: false
+    notes: "Brackets are PLACEHOLDERS pending verification. Mental-health surcharge above $1M not modeled in Phase 1."

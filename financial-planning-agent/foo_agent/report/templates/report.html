@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Financial Plan — {{ branding.firm_name }}</title>
+<style>
+  @page { size: Letter; margin: 1.6cm 1.8cm; }
+  body { font-family: "DejaVu Sans", sans-serif; color: #1c1c1c; font-size: 10.5px; line-height: 1.45; }
+  h1 { color: {{ branding.primary_color }}; font-size: 20px; margin: 0 0 2px 0; }
+  h2 { color: {{ branding.primary_color }}; font-size: 13px; border-bottom: 2px solid {{ branding.accent_color }};
+       padding-bottom: 2px; margin: 16px 0 8px 0; }
+  .header { display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 3px solid {{ branding.primary_color }}; padding-bottom: 8px; }
+  .firm { color: {{ branding.primary_color }}; font-weight: bold; font-size: 14px; }
+  .meta { color: #666; font-size: 8.5px; }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0; }
+  th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #e2e2e2; vertical-align: top; }
+  th { background: {{ branding.primary_color }}; color: #fff; font-size: 9px; }
+  .step { font-weight: bold; color: {{ branding.primary_color }}; }
+  .pill { display: inline-block; padding: 1px 6px; border-radius: 8px; font-size: 8px; color: #fff; }
+  .opportunity { background: #2e7d32; } .warning { background: #c62828; }
+  .caution { background: #ef6c00; } .info { background: {{ branding.accent_color }}; }
+  .kpi { display: flex; gap: 14px; margin: 6px 0; }
+  .kpi div { background: #f4f6f9; border-left: 3px solid {{ branding.accent_color }}; padding: 6px 10px; }
+  .kpi .v { font-size: 15px; font-weight: bold; color: {{ branding.primary_color }}; }
+  .kpi .l { font-size: 8px; color: #555; }
+  img.chart { width: 100%; margin: 4px 0; }
+  .disclosure { background: #fff8e1; border: 1px solid #ffe082; padding: 8px 10px; font-size: 8px;
+                color: #5d4037; margin-top: 4px; }
+  .review { background: #fde7e9; border: 1px solid #f5a3ae; padding: 6px 10px; font-weight: bold;
+            color: #8e1c2b; font-size: 9.5px; }
+  .cite { color: #777; font-size: 8px; }
+  .footer { margin-top: 14px; border-top: 1px solid #ccc; padding-top: 4px; color: #888; font-size: 8px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <div class="firm">{{ branding.firm_name }}</div>
+      <h1>Financial Plan</h1>
+    </div>
+    {% if logo_uri %}<img src="{{ logo_uri }}" style="max-height:54px;">{% endif %}
+  </div>
+  <div class="meta">
+    As of {{ result.as_of }} &middot; engine {{ result.engine_version }} &middot;
+    ruleset {{ result.ruleset_version }} &middot; CMA {{ result.cma_version or "n/a" }}
+    {% if result.mc_seed is not none %}&middot; MC seed {{ result.mc_seed }}{% endif %}
+    &middot; input {{ result.input_hash[:18] }}…
+  </div>
+
+  {% if result.requires_advisor_review %}
+  <div class="review">⚠ Decision-support draft — requires review and approval by a qualified fiduciary adviser before use.</div>
+  {% endif %}
+
+  {% if result.projection %}
+  <h2>Retirement outlook</h2>
+  <div class="kpi">
+    <div><div class="v">{{ result.projection.goal.status|replace("_"," ")|title }}</div><div class="l">Goal status</div></div>
+    <div><div class="v">{{ "%.0f"|format(result.projection.funded_ratio|float * 100) }}%</div><div class="l">Funded ratio</div></div>
+    {% if result.monte_carlo %}
+    <div><div class="v">{{ "%.0f"|format(result.monte_carlo.probability_of_success * 100) }}%</div><div class="l">P(success), {{ result.monte_carlo.trials }} trials</div></div>
+    {% endif %}
+    <div><div class="v">${{ "{:,.0f}".format(result.projection.balance_at_retirement|float) }}</div><div class="l">Balance at age {{ result.projection.retire_age }}</div></div>
+  </div>
+  {% if charts.projection %}<img class="chart" src="{{ charts.projection }}">{% endif %}
+  {% if charts.montecarlo %}<img class="chart" src="{{ charts.montecarlo }}">{% endif %}
+  {% endif %}
+
+  <h2>Recommended next actions (Financial Order of Operations)</h2>
+  <table>
+    <tr><th>#</th><th>Action</th><th>Detail</th><th>Source</th></tr>
+    {% for r in result.recommendations %}
+    <tr>
+      <td class="step">{{ r.step }}</td>
+      <td>{{ r.headline }}</td>
+      <td>{{ detail(r) }}</td>
+      <td class="cite">{{ r.citations|join(", ") }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% if result.insights %}
+  <h2>Insights</h2>
+  <table>
+    {% for i in result.insights %}
+    <tr>
+      <td style="width:80px"><span class="pill {{ i.severity }}">{{ i.severity }}</span></td>
+      <td>{{ i.message }}</td>
+      <td class="cite" style="width:50px">{{ i.citations|join(", ") }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+
+  <h2>Sources</h2>
+  <table>
+    {% for s in result.sources %}
+    <tr><td style="width:30px">{{ s.n }}</td><td>{{ s.title }}</td><td class="cite">{{ s.url }}</td></tr>
+    {% endfor %}
+  </table>
+
+  <h2>Disclosures</h2>
+  {% for d in result.disclosures %}<div class="disclosure">{{ d }}</div>{% endfor %}
+  {% for d in branding.extra_disclosures %}<div class="disclosure">{{ d }}</div>{% endfor %}
+
+  <div class="footer">{{ branding.footer or branding.firm_name }} — generated deterministically by foo-agent {{ result.engine_version }}.</div>
+</body>
+</html>

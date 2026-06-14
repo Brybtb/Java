@@ -1,0 +1,270 @@
+{
+  "annual_contribution": "8100",
+  "annual_spend_retire": "155064",
+  "balance_at_retirement": "856467",
+  "cma_version": "2026.0",
+  "depleted_age": 67,
+  "end_age": 95,
+  "ending_balance": "0",
+  "funded_ratio": "0.221",
+  "goal": {
+    "balance_at_retirement": "856467",
+    "deterministic_success": false,
+    "funded_ratio": "0.221",
+    "goal": "retirement",
+    "status": "behind",
+    "target_nest_egg": "3876597"
+  },
+  "initial_balance": "53500",
+  "path": [
+    {
+      "age": 35,
+      "balance": "64810"
+    },
+    {
+      "age": 36,
+      "balance": "77001"
+    },
+    {
+      "age": 37,
+      "balance": "90131"
+    },
+    {
+      "age": 38,
+      "balance": "104262"
+    },
+    {
+      "age": 39,
+      "balance": "119459"
+    },
+    {
+      "age": 40,
+      "balance": "135790"
+    },
+    {
+      "age": 41,
+      "balance": "153331"
+    },
+    {
+      "age": 42,
+      "balance": "172160"
+    },
+    {
+      "age": 43,
+      "balance": "192358"
+    },
+    {
+      "age": 44,
+      "balance": "214016"
+    },
+    {
+      "age": 45,
+      "balance": "237225"
+    },
+    {
+      "age": 46,
+      "balance": "262087"
+    },
+    {
+      "age": 47,
+      "balance": "288705"
+    },
+    {
+      "age": 48,
+      "balance": "317194"
+    },
+    {
+      "age": 49,
+      "balance": "347670"
+    },
+    {
+      "age": 50,
+      "balance": "380262"
+    },
+    {
+      "age": 51,
+      "balance": "415102"
+    },
+    {
+      "age": 52,
+      "balance": "452333"
+    },
+    {
+      "age": 53,
+      "balance": "492106"
+    },
+    {
+      "age": 54,
+      "balance": "534582"
+    },
+    {
+      "age": 55,
+      "balance": "579930"
+    },
+    {
+      "age": 56,
+      "balance": "628330"
+    },
+    {
+      "age": 57,
+      "balance": "679974"
+    },
+    {
+      "age": 58,
+      "balance": "735066"
+    },
+    {
+      "age": 59,
+      "balance": "793821"
+    },
+    {
+      "age": 60,
+      "balance": "856467"
+    },
+    {
+      "age": 61,
+      "balance": "752791"
+    },
+    {
+      "age": 62,
+      "balance": "639018"
+    },
+    {
+      "age": 63,
+      "balance": "514445"
+    },
+    {
+      "age": 64,
+      "balance": "378325"
+    },
+    {
+      "age": 65,
+      "balance": "229863"
+    },
+    {
+      "age": 66,
+      "balance": "68215"
+    },
+    {
+      "age": 67,
+      "balance": "0"
+    },
+    {
+      "age": 68,
+      "balance": "0"
+    },
+    {
+      "age": 69,
+      "balance": "0"
+    },
+    {
+      "age": 70,
+      "balance": "0"
+    },
+    {
+      "age": 71,
+      "balance": "0"
+    },
+    {
+      "age": 72,
+      "balance": "0"
+    },
+    {
+      "age": 73,
+      "balance": "0"
+    },
+    {
+      "age": 74,
+      "balance": "0"
+    },
+    {
+      "age": 75,
+      "balance": "0"
+    },
+    {
+      "age": 76,
+      "balance": "0"
+    },
+    {
+      "age": 77,
+      "balance": "0"
+    },
+    {
+      "age": 78,
+      "balance": "0"
+    },
+    {
+      "age": 79,
+      "balance": "0"
+    },
+    {
+      "age": 80,
+      "balance": "0"
+    },
+    {
+      "age": 81,
+      "balance": "0"
+    },
+    {
+      "age": 82,
+      "balance": "0"
+    },
+    {
+      "age": 83,
+      "balance": "0"
+    },
+    {
+      "age": 84,
+      "balance": "0"
+    },
+    {
+      "age": 85,
+      "balance": "0"
+    },
+    {
+      "age": 86,
+      "balance": "0"
+    },
+    {
+      "age": 87,
+      "balance": "0"
+    },
+    {
+      "age": 88,
+      "balance": "0"
+    },
+    {
+      "age": 89,
+      "balance": "0"
+    },
+    {
+      "age": 90,
+      "balance": "0"
+    },
+    {
+      "age": 91,
+      "balance": "0"
+    },
+    {
+      "age": 92,
+      "balance": "0"
+    },
+    {
+      "age": 93,
+      "balance": "0"
+    },
+    {
+      "age": 94,
+      "balance": "0"
+    },
+    {
+      "age": 95,
+      "balance": "0"
+    }
+  ],
+  "portfolio": "moderate",
+  "retire_age": 60,
+  "start_age": 34,
+  "success": false,
+  "target_nest_egg": "3876597"
+}
