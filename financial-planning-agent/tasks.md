@@ -134,7 +134,7 @@ dod:
 tests_to_add: [test_build_returns_baseline_proposed_delta, test_employer_match_is_modeled_and_lifts_funded_ratio, test_advisory_recs_carry_zero_delta_and_a_reason, test_debt_and_protection_are_advisory_not_modeled, test_multiple_modeled_steps_compose, test_waterfall_steps_sum_to_total_delta, test_no_modeled_recs_means_zero_delta, test_proposed_scenario_and_profile_validate, test_proposed_is_deterministic, test_orchestrator_attaches_proposed_when_ready, test_orchestrator_propose_false_omits_it]
 gates: { code: required, ui: smoke, experts: [cfp_decumulation, risk_quant, tax_cpa] }
 expert_rubric: rubrics/C04.yaml
-status: in_progress
+status: done
 ```
 ```yaml
 id: C05
@@ -149,7 +149,7 @@ dod:
 tests_to_add: [test_intake_brackets_single_bands_are_gross_and_dated, test_intake_brackets_rates_match_engine_params, test_intake_brackets_filing_status_changes_bands, test_intake_brackets_endpoint_200, test_intake_brackets_bad_filing_status_400, test_intake_brackets_missing_filing_status_400, test_intake_brackets_unknown_path_404]
 gates: { code: required, ui: required, experts: [intake_correctness, tax_cpa] }
 expert_rubric: rubrics/C05.yaml
-status: in_progress
+status: done
 ```
 ```yaml
 id: C06
@@ -161,5 +161,58 @@ dod:
   - "on-screen projection chart, Monte Carlo cone, Asset-Map, recommendation detail, optimizer tables, clickable sources"
 gates: { code: required, ui: required, experts: [risk_quant, cfp_decumulation] }
 expert_rubric: rubrics/C06.yaml
+status: todo
+```
+
+## tax-aware multi-bucket (owner direction 2026-06-14): keep more, grow longer, least tax drag
+
+Inversion / end-in-mind: the single-bucket projection (projection/accounts.py blends all
+balances into one pot + one blended retirement tax rate) cannot price the difference between
+taxable, tax-deferred, and Roth money — so C04 honestly flags taxable-surplus / Roth-vs-pretax
+recs as advisory. These three chunks make the engine bucket-aware end to end. Split because the
+change is far over the ~400-LOC chunk cap.
+
+```yaml
+id: C07
+title: multi-bucket accumulation (taxable / tax-deferred / Roth + HSA), per-bucket growth & tax drag
+tier: "10^2"
+depends_on: [C04]
+files: [foo_agent/projection/accounts.py, foo_agent/projection/buckets.py, foo_agent/projection/__init__.py, foo_agent/montecarlo/__init__.py, tests/test_buckets.py, tasks.md, rubrics/C07.yaml]
+dod:
+  - "PlanInputs splits initial_balance + annual_contribution into 3 buckets: taxable, tax_deferred (pre-tax 401k/trad IRA), tax_free (Roth IRA/Roth 401k); HSA folded into tax_free for retirement use"
+  - "coexisting contributions route correctly: a Roth IRA + a pre-tax 401k + employer match land in the right buckets simultaneously"
+  - "taxable bucket nets an annual tax drag on growth (dividends/turnover); tax-deferred & Roth compound untaxed; deterministic, seeded"
+  - "projection + Monte Carlo track the 3 balances and sum to today's single-bucket total when tax treatment is neutralized (golden parity guard) -> any golden change carries a WHY"
+gates: { code: required, ui: skip, experts: [tax_cpa, risk_quant, cfp_decumulation] }
+expert_rubric: rubrics/C07.yaml
+status: todo
+```
+```yaml
+id: C08
+title: tax-aware decumulation (drawdown order, RMDs, bracket-fill / Roth-conversion gap, lifetime tax)
+tier: "10^2"
+depends_on: [C07]
+files: [foo_agent/projection/decumulation.py, foo_agent/projection/__init__.py, foo_agent/calculators/rmd.py, tests/test_decumulation_proj.py, tasks.md, rubrics/C08.yaml]
+dod:
+  - "retirement spend is sourced in tax-efficient order (taxable -> tax-deferred -> Roth) honoring RMDs at the statutory age"
+  - "low-bracket headroom filled with tax-deferred withdrawals / partial Roth conversions in the gap years (reuse magi.py + tax.py brackets)"
+  - "each retirement year computes ordinary + LTCG tax -> net spendable; output carries lifetime_tax_paid and after-tax terminal wealth"
+  - "deterministic; reuses optimize/withdrawal_plan + decum.* rules; a worked-example test verifies the tax math against hand calc"
+gates: { code: required, ui: skip, experts: [tax_cpa, cfp_decumulation, risk_quant] }
+expert_rubric: rubrics/C08.yaml
+status: todo
+```
+```yaml
+id: C09
+title: asset-location + decumulation surface; un-strand C04 advisory rows (taxable/Roth routing become modeled)
+tier: "10^3"
+depends_on: [C08]
+files: [foo_agent/projection/proposed.py, foo_agent/agents/engine_tools.py, web/index.html, tests/test_proposed.py, tasks.md, rubrics/C09.yaml]
+dod:
+  - "proposed.py: taxable.hyper_accumulate and ira-routing become MODELED now that buckets exist (their advisory reasons removed); lifetime-tax delta shown alongside funded_ratio/P(success)"
+  - "web shows the bucket breakdown, the year-by-year drawdown/tax schedule, Roth-conversion windows, and least-tax-drag next-dollar guidance"
+  - "deltas + decumulation are deterministic and guarded; no fabricated tax numbers"
+gates: { code: required, ui: required, experts: [tax_cpa, cfp_decumulation, risk_quant] }
+expert_rubric: rubrics/C09.yaml
 status: todo
 ```
