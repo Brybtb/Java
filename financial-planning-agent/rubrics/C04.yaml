@@ -1,0 +1,10 @@
+chunk: C04
+personas: [cfp_decumulation, risk_quant, tax_cpa]
+items:
+  R1: "Each MODELED recommendation maps to a scenario delta that edits a field the deterministic projection actually consumes (contributions.employer_401k.pct, contributions.roth_ira.annual, contributions.hsa.annual, or an investable account balance per projection/accounts.py). Recommendations the projection does not model (cash reserve, debt payoff, taxable surplus, protection/estate) are flagged advisory/unmodeled, NOT given a fabricated funded_ratio / P(success) delta."
+  R2: "Baseline and proposed metrics both come from the deterministic engine (full_plan / orchestrator on the base and on apply_scenario'd profiles); per-rec deltas are computed by re-running the engine, never authored/estimated."
+  R3: "Deltas are reported for BOTH funded_ratio and probability_of_success, and the proposed result is deterministic: same (profile, as_of, seed, trials) -> byte-identical output."
+  R4: "The proposed/what-if scenario validates against scenario.schema.json via apply_scenario, and the resulting proposed profile still passes profile validation (no degenerate or schema-invalid profile is fed to the engine)."
+  R5: "Per-recommendation attribution is order-correct and matches the engine's recommendation set (cumulative FOO-order waterfall whose steps sum to proposed-minus-baseline, or a clearly-labeled marginal view)."
+  R6: "No fabricated numbers: every target value traces to a recommendation's 'computed' block or an engine result; the guard would still reject an invented figure in any narration."
+block_if_any: [R1, R2, R3]

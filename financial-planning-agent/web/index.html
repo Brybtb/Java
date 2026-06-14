@@ -119,6 +119,7 @@ function renderPlan(d, target){
       <div><b>${money(d.projection.balance_at_retirement)}</b>at age ${d.projection.retire_age}</div></div>`; }
   html += `<h3>Recommended next actions</h3><table><tr><th>#</th><th>Action</th><th>Sources</th></tr>` +
     (d.recommendations||[]).map(r=>`<tr><td>${r.step}</td><td>${r.headline}</td><td>${(r.citations||[]).join(', ')}</td></tr>`).join('') + `</table>`;
+  if(d.proposed) html += renderProposed(d.proposed);
   const o=d.optimizers||{};
   if(o.risk) html += `<p><b>Risk:</b> tolerance ${o.risk.tolerance_risk_number} vs capacity ${o.risk.capacity_risk_number} vs portfolio ${o.risk.portfolio_risk_number} → ${o.risk.alignment.replace(/_/g,' ')}</p>`;
   if(o.social_security?.recommended_claim_age) html += `<p><b>Social Security:</b> claim at age ${o.social_security.recommended_claim_age}</p>`;
@@ -127,6 +128,26 @@ function renderPlan(d, target){
   html += `<div style="margin:14px 0"><button class="send secondary" onclick="downloadPdf()">Download white-labeled PDF</button></div>`;
   html += (d.disclosures||[]).map(x=>`<div class="disc">${x}</div>`).join('') + `</div>`;
   target.innerHTML = html;
+}
+/* ---------------- Current vs. proposed (C04) ---------------- */
+function _pct(x){ return (x==null)?'—':(Math.round(x*1000)/10)+'%'; }
+function _signed(x){ if(x==null) return '—'; const v=Math.round(x*1000)/10; return (v>=0?'+':'')+v+' pts'; }
+function _h(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function renderProposed(p){
+  const b=p.baseline||{}, pr=p.proposed||{}, d=p.delta||{};
+  let h=`<h3>Current vs. proposed</h3>
+    <p class="note">What changes if you follow the plan. Only actions the projection models move these numbers; the rest are real advice the model can't price yet.</p>
+    <table><tr><th>Metric</th><th>Current</th><th>If you follow the plan</th><th>Change</th></tr>
+      <tr><td>Funded ratio</td><td>${_pct(b.funded_ratio)}</td><td>${_pct(pr.funded_ratio)}</td><td>${_signed(d.funded_ratio)}</td></tr>
+      <tr><td>Probability of success</td><td>${_pct(b.probability_of_success)}</td><td>${_pct(pr.probability_of_success)}</td><td>${_signed(d.probability_of_success)}</td></tr>
+    </table>`;
+  if((p.steps||[]).length){
+    h+=`<table><tr><th>#</th><th>Action</th><th>Δ funded</th><th>Modeled</th></tr>`+
+      p.steps.map(s=>`<tr><td>${s.step||''}</td><td>${_h(s.headline||s.rule_id)}</td>`+
+        `<td>${s.modeled?_signed(s.delta_funded_ratio):'—'}</td>`+
+        `<td>${s.modeled?'yes':('<span class="note">advisory — '+_h(s.reason||'')+'</span>')}</td></tr>`).join('')+`</table>`;
+  }
+  return `<div style="margin-top:8px">${h}</div>`;
 }
 async function downloadPdf(){
   const r = await fetch('/api/report.pdf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({profile:copilotProfile})});
