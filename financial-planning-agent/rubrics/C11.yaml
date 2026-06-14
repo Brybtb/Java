@@ -1,0 +1,8 @@
+chunk: C11
+personas: [tax_cpa, fiduciary_compliance]
+items:
+  R1: "The engine's ordinary_tax is CROSS-EXECUTED against an independent executable tax oracle (tenforty / OpenTaxSolver), not merely cited: across single + MFJ and incomes 40k-600k (tax year 2023), the engine matches the oracle to the dollar where the IRS exact computation worksheet applies (taxable >= 100k) and within IRS tax-table rounding (<= $25) below it."
+  R2: "The oracle is genuinely independent (a separate library applying real IRS rules); both engine and oracle are fed the SAME tax year (2023); the engine's taxable base (gross - standard deduction) equals the oracle's federal_taxable_income."
+  R3: "CI-safe + reproducible: tenforty is an optional [oracle] extra and the test importorskips, so CI (which installs only [dev]) stays green; the docstring states how to run the verification locally."
+  R4: "No fabricated numbers: the comparison uses real engine output vs real oracle output; tolerances are justified by the IRS tax-table-vs-worksheet distinction, not chosen to force a pass."
+block_if_any: [R1, R2]
