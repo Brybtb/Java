@@ -193,15 +193,17 @@ id: C08
 title: tax-aware decumulation (drawdown order, RMDs, bracket-fill / Roth-conversion gap, lifetime tax)
 tier: "10^2"
 depends_on: [C07]
-files: [foo_agent/projection/decumulation.py, foo_agent/projection/__init__.py, foo_agent/calculators/rmd.py, tests/test_decumulation_proj.py, tasks.md, rubrics/C08.yaml]
+files: [foo_agent/projection/decumulation.py, foo_agent/projection/__init__.py, tests/test_decumulation_proj.py, tasks.md, rubrics/C08.yaml]
 dod:
   - "retirement spend is sourced in tax-efficient order (taxable -> tax-deferred -> Roth) honoring RMDs at the statutory age"
   - "low-bracket headroom filled with tax-deferred withdrawals / partial Roth conversions in the gap years (reuse magi.py + tax.py brackets)"
   - "each retirement year computes ordinary + LTCG tax -> net spendable; output carries lifetime_tax_paid and after-tax terminal wealth"
   - "deterministic; reuses optimize/withdrawal_plan + decum.* rules; a worked-example test verifies the tax math against hand calc"
+  - "additive: exposed as projection.decumulation_projection(); project()/funded_ratio unchanged (no golden churn)"
+tests_to_add: [test_ordinary_tax_progressive_hand_calc, test_marginal_rate_picks_the_right_bracket, test_schedule_spans_retirement_and_is_deterministic, test_taxable_drains_before_roth_is_touched, test_rmd_is_forced_at_statutory_age, test_rmd_start_age_73_for_pre_1960, test_lifetime_tax_is_nonneg_and_after_tax_terminal_discounts_tax_deferred, test_lifetime_tax_equals_sum_of_yearly_taxes, test_no_taxable_bucket_means_no_ltcg_tax, test_decumulation_projection_from_profile]
 gates: { code: required, ui: skip, experts: [tax_cpa, cfp_decumulation, risk_quant] }
 expert_rubric: rubrics/C08.yaml
-status: todo
+status: in_progress
 ```
 ```yaml
 id: C09
