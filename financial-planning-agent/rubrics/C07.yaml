@@ -1,0 +1,9 @@
+chunk: C07
+personas: [tax_cpa, risk_quant, cfp_decumulation]
+items:
+  R1: "Account/contribution routing is correct: pre-tax 401(k) deferral + employer match -> tax_deferred; traditional IRA -> tax_deferred; Roth IRA / Roth 401(k) / HSA -> tax_free; taxable/brokerage -> taxable; cash_emergency is excluded. Coexisting Roth-IRA + pre-tax-401(k) contributions both route to their correct buckets simultaneously."
+  R2: "PARITY: with taxable_drag = 0 (or no taxable money) the 3-bucket projection AND Monte Carlo reproduce the pre-C07 single-pot result exactly; the three bucket balances sum to initial_balance and the three contributions sum to annual_contribution. The golden young_saver projection values are unchanged (only the additive 'buckets' key is new, regen logged with a WHY)."
+  R3: "The taxable bucket grows net of taxable_drag while tax_deferred and tax_free compound at the full return (the drag does not bite untaxed buckets) — a taxable dollar ends lower than the same dollar held tax-deferred when drag > 0."
+  R4: "Deterministic (same inputs/seed -> identical output); taxable_drag is sourced from the versioned CMA, not hardcoded in the engine path; no tax number is fabricated."
+  R5: "Decumulation is intentionally UNCHANGED in C07: the buckets collapse to their sum at retirement and the existing blended-tax drawdown runs as before. Bucket-aware tax-efficient withdrawal/RMDs is explicitly deferred to C08, not half-shipped here."
+block_if_any: [R1, R2, R4]

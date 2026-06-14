@@ -2,6 +2,12 @@
   "annual_contribution": "8100",
   "annual_spend_retire": "155064",
   "balance_at_retirement": "856467",
+  "buckets": {
+    "tax_deferred": "795050",
+    "tax_free": "61417",
+    "taxable": "0",
+    "taxable_drag": "0.005"
+  },
   "cma_version": "2026.0",
   "depleted_age": 66,
   "end_age": 97,

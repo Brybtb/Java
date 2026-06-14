@@ -31,3 +31,8 @@ spending_replacement: 0.80
 # Blended effective tax rate applied to portfolio withdrawals in retirement
 # (approximates the drag from tax-deferred withdrawals + RMDs). PLACEHOLDER.
 retirement_tax_rate: 0.15
+# C7: annual return haircut on the TAXABLE bucket only (the "tax cost ratio" of a
+# taxable brokerage — dividends + turnover taxed yearly). Tax-deferred and Roth
+# buckets compound untaxed and ignore this. ~50 bps is a common estimate for a
+# tax-efficient taxable equity allocation. PLACEHOLDER pending CMA verification.
+taxable_drag: 0.005

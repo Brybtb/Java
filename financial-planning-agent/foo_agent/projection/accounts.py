@@ -7,6 +7,7 @@ from dataclasses import dataclass
 
 from ..calculators.money import D
 from ..montecarlo.cma import CMA
+from .buckets import bucket_balances_d, bucket_contributions_d
 
 # Account keys treated as investable (vs. emergency cash).
 INVESTABLE = ("employer_401k", "roth_ira", "hsa", "taxable", "ira", "brokerage")
@@ -27,31 +28,26 @@ class PlanInputs:
     ss_annual: float = 0.0      # annual SS benefit at claim age, today's dollars
     ss_claim_age: int = 0       # age SS income begins (0 = none)
     retirement_tax_rate: float = 0.0  # blended effective tax on portfolio withdrawals
+    # C7: per-bucket accumulation. The three balances sum to initial_balance and the
+    # three contributions sum to annual_contribution (parity). taxable growth is net
+    # of taxable_drag; tax_deferred and tax_free compound at the full mean_return.
+    taxable_balance: float = 0.0
+    deferred_balance: float = 0.0
+    free_balance: float = 0.0
+    taxable_contrib: float = 0.0
+    deferred_contrib: float = 0.0
+    free_contrib: float = 0.0
+    taxable_drag: float = 0.0   # annual return haircut on the taxable bucket
 
 
 def _investable_total(profile: dict) -> float:
-    accounts = profile.get("accounts", {}) or {}
-    total = D(0)
-    for key in INVESTABLE:
-        acct = accounts.get(key)
-        if isinstance(acct, dict):
-            total += D(acct.get("balance", 0))
-    return float(total)
+    # Sum of the tax buckets (cash_emergency excluded) — identical to the prior
+    # per-account sum, now sourced from the single bucket classifier.
+    return float(sum(bucket_balances_d(profile).values()))
 
 
 def _annual_contribution(profile: dict) -> float:
-    gross = D(profile.get("income", {}).get("gross_annual", 0))
-    contrib = profile.get("contributions", {}) or {}
-    accts = profile.get("accounts", {}) or {}
-    deferral_pct = D(contrib.get("employer_401k", {}).get("pct", 0))
-    deferral = gross * deferral_pct
-    match_rate = D(accts.get("employer_401k", {}).get("match_rate", 0))
-    match_cap = D(accts.get("employer_401k", {}).get("match_pct_cap", 0))
-    captured = deferral_pct if deferral_pct < match_cap else match_cap
-    match = gross * captured * match_rate
-    roth = D(contrib.get("roth_ira", {}).get("annual", 0))
-    hsa = D(contrib.get("hsa", {}).get("annual", 0))
-    return float(deferral + match + roth + hsa)
+    return float(sum(bucket_contributions_d(profile).values()))
 
 
 def build_plan_inputs(profile: dict, cma: CMA) -> PlanInputs:
@@ -75,12 +71,15 @@ def build_plan_inputs(profile: dict, cma: CMA) -> PlanInputs:
     has_spouse = bool(profile.get("household", {}).get("spouse_age"))
     end_age = cma.longevity_age_joint if has_spouse else cma.longevity_age
 
+    bal = bucket_balances_d(profile)
+    con = bucket_contributions_d(profile)
+
     return PlanInputs(
         start_age=start_age,
         retire_age=retire_age,
         end_age=end_age,
-        initial_balance=_investable_total(profile),
-        annual_contribution=_annual_contribution(profile),
+        initial_balance=float(sum(bal.values())),
+        annual_contribution=float(sum(con.values())),
         annual_spend_retire=spend_retire,
         inflation=cma.inflation,
         mean_return=cma.mean_return,
@@ -88,6 +87,13 @@ def build_plan_inputs(profile: dict, cma: CMA) -> PlanInputs:
         ss_annual=ss_annual,
         ss_claim_age=ss_claim_age,
         retirement_tax_rate=float(cma.retirement_tax_rate),
+        taxable_balance=float(bal["taxable"]),
+        deferred_balance=float(bal["tax_deferred"]),
+        free_balance=float(bal["tax_free"]),
+        taxable_contrib=float(con["taxable"]),
+        deferred_contrib=float(con["tax_deferred"]),
+        free_contrib=float(con["tax_free"]),
+        taxable_drag=float(cma.taxable_drag),
     )
 
 
