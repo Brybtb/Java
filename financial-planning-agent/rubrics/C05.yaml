@@ -1,0 +1,10 @@
+chunk: C05
+personas: [intake_correctness, tax_cpa]
+items:
+  R1: "Income-band pills are GROSS-income bands: each bracket edge is taxable + that status's standard deduction (gross = taxable + std_ded), not the raw taxable threshold."
+  R2: "Band marginal rates and the standard deduction equal the engine's TY2026 params for the chosen filing status (no hand-typed tax numbers in the UI)."
+  R3: "Changing filing status changes the income bands (single vs MFJ differ); the endpoint re-derives per status."
+  R4: "Brackets come from rules.loader.load_params (engine-sourced, dated) via GET /api/intake/brackets; an unknown filing_status returns 400, never a degenerate band set."
+  R5: "filing-status renders as selectable pills, state as a picker, and a visible 'Step N of M' progress counter is shown; the structured guided plan is the default tab with chat demoted to fallback."
+  R6: "The top (open-ended) bracket is shown as an open band ('$…+', no upper) and never invents a finite ceiling."
+block_if_any: [R1, R2, R4]
