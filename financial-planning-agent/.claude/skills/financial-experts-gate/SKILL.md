@@ -13,8 +13,14 @@ It is a parameterized Workflow at `.claude/workflows/financial-experts-gate.js`.
 Invoke it with the chunk id:
 
 ```
-Workflow({ scriptPath: ".claude/workflows/financial-experts-gate.js", args: { chunk: "C03" } })
+Workflow({ scriptPath: ".claude/workflows/financial-experts-gate.js",
+           args: { chunk: "C03",
+                   block_if_any: ["R1","R2","R4"],                 // authoritative (from rubrics/C03.yaml)
+                   rubric: [{ id: "R1", text: "..." }, /* ... */], // optional but recommended
+                   personas: ["copilot_safety","intake_correctness"] } })
 ```
+
+**Pass `block_if_any` (and ideally `rubric`/`diff`/`engine_evidence`) deterministically from the caller** — they are authoritative and remove the LLM from the ground-truth path. Invoke via `scriptPath` (not `name`, which can run a stale registered snapshot). The gate is **fail-closed**: any uncertainty (missing persona, un-adjudicated block item, dropped-evidence fail, empty diff, empty rubric, caller block id absent from the rubric) → `NEEDS_HUMAN`, never a silent PASS.
 
 Pipeline:
 1. **Context** — one agent reads the chunk's `tasks.md` row + `rubrics/<chunk>.yaml`,
