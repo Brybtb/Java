@@ -166,3 +166,65 @@ def test_gemini_extract_text():
     assert _extract_text(ok) == '{"final":"hi"}'
     blocked = {"promptFeedback": {"blockReason": "SAFETY"}}
     assert "SAFETY" in _extract_text(blocked)
+
+
+# --- C03: set_profile_fields write tool + forward-threaded loop ---------------
+def test_set_profile_fields_coerces_and_validates():
+    from foo_agent.engine.errors import ProfileError
+    out = call_tool("set_profile_fields", {
+        "profile": {"schema_version": "1.0.0"},
+        "fields": {"household.filing_status": "single",
+                   "household.primary_age": "40",      # -> int
+                   "income.gross_annual": "120000"},   # -> number
+    })["output"]
+    p = out["profile"]
+    assert p["household"]["filing_status"] == "single"
+    assert p["household"]["primary_age"] == 40
+    assert p["income"]["gross_annual"] == 120000.0
+    with pytest.raises(ProfileError):                  # invalid choice rejected (B15)
+        call_tool("set_profile_fields", {"profile": {"schema_version": "1.0.0"},
+                  "fields": {"household.filing_status": "<script>"}})
+
+
+def test_llm_turn_threads_profile_forward():
+    calls = []
+    def stub(prompt):
+        calls.append(prompt)
+        if len(calls) == 1:
+            return json.dumps({"tool": "set_profile_fields", "args": {"fields": {"household.state": "TX"}}})
+        if len(calls) == 2:
+            return json.dumps({"tool": "set_profile_fields", "args": {"fields": {"household.primary_age": 40}}})
+        return json.dumps({"final": "Got it."})
+    res = turn(start(profile={}, as_of=AS_OF), "hi", llm=stub, as_of=AS_OF, seed=1, trials=100)
+    prof = res["state"]["profile"]
+    assert prof["household"]["state"] == "TX"
+    assert prof["household"]["primary_age"] == 40        # both writes threaded forward
+
+
+_C03_FIELDS = {
+    "household.filing_status": "single", "household.state": "TX",
+    "household.primary_age": 40, "income.gross_annual": 120000,
+    "expenses.monthly_essential": 3000, "accounts.cash_emergency.balance": 10000,
+    "accounts.employer_401k.match_offered": False, "accounts.hsa.eligible": False,
+}
+
+
+def test_llm_turn_reaches_ready_from_empty():
+    seq = iter([
+        json.dumps({"tool": "set_profile_fields", "args": {"fields": _C03_FIELDS}}),
+        json.dumps({"tool": "workflow_run", "args": {}}),
+        json.dumps({"final": "Here is your plan."}),
+    ])
+    res = turn(start(profile={}, as_of=AS_OF), "build my plan",
+               llm=lambda _p: next(seq), as_of=AS_OF, seed=1, trials=100)
+    assert res["status"] == "ready"
+    assert res["result"] and res["result"].get("recommendations")
+
+
+def test_llm_turn_overflow_falls_back_not_raises():
+    # A stub that never finalizes must NOT raise (no HTTP 500); it falls back to the
+    # deterministic next question.
+    res = turn(start(profile={}, as_of=AS_OF), "hi",
+               llm=lambda _p: json.dumps({"tool": "interview_next", "args": {}}),
+               as_of=AS_OF, seed=1, trials=100)
+    assert res["status"] in ("collecting", "ready")

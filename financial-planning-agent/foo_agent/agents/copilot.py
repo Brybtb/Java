@@ -109,7 +109,11 @@ _SYSTEM = (
     "provided tools; never state a dollar amount, percentage, or age that did not "
     "come from a tool result. Respond ONLY with JSON: either "
     '{"tool": "<name>", "args": {...}} to call a tool, or '
-    '{"final": "<reply to the user>"} when done. Prefer the workflow_run tool.'
+    '{"final": "<reply to the user>"} when done. '
+    "When the user states a fact (age, income, state, filing status, expenses, accounts), "
+    'FIRST call set_profile_fields with {"<dotted.path>": value} to record it (the profile '
+    "passed back reflects what is stored). Then call workflow_run for the next question to "
+    "ask, or the finished plan once enough is known."
 )
 
 
@@ -123,6 +127,15 @@ def _build_prompt(profile, history, tool_results) -> str:
     }, default=str)
 
 
+def _plan_result(tool_results):
+    """The most recent tool output that is a full plan (for the SPA to render)."""
+    for tr in reversed(tool_results):
+        out = tr.get("output")
+        if isinstance(out, dict) and ("recommendations" in out or out.get("status") == "ready"):
+            return out
+    return None
+
+
 def _llm_turn(profile, history, llm, seed, trials) -> dict:
     tool_results: list[dict] = []
     for _ in range(_MAX_TOOL_CALLS):
@@ -133,22 +146,28 @@ def _llm_turn(profile, history, llm, seed, trials) -> dict:
             # Treat unparseable output as a final reply and guard it.
             reply = validate(str(raw), [t["output"] for t in tool_results] or [{}])
             history.append({"role": "assistant", "content": reply})
-            return {"status": "ready", "reply": reply, "tool_results": tool_results,
-                    "state": {"profile": profile, "history": history}}
+            return {"status": "ready", "reply": reply, "result": _plan_result(tool_results),
+                    "tool_results": tool_results, "state": {"profile": profile, "history": history}}
         if "tool" in msg:
             args = msg.get("args", {}) or {}
-            args.setdefault("profile", profile)
+            args["profile"] = profile                      # always the CURRENT (threaded) profile
             args.setdefault("as_of", profile.get("as_of"))
             if seed is not None:
                 args.setdefault("seed", seed)
             if trials is not None:
                 args.setdefault("trials", trials)
-            tool_results.append(call_tool(msg["tool"], args))
+            tr = call_tool(msg["tool"], args)
+            tool_results.append(tr)
+            out = tr.get("output")
+            if isinstance(out, dict) and isinstance(out.get("profile"), dict):
+                profile = out["profile"]                   # thread the UPDATED profile forward (D6/B1)
             continue
         # final answer — guard against every tool output gathered this turn
         reply = validate(str(msg.get("final", "")), [t["output"] for t in tool_results] or [{}])
         history.append({"role": "assistant", "content": reply})
-        return {"status": "ready", "reply": reply, "tool_results": tool_results,
-                "state": {"profile": profile, "history": history}}
+        return {"status": "ready", "reply": reply, "result": _plan_result(tool_results),
+                "tool_results": tool_results, "state": {"profile": profile, "history": history}}
 
-    raise RuntimeError("copilot exceeded max tool calls without a final reply")
+    # Loop budget exhausted: NEVER raise (no HTTP 500). Hand back to the deterministic
+    # path — it asks the next question, or runs the plan if the profile is complete (D6).
+    return _deterministic_turn(profile, history, None, seed, trials)

@@ -90,7 +90,7 @@ dod:
 tests_to_add: [test_guard_rejects_provenance_collision, test_guard_rejects_spelled_out]
 gates: { code: required, ui: skip, experts: [copilot_safety] }
 expert_rubric: rubrics/C01.yaml
-status: in_progress
+status: done
 ```
 ```yaml
 id: C02
@@ -110,7 +110,7 @@ id: C03
 title: set_profile_fields write tool + forward-threaded copilot loop
 tier: "10^1"
 depends_on: [C01]
-files: [foo_agent/agents/engine_tools.py, foo_agent/agents/copilot.py, tests/test_agents.py]
+files: [foo_agent/agents/engine_tools.py, foo_agent/agents/copilot.py, tests/test_agents.py, tasks.md]
 dod:
   - "set_profile_fields(profile, {dotted_path: value}) coerces by interview question type and validates at the contract boundary (B15)"
   - "_llm_turn threads the UPDATED profile forward each iteration (not args.setdefault('profile', entry_profile)) (B1)"
@@ -119,7 +119,7 @@ dod:
 tests_to_add: [test_set_profile_fields_coerces_and_validates, test_llm_turn_threads_profile_forward, test_llm_turn_reaches_ready_from_empty, test_llm_turn_overflow_falls_back_not_raises]
 gates: { code: required, ui: skip, experts: [copilot_safety, intake_correctness] }
 expert_rubric: rubrics/C03.yaml
-status: todo
+status: in_progress
 ```
 ```yaml
 id: C04
