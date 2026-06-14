@@ -52,16 +52,47 @@ def _redacted(k): return "<missing>" if not k else f"set(len={len(k)},****{k[-2:
 
 def _claims_from_params(params: dict, year: int) -> list[dict]:
     cl = params.get("contribution_limits", {})
+    ed = cl.get("elective_deferral", {})
+    ira = cl.get("ira", {})
+    hsa = cl.get("hsa", {})
+    sd = params.get("tax", {}).get("standard_deduction", {})
+    rp = params.get("phaseouts", {}).get("roth_ira", {})
     out = [
-        {"id": "elective_deferral",
+        {"id": "elective_deferral_limit",
          "q": f"For tax year {year}, what is the IRS 401(k)/403(b) employee elective "
-              f"deferral limit (402(g))? The engine uses {cl.get('elective_deferral', {}).get('limit')}."},
+              f"deferral limit (402(g))? The engine uses {ed.get('limit')}."},
+        {"id": "elective_deferral_catchup",
+         "q": f"For tax year {year}, what is the IRS age-50 catch-up contribution for "
+              f"401(k)/403(b) plans? The engine uses {ed.get('catchup')}."},
         {"id": "ira_limit",
          "q": f"For tax year {year}, what is the IRS traditional/Roth IRA contribution "
-              f"limit (under age 50)? The engine uses {cl.get('ira', {}).get('limit')}."},
+              f"limit (under age 50)? The engine uses {ira.get('limit')}."},
+        {"id": "ira_catchup",
+         "q": f"For tax year {year}, what is the IRS age-50 IRA catch-up contribution? "
+              f"The engine uses {ira.get('catchup')}."},
+        {"id": "hsa_self",
+         "q": f"For tax year {year}, what is the IRS HSA self-only contribution limit? "
+              f"The engine uses {hsa.get('self')}."},
         {"id": "hsa_family",
          "q": f"For tax year {year}, what is the IRS HSA family contribution limit? "
-              f"The engine uses {cl.get('hsa', {}).get('family')}."},
+              f"The engine uses {hsa.get('family')}."},
+        {"id": "hsa_catchup",
+         "q": f"For tax year {year}, what is the IRS HSA age-55 catch-up amount? "
+              f"The engine uses {hsa.get('catchup')}."},
+        {"id": "std_deduction_single",
+         "q": f"For tax year {year}, what is the IRS standard deduction for a single "
+              f"filer? The engine uses {sd.get('single')}."},
+        {"id": "std_deduction_mfj",
+         "q": f"For tax year {year}, what is the IRS standard deduction for married "
+              f"filing jointly? The engine uses {sd.get('married_filing_jointly')}."},
+        {"id": "roth_phaseout_single",
+         "q": f"For tax year {year}, what is the Roth IRA MAGI phase-out RANGE for single "
+              f"filers? The engine uses start {rp.get('single', {}).get('start')} to end "
+              f"{rp.get('single', {}).get('end')}."},
+        {"id": "roth_phaseout_mfj",
+         "q": f"For tax year {year}, what is the Roth IRA MAGI phase-out RANGE for married "
+              f"filing jointly? The engine uses start {rp.get('married_filing_jointly', {}).get('start')} "
+              f"to end {rp.get('married_filing_jointly', {}).get('end')}."},
     ]
     return out
 

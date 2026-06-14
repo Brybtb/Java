@@ -1,6 +1,7 @@
 # US federal base parameters + global engine defaults, versioned by effective_date.
-# IMPORTANT: dollar figures are PLACEHOLDERS for the 2026 tax year pending
-# verification by research/verify_assumptions.py against IRS/SSA primary sources.
+# Tax-year-2026 figures VERIFIED 2026-06-14 via research/verify_assumptions.py
+# (Parallel.ai Task API) against IRS Rev. Proc. 2025-32 and Rev. Proc. 2025-19.
+# Re-run the verifier when IRS publishes new figures, then bump the version.
 # The engine selects the version whose [effective_date, expiry_date) brackets as_of.
 versions:
   - effective_date: "2026-01-01"
@@ -20,8 +21,8 @@ versions:
       life_income_multiple: 10
 
     contribution_limits:
-      elective_deferral:        # 401(k)/403(b) employee deferral (402(g))
-        limit: 24000
+      elective_deferral:        # 401(k)/403(b) employee deferral (402(g)), TY2026
+        limit: 24500
         catchup_50: 8000
         catchup: 8000
         catchup_age: 50
@@ -35,59 +36,59 @@ versions:
         catchup: 1000
         catchup_age: 55
 
-    phaseouts:
+    phaseouts:                  # Roth IRA MAGI phase-out ranges, TY2026
       roth_ira:
-        single: { start: 150000, end: 165000 }
-        head_of_household: { start: 150000, end: 165000 }
-        married_filing_jointly: { start: 236000, end: 246000 }
+        single: { start: 153000, end: 168000 }
+        head_of_household: { start: 153000, end: 168000 }
+        married_filing_jointly: { start: 242000, end: 252000 }
         married_filing_separately: { start: 0, end: 10000 }
-        qualifying_widow: { start: 236000, end: 246000 }
+        qualifying_widow: { start: 242000, end: 252000 }
 
     tax:
-      standard_deduction:
-        single: 15000
-        head_of_household: 22500
-        married_filing_jointly: 30000
-        married_filing_separately: 15000
-        qualifying_widow: 30000
-      brackets:
+      standard_deduction:       # TY2026
+        single: 16100
+        head_of_household: 24150
+        married_filing_jointly: 32200
+        married_filing_separately: 16100
+        qualifying_widow: 32200
+      brackets:                 # TY2026 ordinary income (Rev. Proc. 2025-32)
         single:
-          - { up_to: 11925, rate: 0.10 }
-          - { up_to: 48475, rate: 0.12 }
-          - { up_to: 103350, rate: 0.22 }
-          - { up_to: 197300, rate: 0.24 }
-          - { up_to: 250525, rate: 0.32 }
-          - { up_to: 626350, rate: 0.35 }
+          - { up_to: 12400, rate: 0.10 }
+          - { up_to: 50400, rate: 0.12 }
+          - { up_to: 105700, rate: 0.22 }
+          - { up_to: 201775, rate: 0.24 }
+          - { up_to: 256225, rate: 0.32 }
+          - { up_to: 640600, rate: 0.35 }
           - { up_to: null, rate: 0.37 }
         married_filing_jointly:
-          - { up_to: 23850, rate: 0.10 }
-          - { up_to: 96950, rate: 0.12 }
-          - { up_to: 206700, rate: 0.22 }
-          - { up_to: 394600, rate: 0.24 }
-          - { up_to: 501050, rate: 0.32 }
-          - { up_to: 751600, rate: 0.35 }
+          - { up_to: 24800, rate: 0.10 }
+          - { up_to: 100800, rate: 0.12 }
+          - { up_to: 211400, rate: 0.22 }
+          - { up_to: 403550, rate: 0.24 }
+          - { up_to: 512450, rate: 0.32 }
+          - { up_to: 768700, rate: 0.35 }
           - { up_to: null, rate: 0.37 }
         head_of_household:
-          - { up_to: 17000, rate: 0.10 }
-          - { up_to: 64850, rate: 0.12 }
-          - { up_to: 103350, rate: 0.22 }
-          - { up_to: 197300, rate: 0.24 }
-          - { up_to: 250500, rate: 0.32 }
-          - { up_to: 626350, rate: 0.35 }
+          - { up_to: 17700, rate: 0.10 }
+          - { up_to: 67450, rate: 0.12 }
+          - { up_to: 105700, rate: 0.22 }
+          - { up_to: 201775, rate: 0.24 }
+          - { up_to: 256200, rate: 0.32 }
+          - { up_to: 640600, rate: 0.35 }
           - { up_to: null, rate: 0.37 }
         married_filing_separately:
-          - { up_to: 11925, rate: 0.10 }
-          - { up_to: 48475, rate: 0.12 }
-          - { up_to: 103350, rate: 0.22 }
-          - { up_to: 197300, rate: 0.24 }
-          - { up_to: 250525, rate: 0.32 }
-          - { up_to: 375800, rate: 0.35 }
+          - { up_to: 12400, rate: 0.10 }
+          - { up_to: 50400, rate: 0.12 }
+          - { up_to: 105700, rate: 0.22 }
+          - { up_to: 201775, rate: 0.24 }
+          - { up_to: 256225, rate: 0.32 }
+          - { up_to: 384350, rate: 0.35 }
           - { up_to: null, rate: 0.37 }
         qualifying_widow:
-          - { up_to: 23850, rate: 0.10 }
-          - { up_to: 96950, rate: 0.12 }
-          - { up_to: 206700, rate: 0.22 }
-          - { up_to: 394600, rate: 0.24 }
-          - { up_to: 501050, rate: 0.32 }
-          - { up_to: 751600, rate: 0.35 }
+          - { up_to: 24800, rate: 0.10 }
+          - { up_to: 100800, rate: 0.12 }
+          - { up_to: 211400, rate: 0.22 }
+          - { up_to: 403550, rate: 0.24 }
+          - { up_to: 512450, rate: 0.32 }
+          - { up_to: 768700, rate: 0.35 }
           - { up_to: null, rate: 0.37 }
