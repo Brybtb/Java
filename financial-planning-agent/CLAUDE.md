@@ -21,8 +21,8 @@ Full critique + roadmap is in **`STRATEGY.md`** (the source of truth for directi
   Carlo, all 50 states + DC, joint-survivor longevity.
 - AI wedge: Tool/Contract plane (`foo_agent/agents/engine_tools.py`), Planning Copilot
   (`foo_agent/agents/copilot.py`), generalized guard, chat web UI.
-- **Live Gemini** wired (`foo_agent/agents/llm.py`, model `gemini-3.5-flash`).
-- **85 tests pass.**
+- **Live Gemini** wired (`foo_agent/agents/llm.py`, model `gemini-2.5-flash`).
+- **Full test suite green** (`pytest`); kept green before every commit.
 
 ## Next (what "continue" should start)
 **Phase 5 — platform foundation** (see STRATEGY.md §G): persistence + multi-client

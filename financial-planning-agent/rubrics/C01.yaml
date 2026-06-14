@@ -1,0 +1,9 @@
+chunk: C01
+personas: [copilot_safety]
+items:
+  R1: "The guard rejects a fabricated dollar figure that is not present in any tool Result."
+  R2: "The guard rejects a fabricated percentage and a fabricated age the same way."
+  R3: "Provenance values (sha256 hashes, seeds, as_of dates, list indices) are NOT treated as allowed numbers."
+  R4: "A spelled-out number (e.g. 'one point four million') cannot smuggle a fabricated figure past the guard."
+  R5: "All existing guard tests in tests/test_agents.py still pass."
+block_if_any: [R1, R2, R3, R5]
