@@ -68,9 +68,30 @@ python3 web/app.py --port 8765                 # dynamic-workflow web UI (stdlib
 ### Web UI
 
 `python3 web/app.py` serves a dependency-free single-page app (Python stdlib
-`http.server`) that walks the **dynamic workflow** interactively: it asks the next
-adaptive question, then renders the selected modules, plan, and a downloadable
-white-labeled PDF. The engine stays deterministic; the web layer is pure I/O.
+`http.server`) with a **Copilot** chat tab and a **Guided form** tab. Both walk the
+**dynamic workflow**: ask the next adaptive question, then render the selected
+modules, plan, and a downloadable white-labeled PDF. The engine stays
+deterministic; the web layer is pure I/O.
+
+### AI Copilot (LLM mode)
+
+The Planning Copilot has two modes (`foo_agent/agents/copilot.py`):
+- **Deterministic** (default, zero dependencies): conversationalizes the adaptive
+  interview, runs the orchestrator, and narrates the plan — fully reproducible.
+- **LLM mode**: a bounded tool-calling loop over the **Tool/Contract plane**
+  (`foo_agent/agents/engine_tools.py`). The model can only obtain facts by calling
+  engine tools, and every reply passes the **guard** (`explain/guard.py`) — so the
+  AI may phrase, but can never author a number that isn't in a tool Result.
+
+Enable LLM mode with Gemini:
+```bash
+export GEMINI_API_KEY=...          # never committed; read from env only
+export GEMINI_MODEL=gemini-3.5-flash   # optional; this is the default
+python3 web/app.py                 # then tick "AI mode (Gemini)" in the Copilot tab
+```
+The adapter (`foo_agent/agents/llm.py`) calls Gemini `v1beta generateContent` with
+the key in the `x-goog-api-key` header and `responseMimeType: application/json`. If
+no key is present, the copilot silently stays in deterministic mode.
 
 ### Dynamic workflow (helloplaybook-style, deterministic)
 

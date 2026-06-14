@@ -59,9 +59,14 @@ class Handler(BaseHTTPRequestHandler):
             as_of = data.get("as_of") or profile.get("as_of")
             if self.path == "/api/copilot/turn":
                 from foo_agent.agents.copilot import turn, start
+                llm = None
+                if data.get("llm"):
+                    from foo_agent.agents.llm import get_default_llm
+                    llm = get_default_llm()  # None if no provider key in the server env
                 state = data.get("state") or start(data.get("profile"), as_of)
-                out = turn(state, data.get("message"), as_of=as_of,
+                out = turn(state, data.get("message"), llm=llm, as_of=as_of,
                            seed=data.get("seed"), trials=data.get("trials") or 2000)
+                out["llm_active"] = llm is not None
                 self._send(200, json.dumps(out, default=str).encode(), "application/json")
             elif self.path == "/api/workflow":
                 from foo_agent.workflow.orchestrator import run
