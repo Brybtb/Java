@@ -128,3 +128,54 @@ def test_intake_brackets_missing_filing_status_400():
 def test_intake_brackets_unknown_path_404():
     code, _, _ = app.handle_get("/api/nope", "")
     assert code == 404
+
+
+# --- C02: DoS / limits / clamps ----------------------------------------------
+def test_oversize_post_returns_413():                       # B9
+    import http.client
+    import threading
+    from http.server import ThreadingHTTPServer
+
+    srv = ThreadingHTTPServer(("127.0.0.1", 0), app.Handler)
+    port = srv.server_address[1]
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    try:
+        conn = http.client.HTTPConnection("127.0.0.1", port, timeout=5)
+        conn.putrequest("POST", "/api/workflow")
+        conn.putheader("Content-Length", str(app._MAX_CONTENT + 1))   # oversize, body not sent
+        conn.putheader("Content-Type", "application/json")
+        conn.endheaders()
+        assert conn.getresponse().status == 413
+    finally:
+        srv.shutdown()
+
+
+def test_handler_has_socket_timeout():                      # B9: anti-slowloris
+    assert isinstance(app.Handler.timeout, (int, float)) and app.Handler.timeout > 0
+
+
+def test_deferral_pct_is_clamped():                         # B12
+    from datetime import date
+
+    from foo_agent.calculators.context import CalcContext
+    from foo_agent.calculators.contributions import _deferral_pct
+    over = CalcContext(profile={"contributions": {"employer_401k": {"pct": 5.0}}}, params={}, as_of=date(2026, 6, 14))
+    neg = CalcContext(profile={"contributions": {"employer_401k": {"pct": -2}}}, params={}, as_of=date(2026, 6, 14))
+    assert float(_deferral_pct(over)) == 1.0       # > 100% of pay -> clamped to 1
+    assert float(_deferral_pct(neg)) == 0.0        # negative -> clamped to 0
+
+
+def test_copilot_rejects_invalid_choice():                  # B15
+    from foo_agent.agents.copilot import start, turn
+    state = start(profile={}, as_of="2026-06-14")
+    res = turn(state, "<script>alert(1)</script>", as_of="2026-06-14")   # answering filing_status
+    assert res["status"] == "collecting"
+    # the malicious free text was NOT stored as the filing_status enum
+    assert (res["state"]["profile"].get("household") or {}).get("filing_status") is None
+    assert res["next_question"]["field"] == "household.filing_status"
+
+
+def test_pdf_render_is_lock_serialized():                   # B17
+    from foo_agent.report import pdf
+    import threading as _t
+    assert isinstance(pdf._PDF_EPOCH_LOCK, type(_t.Lock()))

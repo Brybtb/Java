@@ -108,28 +108,29 @@ function sendCopilot(){
 document.getElementById('cinput').addEventListener('keydown',e=>{ if(e.key==='Enter') sendCopilot(); });
 
 /* ---------------- Shared plan renderer ---------------- */
+function fundedPct(x){ const n=Number(x); if(!isFinite(n)) return '—'; const v=Math.round(n*100); if(v>100) return '100%+'; if(v<0) return '0%'; return v+'%'; }   // B8: clamp/guard
 function renderPlan(d, target){
-  const mods = (d.workflow?.selected_modules||[]).map(m=>`<span title="${m.reason||''}">${m.id.replace(/_/g,' ')}</span>`).join('');
+  const mods = (d.workflow?.selected_modules||[]).map(m=>`<span title="${_h(m.reason||'')}">${_h(m.id.replace(/_/g,' '))}</span>`).join('');
   let html = `<div class="card"><h2 style="color:var(--p);margin-top:0">Your plan</h2><div class="mods">${mods}</div>`;
   if(d.projection){ const g=d.projection.goal;
     html += `<div class="kpi">
-      <div><b>${(g.status||'').replace(/_/g,' ')}</b>goal status</div>
-      <div><b>${Math.round(g.funded_ratio*100)}%</b>funded ratio</div>
-      ${d.monte_carlo?`<div><b>${Math.round(d.monte_carlo.probability_of_success*100)}%</b>P(success)</div>`:''}
+      <div><b>${_h((g.status||'').replace(/_/g,' '))}</b>goal status</div>
+      <div><b>${fundedPct(g.funded_ratio)}</b>funded ratio</div>
+      ${d.monte_carlo?`<div><b>${fundedPct(d.monte_carlo.probability_of_success)}</b>P(success)</div>`:''}
       <div><b>${money(d.projection.balance_at_retirement)}</b>at age ${d.projection.retire_age}</div></div>`;
     const bk=d.projection.buckets;
     if(bk) html += `<p class="note">At retirement by tax treatment — taxable ${money(bk.taxable)} · tax-deferred ${money(bk.tax_deferred)} · tax-free/Roth ${money(bk.tax_free)} (taxable drag ${(Number(bk.taxable_drag)*100).toFixed(2)}%/yr).</p>`;
   }
   html += `<h3>Recommended next actions</h3><table><tr><th>#</th><th>Action</th><th>Sources</th></tr>` +
-    (d.recommendations||[]).map(r=>`<tr><td>${r.step}</td><td>${r.headline}</td><td>${(r.citations||[]).join(', ')}</td></tr>`).join('') + `</table>`;
+    (d.recommendations||[]).map(r=>`<tr><td>${_h(r.step)}</td><td>${_h(r.headline)}</td><td>${_h((r.citations||[]).join(', '))}</td></tr>`).join('') + `</table>`;
   if(d.proposed) html += renderProposed(d.proposed);
   const o=d.optimizers||{};
-  if(o.risk) html += `<p><b>Risk:</b> tolerance ${o.risk.tolerance_risk_number} vs capacity ${o.risk.capacity_risk_number} vs portfolio ${o.risk.portfolio_risk_number} → ${o.risk.alignment.replace(/_/g,' ')}</p>`;
-  if(o.social_security?.recommended_claim_age) html += `<p><b>Social Security:</b> claim at age ${o.social_security.recommended_claim_age}</p>`;
+  if(o.risk) html += `<p><b>Risk:</b> tolerance ${_h(o.risk.tolerance_risk_number)} vs capacity ${_h(o.risk.capacity_risk_number)} vs portfolio ${_h(o.risk.portfolio_risk_number)} → ${_h((o.risk.alignment||'').replace(/_/g,' '))}</p>`;
+  if(o.social_security?.recommended_claim_age) html += `<p><b>Social Security:</b> claim at age ${_h(o.social_security.recommended_claim_age)}</p>`;
   if(o.estate) html += `<p><b>Estate:</b> projected total estate tax ${money(o.estate.total_projected_estate_tax||o.estate.projected_federal_estate_tax)}</p>`;
-  if((d.insights||[]).length){ html += `<h3>Insights</h3>` + d.insights.map(i=>`<div style="margin:3px 0"><span class="pill ${i.severity}">${i.severity}</span>${i.message}</div>`).join(''); }
+  if((d.insights||[]).length){ html += `<h3>Insights</h3>` + d.insights.map(i=>`<div style="margin:3px 0"><span class="pill ${_h(i.severity)}">${_h(i.severity)}</span>${_h(i.message)}</div>`).join(''); }
   html += `<div style="margin:14px 0"><button class="send secondary" onclick="downloadPdf()">Download white-labeled PDF</button></div>`;
-  html += (d.disclosures||[]).map(x=>`<div class="disc">${x}</div>`).join('') + `</div>`;
+  html += (d.disclosures||[]).map(x=>`<div class="disc">${_h(x)}</div>`).join('') + `</div>`;
   target.innerHTML = html;
 }
 /* ---------------- Current vs. proposed (C04) ---------------- */

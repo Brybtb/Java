@@ -182,7 +182,12 @@ def handle_get(path: str, query: str) -> tuple[int, bytes, str]:
         return _json(500, {"error": "internal error"})
 
 
+_MAX_CONTENT = 1_000_000   # B9: cap request body (~1 MB) — bound memory, reject oversize
+
+
 class Handler(BaseHTTPRequestHandler):
+    timeout = 30           # B9: socket timeout defeats slowloris — a stalled client can't hang a worker
+
     def _send(self, code: int, body: bytes, ctype: str) -> None:
         self.send_response(code)
         self.send_header("Content-Type", ctype)
@@ -202,6 +207,9 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         n = int(self.headers.get("Content-Length", 0) or 0)
+        if n > _MAX_CONTENT:                                   # B9: reject oversize before reading
+            self._send(*_json(413, {"error": "request entity too large"}))
+            return
         raw = self.rfile.read(n) if n else b""
         self._send(*handle_post(self.path, raw))
 

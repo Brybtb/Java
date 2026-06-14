@@ -10,6 +10,18 @@ from .magi import magi as _magi
 from .money import cents, D
 
 
+def _deferral_pct(ctx: CalcContext) -> D:
+    """The 401(k) elective-deferral fraction, bounded to [0, 1] (B12). A profile can
+    carry a garbage pct (negative, or > 1 = deferring more than 100% of pay); clamp it
+    so downstream dollar math can never go negative or exceed gross."""
+    p = D(ctx.get("contributions.employer_401k.pct", 0))
+    if p < 0:
+        return D(0)
+    if p > 1:
+        return D(1)
+    return p
+
+
 def _headroom(limit, current) -> dict:
     limit, current = cents(limit), cents(current)
     gap = limit - current
@@ -65,7 +77,7 @@ def employer_plan_max(ctx: CalcContext) -> dict:
     if ctx.age() >= int(ctx.param("contribution_limits.elective_deferral.catchup_age", 50)):
         limit += D(ctx.param("contribution_limits.elective_deferral.catchup", 0))
     gross = D(ctx.get("income.gross_annual", 0))
-    current = gross * D(ctx.get("contributions.employer_401k.pct", 0))
+    current = gross * _deferral_pct(ctx)
     return _headroom(limit, current)
 
 
@@ -74,7 +86,7 @@ def taxable_brokerage(ctx: CalcContext) -> dict:
     taxable account after essential expenses and current contributions."""
     gross = D(ctx.get("income.gross_annual", 0))
     essential_annual = D(ctx.get("expenses.monthly_essential", 0)) * 12
-    cur_deferral = gross * D(ctx.get("contributions.employer_401k.pct", 0))
+    cur_deferral = gross * _deferral_pct(ctx)
     other = (
         D(ctx.get("contributions.roth_ira.annual", 0))
         + D(ctx.get("contributions.hsa.annual", 0))

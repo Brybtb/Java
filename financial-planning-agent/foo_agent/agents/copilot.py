@@ -83,7 +83,15 @@ def turn(state: dict, user_input=None, *, llm=None, as_of: str | None = None,
 def _deterministic_turn(profile, history, user_input, seed, trials) -> dict:
     q = next_question(profile)
     if q is not None and user_input is not None:
-        _set_path(profile, q["field"], _coerce(user_input, q.get("type", "string")))
+        value = _coerce(user_input, q.get("type", "string"))
+        # B15: validate a choice answer against its allowed set BEFORE storing — never
+        # accept free text (e.g. "<script>") as an enum value. Re-ask on a bad choice.
+        if q.get("type") == "choice" and q.get("choices") and value not in q["choices"]:
+            reply = f"Please choose one of: {', '.join(q['choices'])}."
+            history.append({"role": "assistant", "content": reply})
+            return {"status": "collecting", "reply": reply, "next_question": q,
+                    "state": {"profile": profile, "history": history}, "tool_results": []}
+        _set_path(profile, q["field"], value)
         q = next_question(profile)
 
     if q is not None:

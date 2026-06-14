@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import base64
 import os
+import threading
 from datetime import datetime, timezone
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -73,6 +74,12 @@ def render_html(result: dict, branding: Branding, profile: dict | None = None) -
     )
 
 
+# B17: SOURCE_DATE_EPOCH is process-global; concurrent renders would clobber each
+# other's value (a determinism leak under threading). Serialize the env-mutate +
+# render so each PDF sees its own epoch. PDF export is rare, so the lock is cheap.
+_PDF_EPOCH_LOCK = threading.Lock()
+
+
 def render_pdf_bytes(result: dict, branding: Branding | None = None, profile: dict | None = None) -> bytes:
     from weasyprint import HTML  # local import: heavy, only needed for PDF
 
@@ -80,16 +87,17 @@ def render_pdf_bytes(result: dict, branding: Branding | None = None, profile: di
     # Pin embedded PDF timestamps to as_of (UTC midnight) for reproducibility.
     as_of = result.get("as_of")
     epoch = int(datetime.fromisoformat(as_of).replace(tzinfo=timezone.utc).timestamp()) if as_of else 0
-    prev = os.environ.get("SOURCE_DATE_EPOCH")
-    os.environ["SOURCE_DATE_EPOCH"] = str(epoch)
-    try:
-        html = render_html(result, branding, profile)
-        return HTML(string=html).write_pdf()
-    finally:
-        if prev is None:
-            os.environ.pop("SOURCE_DATE_EPOCH", None)
-        else:
-            os.environ["SOURCE_DATE_EPOCH"] = prev
+    with _PDF_EPOCH_LOCK:
+        prev = os.environ.get("SOURCE_DATE_EPOCH")
+        os.environ["SOURCE_DATE_EPOCH"] = str(epoch)
+        try:
+            html = render_html(result, branding, profile)
+            return HTML(string=html).write_pdf()
+        finally:
+            if prev is None:
+                os.environ.pop("SOURCE_DATE_EPOCH", None)
+            else:
+                os.environ["SOURCE_DATE_EPOCH"] = prev
 
 
 def write_pdf(result: dict, out_path: str, branding_path: str | None = None,
