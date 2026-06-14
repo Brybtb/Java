@@ -22,7 +22,9 @@ import argparse
 import json
 import os
 import sys
+from datetime import date
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from urllib.parse import parse_qs, urlsplit
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
@@ -60,6 +62,37 @@ def _validate_if_complete(profile: dict) -> None:
     if bad:
         loc = "/".join(str(p) for p in bad[0].path) or "(root)"
         raise ProfileError(f"invalid value at {loc}: {bad[0].message}")
+
+
+def _intake_brackets(filing_status: str, as_of) -> dict:
+    """Income-band pills (C05 / NOTE-1): turn the federal marginal brackets for the
+    chosen filing status into GROSS-income bands and tag each with its marginal rate.
+
+    A bracket threshold is on TAXABLE income; the intake question asks for GROSS
+    income, so each edge is shifted up by that status's standard deduction
+    (gross = taxable + standard_deduction). Federal brackets are state-independent,
+    so we resolve params through the normal dated loader (any valid state works) —
+    the numbers stay engine-sourced, never hand-typed in the UI."""
+    from foo_agent.interview.statemachine import _questions
+    from foo_agent.rules.loader import load_params
+
+    statuses = next((q["choices"] for q in _questions() if q["id"] == "filing_status"), [])
+    if filing_status not in statuses:
+        raise ProfileError(f"unknown filing_status {filing_status!r}; choose one of {statuses}")
+    d = as_of if isinstance(as_of, date) else date.fromisoformat(str(as_of))
+    tax = load_params(d, "TX")["tax"]               # TX overlay has no income tax; brackets are federal
+    ded = tax["standard_deduction"][filing_status]
+    bands, lower = [], 0
+    for b in tax["brackets"][filing_status]:
+        up = b.get("up_to")
+        upper = (up + ded) if up is not None else None
+        value = round((lower + upper) / 2) if upper is not None else lower
+        label = f"${lower:,.0f}–${upper:,.0f}" if upper is not None else f"${lower:,.0f}+"
+        bands.append({"rate": b["rate"], "marginal_rate_pct": round(b["rate"] * 100),
+                      "lower": lower, "upper": upper, "value": value, "label": label})
+        lower = upper if upper is not None else lower
+    return {"filing_status": filing_status, "as_of": d.isoformat(),
+            "standard_deduction": ded, "bands": bands}
 
 
 def _read_index() -> bytes:
@@ -127,6 +160,28 @@ def handle_post(path: str, raw: bytes) -> tuple[int, bytes, str]:
         return _json(500, {"error": "internal error"})
 
 
+def handle_get(path: str, query: str) -> tuple[int, bytes, str]:
+    """Pure GET dispatch (unit-testable). Same error mapping as handle_post:
+    bad/invalid input -> 400, unknown path -> 404, unexpected fault -> sanitized 500."""
+    try:
+        if path == "/favicon.ico":                         # silence the browser's default fetch (no console 404)
+            return 204, b"", "image/x-icon"
+        if path == "/api/intake/brackets":                 # C05: income-band pills
+            q = parse_qs(query or "")
+            fs = (q.get("filing_status") or [None])[0]
+            if not fs:
+                raise _BadRequest("filing_status query parameter is required")
+            as_of = (q.get("as_of") or [None])[0] or date.today().isoformat()  # noqa: P0-CLOCK (I/O boundary)
+            return _json(200, _intake_brackets(fs, as_of))
+        return 404, b"not found", "text/plain"
+    except _BadRequest as e:
+        return _json(400, {"error": str(e)})
+    except _CLIENT_ERRORS as e:
+        return _json(400, {"error": str(e)})
+    except Exception:
+        return _json(500, {"error": "internal error"})
+
+
 class Handler(BaseHTTPRequestHandler):
     def _send(self, code: int, body: bytes, ctype: str) -> None:
         self.send_response(code)
@@ -139,10 +194,11 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
     def do_GET(self):
-        if self.path in ("/", "/index.html"):
+        parts = urlsplit(self.path)
+        if parts.path in ("/", "/index.html"):
             self._send(200, _read_index(), "text/html; charset=utf-8")
         else:
-            self._send(404, b"not found", "text/plain")
+            self._send(*handle_get(parts.path, parts.query))
 
     def do_POST(self):
         n = int(self.headers.get("Content-Length", 0) or 0)

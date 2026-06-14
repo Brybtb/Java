@@ -33,6 +33,18 @@
   .kpi b{display:block;font-size:18px;color:var(--p)}
   .disc{background:#fff8e1;border:1px solid #ffe082;color:#5d4037;font-size:12px;padding:8px 10px;border-radius:7px;margin-top:6px}
   .note{font-size:12px;color:#777;margin-top:8px}
+  .progress{font-size:12px;color:#777;margin-bottom:10px}
+  .progress .bar{height:5px;background:#eef3f8;border-radius:3px;margin-top:5px;overflow:hidden}
+  .progress .bar i{display:block;height:100%;background:var(--a);border-radius:3px;transition:width .2s}
+  .choices{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+  .choices button{background:#eef3f8;color:var(--p);border:1px solid var(--a);border-radius:20px;
+    padding:9px 15px;cursor:pointer;font-size:14px;text-align:left;line-height:1.25}
+  .choices button:hover{background:#dde9f3}
+  .choices button.sel{background:var(--p);color:#fff}
+  .choices button small{display:block;opacity:.85;font-size:11px;font-weight:400}
+  select#gans,input#gans{font-size:15px;padding:9px 11px;border:1px solid #ccc;border-radius:8px;min-width:240px}
+  .alt{font-size:12px;color:#777;margin-top:10px}
+  .alt input{font-size:13px;padding:6px 9px;border:1px solid #ccc;border-radius:7px;width:160px}
 </style>
 </head>
 <body>
@@ -40,11 +52,15 @@
   <p class="sub">An AI-native planning copilot on a deterministic engine — it drives a dynamic
      workflow, and every number it states is provably from the engine (the guard blocks the rest).</p>
   <div class="tabs">
-    <button id="tab-copilot" class="active" onclick="show('copilot')">Copilot</button>
-    <button id="tab-guided" onclick="show('guided')">Guided form</button>
+    <button id="tab-guided" class="active" onclick="show('guided')">Guided plan</button>
+    <button id="tab-copilot" onclick="show('copilot')">Chat (AI)</button>
   </div>
 
-  <div id="copilot" class="card">
+  <div id="guided" class="card">
+    <div id="app"></div>
+  </div>
+
+  <div id="copilot" class="card" style="display:none">
     <div id="chat" class="chat"></div>
     <div class="composer">
       <input id="cinput" placeholder="Type your answer…" autocomplete="off">
@@ -55,10 +71,6 @@
     <div class="note">No data is stored; this is a stateless demo. The copilot only states figures returned by the engine.</div>
   </div>
 
-  <div id="guided" class="card" style="display:none">
-    <div id="app"></div>
-  </div>
-
 <script>
 const TODAY = new Date().toISOString().slice(0,10);
 function show(which){
@@ -67,11 +79,13 @@ function show(which){
   document.getElementById('tab-copilot').classList.toggle('active', which==='copilot');
   document.getElementById('tab-guided').classList.toggle('active', which==='guided');
   if(which==='guided' && !guidedStarted){ guidedStarted=true; step(); }
+  if(which==='copilot' && !copilotStarted){ copilotStarted=true; copilotTurn(null); }
 }
 function money(n){ return '$' + Number(n).toLocaleString(undefined,{maximumFractionDigits:0}); }
 
 /* ---------------- Copilot (chat over the dynamic workflow) ---------------- */
 let copilotState = null;
+let copilotStarted = false;
 let copilotProfile = {};
 const chat = document.getElementById('chat');
 function bubble(text, who){ const d=document.createElement('div'); d.className='msg '+who; d.textContent=text; chat.appendChild(d); chat.scrollTop=chat.scrollHeight; }
@@ -120,32 +134,89 @@ async function downloadPdf(){
   const b=await r.blob(); const u=URL.createObjectURL(b); const a=document.createElement('a'); a.href=u; a.download='financial_plan.pdf'; a.click(); URL.revokeObjectURL(u);
 }
 
-/* ---------------- Guided form (the original dynamic interview) ---------------- */
+/* ---------------- Guided plan (structured, low-friction intake — C05/NOTE-1) ----
+   Default surface. filing status is a pill row; income is a row of bracket-aware
+   pills derived from the chosen status's TY2026 marginal brackets; state is a
+   picker; a live "Step N of M" counter shows progress. Chat is the fallback tab. */
 let guidedStarted=false;
-let gProfile={schema_version:"1.0.0",as_of:TODAY}, gTotal=null;
+let gProfile={schema_version:"1.0.0",as_of:TODAY};
+let gAnswered=0;                                  // questions answered so far (for the counter)
 const app=document.getElementById('app');
+const US_STATES=["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA",
+  "KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND",
+  "OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function setPath(obj,path,val){const p=path.split('.');let c=obj;for(let i=0;i<p.length-1;i++){if(typeof c[p[i]]!=='object'||c[p[i]]===null)c[p[i]]={};c=c[p[i]];}c[p[p.length-1]]=val;}
+function gCoerce(v,t){if(t==='boolean')return v===true||v==='true';if(t==='integer')return parseInt(v,10);if(t==='number')return parseFloat(v);return v;}
+
 async function step(){
   const res=await fetch('/api/workflow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({profile:gProfile,trials:2000})});
   const d=await res.json();
-  if(d.error){app.innerHTML=`<div>Error: ${d.error}</div>`;return;}
-  if(d.status==='collecting') gQuestion(d); else { copilotProfile=gProfile; renderPlan(d, app); }
+  if(d.error){app.innerHTML=`<div>Error: ${esc(d.error)}</div>`;return;}
+  if(d.status==='collecting') await gQuestion(d); else { copilotProfile=gProfile; renderPlan(d, app); }
 }
-function gQuestion(d){
-  const q=d.next_question; if(gTotal===null) gTotal=d.remaining+1;
-  let input;
-  if(q.type==='choice') input=`<select id="gans">${q.choices.map(c=>`<option value="${c}">${c.replace(/_/g,' ')}</option>`).join('')}</select>`;
-  else if(q.type==='boolean') input=`<select id="gans"><option value="true">Yes</option><option value="false">No</option></select>`;
-  else input=`<input id="gans" type="${q.type==='string'?'text':'number'}" step="any">`;
-  app.innerHTML=`<div class="q" style="font-weight:600;color:var(--p);margin-bottom:10px">${q.prompt}</div>${input}
-    <div style="margin-top:12px"><button class="send" onclick="gSubmit('${q.field}','${q.type}')">Next →</button></div>`;
+
+function gProgress(d){
+  const step=gAnswered+1, total=gAnswered+d.remaining;   // remaining counts the current question
+  const pct=Math.round((gAnswered/total)*100);
+  return `<div class="progress">Step ${step} of ${total}<div class="bar"><i style="width:${pct}%"></i></div></div>`;
+}
+function gPrompt(q){return `<div class="q" style="font-weight:600;color:var(--p);margin:4px 0 6px">${esc(q.prompt)}</div>`;}
+
+async function gQuestion(d){
+  const q=d.next_question;
+  if(q.field==='income.gross_annual'){ return gIncome(d); }     // bracket-aware pills
+  let body;
+  if(q.type==='choice'){
+    body=`<div class="choices">`+q.choices.map(c=>
+      `<button onclick="gPick('${q.field}','${q.type}','${esc(c)}')">${esc(c.replace(/_/g,' '))}</button>`).join('')+`</div>`;
+  } else if(q.type==='boolean'){
+    body=`<div class="choices">
+      <button onclick="gPick('${q.field}','boolean','true')">Yes</button>
+      <button onclick="gPick('${q.field}','boolean','false')">No</button></div>`;
+  } else if(q.field==='household.state'){
+    body=`<select id="gans">${US_STATES.map(s=>`<option value="${s}">${s}</option>`).join('')}</select>
+      <div style="margin-top:12px"><button class="send" onclick="gSubmit('${q.field}','string')">Next →</button></div>`;
+  } else {
+    body=`<input id="gans" type="${q.type==='string'?'text':'number'}" step="any">
+      <div style="margin-top:12px"><button class="send" onclick="gSubmit('${q.field}','${q.type}')">Next →</button></div>`;
+  }
+  app.innerHTML=gProgress(d)+gPrompt(q)+body;
   const el=document.getElementById('gans'); if(el&&el.focus)el.focus();
   if(el) el.addEventListener('keydown',e=>{if(e.key==='Enter')gSubmit(q.field,q.type);});
 }
-function gCoerce(v,t){if(t==='boolean')return v==='true';if(t==='integer')return parseInt(v,10);if(t==='number')return parseFloat(v);return v;}
-function gSubmit(field,type){const v=document.getElementById('gans').value;setPath(gProfile,field,gCoerce(v,type));step();}
 
-copilotTurn(null);   // greet + ask the first question
+async function gIncome(d){
+  const q=d.next_question, fs=gProfile.household&&gProfile.household.filing_status;
+  app.innerHTML=gProgress(d)+gPrompt(q)+`<div class="note">Loading tax brackets…</div>`;
+  let bands=null;
+  try{
+    const r=await fetch(`/api/intake/brackets?filing_status=${encodeURIComponent(fs)}&as_of=${gProfile.as_of}`);
+    if(r.ok) bands=(await r.json()).bands;
+  }catch(e){ bands=null; }
+  let body;
+  if(bands&&bands.length){
+    body=`<div class="choices">`+bands.map(b=>
+      `<button onclick="gPick('income.gross_annual','number',${b.value})">${esc(b.label)}
+        <small>${b.marginal_rate_pct}% marginal bracket</small></button>`).join('')+`</div>
+      <div class="alt">Exact amount instead:
+        <input id="gans" type="number" step="any" placeholder="e.g. 120000">
+        <button class="send" onclick="gSubmit('income.gross_annual','number')">Use →</button></div>`;
+  } else {
+    body=`<input id="gans" type="number" step="any">
+      <div style="margin-top:12px"><button class="send" onclick="gSubmit('income.gross_annual','number')">Next →</button></div>`;
+  }
+  app.innerHTML=gProgress(d)+gPrompt(q)+body;
+}
+
+function gPick(field,type,val){ gAnswered++; setPath(gProfile,field,gCoerce(val,type)); step(); }
+function gSubmit(field,type){
+  const v=document.getElementById('gans').value;
+  if(v===''||v===null) return;
+  gAnswered++; setPath(gProfile,field,gCoerce(v,type)); step();
+}
+
+step();   // guided plan is the default surface; render the first question
 </script>
 </body>
 </html>

@@ -139,14 +139,15 @@ id: C05
 title: pill / bracket-aware intake (NOTE-1)
 tier: "10^3"
 depends_on: [C03]
-files: [web/index.html, web/app.py, tests/test_web_app.py]
+files: [web/index.html, web/app.py, tests/test_web_app.py, tasks.md, rubrics/C05.yaml]
 dod:
   - "filing-status pills; income-band pills from TY2026 brackets for chosen filing status (re-render on change)"
   - "state picker; visible progress counter; chat demoted to fallback"
   - "new GET /api/intake/brackets reuses rules.loader.load_params"
+tests_to_add: [test_intake_brackets_single_bands_are_gross_and_dated, test_intake_brackets_rates_match_engine_params, test_intake_brackets_filing_status_changes_bands, test_intake_brackets_endpoint_200, test_intake_brackets_bad_filing_status_400, test_intake_brackets_missing_filing_status_400, test_intake_brackets_unknown_path_404]
 gates: { code: required, ui: required, experts: [intake_correctness, tax_cpa] }
 expert_rubric: rubrics/C05.yaml
-status: todo
+status: in_progress
 ```
 ```yaml
 id: C06
