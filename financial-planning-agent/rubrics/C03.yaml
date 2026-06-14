@@ -1,0 +1,9 @@
+chunk: C03
+personas: [copilot_safety, intake_correctness]
+items:
+  R1: "set_profile_fields rejects values that fail the question's type/choices (e.g. '<script>' as filing_status)."
+  R2: "No engine number can be authored by the LLM in this path; the guard still raises on a fabricated figure."
+  R3: "The updated profile threads forward: a 3-field stubbed conversation accumulates all 3 fields."
+  R4: "Loop overflow returns a deterministic next_question; no RuntimeError / HTTP 500 is reachable (D6)."
+  R5: "Coercion uses the interview question type (0.06 stays the number 0.06, not the string '0.06')."
+block_if_any: [R1, R2, R4]

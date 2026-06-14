@@ -1,0 +1,11 @@
+# Rubric template for the financial-experts-gate. One per chunk: rubrics/<id>.yaml
+# Items are CLOSED yes/no criteria grounded in the diff or in real engine output.
+# block_if_any lists the safety/correctness-critical items: a finding against one
+# of these, with evidence, that survives the red-team, BLOCKS the merge. Everything
+# else is advisory (the human adjudicates).
+chunk: <id>
+personas: [copilot_safety]          # subset of the persona pool (matches tasks.md gates.experts)
+items:
+  R1: "<closed criterion grounded in a diff line or engine output/hash>"
+  R2: "<...>"
+block_if_any: [R1]
