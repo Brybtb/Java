@@ -1,6 +1,6 @@
 {
   "generated_utc": "20260614T073000Z",
-  "note": "Curated rule citations (1-9) plus a discipline-sourced reference library gathered + deduped by research/source_rules.py (Parallel.ai Search, 2026-06-14).",
+  "note": "Curated rule citations (1-9) plus a discipline-sourced reference library gathered + deduped by research/source_rules.py (Parallel.ai Search, 2026-06-14). Low-quality entries pruned and titles normalized 2026-06-14.",
   "sources": [
     {
       "n": 1,
@@ -66,15 +66,6 @@
       "source_type": "primary"
     },
     {
-      "n": 10,
-      "url": "https://ftp.kontos.com/I7t/807/bestJud98wFinancialOrderOfOperations",
-      "title": "FINANCIAL ORDER OF OPERATIONS",
-      "domain": "ftp.kontos.com",
-      "publish_date": "2026-05-11",
-      "discipline": "CFP",
-      "source_type": "unknown"
-    },
-    {
       "n": 11,
       "url": "https://www.cfp.net/-/media/files/cfp-board/standards-and-ethics/compliance-resources/case-studies/case-study-c4-practice-standards-step-4-developing-recommendation.pdf",
       "title": "1: CONSIDERING THE ASSUMPTIONS AND ESTIMATES ...",
@@ -131,7 +122,7 @@
     {
       "n": 17,
       "url": "https://www.cfp.net/ethics/compliance-resources/2024/11/considering-the-assumptions-and-estimates-used-to-develop-the-recommendation",
-      "title": "Considering the Assumptions and Estimates Used to Develop the Recommendation | CFP Board\n",
+      "title": "Considering the Assumptions and Estimates Used to Develop the Recommendation | CFP Board",
       "domain": "cfp.net",
       "publish_date": "2024-11-19",
       "discipline": "CFP",
@@ -158,7 +149,7 @@
     {
       "n": 20,
       "url": "https://www.whitecoatinvestor.com/the-4-rule-safe-withdrawal-rates/",
-      "title": "description: The Trinity Study was key in determining that you can't spend 10% of your portfolio each year and expect it to last. How much can you spend? title: The 4% Rule and Safe Withdrawal Rates | White Coat Investor",
+      "title": "The 4% Rule and Safe Withdrawal Rates | White Coat Investor",
       "domain": "whitecoatinvestor.com",
       "publish_date": "2025-12-21",
       "discipline": "CFA",
@@ -275,7 +266,7 @@
     {
       "n": 33,
       "url": "https://nauma.ai/knowledge/hsa-contribution-limits",
-      "title": "\n      HSA Contribution Limits 2026: Self-Only, Family, and Catch-Up | Nauma\n    ",
+      "title": "HSA Contribution Limits 2026: Self-Only, Family, and Catch-Up | Nauma",
       "domain": "nauma.ai",
       "publish_date": null,
       "discipline": "tax_attorney",
@@ -536,7 +527,7 @@
     {
       "n": 62,
       "url": "https://ritterim.com/blog/4-ways-to-calculate-your-clients-life-insurance-needs/",
-      "title": "4 Ways to Calculate Your Clients' Life Insurance Needs  | Ritter Insurance Marketing",
+      "title": "4 Ways to Calculate Your Clients' Life Insurance Needs | Ritter Insurance Marketing",
       "domain": "ritterim.com",
       "publish_date": "2025-09-23",
       "discipline": "insurance",
@@ -563,7 +554,7 @@
     {
       "n": 65,
       "url": "https://hicksinsurance.com/personal-insurance/umbrella-insurance",
-      "title": "description: Protect your assets with affordable umbrella insurance. Extra liability coverage beyond auto and home policies. Hicks Insurance Group compares 14+ carriers. Call (708) 532-7474 today. title: Umbrella Insurance in Illinois | Extra Liability Protection | Hicks Insurance image: https://img.aelieve.com/w:auto/h:auto/q:91/f:best/https://hicksinsurance.com/wp-content/uploads/LogoImageProfile.png",
+      "title": "Umbrella Insurance in Illinois | Extra Liability Protection | Hicks Insurance image: https://img.aelieve.com/w:auto/h:au",
       "domain": "hicksinsurance.com",
       "publish_date": null,
       "discipline": "insurance",
@@ -1094,7 +1085,7 @@
     {
       "n": 124,
       "url": "https://www.data4impactproject.org/blog/from-intentions-to-actions-using-commitment-devices-for-evidence-use",
-      "title": "From Intentions to Actions \u2013 Using Commitment Devices for Evidence Use\u00a0 - DataForImpactProject",
+      "title": "From Intentions to Actions \u2013 Using Commitment Devices for Evidence Use - DataForImpactProject",
       "domain": "data4impactproject.org",
       "publish_date": "2024-10-11",
       "discipline": "behavioral_finance",

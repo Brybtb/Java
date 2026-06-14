@@ -1,13 +1,14 @@
 # Texas — no state income tax, community-property state, strong homestead protection.
+# Facts VERIFIED 2026-06-14 (Parallel.ai Task API) against primary authority.
 versions:
   - state: "TX"
     effective_date: "2026-01-01"
     expiry_date: null
     income_tax:
-      has_income_tax: false
+      has_income_tax: false      # Tex. Const. art. VIII, § 24-a (no personal income tax)
       flat_rate: null
       brackets: null
-    community_property: true
-    homestead_exemption: "unlimited_acreage_capped"
+    community_property: true      # Tex. Family Code § 3.002
+    homestead_exemption: "unlimited_value_acreage_capped"
     estate_or_inheritance_tax: false
-    notes: "No state income or estate tax. Community-property titling affects basis step-up and beneficiary planning."
+    notes: "No state income or estate tax (Tex. Const. art. VIII, § 24-a). Community property (Tex. Family Code § 3.002) yields full double step-up in basis at first spouse's death; relevant to beneficiary planning."
