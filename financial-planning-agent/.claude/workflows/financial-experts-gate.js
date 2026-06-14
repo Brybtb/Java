@@ -27,6 +27,7 @@ const argEvidence = typeof A.engine_evidence === 'string' ? A.engine_evidence : 
 const argPersonas = Array.isArray(A.personas) ? A.personas : null
 
 const norm = s => String(s == null ? '' : s).trim().toLowerCase()
+const rid = s => String(s == null ? '' : s).trim().split(':')[0].trim()  // 'R1: text' -> 'R1'
 
 const PERSONA = {
   tax_cpa: 'a CPA with 30+ years in individual & fiduciary tax (federal/state brackets, NIIT/IRMAA/AMT, Roth math)',
@@ -99,7 +100,7 @@ phase('Review')
 const reviews = (await parallel(personas.map(p => () => agent(
   `You are ${PERSONA[p] || p}. Review chunk ${chunk} STRICTLY against the rubric. Judge the REAL output below, never numbers you compute.\n\n` +
   `RUBRIC:\n${rubricText}\n\nDIFF:\n${diffText}\n\nENGINE EVIDENCE:\n${engineEvidence}\n\n` +
-  `For EACH rubric item return ONE finding: {rubric_item, status('fail' iff VIOLATED else 'pass'), severity('blocking' only for a FAIL on a block-listed item [${blockIds.join(', ') || 'none'}] else 'advisory'), claim, evidence}. ` +
+  `For EACH rubric item return ONE finding: {rubric_item (the id ONLY, e.g. "R1"), status('fail' iff VIOLATED else 'pass'), severity('blocking' only for a FAIL on a block-listed item [${blockIds.join(', ') || 'none'}] else 'advisory'), claim, evidence}. ` +
   `EVERY finding MUST cite concrete evidence (diff line / file path / engine output-hash) or it is discarded. A 'pass' CONFIRMS the criterion and can never block; only a 'fail' can. Cover EVERY block-listed item.`,
   { label: `review:${chunk}:${p}`, phase: 'Review', schema: FINDINGS_SCHEMA })
 ))).filter(Boolean)
@@ -108,7 +109,8 @@ if (reviews.length < personas.length) reasons.push(`${personas.length - reviews.
 // Block coverage: every block id must be explicitly adjudicated (pass|fail) by a live persona.
 const adjudicated = new Set()
 for (const r of reviews) for (const f of (r.findings || [])) {
-  if (blockIds.includes(f.rubric_item) && (norm(f.status) === 'pass' || norm(f.status) === 'fail')) adjudicated.add(f.rubric_item)
+  const id = rid(f.rubric_item)
+  if (blockIds.includes(id) && (norm(f.status) === 'pass' || norm(f.status) === 'fail')) adjudicated.add(id)
 }
 const uncovered = blockIds.filter(id => !adjudicated.has(id))
 if (uncovered.length) reasons.push('un-adjudicated block items: ' + uncovered.join(','))
@@ -116,11 +118,11 @@ if (uncovered.length) reasons.push('un-adjudicated block items: ' + uncovered.jo
 // Candidates: a FAILING block-listed item carrying evidence.
 const candidates = []
 for (const r of reviews) for (const f of (r.findings || [])) {
-  if (norm(f.status) === 'fail' && f.evidence && f.evidence.trim() && blockIds.includes(f.rubric_item)) candidates.push({ persona: r.persona, ...f })
+  if (norm(f.status) === 'fail' && f.evidence && f.evidence.trim() && blockIds.includes(rid(f.rubric_item))) candidates.push({ persona: r.persona, ...f })
 }
 // A block-listed FAIL with unusable evidence can't be red-teamed -> escalate, never drop.
 const droppedBlockFail = reviews.some(r => (r.findings || []).some(f =>
-  norm(f.status) === 'fail' && blockIds.includes(f.rubric_item) &&
+  norm(f.status) === 'fail' && blockIds.includes(rid(f.rubric_item)) &&
   !candidates.find(c => c.persona === r.persona && c.rubric_item === f.rubric_item && c.claim === f.claim)))
 if (droppedBlockFail) reasons.push('a block-listed FAIL had unusable evidence (cannot evaluate)')
 
