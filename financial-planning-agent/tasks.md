@@ -126,13 +126,15 @@ id: C04
 title: current-vs-proposed plan engine
 tier: "10^2"
 depends_on: [C03]
-files: [foo_agent/projection/proposed.py, foo_agent/workflow/orchestrator.py, web/index.html, tests/test_proposed.py]
+files: [foo_agent/projection/proposed.py, foo_agent/workflow/orchestrator.py, web/index.html, tests/test_proposed.py, tasks.md, rubrics/C04.yaml]
 dod:
   - "map recommendations to a scenario, apply_scenario, re-run plan; return baseline + proposed + per-rec delta"
   - "deltas shown for funded_ratio and P(success); deterministic"
+  - "only recommendations whose action edits a projection-consumed field are modeled; the rest are advisory with an honest reason (no fabricated delta)"
+tests_to_add: [test_build_returns_baseline_proposed_delta, test_employer_match_is_modeled_and_lifts_funded_ratio, test_advisory_recs_carry_zero_delta_and_a_reason, test_debt_and_protection_are_advisory_not_modeled, test_multiple_modeled_steps_compose, test_waterfall_steps_sum_to_total_delta, test_no_modeled_recs_means_zero_delta, test_proposed_scenario_and_profile_validate, test_proposed_is_deterministic, test_orchestrator_attaches_proposed_when_ready, test_orchestrator_propose_false_omits_it]
 gates: { code: required, ui: smoke, experts: [cfp_decumulation, risk_quant, tax_cpa] }
 expert_rubric: rubrics/C04.yaml
-status: todo
+status: in_progress
 ```
 ```yaml
 id: C05

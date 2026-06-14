@@ -64,7 +64,7 @@ def select_modules(profile: dict, params: dict, as_of: date) -> list[dict]:
 
 
 def run(profile: dict, as_of=None, *, seed: int | None = None, trials: int | None = None,
-        data_dir: str | None = None) -> dict:
+        data_dir: str | None = None, propose: bool = True) -> dict:
     # Phase 1: still collecting? Return the next question and stop.
     q = next_question(profile)
     if q is not None:
@@ -89,11 +89,13 @@ def run(profile: dict, as_of=None, *, seed: int | None = None, trials: int | Non
     params = load_params(as_of_d, state, data_dir)
     modules = select_modules(profile, params, as_of_d)
     module_ids = {m["id"] for m in modules}
+    seed_v = seed if seed is not None else DEFAULT_MC_SEED
+    trials_v = trials if trials is not None else DEFAULT_MC_TRIALS
 
     result = full_plan(
         profile, as_of_d,
-        seed=seed if seed is not None else DEFAULT_MC_SEED,
-        trials=trials if trials is not None else DEFAULT_MC_TRIALS,
+        seed=seed_v,
+        trials=trials_v,
         run_montecarlo="monte_carlo" in module_ids,
         data_dir=data_dir,
     )
@@ -124,4 +126,10 @@ def run(profile: dict, as_of=None, *, seed: int | None = None, trials: int | Non
     result["status"] = "ready"
     result["workflow"] = {"selected_modules": modules}
     result["optimizers"] = optimizers
+    if propose:
+        # Current-vs-proposed (C04): reuse the just-computed Result as the baseline so
+        # we don't recompute it; the proposed engine re-runs only the modeled steps.
+        from ..projection.proposed import build as build_proposed
+        result["proposed"] = build_proposed(profile, as_of_d, seed=seed_v, trials=trials_v,
+                                             data_dir=data_dir, baseline=result)
     return result
