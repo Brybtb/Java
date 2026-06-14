@@ -44,6 +44,63 @@ def projection_chart(projection: dict, primary: str = "#1f3a5f", accent: str = "
     return _data_uri(fig)
 
 
+def assetmap_chart(profile: dict, primary: str = "#1f3a5f", accent: str = "#3d7ea6") -> str:
+    """A one-page Asset-Map-style household balance sheet: members at the top,
+    assets (left) vs. liabilities (right), and net worth. Deterministic layout."""
+    from decimal import Decimal
+
+    def D(x):
+        try:
+            return Decimal(str(x or 0))
+        except Exception:
+            return Decimal(0)
+
+    accts = profile.get("accounts", {}) or {}
+    assets = []
+    for name in sorted(accts):
+        a = accts[name]
+        if isinstance(a, dict) and "balance" in a:
+            assets.append((name.replace("_", " "), D(a["balance"])))
+    debts = [(d.get("type", d.get("id", "debt")).replace("_", " "), D(d.get("balance", 0)))
+             for d in (profile.get("debts", []) or [])]
+    total_assets = sum((v for _, v in assets), Decimal(0))
+    total_debt = sum((v for _, v in debts), Decimal(0))
+    net_worth = total_assets - total_debt
+
+    hh = profile.get("household", {}) or {}
+    members = f"Ages {hh.get('primary_age', '?')}"
+    if hh.get("spouse_age"):
+        members += f" & {hh['spouse_age']}"
+    title = f"{hh.get('filing_status','').replace('_',' ').title()} · {hh.get('state','')} · {members}"
+
+    fig, ax = plt.subplots(figsize=(7.4, 4.4))
+    ax.axis("off")
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
+    ax.add_patch(plt.Rectangle((0.5, 9), 9, 0.9, color=primary))
+    ax.text(5, 9.45, f"Household Asset-Map — {title}", color="white", ha="center",
+            va="center", fontsize=9, weight="bold")
+
+    def column(x0, header, items, color):
+        ax.text(x0 + 1.9, 8.5, header, ha="center", fontsize=9, weight="bold", color=color)
+        y = 8.0
+        for label, val in items[:9]:
+            ax.add_patch(plt.Rectangle((x0, y - 0.42), 3.8, 0.5, color=color, alpha=0.12,
+                                       ec=color))
+            ax.text(x0 + 0.15, y - 0.17, label[:22], fontsize=7.5, va="center")
+            ax.text(x0 + 3.65, y - 0.17, f"${val:,.0f}", fontsize=7.5, va="center", ha="right")
+            y -= 0.6
+        return y
+
+    column(0.5, f"Assets  ${total_assets:,.0f}", assets, "#2e7d32")
+    column(5.7, f"Liabilities  ${total_debt:,.0f}", debts or [("none", Decimal(0))], "#c62828")
+
+    ax.add_patch(plt.Rectangle((0.5, 0.4), 9, 0.8, color=accent, alpha=0.18, ec=accent))
+    ax.text(5, 0.8, f"Net worth:  ${net_worth:,.0f}", ha="center", va="center",
+            fontsize=11, weight="bold", color=primary)
+    return _data_uri(fig)
+
+
 def montecarlo_chart(mc: dict, primary: str = "#1f3a5f", accent: str = "#3d7ea6") -> str:
     pct = mc.get("ending_balance_percentiles", {})
     labels = ["p10", "p25", "p50", "p75", "p90"]

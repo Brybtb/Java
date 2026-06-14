@@ -79,6 +79,40 @@
     {% endfor %}
   </table>
 
+  {% if charts.assetmap %}
+  <h2>Household Asset-Map</h2>
+  <img class="chart" src="{{ charts.assetmap }}">
+  {% endif %}
+
+  {% if optimizers %}
+  <h2>Planning modules</h2>
+  {% if optimizers.roth_conversion and optimizers.roth_conversion.fill_targets %}
+  <p><b>Roth conversion / bracket fill</b> — taxable income
+     ${{ optimizers.roth_conversion.taxable_income }}:</p>
+  <table>
+    <tr><th>Fill to bracket</th><th>Ceiling</th><th>Conversion room</th><th>Incremental tax</th><th>Blended rate</th></tr>
+    {% for t in optimizers.roth_conversion.fill_targets %}
+    <tr><td>{{ "%.0f"|format(t.fill_to_bracket_below_rate|float * 100) }}%</td>
+        <td>${{ t.ceiling }}</td><td>${{ t.conversion_room }}</td>
+        <td>${{ t.incremental_tax }}</td>
+        <td>{{ "%.1f"|format(t.blended_rate|float * 100) }}%</td></tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+  {% if optimizers.social_security and optimizers.social_security.recommended_claim_age %}
+  <p><b>Social Security claiming</b> — recommended age
+     <b>{{ optimizers.social_security.recommended_claim_age }}</b>
+     {% if optimizers.social_security.breakeven_age_vs_62 %}(break-even vs 62 at age
+     {{ optimizers.social_security.breakeven_age_vs_62 }}){% endif %};
+     monthly at FRA ${{ optimizers.social_security.pia_monthly }}.</p>
+  {% endif %}
+  {% if optimizers.withdrawal_plan and optimizers.withdrawal_plan.first_year_draw %}
+  <p><b>Tax-efficient withdrawal</b> — first-year draw order
+     {{ optimizers.withdrawal_plan.order|join(" → ") }}; need
+     ${{ optimizers.withdrawal_plan.annual_need }}.</p>
+  {% endif %}
+  {% endif %}
+
   {% if result.insights %}
   <h2>Insights</h2>
   <table>

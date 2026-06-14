@@ -14,7 +14,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from ..compliance.wrapper import assert_compliant
 from .branding import Branding
-from .charts import montecarlo_chart, projection_chart
+from .charts import assetmap_chart, montecarlo_chart, projection_chart
 
 _TEMPLATES = os.path.join(os.path.dirname(__file__), "templates")
 
@@ -49,7 +49,7 @@ def _logo_uri(branding: Branding) -> str | None:
         return f"data:image/{ext};base64," + base64.b64encode(f.read()).decode("ascii")
 
 
-def render_html(result: dict, branding: Branding) -> str:
+def render_html(result: dict, branding: Branding, profile: dict | None = None) -> str:
     assert_compliant(result)
     env = Environment(
         loader=FileSystemLoader(_TEMPLATES),
@@ -64,13 +64,16 @@ def render_html(result: dict, branding: Branding) -> str:
     mc = result.get("monte_carlo")
     if mc:
         charts["montecarlo"] = montecarlo_chart(mc, branding.primary_color, branding.accent_color)
+    if profile:
+        charts["assetmap"] = assetmap_chart(profile, branding.primary_color, branding.accent_color)
 
     return env.get_template("report.html").render(
-        result=result, branding=branding, charts=charts, logo_uri=_logo_uri(branding)
+        result=result, branding=branding, charts=charts, logo_uri=_logo_uri(branding),
+        optimizers=result.get("optimizers", {}),
     )
 
 
-def render_pdf_bytes(result: dict, branding: Branding | None = None) -> bytes:
+def render_pdf_bytes(result: dict, branding: Branding | None = None, profile: dict | None = None) -> bytes:
     from weasyprint import HTML  # local import: heavy, only needed for PDF
 
     branding = branding or Branding()
@@ -80,7 +83,7 @@ def render_pdf_bytes(result: dict, branding: Branding | None = None) -> bytes:
     prev = os.environ.get("SOURCE_DATE_EPOCH")
     os.environ["SOURCE_DATE_EPOCH"] = str(epoch)
     try:
-        html = render_html(result, branding)
+        html = render_html(result, branding, profile)
         return HTML(string=html).write_pdf()
     finally:
         if prev is None:
@@ -89,9 +92,10 @@ def render_pdf_bytes(result: dict, branding: Branding | None = None) -> bytes:
             os.environ["SOURCE_DATE_EPOCH"] = prev
 
 
-def write_pdf(result: dict, out_path: str, branding_path: str | None = None) -> str:
+def write_pdf(result: dict, out_path: str, branding_path: str | None = None,
+              profile: dict | None = None) -> str:
     branding = Branding.load(branding_path)
-    pdf = render_pdf_bytes(result, branding)
+    pdf = render_pdf_bytes(result, branding, profile)
     with open(out_path, "wb") as f:
         f.write(pdf)
     return out_path

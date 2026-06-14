@@ -55,6 +55,26 @@ def render_markdown(result: dict) -> str:
             L.append(f"- **[{i['severity']}]** {i['message']} _(sources: {', '.join(map(str, i['citations']))})_")
         L.append("")
 
+    opt = result.get("optimizers") or {}
+    if opt:
+        L += ["## Planning modules", ""]
+        rc = opt.get("roth_conversion")
+        if rc and rc.get("fill_targets"):
+            L.append(f"- **Roth conversion** (taxable ${rc['taxable_income']}): "
+                     + "; ".join(f"fill to {float(t['fill_to_bracket_below_rate'])*100:.0f}% "
+                                 f"= ${t['conversion_room']} room @ {float(t['blended_rate'])*100:.1f}%"
+                                 for t in rc["fill_targets"]))
+        ss = opt.get("social_security")
+        if ss and ss.get("recommended_claim_age"):
+            be = ss.get("breakeven_age_vs_62")
+            L.append(f"- **Social Security**: claim at age {ss['recommended_claim_age']}"
+                     + (f" (break-even vs 62 at {be})" if be else ""))
+        wd = opt.get("withdrawal_plan")
+        if wd and wd.get("order"):
+            L.append(f"- **Withdrawal order**: {' → '.join(wd['order'])} "
+                     f"(annual need ${wd['annual_need']})")
+        L.append("")
+
     if result.get("sources"):
         L += ["## Sources", ""]
         for s in result["sources"]:

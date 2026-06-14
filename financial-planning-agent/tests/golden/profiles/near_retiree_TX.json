@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "as_of": "2026-06-14",
+  "household": {
+    "filing_status": "married_filing_jointly",
+    "state": "TX",
+    "primary_age": 63,
+    "spouse_age": 62,
+    "has_dependents": false,
+    "social_security": { "pia_monthly": 2800, "fra_age": 67, "longevity_age": 92 }
+  },
+  "income": { "gross_annual": 140000 },
+  "expenses": { "monthly_essential": 5000, "monthly_total": 7000 },
+  "accounts": {
+    "cash_emergency": { "balance": 40000 },
+    "employer_401k": { "balance": 900000, "match_offered": true, "match_rate": 0.5, "match_pct_cap": 0.06 },
+    "roth_ira": { "balance": 150000 },
+    "taxable": { "balance": 300000 },
+    "hsa": { "eligible": false }
+  },
+  "contributions": { "employer_401k": { "pct": 0.10 }, "roth_ira": { "annual": 0 }, "hsa": { "annual": 0 } },
+  "goals": [ { "type": "retirement", "target_age": 65 } ],
+  "risk": { "tolerance": "moderate" }
+}
