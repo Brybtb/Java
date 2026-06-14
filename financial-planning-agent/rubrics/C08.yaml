@@ -1,0 +1,10 @@
+chunk: C08
+personas: [tax_cpa, cfp_decumulation, risk_quant]
+items:
+  R1: "Ordinary income tax is exact progressive bracket math (hand-verifiable): a worked example matches by hand (e.g. 20000 taxable on 10/12/22 brackets = 1240 + 912 = 2152; 60000 = 7912). marginal_rate returns the correct top bracket."
+  R2: "RMDs are forced from the tax-deferred bucket at the statutory start age (73 for pre-1960, 75 for 1960+, via calculators.rmd), and are zero before that age. The RMD is satisfied from tax-deferred regardless of the drawdown order."
+  R3: "Remaining spend is sourced in tax-efficient order taxable -> tax_deferred -> Roth (Roth last; reuses projection.withdrawal.DEFAULT_ORDER); Roth is untouched while taxable/tax-deferred funds remain in a non-depleted year."
+  R4: "Each year computes ordinary tax + LTCG tax; lifetime_tax_paid equals the sum of yearly taxes (within whole-dollar rounding); after_tax_terminal_wealth discounts the tax-deferred bucket by the terminal ordinary rate (<= raw ending balances)."
+  R5: "Deterministic (same inputs -> identical output). Tax assumptions (ltcg_rate, gain_fraction, ss_taxable_fraction, terminal rate, the marginal-vs-effective single-pass gross-up) are EXPLICIT and labeled PLACEHOLDERS, not hidden or fabricated; no figure is invented outside the bracket/RMD math."
+  R6: "Additive: project()/funded_ratio and the existing projection are UNCHANGED (no golden churn); the tax-aware drawdown is a separate module/export, distinct from C07's blended collapse. Decumulation is not silently half-wired into the success metric."
+block_if_any: [R1, R2, R3]
