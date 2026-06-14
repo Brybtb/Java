@@ -1,0 +1,182 @@
+{
+  "generated_utc": "20260614T072952Z",
+  "engine": "Parallel.ai Task API",
+  "foo_reviewed": "1) starter emergency buffer, 2) capture full employer match, 3) pay high-interest debt, 4) full 3-6 month reserve, 5) max HSA, 6) max IRA, 7) max employer plan, 8) taxable brokerage, 9) protection/estate review",
+  "agreement": "6 of 11 lenses agree with default ordering; dissents converge on prioritizing protection/estate earlier for households with dependents or a sole breadwinner.",
+  "lenses": [
+    {
+      "lens": "CFP",
+      "agrees": false,
+      "confidence": "medium",
+      "concerns": [
+        "Risk management (Protection/Estate Review) is placed at the end (Step 9), whereas CFPs prioritize risk mitigation as a foundational step to prevent catastrophic loss of assets.",
+        "The sequence prioritizes mathematical optimization (Debt Avalanche) over behavioral psychology, which can lead to burnout or failure in clients who benefit from 'quick wins' (Debt Snowball).",
+        "The gap between the 'starter buffer' and 'full reserve' creates a period of high liquidity risk, particularly for clients in volatile industries."
+      ],
+      "exceptions": [
+        "Clients with dependents: Must move Protection/Estate Review to Step 1 or 2 to secure family survival.",
+        "High Net Worth/Income: May prioritize taxable brokerage or specialized tax-advantaged strategies over standard IRA/401k limits due to income caps.",
+        "Unstable Employment: Should prioritize the Full 3-6 Month Reserve (Step 4) before aggressive High-Interest Debt repayment (Step 3) to ensure survival during a job loss."
+      ]
+    },
+    {
+      "lens": "CFA",
+      "agrees": true,
+      "confidence": "high",
+      "concerns": [
+        "Opportunity Cost: Prioritizing a full 3-6 month cash reserve (Step 4) before tax-advantaged investing (Steps 5-7) may lead to significant lost growth for stable, high-earning households.",
+        "Rigidity of Tax Accounts: The default preference for IRAs over employer plans (Step 6 vs 7) does not account for plan-specific fees or the tax-bracket arbitrage possible with traditional vs. Roth options.",
+        "Ambiguity of 'High-Interest': The framework lacks a quantitative threshold for 'high-interest debt', which a CFA would typically define as debt exceeding a specific hurdle rate (e.g., 7-8%)."
+      ],
+      "exceptions": [
+        "Low-Interest Debt: If debt interest is significantly lower than the expected market return (e.g., < 4%), paying it off aggressively (Step 3) is mathematically inferior to investing (Step 8).",
+        "High-Income Phase-outs: Clients subject to IRA contribution income limits may need to prioritize the employer plan (Step 7) over the IRA (Step 6) unless using a Backdoor Roth strategy.",
+        "High Job Instability: In volatile industries, the full emergency reserve (Step 4) should be prioritized over the employer match or high-interest debt to prevent total insolvency.",
+        "Short-Term Capital Needs: If a client has a specific goal (e.g., home downpayment in 2 years), the taxable brokerage (Step 8) must be prioritized over retirement accounts to ensure liquidity."
+      ]
+    },
+    {
+      "lens": "tax attorney",
+      "agrees": false,
+      "confidence": "medium",
+      "concerns": [
+        "The placement of 'Protection/Estate Review' as the final step (Step 9) is a significant risk; professional tax and legal guidance suggests that estate planning should be integrated earlier, especially for clients with assets that may exceed tax-exempt thresholds.",
+        "The ordering does not differentiate between Traditional (pre-tax) and Roth (after-tax) contributions in Steps 6 and 7, which is a critical oversight for a tax-focused review, as the optimal choice depends on current versus future tax brackets.",
+        "There is professional disagreement regarding the sequence of debt repayment versus emergency fund accumulation, with some frameworks prioritizing the elimination of 'bad debt' before building larger reserves."
+      ],
+      "exceptions": [
+        "High-net-worth individuals: These clients must prioritize 'Protection/Estate Review' (Step 9) much earlier in the sequence to manage potential tax liabilities and wealth transfer issues.",
+        "Individuals with extreme high-interest debt: Some professionals recommend prioritizing the total elimination of high-interest 'bad debt' before building a full emergency reserve or maximizing retirement accounts (as suggested by some middle-class financial guides).",
+        "High-income earners: For those who exceed the income limits for traditional IRA deductibility, the priority between the employer plan and the IRA (Steps 6 and 7) may be reversed or modified to utilize 'backdoor' strategies."
+      ]
+    },
+    {
+      "lens": "estate attorney",
+      "agrees": false,
+      "confidence": "medium",
+      "concerns": [
+        "Intestacy Risk: Delaying estate review until the end means a person could die without a will, leaving asset distribution to state law.",
+        "Guardianship Gap: Parents of minor children who follow this order may leave their children without a legally designated guardian if they pass away before Step 9.",
+        "Incapacity Risk: Lack of a health care proxy or durable power of attorney during the wealth-building phase leaves the client and family vulnerable during a medical crisis.",
+        "Tax Inefficiency: For high-net-worth individuals, estate planning is a strategic tool for tax mitigation and should not be treated as a 'finishing touch' after taxable investments."
+      ],
+      "exceptions": [
+        "Parents of minor children: Guardianship is a critical priority that must be addressed immediately.",
+        "High-net-worth individuals: Need for trusts and tax planning to minimize estate taxes.",
+        "Business owners: Requirement for succession planning to protect the entity's survival.",
+        "Blended families: Need for specific legal distributions to avoid family disputes and intestacy issues."
+      ]
+    },
+    {
+      "lens": "insurance specialist",
+      "agrees": false,
+      "confidence": "high",
+      "concerns": [
+        "Protection and estate review are placed at the end of the sequence, which creates a 'fragility gap.'",
+        "The current ordering prioritizes upside growth (maxing HSA, IRA, and Brokerage in steps 5-8) before mitigating catastrophic downside risk.",
+        "An uninsured event occurring during the growth phase would force the liquidation of investment assets, undermining the efficiency of the entire financial plan."
+      ],
+      "exceptions": [
+        "Sole breadwinners: Families dependent on a single income must prioritize life and disability insurance immediately after the starter buffer.",
+        "Parents/Guardians: Those with dependents require life insurance for liquidity and security before maximizing retirement accounts.",
+        "High-liability professionals: Individuals in high-risk professions (e.g., medicine) who require umbrella or professional liability insurance for asset protection.",
+        "Low-liquidity households: Clients who cannot realistically self-insure against a major loss must secure basic protection before investing in taxable brokerages."
+      ]
+    },
+    {
+      "lens": "banking/lending specialist",
+      "agrees": true,
+      "confidence": "high",
+      "concerns": [
+        "Mathematical vs. Behavioral Logic: The FOO prioritizes ROI (Employer Match > High Interest Debt), whereas behavioral models like Dave Ramsey prioritize debt first to build psychological momentum.",
+        "Liquidity Risk: Prioritizing maxing out employer plans (Step 7) before taxable brokerages (Step 8) can lead to 'retirement-rich but cash-poor' scenarios, which is a concern for those planning early retirement (FIRE).",
+        "Emergency Fund Timing: Some frameworks (e.g., Reddit's Prime Directive) argue for a full emergency fund before capturing a match to avoid borrowing during a crisis."
+      ],
+      "exceptions": [
+        "Business Owners/Entrepreneurs: Require a modified FOO that includes establishing working capital and company retirement plans.",
+        "Extreme/Predatory Debt: When debt interest rates are extraordinarily high (e.g., payday loans), paying off debt may take priority over the employer match.",
+        "Early Retirement (FIRE): May prioritize taxable brokerage accounts earlier in the sequence to create a 'bridge' to retirement age.",
+        "High-Risk Dependents: If the client lacks basic insurance (life/disability), protection/estate review must move to Step 1."
+      ]
+    },
+    {
+      "lens": "mortgage specialist",
+      "agrees": false,
+      "confidence": "medium",
+      "concerns": [
+        "Liquidity Gap: The FOO prioritizes retirement accounts (Steps 6 & 7) over liquid assets (Step 8), which would leave a typical home buyer without a down payment or closing costs.",
+        "Fund Inaccessibility: Maxing out IRAs and employer plans creates 'locked' wealth that is not easily accessible for a home purchase without penalties.",
+        "DTI Rigidity: While Step 3 addresses 'high-interest' debt, mortgage qualification often requires reducing moderate-interest debt to lower the Debt-to-Income (DTI) ratio, regardless of the interest rate."
+      ],
+      "exceptions": [
+        "Near-term Home Buyers: For those planning to buy within 1-5 years, liquid savings for a down payment should be moved to Step 4 or 5, immediately after the emergency fund.",
+        "DTI Constraints: Clients who cannot qualify for a loan due to high monthly debt payments should prioritize paying off those specific debts (even if the interest is not 'high') before maxing retirement accounts.",
+        "First-Time Home Buyer Programs: Clients utilizing low-down-payment grants may follow the FOO more closely but must still prioritize closing cost liquidity over Step 6/7 retirement maxing."
+      ]
+    },
+    {
+      "lens": "enrolled agent / CPA",
+      "agrees": true,
+      "confidence": "high",
+      "concerns": [
+        "Liquidity Risk Gap: There is a significant window of vulnerability between the starter buffer (Step 1) and the full reserve (Step 4) that may be too long for households with unstable income.",
+        "Delayed Protection: Placing protection and estate review as the final step (Step 9) is a risk; basic insurance and beneficiary designations should be established early in the process.",
+        "Generic Tax Treatment: The order does not account for the 'Backdoor Roth' or 'Mega Backdoor' strategies essential for high earners who exceed IRA income limits.",
+        "HSA vs. IRA Priority: The priority of HSA over IRA assumes a desire for triple-tax advantages, but may be suboptimal for those in very low current tax brackets who should prioritize Roth contributions."
+      ],
+      "exceptions": [
+        "High-Net-Worth Individuals (HNWIs): May prioritize taxable brokerages (Step 8) earlier to enable tax-loss harvesting or maintain liquidity for opportunistic investments.",
+        "Unstable Income/High-Risk Employment: Should prioritize the full 3-6 month reserve (Step 4) before maximizing retirement accounts to mitigate job volatility.",
+        "Specific Asset Goals: If a primary goal is a home down payment, taxable accounts or High-Yield Savings Accounts would move above retirement maximization (Steps 5-7).",
+        "Predatory Debt: In cases of extreme high-interest debt (e.g., payday loans), the debt payoff (Step 3) should supersede the employer match (Step 2)."
+      ]
+    },
+    {
+      "lens": "Social Security / Medicare specialist",
+      "agrees": true,
+      "confidence": "medium",
+      "concerns": [
+        "Tax Diversification: The order does not explicitly prioritize the balance between Traditional (tax-deferred) and Roth (tax-free) accounts. This is critical for managing the 'tax torpedo' where Social Security benefits become taxable and for controlling MAGI to avoid Medicare IRMAA surcharges.",
+        "Timing of Estate Planning: Placing protection and estate review at the final step (Step 9) is problematic for individuals with significant assets or those planning for long-term care, as Medicaid asset-protection strategies often require years of lead time.",
+        "HSA Transition: While the HSA (Step 5) is a primary tool, its utility and the legality of contributions change abruptly upon Medicare enrollment."
+      ],
+      "exceptions": [
+        "Means-Tested Beneficiaries: Individuals qualifying for SSI or Medicaid must prioritize asset protection over the 'full reserve' (Step 4) or 'taxable brokerage' (Step 8) to avoid exceeding strict government asset limits.",
+        "Pre-Retirees (The Gap Years): Those within 5-10 years of retirement may need to prioritize Step 8 (taxable brokerage) over Step 7 (maxing employer plans) to create a liquid 'bridge fund,' allowing them to manage their taxable income and minimize the taxation of Social Security benefits.",
+        "IRMAA-Sensitive High Earners: Those near the IRMAA thresholds may need to shift their focus to tax-efficient asset location and MAGI management to avoid significant Medicare premium surcharges."
+      ]
+    },
+    {
+      "lens": "student-loan specialist",
+      "agrees": true,
+      "confidence": "medium",
+      "concerns": [
+        "The definition of 'high-interest debt' in Step 3 is ambiguous; nominal rates (e.g., 5-7%) may not actually be 'high' when considering tax deductibility.",
+        "The framework does not account for government interest subsidies (e.g., the SAVE plan), which can make the effective interest rate 0% or negative.",
+        "A rigid adherence to the 3-6 month reserve (Step 4) may be inefficient for borrowers with extreme job security and high-interest loans."
+      ],
+      "exceptions": [
+        "PSLFs (Public Service Loan Forgiveness) candidates: Should minimize payments via IDR/SAVE to maximize the amount forgiven, rather than prioritizing repayment in Step 3.",
+        "SAVE Plan beneficiaries: If the government subsidizes all unpaid interest, these loans should be treated as low-interest debt, regardless of the nominal rate.",
+        "High-rate loans (>7-8%): Should be strictly categorized as 'high-interest debt' and prioritized in Step 3 to secure a guaranteed return.",
+        "Tax-advantaged borrowers: For those in high tax brackets, the student loan interest deduction may lower the effective cost of the debt, shifting the priority toward investing."
+      ]
+    },
+    {
+      "lens": "behavioral-finance specialist",
+      "agrees": true,
+      "confidence": "high",
+      "concerns": [
+        "Mathematical optimization vs. Psychological sustainability: The FOO prioritizes net-worth growth over the emotional stress caused by high-interest debt.",
+        "Liquidity Anxiety: Prioritizing an employer match before a full 3-6 month reserve can create significant anxiety for risk-averse individuals or those in volatile industries.",
+        "The 'Mental Tax' of Debt: Strict adherence to a mathematical order can lead to burnout if the client does not experience the psychological reward of 'small wins' (e.g., eliminating a small account)."
+      ],
+      "exceptions": [
+        "Extreme Debt Anxiety: A client may justify a 'Debt Snowball' approach\u2014paying the smallest balance first\u2014regardless of interest rate or employer match, to build psychological momentum.",
+        "Precarious Employment: A client facing high job instability should prioritize the full 3-6 month reserve (Step 4) over the employer match (Step 2) to avoid insolvency during a transition.",
+        "Low Financial Self-Efficacy: For clients who have historically struggled with budgeting, simplifying the order or focusing on immediate small wins is more effective for long-term adherence than mathematical optimization.",
+        "High-Income Tax Optimization: Very high earners may adjust the priority of IRA vs. employer plans based on phase-out limits and specific tax-deduction strategies."
+      ]
+    }
+  ]
+}

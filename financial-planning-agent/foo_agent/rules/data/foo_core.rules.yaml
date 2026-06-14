@@ -18,6 +18,21 @@ rules:
     confidence: high
     assumptions: ["starter target = max(1 month essential expenses, $1,000)"]
 
+  - id: foo.protect.dependents_priority
+    title: "Secure life/disability coverage and guardianship now (you have dependents)"
+    order: 150
+    priority: 10
+    discipline: ["CFP", "insurance", "estate_attorney"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "household.has_dependents == true"
+    action: { type: recommend_review, calculator: protection.review }
+    rationale_key: dependents_need_protection_before_accumulation
+    verification: { verdict: supported, last_verified: "2026-06-14" }
+    citations: [9, 67]
+    confidence: high
+    assumptions: ["Syndicate cross-validation (2026-06-14): 5 of 11 professional lenses flagged that protection/estate must precede wealth accumulation when dependents or a sole breadwinner exist."]
+
   - id: foo.employer_match.capture_full
     title: "Raise contributions to capture the full employer match"
     order: 200
@@ -130,7 +145,7 @@ rules:
     discipline: ["CFP", "insurance", "estate_attorney"]
     jurisdiction: us_federal
     effective_date: "2026-01-01"
-    condition: "income.gross_annual > 0"
+    condition: "income.gross_annual > 0 and household.has_dependents == false"
     action: { type: recommend_review, calculator: protection.review }
     rationale_key: protect_the_plan_against_shocks
     verification: { verdict: partially_supported, last_verified: "2026-06-14" }
