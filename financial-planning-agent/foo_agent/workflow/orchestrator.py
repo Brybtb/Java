@@ -40,6 +40,12 @@ MODULE_RULES = [
     {"id": "withdrawal_plan",
      "condition": "household.primary_age >= 59",
      "reason": "At/near decumulation age; tax-efficient withdrawal sequencing applies."},
+    {"id": "risk",
+     "condition": "income.gross_annual > 0",
+     "reason": "Always: risk-tolerance vs portfolio alignment and stress tests."},
+    {"id": "estate",
+     "condition": "exists(estate) or derived.high_net_worth == true or household.primary_age >= 60",
+     "reason": "Estate assets present, high net worth, or near the wealth-transfer window."},
 ]
 
 
@@ -71,6 +77,8 @@ def run(profile: dict, as_of=None, *, seed: int | None = None, trials: int | Non
 
     # Phase 2: complete — select and run the applicable modules.
     from .. import full_plan
+    from ..optimize.estate import analyze as estate_analyze
+    from ..optimize.risk import analyze as risk_analyze
     from ..optimize.roth_conversion import conversion_analysis
     from ..optimize.social_security import claiming_analysis
     from ..optimize.withdrawal_plan import withdrawal_plan
@@ -91,6 +99,10 @@ def run(profile: dict, as_of=None, *, seed: int | None = None, trials: int | Non
     )
 
     optimizers: dict = {}
+    if "risk" in module_ids:
+        optimizers["risk"] = risk_analyze(profile)
+    if "estate" in module_ids:
+        optimizers["estate"] = estate_analyze(profile, params, as_of_d)
     if "roth_conversion" in module_ids:
         optimizers["roth_conversion"] = conversion_analysis(profile, params, as_of_d)
     if "withdrawal_plan" in module_ids:

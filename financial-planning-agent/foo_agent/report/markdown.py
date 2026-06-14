@@ -73,6 +73,16 @@ def render_markdown(result: dict) -> str:
         if wd and wd.get("order"):
             L.append(f"- **Withdrawal order**: {' → '.join(wd['order'])} "
                      f"(annual need ${wd['annual_need']})")
+        rk = opt.get("risk")
+        if rk:
+            L.append(f"- **Risk**: tolerance {rk['tolerance_risk_number']} vs portfolio "
+                     f"{rk['portfolio_risk_number']} → {rk['alignment'].replace('_',' ')}")
+        es = opt.get("estate")
+        if es:
+            L.append(f"- **Estate**: taxable estate ${es['taxable_estate']}, projected "
+                     f"federal estate tax ${es['projected_federal_estate_tax']}"
+                     + (f"; strategies modeled: {', '.join(s['name'] for s in es['strategies'])}"
+                        if es.get("strategies") else ""))
         L.append("")
 
     if result.get("sources"):

@@ -1,0 +1,23 @@
+# New York — progressive income tax, NOT community property, has a state ESTATE tax.
+# Estate-tax status verified 2026-06-14 (Parallel.ai). Income brackets are PLACEHOLDERS.
+versions:
+  - state: "NY"
+    effective_date: "2026-01-01"
+    expiry_date: null
+    income_tax:
+      has_income_tax: true
+      flat_rate: null
+      brackets:
+        - { up_to: 8500, rate: 0.04 }
+        - { up_to: 11700, rate: 0.045 }
+        - { up_to: 13900, rate: 0.0525 }
+        - { up_to: 80650, rate: 0.055 }
+        - { up_to: 215400, rate: 0.06 }
+        - { up_to: 1077550, rate: 0.0685 }
+        - { up_to: 5000000, rate: 0.0965 }
+        - { up_to: 25000000, rate: 0.103 }
+        - { up_to: null, rate: 0.109 }
+    community_property: false
+    homestead_exemption: 204825
+    estate_or_inheritance_tax: true
+    notes: "Has a separate NY state estate tax with a 'cliff' near the exemption. Income brackets are PLACEHOLDERS pending verification."

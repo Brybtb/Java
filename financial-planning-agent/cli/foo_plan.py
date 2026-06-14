@@ -88,6 +88,14 @@ def main(argv=None) -> int:
     p_am = sub.add_parser("assetmap"); common(p_am)
     p_am.add_argument("--png", required=True)
 
+    p_es = sub.add_parser("estate"); common(p_es)
+    p_rk = sub.add_parser("risk"); common(p_rk)
+
+    p_in = sub.add_parser("ingest")
+    p_in.add_argument("--form1040", required=True, help="path to extracted 1040 text")
+    p_in.add_argument("--profile", default=None, help="optional base profile to merge into")
+    p_in.add_argument("--out", default=None)
+
     args = ap.parse_args(argv)
 
     import foo_agent
@@ -203,6 +211,33 @@ def main(argv=None) -> int:
         with open(args.png, "wb") as f:
             f.write(base64.b64decode(uri.split(",", 1)[1]))
         print(f"[foo-plan] wrote {args.png}", file=sys.stderr)
+        return 0
+
+    if args.cmd == "estate":
+        from foo_agent.optimize.estate import analyze
+        from foo_agent.rules.loader import load_params
+        from datetime import date
+        prof = _load(args.profile)
+        as_of = date.fromisoformat(args.as_of or prof["as_of"])
+        _emit(analyze(prof, load_params(as_of, prof["household"]["state"]), as_of), args.out)
+        return 0
+
+    if args.cmd == "risk":
+        from foo_agent.optimize.risk import analyze
+        _emit(analyze(_load(args.profile)), args.out)
+        return 0
+
+    if args.cmd == "ingest":
+        from foo_agent.ingest.form1040 import parse_1040_text
+        from foo_agent.ingest.extract import merge_extracted
+        with open(args.form1040, "r", encoding="utf-8") as f:
+            text = f.read()
+        extracted = parse_1040_text(text)
+        if args.profile:
+            merged = merge_extracted(_load(args.profile), extracted, validate=False)
+            _emit({"extracted": extracted, "profile": merged}, args.out)
+        else:
+            _emit(extracted, args.out)
         return 0
 
     return 1

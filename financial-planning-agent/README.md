@@ -57,7 +57,20 @@ foo-plan social-security --profile $P --pia 2800 --fra 67   # claiming-age optim
 foo-plan roth            --profile $P           # Roth-conversion / bracket-fill
 foo-plan withdraw        --profile $P           # tax-efficient withdrawal order
 foo-plan assetmap        --profile $P --png map.png         # one-page household map
+
+# Phase 3 — estate, risk, document intake, web UI
+foo-plan estate          --profile $P          # estate-tax projection + GRAT/SLAT/ILIT modeling
+foo-plan risk            --profile $P          # Risk Number + alignment + stress tests
+foo-plan ingest --form1040 return.txt --profile $P   # parse a 1040 into profile fields
+python3 web/app.py --port 8765                 # dynamic-workflow web UI (stdlib only)
 ```
+
+### Web UI
+
+`python3 web/app.py` serves a dependency-free single-page app (Python stdlib
+`http.server`) that walks the **dynamic workflow** interactively: it asks the next
+adaptive question, then renders the selected modules, plan, and a downloadable
+white-labeled PDF. The engine stays deterministic; the web layer is pure I/O.
 
 ### Dynamic workflow (helloplaybook-style, deterministic)
 
@@ -135,6 +148,11 @@ assumptions disclosed, human-in-the-loop required.
   Roth-conversion/bracket-fill optimizer, tax-efficient withdrawal planner, Social
   Security claiming optimizer, Asset-Map visual household map. TX/CA state facts
   verified against statute.
-- **Phase 3 (next):** estate-tax projection + estate visualization + strategy
-  modeling (GRAT/SLAT/ILIT), Risk Number + stress tests, document OCR
-  (1040/estate/P&C), more states, web UI.
+- **Phase 3 (done):** estate-tax projection + wealth-transfer strategy modeling
+  (GRAT/SLAT/ILIT, annual gifting), Risk Number + alignment + stress tests,
+  document ingestion (deterministic 1040 parser + merge; OCR/AI fenced as the
+  non-deterministic boundary), more states (FL/NY/WA + TX/CA), and a stdlib web
+  UI — all wired into the dynamic orchestrator. TY2026 estate figures verified
+  ($15M exemption, 40%, $19k annual exclusion; 12 estate + 5 inheritance states).
+- **Beyond:** real OCR/LLM extraction adapters, full state tax-bracket coverage,
+  estate-flow waterfall visualization, persistence/multi-client, auth.

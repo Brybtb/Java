@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financial Planning Agent</title>
+<style>
+  :root { --p:#173a5e; --a:#3d7ea6; }
+  * { box-sizing: border-box; }
+  body { font-family: system-ui, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px; color:#1c1c1c; }
+  h1 { color: var(--p); margin-bottom: 2px; }
+  .sub { color:#666; margin-top:0; font-size:14px; }
+  .card { border:1px solid #e2e2e2; border-radius:10px; padding:18px 20px; margin:14px 0; }
+  .q { font-size:18px; font-weight:600; color:var(--p); margin-bottom:12px; }
+  input, select, button { font-size:15px; padding:8px 10px; border:1px solid #ccc; border-radius:7px; }
+  button { background:var(--p); color:#fff; border:none; cursor:pointer; }
+  button.secondary { background:var(--a); }
+  .bar { height:8px; background:#eee; border-radius:5px; overflow:hidden; margin:6px 0 16px; }
+  .bar > div { height:100%; background:var(--a); transition:width .3s; }
+  .pill { display:inline-block; padding:2px 8px; border-radius:9px; font-size:11px; color:#fff; margin-right:4px; }
+  .opportunity{background:#2e7d32}.warning{background:#c62828}.caution{background:#ef6c00}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0}
+  th,td{text-align:left;padding:5px 7px;border-bottom:1px solid #eee}
+  th{background:var(--p);color:#fff}
+  .mods span{display:inline-block;background:#eef3f8;border:1px solid var(--a);color:var(--p);
+    border-radius:7px;padding:3px 8px;margin:2px;font-size:12px}
+  .disc{background:#fff8e1;border:1px solid #ffe082;color:#5d4037;font-size:12px;padding:8px 10px;border-radius:7px}
+  .kpi{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0}
+  .kpi div{background:#f4f6f9;border-left:3px solid var(--a);padding:8px 12px;border-radius:4px}
+  .kpi b{display:block;font-size:18px;color:var(--p)}
+</style>
+</head>
+<body>
+  <h1>Financial Planning Agent</h1>
+  <p class="sub">Deterministic, advisor-grade decision support — a dynamic workflow that
+     asks only what it needs, then runs the modules relevant to you.</p>
+  <div class="bar"><div id="prog" style="width:0%"></div></div>
+  <div id="app"></div>
+
+<script>
+const app = document.getElementById('app');
+const prog = document.getElementById('prog');
+let profile = { schema_version: "1.0.0", as_of: new Date().toISOString().slice(0,10) };
+let totalQuestions = null;
+
+function setPath(obj, path, val){
+  const parts = path.split('.'); let cur = obj;
+  for (let i=0;i<parts.length-1;i++){ if(typeof cur[parts[i]]!=='object'||cur[parts[i]]===null) cur[parts[i]]={}; cur=cur[parts[i]]; }
+  cur[parts[parts.length-1]] = val;
+}
+function money(n){ return '$' + Number(n).toLocaleString(undefined,{maximumFractionDigits:0}); }
+
+async function step(){
+  const res = await fetch('/api/workflow', {method:'POST',headers:{'Content-Type':'application/json'},
+     body: JSON.stringify({profile, trials:2000})});
+  const data = await res.json();
+  if (data.error){ app.innerHTML = `<div class="card">Error: ${data.error}</div>`; return; }
+  if (data.status === 'collecting'){ renderQuestion(data); }
+  else { renderPlan(data); }
+}
+
+function renderQuestion(data){
+  const q = data.next_question;
+  if (totalQuestions===null) totalQuestions = data.remaining + 1;
+  const done = totalQuestions - data.remaining;
+  prog.style.width = Math.round(done/totalQuestions*100) + '%';
+  let input='';
+  if (q.type==='choice') input = `<select id="ans">${q.choices.map(c=>`<option value="${c}">${c.replace(/_/g,' ')}</option>`).join('')}</select>`;
+  else if (q.type==='boolean') input = `<select id="ans"><option value="true">Yes</option><option value="false">No</option></select>`;
+  else input = `<input id="ans" type="${q.type==='string'?'text':'number'}" step="any" autofocus>`;
+  app.innerHTML = `<div class="card"><div class="q">${q.prompt}</div>${input}
+    <div style="margin-top:14px"><button onclick="submit('${q.field}','${q.type}')">Next →</button></div></div>`;
+  const el = document.getElementById('ans'); if(el && el.focus) el.focus();
+  if(el) el.addEventListener('keydown', e=>{ if(e.key==='Enter') submit(q.field,q.type); });
+}
+
+function coerce(v,t){ if(t==='boolean') return v==='true'; if(t==='integer') return parseInt(v,10);
+  if(t==='number') return parseFloat(v); return v; }
+
+function submit(field,type){
+  const v = document.getElementById('ans').value;
+  setPath(profile, field, coerce(v,type));
+  step();
+}
+
+function renderPlan(d){
+  prog.style.width='100%';
+  const mods = (d.workflow?.selected_modules||[]).map(m=>`<span title="${m.reason}">${m.id.replace(/_/g,' ')}</span>`).join('');
+  let html = `<div class="card"><h2 style="color:var(--p);margin-top:0">Your plan</h2>
+    <div class="mods">${mods}</div>`;
+  if (d.projection){
+    const g=d.projection.goal;
+    html += `<div class="kpi">
+      <div><b>${g.status.replace(/_/g,' ')}</b>goal status</div>
+      <div><b>${Math.round(g.funded_ratio*100)}%</b>funded ratio</div>
+      ${d.monte_carlo?`<div><b>${Math.round(d.monte_carlo.probability_of_success*100)}%</b>P(success)</div>`:''}
+      <div><b>${money(d.projection.balance_at_retirement)}</b>at age ${d.projection.retire_age}</div></div>`;
+  }
+  html += `<h3>Recommended next actions</h3><table><tr><th>#</th><th>Action</th><th>Sources</th></tr>` +
+    d.recommendations.map(r=>`<tr><td>${r.step}</td><td>${r.headline}</td><td>${r.citations.join(', ')}</td></tr>`).join('') + `</table>`;
+  const o=d.optimizers||{};
+  if(o.risk) html += `<p><b>Risk:</b> tolerance ${o.risk.tolerance_risk_number} vs portfolio ${o.risk.portfolio_risk_number} → ${o.risk.alignment.replace(/_/g,' ')}</p>`;
+  if(o.social_security?.recommended_claim_age) html += `<p><b>Social Security:</b> claim at age ${o.social_security.recommended_claim_age}${o.social_security.breakeven_age_vs_62?` (break-even vs 62 at ${o.social_security.breakeven_age_vs_62})`:''}</p>`;
+  if(o.roth_conversion?.fill_targets?.length) html += `<p><b>Roth conversion:</b> room ${money(o.roth_conversion.fill_targets[0].conversion_room)} to top of current bracket</p>`;
+  if(o.estate) html += `<p><b>Estate:</b> taxable estate ${money(o.estate.taxable_estate)}, projected federal estate tax ${money(o.estate.projected_federal_estate_tax)}</p>`;
+  if((d.insights||[]).length){ html += `<h3>Insights</h3>` + d.insights.map(i=>`<div style="margin:4px 0"><span class="pill ${i.severity}">${i.severity}</span>${i.message}</div>`).join(''); }
+  html += `<div style="margin:16px 0"><button class="secondary" onclick="downloadPdf()">Download white-labeled PDF</button>
+     <button onclick="location.reload()" style="margin-left:8px">Start over</button></div>`;
+  html += (d.disclosures||[]).map(x=>`<div class="disc">${x}</div>`).join('');
+  html += `</div>`;
+  app.innerHTML = html;
+}
+
+async function downloadPdf(){
+  const res = await fetch('/api/report.pdf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({profile})});
+  const blob = await res.blob(); const url = URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download='financial_plan.pdf'; a.click(); URL.revokeObjectURL(url);
+}
+
+step();
+</script>
+</body>
+</html>

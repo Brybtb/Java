@@ -20,6 +20,16 @@ versions:
     protection:
       life_income_multiple: 10
 
+    estate:                       # TY2026, VERIFIED 2026-06-14 (OBBBA / IRS)
+      exemption_per_individual: 15000000
+      top_rate: 0.40
+      gift_annual_exclusion: 19000
+      review_threshold: 2000000   # net worth at which the estate module engages
+      slat_growth_multiple: 1.5
+      # States with their own estate tax (separate from inheritance tax).
+      estate_tax_states: [CT, HI, IL, ME, MD, MA, MN, NY, OR, RI, VT, WA]
+      inheritance_tax_states: [KY, MD, NE, NJ, PA]
+
     contribution_limits:
       elective_deferral:        # 401(k)/403(b) employee deferral (402(g)), TY2026
         limit: 24500

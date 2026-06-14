@@ -111,6 +111,37 @@
      {{ optimizers.withdrawal_plan.order|join(" → ") }}; need
      ${{ optimizers.withdrawal_plan.annual_need }}.</p>
   {% endif %}
+  {% if optimizers.risk %}
+  <p><b>Risk alignment</b> — tolerance Risk Number
+     {{ optimizers.risk.tolerance_risk_number }} vs portfolio
+     {{ optimizers.risk.portfolio_risk_number }}:
+     <b>{{ optimizers.risk.alignment|replace("_"," ") }}</b>.</p>
+  {% if optimizers.risk.stress_tests %}
+  <table>
+    <tr><th>Stress scenario</th><th>Portfolio return</th><th>Projected change</th><th>Projected value</th></tr>
+    {% for s in optimizers.risk.stress_tests %}
+    <tr><td>{{ s.name }}</td>
+        <td>{{ "%.1f"|format(s.portfolio_return|float * 100) }}%</td>
+        <td>${{ s.projected_change }}</td><td>${{ s.projected_value }}</td></tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+  {% endif %}
+  {% if optimizers.estate %}
+  <p><b>Estate</b> — taxable estate ${{ optimizers.estate.taxable_estate }},
+     applicable exemption ${{ optimizers.estate.applicable_exemption }},
+     projected federal estate tax <b>${{ optimizers.estate.projected_federal_estate_tax }}</b>
+     {% if optimizers.estate.state_estate_tax_applies %}(state estate tax also applies){% endif %}.</p>
+  {% if optimizers.estate.strategies %}
+  <table>
+    <tr><th>Transfer strategy</th><th>Removed from estate</th><th>Federal tax saved</th></tr>
+    {% for s in optimizers.estate.strategies %}
+    <tr><td>{{ s.name }}</td><td>${{ s.amount_removed_from_estate }}</td>
+        <td>${{ s.federal_tax_saved }}</td></tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+  {% endif %}
   {% endif %}
 
   {% if result.insights %}

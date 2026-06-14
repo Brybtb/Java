@@ -1,0 +1,18 @@
+# Washington — no income tax (but 7%+ capital-gains excise), community property,
+# has a state ESTATE tax. Estate/community-property status verified 2026-06-14.
+versions:
+  - state: "WA"
+    effective_date: "2026-01-01"
+    expiry_date: null
+    income_tax:
+      has_income_tax: false
+      flat_rate: null
+      brackets: null
+    community_property: true
+    homestead_exemption: "county_median_value"
+    estate_or_inheritance_tax: true
+    capital_gains_excise:
+      applies: true
+      rate: 0.07
+      note: "7% excise on long-term capital gains above an annual standard deduction (~$270k); not modeled in projections yet."
+    notes: "No broad income tax, but a capital-gains excise and a state estate tax apply. Community-property state."
