@@ -1,6 +1,6 @@
 {
   "generated_utc": "20260614T073000Z",
-  "note": "Curated rule citations (1-9) plus a discipline-sourced reference library gathered + deduped by research/source_rules.py (Parallel.ai Search, 2026-06-14). Low-quality entries pruned and titles normalized 2026-06-14.",
+  "note": "Curated rule citations (1-9) plus a discipline-sourced reference library gathered + deduped by research/source_rules.py (Parallel.ai Search, 2026-06-14). Low-quality entries pruned and titles normalized 2026-06-14. C10 (2026-06-14): added tax-assumption citations 134-141 (IRC 86, Pub 915, Pub 590-B, Topic 409, Morningstar tax-cost-ratio, Vanguard asset-location, IRS rates, Fed SCF) via Parallel.ai.",
   "sources": [
     {
       "n": 1,
@@ -1163,6 +1163,62 @@
       "domain": "irs.gov",
       "source_type": "primary",
       "n": 133
+    },
+    {
+      "n": 134,
+      "url": "https://www.law.cornell.edu/uscode/text/26/86",
+      "title": "26 U.S. Code \u00a7 86 \u2014 Social security and tier 1 railroad retirement benefits (up-to-85% inclusion)",
+      "domain": "law.cornell.edu",
+      "source_type": "primary"
+    },
+    {
+      "n": 135,
+      "url": "https://www.irs.gov/publications/p915",
+      "title": "IRS Publication 915 \u2014 Social Security and Equivalent Railroad Retirement Benefits",
+      "domain": "irs.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 136,
+      "url": "https://www.irs.gov/publications/p590b",
+      "title": "IRS Publication 590-B \u2014 Distributions from IRAs (RMD beginning age 73/75; Uniform Lifetime Table)",
+      "domain": "irs.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 137,
+      "url": "https://www.irs.gov/taxtopics/tc409",
+      "title": "IRS Topic No. 409 \u2014 Capital Gains and Losses (0%/15%/20% long-term rates, IRC \u00a71(h))",
+      "domain": "irs.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 138,
+      "url": "https://awgmain.morningstar.com/webhelp/glossary_definitions/mutual_fund/mfglossary_Tax_Efficiency.html",
+      "title": "Morningstar \u2014 Tax-Cost Ratio (definition & methodology for annual tax drag)",
+      "domain": "morningstar.com",
+      "source_type": "secondary"
+    },
+    {
+      "n": 139,
+      "url": "https://corporate.vanguard.com/content/corporatesite/us/en/corp/articles/greater-tax-efficiency-through-equity-asset-location.html",
+      "title": "Vanguard \u2014 Greater tax efficiency through equity asset location (taxable-equity tax drag)",
+      "domain": "vanguard.com",
+      "source_type": "secondary"
+    },
+    {
+      "n": 140,
+      "url": "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets",
+      "title": "IRS \u2014 Federal income tax rates and brackets (effective-rate basis for blended retirement tax rate)",
+      "domain": "irs.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 141,
+      "url": "https://www.federalreserve.gov/econres/scfindex.htm",
+      "title": "Federal Reserve \u2014 Survey of Consumer Finances (embedded unrealized-gain share of taxable assets)",
+      "domain": "federalreserve.gov",
+      "source_type": "primary"
     }
   ]
 }

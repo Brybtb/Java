@@ -29,10 +29,21 @@ from ..calculators.money import D, whole
 from ..calculators.rmd import rmd_amount, rmd_start_age
 from .withdrawal import DEFAULT_ORDER
 
-# Documented placeholders (verify against CMA / tax authority before client use).
-LTCG_RATE = D("0.15")        # long-term capital-gains rate on realized taxable gains
-GAIN_FRACTION = D("0.5")     # share of a taxable withdrawal assumed to be gain
-SS_TAXABLE_FRACTION = D("0.85")  # statutory max share of Social Security that is taxable
+# Source-backed tax assumptions (C10). Citation numbers index
+# rules/data/citations/sources.json; the test suite fails closed if any is missing.
+LTCG_RATE = D("0.15")        # 0/15/20 LTCG; 15% applies across the broad middle — IRS Topic 409 [137]
+GAIN_FRACTION = D("0.5")     # embedded unrealized-gain share of a taxable position — Fed SCF [141] (planning estimate)
+SS_TAXABLE_FRACTION = D("0.85")  # statutory MAX taxable share of Social Security — IRC §86 [134] / IRS Pub 915 [135]
+
+# Assumption -> primary/empirical sources (sources.json ids). RMD ages + Uniform
+# Lifetime Table are sourced in calculators.rmd against IRS Pub 590-B [136].
+ASSUMPTION_CITATIONS = {
+    "ss_taxable_fraction": [134, 135],
+    "ltcg_rate": [137],
+    "gain_fraction": [141],
+    "terminal_ordinary_rate": [140],
+    "rmd": [136],
+}
 
 
 def _ordered(brackets):
@@ -193,6 +204,9 @@ def decumulate(*, buckets: dict, retire_age: int, end_age: int, annual_spend_ret
             "ltcg_rate": str(ltcg_rate),
             "gain_fraction": str(gain_fraction),
             "ss_taxable_fraction": str(SS_TAXABLE_FRACTION),
-            "note": "PLACEHOLDER tax assumptions; verify vs CMA / IRS before client use.",
+            "citations": ASSUMPTION_CITATIONS,
+            "note": "Source-backed (see citations -> sources.json). Rates/shares are "
+                    "planning defaults; confirm each client's actual bracket, basis, and "
+                    "SS provisional-income inclusion.",
         },
     }

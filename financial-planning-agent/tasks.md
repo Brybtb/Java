@@ -203,6 +203,21 @@ dod:
 tests_to_add: [test_ordinary_tax_progressive_hand_calc, test_marginal_rate_picks_the_right_bracket, test_schedule_spans_retirement_and_is_deterministic, test_taxable_drains_before_roth_is_touched, test_rmd_is_forced_at_statutory_age, test_rmd_start_age_73_for_pre_1960, test_lifetime_tax_is_nonneg_and_after_tax_terminal_discounts_tax_deferred, test_lifetime_tax_equals_sum_of_yearly_taxes, test_no_taxable_bucket_means_no_ltcg_tax, test_decumulation_projection_from_profile]
 gates: { code: required, ui: skip, experts: [tax_cpa, cfp_decumulation, risk_quant] }
 expert_rubric: rubrics/C08.yaml
+status: done
+```
+```yaml
+id: C10
+title: verify + cite the tax/CMA assumptions (Parallel.ai) — SS 85%, LTCG, RMD, taxable_drag, blended rate
+tier: "10^1"
+depends_on: [C08]
+files: [foo_agent/rules/data/citations/sources.json, foo_agent/projection/decumulation.py, foo_agent/rules/data/assumptions/cma.2026.yaml, tests/test_assumption_citations.py, tasks.md, rubrics/C10.yaml]
+dod:
+  - "every tax/CMA assumption cites a source that resolves in sources.json (fail-closed test)"
+  - "sourced values match authority: SS max 85% (IRC 86 / Pub 915), LTCG 0/15/20 (Topic 409), RMD 73/75 + Uniform Lifetime (Pub 590-B)"
+  - "researched via Parallel.ai (not ad-hoc web); decumulation output carries assumptions.citations; no new math (no golden churn)"
+tests_to_add: [test_decumulation_assumption_citations_resolve, test_cma_tax_assumptions_are_cited, test_sourced_values_match_authority, test_decumulate_output_carries_citations]
+gates: { code: required, ui: skip, experts: [tax_cpa, fiduciary_compliance] }
+expert_rubric: rubrics/C10.yaml
 status: in_progress
 ```
 ```yaml

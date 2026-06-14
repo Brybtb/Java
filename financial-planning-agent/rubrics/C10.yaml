@@ -1,0 +1,9 @@
+chunk: C10
+personas: [tax_cpa, fiduciary_compliance]
+items:
+  R1: "Every tax/CMA assumption (SS 85% inclusion, LTCG rate, gain_fraction, terminal/retirement tax rate, taxable_drag, RMD ages+table) references a source number that RESOLVES in rules/data/citations/sources.json; a fail-closed test breaks if any is missing."
+  R2: "Sourced values match their cited authority: SS statutory max 85% (IRC §86 [134] / IRS Pub 915 [135]); long-term capital gains 0/15/20 with 15% across the broad middle (IRS Topic 409 [137]); RMD beginning age 73/75 + Uniform Lifetime Table (IRS Pub 590-B [136], reused from calculators.rmd)."
+  R3: "Source TYPE is appropriate: statutory/IRS facts cite primary sources (IRC, IRS pubs); empirical estimates (taxable tax-drag, embedded-gain share, blended effective rate) cite clearly-labeled secondary/data sources (Morningstar [138], Vanguard [139], IRS rates [140], Fed SCF [141]) and are described as planning defaults, not statutory certainties."
+  R4: "Research was performed via the Parallel.ai pipeline (not ad-hoc web/Exa); no citation, URL, or value is fabricated — each maps to a real returned result."
+  R5: "The decumulation engine output carries the citations (assumptions.citations), so a cited figure is auditable downstream; values are unchanged numerically from C07/C08 (this chunk adds provenance, not new math) -> no golden churn."
+block_if_any: [R1, R2, R4]

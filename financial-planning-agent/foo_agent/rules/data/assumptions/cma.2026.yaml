@@ -29,10 +29,15 @@ default_retirement_age: 65
 # explicit retirement-spend goal is provided.
 spending_replacement: 0.80
 # Blended effective tax rate applied to portfolio withdrawals in retirement
-# (approximates the drag from tax-deferred withdrawals + RMDs). PLACEHOLDER.
+# (approximates the drag from tax-deferred withdrawals + RMDs). Planning default
+# within the effective-rate range for middle-income retirees; verified 2026-06-14
+# against IRS federal income-tax rates/brackets [140].
 retirement_tax_rate: 0.15
+retirement_tax_rate_citations: [140]
 # C7: annual return haircut on the TAXABLE bucket only (the "tax cost ratio" of a
 # taxable brokerage — dividends + turnover taxed yearly). Tax-deferred and Roth
-# buckets compound untaxed and ignore this. ~50 bps is a common estimate for a
-# tax-efficient taxable equity allocation. PLACEHOLDER pending CMA verification.
+# buckets compound untaxed and ignore this. ~50 bps sits in the tax-efficient
+# equity range; verified 2026-06-14 against Morningstar tax-cost-ratio [138] +
+# Vanguard equity asset-location research [139].
 taxable_drag: 0.005
+taxable_drag_citations: [138, 139]
