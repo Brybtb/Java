@@ -4,6 +4,53 @@ One fenced `yaml` block per chunk (machine-parsed by `tools/scope_fence.py` and 
 `financial-experts-gate` workflow). status: todo | in_progress | done | blocked.
 Run the gate: `Workflow({scriptPath: ".claude/workflows/financial-experts-gate.js", args:{chunk:"C03"}})`.
 
+## Phase 6 — comprehensive intake (owner feedback 2026-06-14; Parallel.ai research → see reference-financial-plan-scope memory)
+
+The guided interview asks ~10 fields and NEVER collects investment balances or liabilities,
+so guided plans run on ~0 investable assets (garbage funded_ratio). A real plan gathers the full
+balance sheet + liabilities + goals + insurance/estate. The engine + profile.schema already support
+accounts.*.balance and debts[]; this is mostly INTAKE work (questions + structured pill UI).
+
+```yaml
+id: C12
+title: balance-sheet + liabilities intake (the critical gap — assets & debts in the guided flow)
+tier: "10^2"
+depends_on: [C05]
+files: [foo_agent/interview/questions.yaml, foo_agent/interview/statemachine.py, web/index.html, web/app.py, foo_agent/schemas/profile.schema.json, tests/test_interview.py, tests/test_web_app.py, tasks.md, rubrics/C12.yaml]
+dod:
+  - "intake collects per-account balances (taxable, traditional IRA, Roth IRA, 401k, HSA, cash) and liabilities (mortgage, student, auto, credit card: balance + apr) as a grouped structured step, not 20 separate questions"
+  - "schema validates the new fields; the projection's _investable_total + debt high-interest rule now have real inputs from a guided plan"
+  - "a guided-only profile produces a sane funded_ratio (not ~0); deterministic; XSS-safe; no fabricated numbers"
+gates: { code: required, ui: required, experts: [intake_correctness, cfp_decumulation, risk_quant] }
+expert_rubric: rubrics/C12.yaml
+status: todo
+```
+```yaml
+id: C13
+title: goals + risk-tolerance questionnaire intake (multi-goal with horizons; tolerance vs capacity)
+tier: "10^2"
+depends_on: [C12]
+files: [foo_agent/interview/questions.yaml, web/index.html, foo_agent/schemas/profile.schema.json, tests/test_interview.py, tasks.md, rubrics/C13.yaml]
+dod:
+  - "collect goals (retirement/education/major-purchase/debt-payoff) each with a target amount + horizon + priority"
+  - "a short risk-tolerance questionnaire feeds optimize/risk (tolerance) distinct from capacity; deterministic"
+gates: { code: required, ui: required, experts: [risk_quant, cfp_decumulation, intake_correctness] }
+expert_rubric: rubrics/C13.yaml
+status: todo
+```
+```yaml
+id: C14
+title: insurance + estate intake + gap surfacing (life/disability/LTC; will/trust/POA/beneficiaries)
+tier: "10^2"
+depends_on: [C12]
+files: [foo_agent/interview/questions.yaml, web/index.html, foo_agent/schemas/profile.schema.json, foo_agent/insights/observations.py, tests/test_interview.py, tasks.md, rubrics/C14.yaml]
+dod:
+  - "capture insurance coverage (life/disability/LTC) + estate-doc presence (will/trust/POA/healthcare directive/beneficiaries)"
+  - "surface coverage/estate GAPS as guarded insights (no fabricated coverage numbers); reuse the protection FOO rules"
+gates: { code: required, ui: required, experts: [fiduciary_compliance, cfp_decumulation, intake_correctness] }
+expert_rubric: rubrics/C14.yaml
+status: todo
+```
 ## Phase 0 — safety net
 
 ```yaml
