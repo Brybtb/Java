@@ -63,7 +63,7 @@ def turn(state: dict, user_input=None, *, llm=None, as_of: str | None = None,
     if as_of and not profile.get("as_of"):
         profile["as_of"] = as_of
     if not profile.get("as_of"):
-        profile["as_of"] = date.today().isoformat()  # I/O layer may set as_of; engine never reads the clock
+        profile["as_of"] = date.today().isoformat()  # noqa: P0-CLOCK  (I/O boundary: defaults as_of; engine never reads the clock)
     history = list(state.get("history") or [])
     if user_input is not None:
         history.append({"role": "user", "content": str(user_input)})

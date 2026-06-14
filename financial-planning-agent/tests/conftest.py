@@ -32,6 +32,7 @@ def _host_of(address):
 def _block_external_network():
     real_connect = _socket.socket.connect
     real_create = _socket.create_connection
+    real_gai = _socket.getaddrinfo
 
     def guarded_connect(self, address, *args, **kwargs):
         if _host_of(address) not in _LOCAL_HOSTS:
@@ -46,10 +47,20 @@ def _block_external_network():
             raise RuntimeError(f"External network call blocked in tests: {address!r}.")
         return real_create(address, *args, **kwargs)
 
+    def guarded_gai(host, *args, **kwargs):
+        # Block DNS egress too: a 'blocked' request must not even resolve the host
+        # (harness review: connect was guarded but getaddrinfo leaked the lookup).
+        h = host or ""
+        if h not in _LOCAL_HOSTS and not (isinstance(h, str) and h.startswith("127.")):
+            raise RuntimeError(f"External DNS lookup blocked in tests: {host!r}.")
+        return real_gai(host, *args, **kwargs)
+
     _socket.socket.connect = guarded_connect
     _socket.create_connection = guarded_create
+    _socket.getaddrinfo = guarded_gai
     try:
         yield
     finally:
         _socket.socket.connect = real_connect
         _socket.create_connection = real_create
+        _socket.getaddrinfo = real_gai
