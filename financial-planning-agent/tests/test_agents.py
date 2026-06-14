@@ -91,6 +91,31 @@ def test_guard_clean_prose_passes():
                     {"recommendations": [], "insights": []})
 
 
+def test_guard_rejects_provenance_collision():
+    # Digits that live ONLY inside provenance (hash, as_of, seed, trials) must NOT
+    # become allowed figures (audit B7).
+    result = {
+        "input_hash": "sha256:409938abc",
+        "as_of": "2026-06-14",
+        "mc_seed": 424242,
+        "trials": 2000,
+        "projection": {"balance_at_retirement": 13140},
+        "recommendations": [], "insights": [],
+    }
+    for bad in ("$409938", "$2,026", "$424242", "$2,000"):
+        with pytest.raises(GuardError):
+            validate(f"You'll have {bad}.", result)
+    assert validate("You'll have $13,140 at retirement.", result)  # a genuine value passes
+
+
+def test_guard_rejects_spelled_out():
+    result = {"projection": {"balance_at_retirement": 13140}, "recommendations": [], "insights": []}
+    with pytest.raises(GuardError):
+        validate("You'll have about 1.4 million dollars.", result)
+    with pytest.raises(GuardError):
+        validate("That's two million dollars saved.", result)
+
+
 # --- Copilot LLM mode (stub) + Gemini adapter --------------------------------
 _COMPLETE_PROFILE = {
     "schema_version": "1.0.0", "as_of": AS_OF,

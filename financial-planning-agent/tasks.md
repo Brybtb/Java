@@ -74,14 +74,14 @@ dod:
 tests_to_add: [test_profile_null_does_not_500, test_invalid_enum_returns_400, test_nonfinite_rejected_400, test_llm_active_false_without_llm, test_500_is_sanitized, test_llm_uses_api_key_header_not_bearer]
 gates: { code: required, ui: skip, experts: [copilot_safety, fiduciary_compliance] }
 expert_rubric: rubrics/C00.yaml
-status: in_progress
+status: done
 ```
 ```yaml
 id: C01
 title: guard hardening (B7) - value allowlist, drop whole-blob whitelist
 tier: "10^0"
 depends_on: [P0-GATE]
-files: [foo_agent/explain/guard.py, tests/test_agents.py]
+files: [foo_agent/explain/guard.py, tests/test_agents.py, tasks.md]
 dod:
   - "allowed-number set built from computed dollars/%/ages only"
   - "provenance values (hashes, seeds, as_of, indices) are NOT allowed numbers"
@@ -90,7 +90,7 @@ dod:
 tests_to_add: [test_guard_rejects_provenance_collision, test_guard_rejects_spelled_out]
 gates: { code: required, ui: skip, experts: [copilot_safety] }
 expert_rubric: rubrics/C01.yaml
-status: todo
+status: in_progress
 ```
 ```yaml
 id: C02
