@@ -1,0 +1,10 @@
+chunk: C02
+personas: [copilot_safety, risk_quant]
+items:
+  R1: "B9 DoS: a POST whose Content-Length exceeds the cap returns 413 BEFORE the body is read (bounded memory); the request handler sets a socket timeout so a stalled/slowloris client cannot hang a worker indefinitely."
+  R2: "B16 XSS: renderPlan HTML-escapes every interpolated string (module names/reasons, recommendation headlines, insight severities/messages, disclosures) — a '<img onerror>' / '<script>' payload renders as inert text (0 img/script nodes, nothing executes)."
+  R3: "B8 clamp: the displayed funded ratio is clamped/guarded — an absurd value (e.g. 8.01) shows '100%+' not '801%', negatives show '0%', and non-finite shows '—'."
+  R4: "B12 bound: the 401(k) deferral percentage is clamped to [0,1] in the contribution math, so deferral dollars can never be negative or exceed gross pay."
+  R5: "B15 injection: the deterministic copilot validates a choice answer against its allowed set and REJECTS free text (e.g. '<script>') rather than storing it as an enum value; it re-asks the same question."
+  R6: "B17 determinism: the PDF SOURCE_DATE_EPOCH env mutation is serialized by a lock so concurrent renders cannot clobber each other's epoch (no determinism leak under threading)."
+block_if_any: [R1, R2, R5]

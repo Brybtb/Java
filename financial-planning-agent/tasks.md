@@ -97,10 +97,11 @@ id: C02
 title: DoS/limits/clamps (B9 timeout+413, B12 deferral bound, B17 PDF epoch, B16 DOM-escape, B8 funded_ratio clamp, B15 per-answer validation)
 tier: "10^0"
 depends_on: [P0-GATE]
-files: [web/app.py, web/index.html, foo_agent/calculators/contributions.py, foo_agent/report/pdf.py, foo_agent/agents/copilot.py, tests/test_web_app.py]
+files: [web/app.py, web/index.html, foo_agent/calculators/contributions.py, foo_agent/report/pdf.py, foo_agent/agents/copilot.py, tests/test_web_app.py, tasks.md, rubrics/C02.yaml]
+tests_to_add: [test_oversize_post_returns_413, test_handler_has_socket_timeout, test_deferral_pct_is_clamped, test_copilot_rejects_invalid_choice, test_pdf_render_is_lock_serialized]
 gates: { code: required, ui: smoke, experts: [copilot_safety, risk_quant] }
 expert_rubric: rubrics/C02.yaml
-status: todo
+status: in_progress
 ```
 
 ## wedge — make the engine act
