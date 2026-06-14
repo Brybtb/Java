@@ -1,0 +1,13 @@
+# Texas — no state income tax, community-property state, strong homestead protection.
+versions:
+  - state: "TX"
+    effective_date: "2026-01-01"
+    expiry_date: null
+    income_tax:
+      has_income_tax: false
+      flat_rate: null
+      brackets: null
+    community_property: true
+    homestead_exemption: "unlimited_acreage_capped"
+    estate_or_inheritance_tax: false
+    notes: "No state income or estate tax. Community-property titling affects basis step-up and beneficiary planning."

@@ -1,0 +1,47 @@
+# Deterministic guided-interview question bank. The state machine asks the first
+# question (in this order) whose target field is still missing and whose
+# show_condition holds. Same partial answers -> same next question.
+questions:
+  - id: filing_status
+    field: household.filing_status
+    prompt: "What is your tax filing status?"
+    type: choice
+    choices: [single, married_filing_jointly, married_filing_separately, head_of_household, qualifying_widow]
+  - id: state
+    field: household.state
+    prompt: "Which US state do you live in? (two-letter code)"
+    type: string
+  - id: primary_age
+    field: household.primary_age
+    prompt: "What is your age?"
+    type: integer
+  - id: gross_income
+    field: income.gross_annual
+    prompt: "What is your gross annual household income?"
+    type: number
+  - id: monthly_essential
+    field: expenses.monthly_essential
+    prompt: "What are your essential monthly expenses (housing, food, utilities, minimums)?"
+    type: number
+  - id: emergency_cash
+    field: accounts.cash_emergency.balance
+    prompt: "How much do you hold in cash/emergency savings?"
+    type: number
+  - id: match_offered
+    field: accounts.employer_401k.match_offered
+    prompt: "Does your employer offer a retirement-plan match?"
+    type: boolean
+  - id: match_cap
+    field: accounts.employer_401k.match_pct_cap
+    prompt: "Up to what percent of pay is matched? (e.g. 0.06 for 6%)"
+    type: number
+    show_condition: "accounts.employer_401k.match_offered == true"
+  - id: current_deferral
+    field: contributions.employer_401k.pct
+    prompt: "What percent of pay are you currently contributing? (e.g. 0.03)"
+    type: number
+    show_condition: "accounts.employer_401k.match_offered == true"
+  - id: hsa_eligible
+    field: accounts.hsa.eligible
+    prompt: "Are you covered by an HSA-qualified high-deductible health plan?"
+    type: boolean

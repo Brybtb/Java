@@ -1,0 +1,15 @@
+{
+  "generated_utc": "20260614T000000Z",
+  "note": "Seed citation registry. research/source_rules.py + verify_rules.py will expand and attach verdicts to these. URLs are the authoritative primary sources each rule should ultimately cite.",
+  "sources": [
+    { "n": 1, "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits", "title": "401(k) contribution limits", "domain": "irs.gov", "source_type": "primary" },
+    { "n": 2, "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits", "title": "IRA contribution limits", "domain": "irs.gov", "source_type": "primary" },
+    { "n": 3, "url": "https://www.consumerfinance.gov/about-us/blog/an-essential-guide-to-building-an-emergency-fund/", "title": "Building an emergency fund", "domain": "consumerfinance.gov", "source_type": "primary" },
+    { "n": 4, "url": "https://www.irs.gov/publications/p969", "title": "Pub 969 — HSAs and other tax-favored health plans", "domain": "irs.gov", "source_type": "primary" },
+    { "n": 5, "url": "https://www.irs.gov/retirement-plans/amount-of-roth-ira-contributions-that-you-can-make-for-the-current-year", "title": "Roth IRA contribution phase-outs", "domain": "irs.gov", "source_type": "primary" },
+    { "n": 6, "url": "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest", "title": "Save and invest — investor.gov", "domain": "investor.gov", "source_type": "primary" },
+    { "n": 7, "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-the-debt-snowball-and-debt-avalanche-en-2103/", "title": "Debt avalanche vs snowball", "domain": "consumerfinance.gov", "source_type": "primary" },
+    { "n": 8, "url": "https://www.dol.gov/general/topic/retirement/typesofplans", "title": "Employer retirement plan types & matching", "domain": "dol.gov", "source_type": "primary" },
+    { "n": 9, "url": "https://www.usa.gov/wills-estates", "title": "Wills, estates, and probate — USAGov", "domain": "usa.gov", "source_type": "primary" }
+  ]
+}

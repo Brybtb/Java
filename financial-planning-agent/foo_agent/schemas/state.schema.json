@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "State Jurisdiction Params",
+  "type": "object",
+  "required": ["state", "effective_date", "income_tax"],
+  "properties": {
+    "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "effective_date": { "type": "string", "format": "date" },
+    "expiry_date": { "type": ["string", "null"], "format": "date" },
+    "income_tax": {
+      "type": "object",
+      "required": ["has_income_tax"],
+      "properties": {
+        "has_income_tax": { "type": "boolean" },
+        "flat_rate": { "type": ["number", "null"] },
+        "brackets": { "type": ["array", "null"] }
+      },
+      "additionalProperties": true
+    },
+    "community_property": { "type": "boolean" },
+    "homestead_exemption": { "type": ["number", "string", "null"] },
+    "estate_or_inheritance_tax": { "type": "boolean" },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

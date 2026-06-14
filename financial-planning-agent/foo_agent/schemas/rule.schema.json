@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FOO Rule",
+  "type": "object",
+  "required": ["id", "title", "order", "discipline", "jurisdiction", "effective_date", "condition", "action", "rationale_key", "citations"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_]+(\\.[a-z0-9_]+)+$" },
+    "title": { "type": "string", "minLength": 1 },
+    "order": { "type": "integer", "minimum": 0 },
+    "priority": { "type": "integer", "default": 0 },
+    "discipline": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "jurisdiction": { "type": "string", "minLength": 1 },
+    "effective_date": { "type": "string", "format": "date" },
+    "expiry_date": { "type": ["string", "null"], "format": "date" },
+    "condition": { "type": "string", "minLength": 1 },
+    "action": {
+      "type": "object",
+      "required": ["type", "calculator"],
+      "properties": {
+        "type": { "type": "string", "minLength": 1 },
+        "calculator": { "type": "string", "minLength": 1 },
+        "target_account": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "rationale_key": { "type": "string", "minLength": 1 },
+    "citations": { "type": "array", "items": { "type": "integer" }, "minItems": 1 },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low"], "default": "medium" },
+    "assumptions": { "type": "array", "items": { "type": "string" } },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "verdict": { "type": "string", "enum": ["supported", "partially_supported", "unsupported", "contradicted", "unverified"] },
+        "verified_run_id": { "type": ["string", "null"] },
+        "last_verified": { "type": ["string", "null"] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

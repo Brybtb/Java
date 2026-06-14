@@ -1,0 +1,46 @@
+# Declarative "unique insights" — opportunities and gaps surfaced deterministically.
+# Each signal: a safe-DSL condition over facts (profile / derived / params /
+# projection / montecarlo) plus a message and citation(s). Conditions that
+# reference projection/montecarlo simply do not fire when those facts are absent.
+signals:
+  - id: employer_match_left_on_table
+    severity: opportunity
+    condition: "accounts.employer_401k.match_offered == true and contributions.employer_401k.pct < accounts.employer_401k.match_pct_cap"
+    message: "You are not capturing the full employer match — an immediate, guaranteed return is being left on the table."
+    citations: [1]
+
+  - id: high_interest_debt_present
+    severity: warning
+    condition: "derived.has_high_interest_debt == true"
+    message: "High-interest debt is present. Paying it down is a guaranteed return that usually beats taxable investing."
+    citations: [7]
+
+  - id: emergency_reserve_incomplete
+    severity: caution
+    condition: "derived.emergency_full_funded == false"
+    message: "Your full emergency reserve (3-6 months of essential expenses) is not yet funded."
+    citations: [3]
+
+  - id: hsa_unused
+    severity: opportunity
+    condition: "accounts.hsa.eligible == true and contributions.hsa.annual == 0"
+    message: "You are HSA-eligible but not contributing. The HSA is the only triple-tax-advantaged account."
+    citations: [4]
+
+  - id: roth_backdoor_candidate
+    severity: opportunity
+    condition: "derived.roth_backdoor_candidate == true"
+    message: "Income appears above the Roth IRA phase-out; consider a backdoor Roth or traditional IRA strategy."
+    citations: [5]
+
+  - id: retirement_behind
+    severity: warning
+    condition: "projection.goal.status == 'behind'"
+    message: "The deterministic projection shows the retirement goal is behind its funding target."
+    citations: [6]
+
+  - id: low_probability_of_success
+    severity: warning
+    condition: "montecarlo.probability_of_success < 0.70"
+    message: "Modeled probability of retirement success is below 70%; consider higher savings, later retirement, or lower spending."
+    citations: [6]

@@ -1,0 +1,28 @@
+# Capital Market Assumptions, versioned. Monte Carlo pins this file's version so
+# a probability-of-success figure is always reproducible. Nominal annual figures.
+# PLACEHOLDERS pending verification (e.g. against published CMAs); for modeling
+# only, never a forecast.
+version: "2026.0"
+effective_date: "2026-01-01"
+expiry_date: null
+
+inflation: 0.025
+
+# Model portfolios keyed by stated risk tolerance.
+portfolios:
+  conservative:
+    mean_return: 0.045
+    stdev: 0.07
+  moderate:
+    mean_return: 0.060
+    stdev: 0.11
+  aggressive:
+    mean_return: 0.075
+    stdev: 0.16
+
+# Planning horizon defaults.
+longevity_age: 95
+default_retirement_age: 65
+# Retirement spending replacement applied to current total expenses if no
+# explicit retirement-spend goal is provided.
+spending_replacement: 0.80
