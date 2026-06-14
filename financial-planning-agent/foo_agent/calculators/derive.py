@@ -6,7 +6,22 @@ the inputs, so they preserve determinism while keeping conditions readable.
 from __future__ import annotations
 
 from .context import CalcContext
+from .money import D
 from . import contributions, debt, emergency_fund
+
+
+def _estimated_net_worth(ctx: CalcContext) -> D:
+    accts = ctx.get("accounts", {}) or {}
+    nw = D(0)
+    for a in accts.values():
+        if isinstance(a, dict) and "balance" in a:
+            nw += D(a["balance"])
+    estate = ctx.get("estate", {}) or {}
+    for k in ("real_estate", "business", "other_assets"):
+        nw += D(estate.get(k, 0))
+    for dbt in ctx.get("debts", []) or []:
+        nw -= D(dbt.get("balance", 0))
+    return nw
 
 
 def derive(ctx: CalcContext) -> dict:
@@ -36,4 +51,9 @@ def derive(ctx: CalcContext) -> dict:
         and d["employer_plan_maxed"]
     )
     d["roth_backdoor_candidate"] = ira["roth_route"] == "backdoor_or_traditional"
+
+    net_worth = _estimated_net_worth(ctx)
+    threshold = D(ctx.param("estate.review_threshold", 2000000))
+    d["estimated_net_worth"] = str(net_worth)
+    d["high_net_worth"] = net_worth >= threshold
     return d

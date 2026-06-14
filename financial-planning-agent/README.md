@@ -50,7 +50,40 @@ foo-plan interview  --profile partial.json     # next guided-interview question
 foo-plan explain    --profile $P               # plain-English narration (no LLM)
 foo-plan report     --profile $P --brand examples/branding.example.yaml \
                     --pdf plan.pdf --md plan.md
+
+# Phase 2 — dynamic workflow + optimizers
+foo-plan workflow        --profile $P          # adaptive: next question OR selected modules + plan
+foo-plan social-security --profile $P --pia 2800 --fra 67   # claiming-age optimizer
+foo-plan roth            --profile $P           # Roth-conversion / bracket-fill
+foo-plan withdraw        --profile $P           # tax-efficient withdrawal order
+foo-plan assetmap        --profile $P --png map.png         # one-page household map
+
+# Phase 3 — estate, risk, document intake, web UI
+foo-plan estate          --profile $P          # estate-tax projection + GRAT/SLAT/ILIT modeling
+foo-plan risk            --profile $P          # Risk Number + alignment + stress tests
+foo-plan ingest --form1040 return.txt --profile $P   # parse a 1040 into profile fields
+python3 web/app.py --port 8765                 # dynamic-workflow web UI (stdlib only)
 ```
+
+### Web UI
+
+`python3 web/app.py` serves a dependency-free single-page app (Python stdlib
+`http.server`) that walks the **dynamic workflow** interactively: it asks the next
+adaptive question, then renders the selected modules, plan, and a downloadable
+white-labeled PDF. The engine stays deterministic; the web layer is pure I/O.
+
+### Dynamic workflow (helloplaybook-style, deterministic)
+
+`foo-plan workflow` adapts to the client instead of always running everything:
+
+1. **Collecting** — if the profile is incomplete, it returns the *next* guided
+   question and stops (driven by `interview/statemachine.py`).
+2. **Ready** — once complete, it deterministically **selects which modules are
+   relevant** (`workflow/orchestrator.py`, safe-DSL conditions over the profile +
+   derived facts), runs the core plan plus those modules, and reports the reason
+   each was included. A 34-year-old gets projection + Monte Carlo + Asset-Map; a
+   63-year-old additionally gets Social Security, Roth-conversion, and withdrawal
+   modules.
 
 (`foo-plan` is the console script; equivalently `python cli/foo_plan.py …`.)
 
@@ -108,12 +141,18 @@ assumptions disclosed, human-in-the-loop required.
 
 ## Status & roadmap
 
-- **Phase 1 (this build):** FOO engine, projection, seeded Monte Carlo,
-  scenarios, insights, interview, white-labeled PDF, research/verification
-  pipeline. Parameters are seeded **placeholders** pending a live run of the
-  verification scripts.
-- **Phase 2:** Roth-conversion/bracket-fill + tax-efficient withdrawal optimizer,
-  Social Security claiming, Asset-Map visual household map, more states.
-- **Phase 3:** estate-tax projection + estate visualization + strategy modeling
-  (GRAT/SLAT/ILIT), Risk Number + stress tests, document OCR (1040/estate/P&C),
-  web UI.
+- **Phase 1 (done):** FOO engine, projection, seeded Monte Carlo, scenarios,
+  insights, interview, white-labeled PDF, research/verification pipeline. TY2026
+  federal parameters **verified** via the live Parallel.ai pipeline.
+- **Phase 2 (done):** dynamic-workflow orchestrator (adaptive module selection),
+  Roth-conversion/bracket-fill optimizer, tax-efficient withdrawal planner, Social
+  Security claiming optimizer, Asset-Map visual household map. TX/CA state facts
+  verified against statute.
+- **Phase 3 (done):** estate-tax projection + wealth-transfer strategy modeling
+  (GRAT/SLAT/ILIT, annual gifting), Risk Number + alignment + stress tests,
+  document ingestion (deterministic 1040 parser + merge; OCR/AI fenced as the
+  non-deterministic boundary), more states (FL/NY/WA + TX/CA), and a stdlib web
+  UI — all wired into the dynamic orchestrator. TY2026 estate figures verified
+  ($15M exemption, 40%, $19k annual exclusion; 12 estate + 5 inheritance states).
+- **Beyond:** real OCR/LLM extraction adapters, full state tax-bracket coverage,
+  estate-flow waterfall visualization, persistence/multi-client, auth.

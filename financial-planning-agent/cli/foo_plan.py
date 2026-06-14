@@ -73,6 +73,29 @@ def main(argv=None) -> int:
     p_rp.add_argument("--seed", type=int, default=None)
     p_rp.add_argument("--trials", type=int, default=None)
 
+    p_wf = sub.add_parser("workflow"); common(p_wf)
+    p_wf.add_argument("--seed", type=int, default=None)
+    p_wf.add_argument("--trials", type=int, default=None)
+
+    p_ss = sub.add_parser("social-security"); common(p_ss)
+    p_ss.add_argument("--pia", type=float, default=None, help="monthly PIA at FRA")
+    p_ss.add_argument("--fra", type=float, default=67.0)
+    p_ss.add_argument("--longevity", type=int, default=90)
+
+    p_roth = sub.add_parser("roth"); common(p_roth)
+    p_wd = sub.add_parser("withdraw"); common(p_wd)
+
+    p_am = sub.add_parser("assetmap"); common(p_am)
+    p_am.add_argument("--png", required=True)
+
+    p_es = sub.add_parser("estate"); common(p_es)
+    p_rk = sub.add_parser("risk"); common(p_rk)
+
+    p_in = sub.add_parser("ingest")
+    p_in.add_argument("--form1040", required=True, help="path to extracted 1040 text")
+    p_in.add_argument("--profile", default=None, help="optional base profile to merge into")
+    p_in.add_argument("--out", default=None)
+
     args = ap.parse_args(argv)
 
     import foo_agent
@@ -128,11 +151,15 @@ def main(argv=None) -> int:
         return 0
 
     if args.cmd == "report":
-        res = foo_agent.full_plan(
-            _load(args.profile), args.as_of,
-            seed=args.seed if args.seed is not None else DEFAULT_MC_SEED,
-            trials=args.trials if args.trials is not None else DEFAULT_MC_TRIALS,
-        )
+        from foo_agent.workflow.orchestrator import run as wf_run
+        prof = _load(args.profile)
+        res = wf_run(prof, args.as_of,
+                     seed=args.seed if args.seed is not None else DEFAULT_MC_SEED,
+                     trials=args.trials if args.trials is not None else DEFAULT_MC_TRIALS)
+        if res.get("status") == "collecting":
+            _emit(res, None)
+            print("[foo-plan] profile incomplete; answer remaining questions.", file=sys.stderr)
+            return 2
         if args.md:
             from foo_agent.report.markdown import render_markdown
             with open(args.md, "w", encoding="utf-8") as f:
@@ -140,10 +167,77 @@ def main(argv=None) -> int:
             print(f"[foo-plan] wrote {args.md}", file=sys.stderr)
         if args.pdf:
             from foo_agent.report.pdf import write_pdf
-            write_pdf(res, args.pdf, args.brand)
+            write_pdf(res, args.pdf, args.brand, profile=prof)
             print(f"[foo-plan] wrote {args.pdf}", file=sys.stderr)
         if not args.md and not args.pdf:
             _emit(res, args.out)
+        return 0
+
+    if args.cmd == "workflow":
+        from foo_agent.workflow.orchestrator import run as wf_run
+        _emit(wf_run(_load(args.profile), args.as_of,
+                     seed=args.seed, trials=args.trials), args.out)
+        return 0
+
+    if args.cmd == "social-security":
+        from foo_agent.optimize.social_security import claiming_analysis
+        prof = _load(args.profile)
+        ss = (prof.get("household", {}).get("social_security") or {})
+        pia = args.pia if args.pia is not None else ss.get("pia_monthly")
+        if pia is None:
+            raise SystemExit("provide --pia or household.social_security.pia_monthly in the profile")
+        _emit(claiming_analysis(pia, args.fra, args.longevity), args.out)
+        return 0
+
+    if args.cmd == "roth":
+        from foo_agent.optimize.roth_conversion import conversion_analysis
+        from foo_agent.rules.loader import load_params
+        from datetime import date
+        prof = _load(args.profile)
+        as_of = date.fromisoformat(args.as_of or prof["as_of"])
+        params = load_params(as_of, prof["household"]["state"])
+        _emit(conversion_analysis(prof, params, as_of), args.out)
+        return 0
+
+    if args.cmd == "withdraw":
+        from foo_agent.optimize.withdrawal_plan import withdrawal_plan
+        _emit(withdrawal_plan(_load(args.profile)), args.out)
+        return 0
+
+    if args.cmd == "assetmap":
+        import base64
+        from foo_agent.report.charts import assetmap_chart
+        uri = assetmap_chart(_load(args.profile))
+        with open(args.png, "wb") as f:
+            f.write(base64.b64decode(uri.split(",", 1)[1]))
+        print(f"[foo-plan] wrote {args.png}", file=sys.stderr)
+        return 0
+
+    if args.cmd == "estate":
+        from foo_agent.optimize.estate import analyze
+        from foo_agent.rules.loader import load_params
+        from datetime import date
+        prof = _load(args.profile)
+        as_of = date.fromisoformat(args.as_of or prof["as_of"])
+        _emit(analyze(prof, load_params(as_of, prof["household"]["state"]), as_of), args.out)
+        return 0
+
+    if args.cmd == "risk":
+        from foo_agent.optimize.risk import analyze
+        _emit(analyze(_load(args.profile)), args.out)
+        return 0
+
+    if args.cmd == "ingest":
+        from foo_agent.ingest.form1040 import parse_1040_text
+        from foo_agent.ingest.extract import merge_extracted
+        with open(args.form1040, "r", encoding="utf-8") as f:
+            text = f.read()
+        extracted = parse_1040_text(text)
+        if args.profile:
+            merged = merge_extracted(_load(args.profile), extracted, validate=False)
+            _emit({"extracted": extracted, "profile": merged}, args.out)
+        else:
+            _emit(extracted, args.out)
         return 0
 
     return 1

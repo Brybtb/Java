@@ -1,0 +1,14 @@
+# Florida — no state income tax, NOT community property, strong (unlimited) homestead.
+# Facts verified 2026-06-14 (Parallel.ai).
+versions:
+  - state: "FL"
+    effective_date: "2026-01-01"
+    expiry_date: null
+    income_tax:
+      has_income_tax: false
+      flat_rate: null
+      brackets: null
+    community_property: false
+    homestead_exemption: "unlimited_value_acreage_capped"
+    estate_or_inheritance_tax: false
+    notes: "No state income, estate, or inheritance tax. Constitutional homestead protection is unlimited in value (size-capped)."

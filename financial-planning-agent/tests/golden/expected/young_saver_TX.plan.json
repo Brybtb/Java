@@ -16,6 +16,34 @@
   "recommendations": [
     {
       "assumptions": [
+        "Syndicate cross-validation (2026-06-14): 5 of 11 professional lenses flagged that protection/estate must precede wealth accumulation when dependents or a sole breadwinner exist."
+      ],
+      "band": "Essentials & starter emergency buffer",
+      "citations": [
+        9,
+        67
+      ],
+      "computed": {
+        "disability_note": "Confirm long-term disability covers ~60% of gross income.",
+        "estate_checklist": [
+          "will",
+          "durable_power_of_attorney",
+          "healthcare_directive",
+          "beneficiary_review",
+          "community_property_titling_review"
+        ],
+        "has_dependents": true,
+        "life_income_multiple": "10",
+        "suggested_life_coverage": "1800000.00"
+      },
+      "confidence": "high",
+      "headline": "Secure life/disability coverage and guardianship now (you have dependents)",
+      "rationale_key": "dependents_need_protection_before_accumulation",
+      "rule_id": "foo.protect.dependents_priority",
+      "step": 1
+    },
+    {
+      "assumptions": [
         "match is non-discretionary",
         "employee stays through vesting"
       ],
@@ -36,7 +64,7 @@
       "headline": "Raise contributions to capture the full employer match",
       "rationale_key": "employer_match_is_free_money",
       "rule_id": "foo.employer_match.capture_full",
-      "step": 1
+      "step": 2
     },
     {
       "assumptions": [
@@ -66,39 +94,12 @@
       "headline": "Pay off high-interest debt (avalanche order)",
       "rationale_key": "high_interest_debt_guaranteed_return",
       "rule_id": "foo.debt.high_interest",
-      "step": 2
-    },
-    {
-      "assumptions": [
-        "heuristic coverage targets; not a full needs analysis"
-      ],
-      "band": "Estate, insurance & advanced steps",
-      "citations": [
-        9
-      ],
-      "computed": {
-        "disability_note": "Confirm long-term disability covers ~60% of gross income.",
-        "estate_checklist": [
-          "will",
-          "durable_power_of_attorney",
-          "healthcare_directive",
-          "beneficiary_review",
-          "community_property_titling_review"
-        ],
-        "has_dependents": true,
-        "life_income_multiple": "10",
-        "suggested_life_coverage": "1800000.00"
-      },
-      "confidence": "medium",
-      "headline": "Review protection: life/disability coverage and estate documents",
-      "rationale_key": "protect_the_plan_against_shocks",
-      "rule_id": "foo.protect.review_coverage",
       "step": 3
     }
   ],
   "requires_advisor_review": true,
-  "ruleset_checksum": "sha256:83515693b7aab982ba2a606b6309c997b85aaf9e259f06bdec1bf80d8a0c5a02",
-  "ruleset_version": "2026.06.0",
+  "ruleset_checksum": "sha256:aa95e858e0c01d70cf8ccab62b6434ae4f54804f442853c8379ffa4d5ff6e6a0",
+  "ruleset_version": "2026.06.3",
   "schema_version": "1.0.0",
   "sources": [
     {
@@ -128,6 +129,15 @@
       "source_type": "primary",
       "title": "Wills, estates, and probate \u2014 USAGov",
       "url": "https://www.usa.gov/wills-estates"
+    },
+    {
+      "discipline": "insurance",
+      "domain": "ncdoi.gov",
+      "n": 67,
+      "publish_date": null,
+      "source_type": "unknown",
+      "title": "Disability Income Insurance | NC DOI",
+      "url": "https://www.ncdoi.gov/consumers/disability-income-insurance"
     }
   ],
   "trace": {
@@ -137,6 +147,11 @@
         "condition_result": false,
         "fired": false,
         "rule_id": "foo.emergency_fund.starter"
+      },
+      {
+        "condition_result": true,
+        "fired": true,
+        "rule_id": "foo.protect.dependents_priority"
       },
       {
         "condition_result": true,
@@ -174,12 +189,12 @@
         "rule_id": "foo.taxable.hyper_accumulate"
       },
       {
-        "condition_result": true,
-        "fired": true,
+        "condition_result": false,
+        "fired": false,
         "rule_id": "foo.protect.review_coverage"
       }
     ],
-    "rules_evaluated": 9,
+    "rules_evaluated": 10,
     "rules_fired": 3,
     "skipped": [
       {
@@ -211,6 +226,11 @@
         "condition_result": false,
         "fired": false,
         "rule_id": "foo.taxable.hyper_accumulate"
+      },
+      {
+        "condition_result": false,
+        "fired": false,
+        "rule_id": "foo.protect.review_coverage"
       }
     ]
   }

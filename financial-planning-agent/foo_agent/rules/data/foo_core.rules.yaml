@@ -13,9 +13,25 @@ rules:
     condition: "derived.emergency_starter_funded == false"
     action: { type: recommend_cash_target, calculator: emergency_fund.starter, target_account: cash_emergency }
     rationale_key: emergency_fund_prevents_debt_spiral
+    verification: { verdict: partially_supported, last_verified: "2026-06-14" }
     citations: [3]
     confidence: high
     assumptions: ["starter target = max(1 month essential expenses, $1,000)"]
+
+  - id: foo.protect.dependents_priority
+    title: "Secure life/disability coverage and guardianship now (you have dependents)"
+    order: 150
+    priority: 10
+    discipline: ["CFP", "insurance", "estate_attorney"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "household.has_dependents == true"
+    action: { type: recommend_review, calculator: protection.review }
+    rationale_key: dependents_need_protection_before_accumulation
+    verification: { verdict: supported, last_verified: "2026-06-14" }
+    citations: [9, 67]
+    confidence: high
+    assumptions: ["Syndicate cross-validation (2026-06-14): 5 of 11 professional lenses flagged that protection/estate must precede wealth accumulation when dependents or a sole breadwinner exist."]
 
   - id: foo.employer_match.capture_full
     title: "Raise contributions to capture the full employer match"
@@ -27,6 +43,7 @@ rules:
     condition: "accounts.employer_401k.match_offered == true and contributions.employer_401k.pct < accounts.employer_401k.match_pct_cap"
     action: { type: recommend_contribution, calculator: employer_match.capture_full, target_account: employer_401k }
     rationale_key: employer_match_is_free_money
+    verification: { verdict: supported, last_verified: "2026-06-14" }
     citations: [1, 8]
     confidence: high
     assumptions: ["match is non-discretionary", "employee stays through vesting"]
@@ -41,6 +58,7 @@ rules:
     condition: "derived.has_high_interest_debt == true"
     action: { type: recommend_debt_payoff, calculator: debt.high_interest }
     rationale_key: high_interest_debt_guaranteed_return
+    verification: { verdict: supported, last_verified: "2026-06-14" }
     citations: [7]
     confidence: high
     assumptions: ["high-interest threshold from params (default APR > 8%)"]
@@ -55,6 +73,7 @@ rules:
     condition: "derived.emergency_starter_funded == true and derived.has_high_interest_debt == false and derived.emergency_full_funded == false"
     action: { type: recommend_cash_target, calculator: emergency_fund.full, target_account: cash_emergency }
     rationale_key: full_reserve_covers_income_shock
+    verification: { verdict: supported, last_verified: "2026-06-14" }
     citations: [3]
     confidence: high
     assumptions: ["target = 6 months essential expenses (tune by job stability)"]
@@ -69,6 +88,7 @@ rules:
     condition: "accounts.hsa.eligible == true and derived.emergency_full_funded == true and derived.has_high_interest_debt == false and derived.hsa_maxed == false"
     action: { type: recommend_contribution, calculator: contributions.hsa_max, target_account: hsa }
     rationale_key: hsa_triple_tax_advantage
+    verification: { verdict: supported, last_verified: "2026-06-14" }
     citations: [4]
     confidence: high
     assumptions: ["covered by an HSA-qualified HDHP all year"]
@@ -83,6 +103,7 @@ rules:
     condition: "derived.emergency_full_funded == true and derived.has_high_interest_debt == false and (derived.hsa_maxed == true or derived.hsa_eligible == false) and derived.ira_maxed == false"
     action: { type: recommend_contribution, calculator: contributions.ira_max, target_account: roth_ira }
     rationale_key: ira_tax_advantaged_growth
+    verification: { verdict: partially_supported, last_verified: "2026-06-14" }
     citations: [2, 5]
     confidence: high
     assumptions: ["MAGI proxied by gross income in Phase 1"]
@@ -97,6 +118,7 @@ rules:
     condition: "derived.emergency_full_funded == true and derived.has_high_interest_debt == false and derived.ira_maxed == true and derived.employer_plan_maxed == false"
     action: { type: recommend_contribution, calculator: contributions.employer_plan_max, target_account: employer_401k }
     rationale_key: maximize_tax_advantaged_space
+    verification: { verdict: partially_supported, last_verified: "2026-06-14" }
     citations: [1]
     confidence: high
     assumptions: []
@@ -111,6 +133,7 @@ rules:
     condition: "derived.ready_for_taxable == true"
     action: { type: recommend_contribution, calculator: contributions.taxable_brokerage, target_account: taxable }
     rationale_key: taxable_for_flexible_growth
+    verification: { verdict: partially_supported, last_verified: "2026-06-14" }
     citations: [6]
     confidence: medium
     assumptions: ["surplus = gross - essentials - current tax-advantaged contributions"]
@@ -122,9 +145,10 @@ rules:
     discipline: ["CFP", "insurance", "estate_attorney"]
     jurisdiction: us_federal
     effective_date: "2026-01-01"
-    condition: "income.gross_annual > 0"
+    condition: "income.gross_annual > 0 and household.has_dependents == false"
     action: { type: recommend_review, calculator: protection.review }
     rationale_key: protect_the_plan_against_shocks
+    verification: { verdict: partially_supported, last_verified: "2026-06-14" }
     citations: [9]
     confidence: medium
     assumptions: ["heuristic coverage targets; not a full needs analysis"]

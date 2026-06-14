@@ -16,7 +16,7 @@ versions:
         - { up_to: 432787, rate: 0.103 }
         - { up_to: 721314, rate: 0.113 }
         - { up_to: null, rate: 0.123 }
-    community_property: true
-    homestead_exemption: 626400
+    community_property: true        # Cal. Family Code § 760
+    homestead_exemption: 743681     # Cal. Code Civ. Proc. § 704.730 (2026, inflation-adjusted)
     estate_or_inheritance_tax: false
-    notes: "Brackets are PLACEHOLDERS pending verification. Mental-health surcharge above $1M not modeled in Phase 1."
+    notes: "Community property (Cal. Family Code § 760). Homestead $743,681 (CCP § 704.730, 2026). Top marginal rate 12.3% verified; brackets remain partially placeholder. The 1% mental-health surcharge above $1M is not modeled in Phase 1."
