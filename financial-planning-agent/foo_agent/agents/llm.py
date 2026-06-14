@@ -58,21 +58,19 @@ def make_gemini(api_key: str | None = None, model: str | None = None,
             "contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "generationConfig": {"temperature": 0, "responseMimeType": "application/json"},
         }
-        # Newer keys (AQ.* / OAuth) use Bearer; classic AIza* use x-goog-api-key.
-        # Try the api-key header first, then fall back to Bearer on auth failure.
-        header_variants = [{"x-goog-api-key": key}, {"Authorization": f"Bearer {key}"}]
+        # An API key (AQ.* or AIza*) goes in the x-goog-api-key header. It is NEVER
+        # an OAuth token, so there is NO Bearer fallback — that only converts a clear
+        # error into a confusing 401 "Expected OAuth2" (audit D1b). Retry only on
+        # rate-limit / transient 5xx. The raw provider body is not captured (D3).
+        headers = {"x-goog-api-key": key, "Content-Type": "application/json"}
         delay, last = 2, None
         for attempt in range(1, retries + 1):
-            headers = header_variants[min(attempt - 1, 1)]
-            headers = {**headers, "Content-Type": "application/json"}
             try:
                 r = requests.post(url, headers=headers, json=body, timeout=timeout)
                 if r.status_code == 200:
                     return _extract_text(r.json())
-                last = f"HTTP {r.status_code}: {r.text[:300]}"
-                if r.status_code in (401, 403) and attempt < retries:
-                    continue  # try the other auth scheme
-                if r.status_code in (429, 500, 502, 503, 504):
+                last = f"HTTP {r.status_code}"
+                if r.status_code in (429, 500, 502, 503, 504) and attempt < retries:
                     time.sleep(delay); delay *= 2; continue
                 raise RuntimeError(f"Gemini error: {last}")
             except requests.RequestException as e:

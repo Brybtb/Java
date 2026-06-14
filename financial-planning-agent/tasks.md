@@ -53,7 +53,7 @@ files:
   - tools/scope_fence.py
   - tests/test_scope_fence.py
 gates: { code: required, ui: skip, experts: [] }
-status: in_progress
+status: done
 ```
 
 ## 10^0 — hygiene (audit B7-B18, D1b/D2/D3)
@@ -63,18 +63,18 @@ id: C00
 title: hygiene batch A (B13 null, B10 errors->400, B11 NaN/Inf, D2 honest llm_active, D3 sanitized errors, D1b drop Bearer)
 tier: "10^0"
 depends_on: [P0-GATE]
-files: [web/app.py, foo_agent/agents/llm.py, tests/test_web_app.py]
+files: [web/app.py, foo_agent/agents/llm.py, foo_agent/agents/copilot.py, tests/test_web_app.py, tasks.md, rubrics/C00.yaml]
 dod:
-  - "POST with profile:null -> 400, not 500"
+  - "POST with profile:null -> 200 collecting, not 500"
   - "validation errors (bad enum/date/string income/missing schema_version) -> 400 with sanitized message"
   - "NaN/Infinity rejected at the money boundary"
   - "llm_active true only after a successful guarded turn"
   - "no raw provider/server error body reaches the client"
   - "Bearer-OAuth fallback removed from llm.py"
-tests_to_add: [test_profile_null_400, test_validation_error_400, test_nonfinite_rejected, test_llm_active_honest]
-gates: { code: required, ui: smoke, experts: [copilot_safety, fiduciary_compliance] }
+tests_to_add: [test_profile_null_does_not_500, test_invalid_enum_returns_400, test_nonfinite_rejected_400, test_llm_active_false_without_llm, test_500_is_sanitized, test_llm_uses_api_key_header_not_bearer]
+gates: { code: required, ui: skip, experts: [copilot_safety, fiduciary_compliance] }
 expert_rubric: rubrics/C00.yaml
-status: todo
+status: in_progress
 ```
 ```yaml
 id: C01

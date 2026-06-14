@@ -1,0 +1,10 @@
+chunk: C00
+personas: [copilot_safety, fiduciary_compliance]
+items:
+  R1: "No raw exception / provider error text leaks to the client; 5xx bodies are sanitized (D3)."
+  R2: "Client-input errors (bad enum, non-finite numbers, null profile, bad JSON) return 4xx, not 500 (B10/B11/B13)."
+  R3: "llm_active is reported only when the LLM actually ran a turn (not merely because a key exists) (D2)."
+  R4: "No API key, secret, or PII appears in any code path, error message, or test fixture."
+  R5: "The Bearer-OAuth fallback is gone; the adapter sends the key only via x-goog-api-key (D1b)."
+  R6: "No engine number is authored outside a tool Result; the guard contract is unchanged by this chunk."
+block_if_any: [R1, R4, R6]
