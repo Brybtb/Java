@@ -25,6 +25,10 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "hypothesis>=6"]
+# Independent tax oracle (C11) for cross-checking the engine's bracket math against
+# OpenTaxSolver. NOT in dev/CI: the cross-check test importorskips, so CI stays green
+# without it; install with `pip install -e .[oracle]` to run the verification locally.
+oracle = ["tenforty>=0.2"]
 
 [project.scripts]
 foo-plan = "cli.foo_plan:main"

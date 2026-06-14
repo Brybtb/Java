@@ -218,6 +218,20 @@ dod:
 tests_to_add: [test_decumulation_assumption_citations_resolve, test_cma_tax_assumptions_are_cited, test_sourced_values_match_authority, test_decumulate_output_carries_citations]
 gates: { code: required, ui: skip, experts: [tax_cpa, fiduciary_compliance] }
 expert_rubric: rubrics/C10.yaml
+status: done
+```
+```yaml
+id: C11
+title: cross-execute the engine's tax math against an independent oracle (tenforty / OpenTaxSolver)
+tier: "10^1"
+depends_on: [C08]
+files: [pyproject.toml, tests/test_tax_oracle.py, tasks.md, rubrics/C11.yaml]
+dod:
+  - "engine ordinary_tax matches tenforty to the dollar where the IRS exact worksheet applies (taxable >= 100k), within tax-table rounding below it, across single + MFJ and a range of incomes"
+  - "tenforty is an optional [oracle] extra; the test importorskips so CI stays green; documented how to run locally"
+tests_to_add: [test_engine_ordinary_tax_matches_tenforty, test_engine_matches_tenforty_taxable_income]
+gates: { code: required, ui: skip, experts: [tax_cpa, fiduciary_compliance] }
+expert_rubric: rubrics/C11.yaml
 status: in_progress
 ```
 ```yaml
