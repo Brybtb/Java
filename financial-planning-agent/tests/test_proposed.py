@@ -91,20 +91,45 @@ def test_waterfall_steps_sum_to_total_delta():
     assert summed == pytest.approx(out["delta"]["funded_ratio"], abs=1e-9)
 
 
-# --- no-modeled-rec path -----------------------------------------------------
-def test_no_modeled_recs_means_zero_delta():
-    # Everything tax-advantaged already maxed -> only advisory recs (taxable surplus,
-    # protection) fire, so nothing the projection models changes.
+# --- C9: taxable surplus is now MODELED (un-stranded from advisory) -----------
+def _all_maxed():
     p = _young()
     p["accounts"]["cash_emergency"]["balance"] = 60000
     p["debts"] = []
-    p["contributions"]["employer_401k"]["pct"] = 0.14    # > 402(g) limit / gross -> plan maxed
+    p["contributions"]["employer_401k"]["pct"] = 0.14
     p["contributions"]["hsa"]["annual"] = 8750
     p["contributions"]["roth_ira"]["annual"] = 7500
+    return p
+
+
+def test_taxable_surplus_is_now_modeled():
+    out = build(_all_maxed(), AS_OF, trials=200)
+    tax = next(s for s in out["steps"] if s["rule_id"] == "foo.taxable.hyper_accumulate")
+    assert tax["modeled"] is True
+    assert tax["deltas"][0]["path"] == "contributions.taxable.annual"
+    assert out["modeled_count"] >= 1
+
+
+# --- no-modeled-rec path (a household already in retirement) ------------------
+def test_no_modeled_recs_means_zero_delta():
+    p = _young()
+    p["household"]["primary_age"] = 70           # in retirement -> only decum/protect (advisory) fire
     out = build(p, AS_OF, trials=200)
     assert out["modeled_count"] == 0
     assert out["delta"]["funded_ratio"] == 0.0
     assert out["proposed"]["funded_ratio"] == out["baseline"]["funded_ratio"]
+
+
+# --- C9: tax-aware decumulation delta surfaced in the proposed output ---------
+def test_proposed_carries_decumulation_delta():
+    out = build(_all_maxed(), AS_OF, trials=200)
+    dq = out["decumulation"]
+    assert dq and "delta" in dq
+    for side in ("baseline", "proposed"):
+        assert "lifetime_tax_paid" in dq[side]
+        assert "after_tax_terminal_wealth" in dq[side]
+    assert int(dq["rmd_start_age"]) in (73, 75)
+    assert dq["assumptions"]["citations"]          # provenance carried through (C10)
 
 
 # --- correctness guards: valid scenario + valid proposed profile ------------
@@ -135,3 +160,12 @@ def test_orchestrator_attaches_proposed_when_ready():
 def test_orchestrator_propose_false_omits_it():
     r = run(_young(), AS_OF, trials=200, propose=False)
     assert "proposed" not in r
+
+
+# --- C9: decumulation tool exposed on the engine-tool plane ------------------
+def test_decumulation_tool_is_callable():
+    from foo_agent.agents.engine_tools import call_tool, tool_catalog
+    assert "decumulation" in {t["name"] for t in tool_catalog()}
+    out = call_tool("decumulation", {"profile": _young(), "as_of": AS_OF})["output"]
+    assert out["drawdown_order"] == ["taxable", "tax_deferred", "roth"]
+    assert "lifetime_tax_paid" in out and out["assumptions"]["citations"]

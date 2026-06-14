@@ -116,7 +116,10 @@ function renderPlan(d, target){
       <div><b>${(g.status||'').replace(/_/g,' ')}</b>goal status</div>
       <div><b>${Math.round(g.funded_ratio*100)}%</b>funded ratio</div>
       ${d.monte_carlo?`<div><b>${Math.round(d.monte_carlo.probability_of_success*100)}%</b>P(success)</div>`:''}
-      <div><b>${money(d.projection.balance_at_retirement)}</b>at age ${d.projection.retire_age}</div></div>`; }
+      <div><b>${money(d.projection.balance_at_retirement)}</b>at age ${d.projection.retire_age}</div></div>`;
+    const bk=d.projection.buckets;
+    if(bk) html += `<p class="note">At retirement by tax treatment — taxable ${money(bk.taxable)} · tax-deferred ${money(bk.tax_deferred)} · tax-free/Roth ${money(bk.tax_free)} (taxable drag ${(Number(bk.taxable_drag)*100).toFixed(2)}%/yr).</p>`;
+  }
   html += `<h3>Recommended next actions</h3><table><tr><th>#</th><th>Action</th><th>Sources</th></tr>` +
     (d.recommendations||[]).map(r=>`<tr><td>${r.step}</td><td>${r.headline}</td><td>${(r.citations||[]).join(', ')}</td></tr>`).join('') + `</table>`;
   if(d.proposed) html += renderProposed(d.proposed);
@@ -147,7 +150,25 @@ function renderProposed(p){
         `<td>${s.modeled?_signed(s.delta_funded_ratio):'—'}</td>`+
         `<td>${s.modeled?'yes':('<span class="note">advisory — '+_h(s.reason||'')+'</span>')}</td></tr>`).join('')+`</table>`;
   }
+  if(p.decumulation) h+=renderDecum(p.decumulation);
   return `<div style="margin-top:8px">${h}</div>`;
+}
+function _smoney(x){ if(x==null) return '—'; const v=Math.round(x); return (v>=0?'+':'-')+money(Math.abs(v)); }
+function renderDecum(dq){
+  const b=dq.baseline||{}, pr=dq.proposed||{}, d=dq.delta||{};
+  let h=`<h3>Tax-aware decumulation</h3>
+    <p class="note">Drawdown order ${(dq.drawdown_order||[]).join(' → ')}; RMDs begin at age ${dq.rmd_start_age}. Tax assumptions are source-cited planning defaults — confirm each client's bracket, basis, and Social Security inclusion.</p>
+    <table><tr><th>Metric</th><th>Current</th><th>If you follow the plan</th><th>Change</th></tr>
+      <tr><td>Lifetime tax paid</td><td>${money(b.lifetime_tax_paid)}</td><td>${money(pr.lifetime_tax_paid)}</td><td>${_smoney(d.lifetime_tax_paid)}</td></tr>
+      <tr><td>After-tax terminal wealth</td><td>${money(b.after_tax_terminal_wealth)}</td><td>${money(pr.after_tax_terminal_wealth)}</td><td>${_smoney(d.after_tax_terminal_wealth)}</td></tr>
+    </table>`;
+  const sch=(dq.schedule||[]).slice(0,8);
+  if(sch.length){
+    h+=`<table><tr><th>Age</th><th>Spend</th><th>RMD</th><th>Ord. tax</th><th>LTCG tax</th><th>Net</th></tr>`+
+      sch.map(r=>`<tr><td>${r.age}</td><td>${money(r.spend_target)}</td><td>${money(r.rmd)}</td><td>${money(r.ordinary_tax)}</td><td>${money(r.ltcg_tax)}</td><td>${money(r.net_spendable)}</td></tr>`).join('')+
+      `</table><p class="note">Low-bracket years before RMDs/Social Security begin are prime for Roth conversions or 0%-capital-gains harvesting (watch IRMAA). Fund the most tax-efficient bucket next to cut lifetime tax drag.</p>`;
+  }
+  return h;
 }
 async function downloadPdf(){
   const r = await fetch('/api/report.pdf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({profile:copilotProfile})});

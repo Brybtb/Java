@@ -24,6 +24,7 @@ from ..optimize.roth_conversion import conversion_analysis as _roth
 from ..optimize.social_security import claiming_analysis as _ss
 from ..optimize.withdrawal_plan import withdrawal_plan as _withdraw
 from ..projection import project as _project
+from ..projection import decumulation_projection as _decum
 from ..rules.loader import load_params
 from ..interview.statemachine import _questions, next_question, remaining
 from ..version import DEFAULT_MC_SEED, DEFAULT_MC_TRIALS, __version__
@@ -67,6 +68,10 @@ def _t_full_plan(a):
 
 def _t_project(a):
     return _project(a["profile"], _as_of(a))
+
+
+def _t_decumulation(a):
+    return _decum(a["profile"], _as_of(a))
 
 
 def _t_montecarlo(a):
@@ -188,6 +193,12 @@ TOOLS: dict[str, dict] = {
                 "parameters": {"type": "object", "properties": {"profile": {"type": "object"},
                                "as_of": {"type": "string"}}, "required": ["profile"]},
                 "fn": _t_project},
+    "decumulation": {"description": "Tax-aware retirement drawdown: RMDs + tax-efficient "
+                                    "withdrawal order + per-year ordinary/LTCG tax, with "
+                                    "lifetime tax paid and after-tax terminal wealth.",
+                     "parameters": {"type": "object", "properties": {"profile": {"type": "object"},
+                                    "as_of": {"type": "string"}}, "required": ["profile"]},
+                     "fn": _t_decumulation},
     "montecarlo": {"description": "Seeded Monte Carlo probability of success.",
                    "parameters": {"type": "object", "properties": {"profile": {"type": "object"},
                                   "as_of": {"type": "string"}, "seed": {"type": "integer"},

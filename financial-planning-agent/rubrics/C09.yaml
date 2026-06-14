@@ -1,0 +1,9 @@
+chunk: C09
+personas: [tax_cpa, cfp_decumulation, risk_quant]
+items:
+  R1: "foo.taxable.hyper_accumulate is now MODELED: its delta sets contributions.taxable.annual (= computed.estimated_annual_surplus), routed by buckets.py into the taxable bucket which the projection consumes; its advisory reason is removed and its funded_ratio delta is engine-computed, not fabricated."
+  R2: "Lifetime tax paid and after-tax terminal wealth deltas (baseline vs proposed) come from the deterministic decumulation engine run on BOTH the base and apply_scenario'd profiles (decumulation_projection); no authored/estimated numbers."
+  R3: "Provenance preserved: the decumulation output carried into the proposed result keeps the C10 source citations (assumptions.citations); tax figures remain source-cited planning defaults, not statutory certainties."
+  R4: "Deterministic; the decumulation block fails SOFT (returns None) rather than 500-ing or fabricating; advisory recs (cash reserve, debt payoff, protection) still carry a zero modeled delta + honest reason; parity preserved (no taxable contribution -> no change -> no golden churn)."
+  R5: "The web surfaces the at-retirement bucket breakdown, the lifetime-tax + after-tax-terminal-wealth deltas, a year-by-year drawdown/tax schedule, and Roth-conversion-window / least-tax-drag guidance; zero console errors (verified via Playwright)."
+block_if_any: [R1, R2, R4]

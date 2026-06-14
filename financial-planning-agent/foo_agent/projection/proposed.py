@@ -27,15 +27,14 @@ from __future__ import annotations
 from ..scenarios.scenario import apply_scenario
 from ..version import DEFAULT_MC_SEED, DEFAULT_MC_TRIALS
 
-# Recommendations the single-bucket projection structurally cannot model, with the
-# honest reason shown to the advisor (never a fabricated funded_ratio delta).
+# Recommendations the projection structurally cannot model, with the honest reason
+# shown to the advisor (never a fabricated funded_ratio delta). As of C9 the taxable
+# surplus IS modeled (it funds the taxable bucket), so it is no longer here.
 _ADVISORY_REASON = {
     "foo.emergency_fund.starter":
         "Cash reserve is liquidity, not an invested asset — excluded from the projection's investable pot.",
     "foo.emergency_fund.full":
         "Cash reserve is liquidity, not an invested asset — excluded from the projection's investable pot.",
-    "foo.taxable.hyper_accumulate":
-        "Taxable-brokerage surplus has no contribution input in the current projection model.",
     "foo.debt.high_interest":
         "Debt payoff / freed cash flow is not modeled by the retirement projection.",
     "foo.protect.dependents_priority":
@@ -70,6 +69,10 @@ def _delta_for(rec: dict, profile: dict) -> list[dict]:
                 return []
             return [{"path": "contributions.employer_401k.pct", "op": "set",
                      "value": _clamp_pct(float(c["annual_limit"]) / gross)}]
+        if rid == "foo.taxable.hyper_accumulate":
+            # C9: now modeled — the surplus funds the taxable bucket (grows net of drag).
+            return [{"path": "contributions.taxable.annual", "op": "set",
+                     "value": float(c["estimated_annual_surplus"])}]
     except (KeyError, TypeError, ValueError):
         return []   # missing/garbled computed target -> advisory, never invented
     return []
@@ -159,4 +162,30 @@ def build(profile: dict, as_of=None, *, seed: int = DEFAULT_MC_SEED,
         "modeled_count": sum(1 for s in steps if s.get("modeled")),
         "steps": steps,
         "proposed_scenario": {"id": "proposed", "label": "Proposed plan", "deltas": cumulative},
+        "decumulation": _decumulation_delta(profile, cumulative, base.get("as_of"), data_dir),
+    }
+
+
+def _decumulation_delta(profile, cumulative, as_of, data_dir):
+    """C9: tax-aware decumulation for baseline vs proposed — lifetime tax + after-tax
+    terminal wealth (deltas), the rmd start age, and the proposed drawdown/tax schedule.
+    Additive enhancement; fails soft (returns None) so it never breaks the plan output."""
+    from . import decumulation_projection
+    try:
+        base_d = decumulation_projection(profile, as_of, data_dir=data_dir)
+        prop_profile = (apply_scenario(profile, {"id": "proposed", "label": "Proposed plan",
+                                                 "deltas": cumulative}) if cumulative else profile)
+        prop_d = decumulation_projection(prop_profile, as_of, data_dir=data_dir)
+    except Exception:
+        return None
+    bt, pt = _num(base_d["lifetime_tax_paid"]), _num(prop_d["lifetime_tax_paid"])
+    bw, pw = _num(base_d["after_tax_terminal_wealth"]), _num(prop_d["after_tax_terminal_wealth"])
+    return {
+        "rmd_start_age": base_d["rmd_start_age"],
+        "drawdown_order": base_d["drawdown_order"],
+        "baseline": {"lifetime_tax_paid": bt, "after_tax_terminal_wealth": bw},
+        "proposed": {"lifetime_tax_paid": pt, "after_tax_terminal_wealth": pw},
+        "delta": {"lifetime_tax_paid": _sub(pt, bt), "after_tax_terminal_wealth": _sub(pw, bw)},
+        "schedule": prop_d["schedule"],
+        "assumptions": prop_d["assumptions"],
     }
