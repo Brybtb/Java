@@ -1,0 +1,9 @@
+chunk: C06
+personas: [risk_quant, cfp_decumulation]
+items:
+  R1: "On-screen projection chart rendered from projection.path (inline SVG line, retire-age marker) — deterministic, no image/server dependency; matches the PDF's projection content."
+  R2: "Monte-Carlo ending-balance range from monte_carlo.ending_balance_percentiles (p10..p90) with P(success); asset map (taxable / tax-deferred / tax-free) from projection.buckets at retirement."
+  R3: "Recommendation detail (each rec's computed facts) and optimizer tables (withdrawal-plan first-year draw, Roth-conversion fill targets, risk tolerance/capacity/portfolio/recommended) are rendered."
+  R4: "Clickable sources from d.sources are http(s)-only (the renderer drops any non-http scheme, so no javascript: URL), HTML-escaped, with rel=noopener noreferrer."
+  R5: "Every value shown comes from the engine result (no client-side fabricated number); all interpolation is HTML-escaped (XSS-safe, per C02); zero console errors."
+block_if_any: [R4, R5]
