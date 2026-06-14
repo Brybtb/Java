@@ -57,7 +57,13 @@ class Handler(BaseHTTPRequestHandler):
             data = self._body()
             profile = data.get("profile", {})
             as_of = data.get("as_of") or profile.get("as_of")
-            if self.path == "/api/workflow":
+            if self.path == "/api/copilot/turn":
+                from foo_agent.agents.copilot import turn, start
+                state = data.get("state") or start(data.get("profile"), as_of)
+                out = turn(state, data.get("message"), as_of=as_of,
+                           seed=data.get("seed"), trials=data.get("trials") or 2000)
+                self._send(200, json.dumps(out, default=str).encode(), "application/json")
+            elif self.path == "/api/workflow":
                 from foo_agent.workflow.orchestrator import run
                 result = run(profile, as_of,
                              seed=data.get("seed"), trials=data.get("trials") or 2000)
