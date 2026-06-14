@@ -58,7 +58,12 @@ def analyze(profile: dict, params: dict, as_of) -> dict:
 
     filing = ctx.get("household.filing_status", "single")
     married = filing in ("married_filing_jointly", "qualifying_widow")
-    exemption = exemption_ind * (2 if married else 1)  # portability for couples
+    # C4: prior taxable gifts use up lifetime exemption (unified credit).
+    prior_gifts = D((profile.get("estate", {}) or {}).get("prior_taxable_gifts", 0))
+    gross_exemption = exemption_ind * (2 if married else 1)  # portability for couples
+    exemption = gross_exemption - prior_gifts
+    if exemption < 0:
+        exemption = D(0)
 
     over_exemption = taxable_estate - exemption
     if over_exemption < 0:
@@ -71,6 +76,23 @@ def analyze(profile: dict, params: dict, as_of) -> dict:
     inh_states = set(ctx.param("estate.inheritance_tax_states", []) or [])
     state_estate_tax = state in estate_states
     state_inheritance_tax = state in inh_states
+
+    # C4: simplified state estate-tax dollar model where the state overlay provides
+    # an exemption + top rate. Handles the NY "cliff" (no exemption if the estate
+    # exceeds 105% of the threshold). Marked approximate.
+    state_estate_block = ctx.param("state.estate_tax") or {}
+    state_estate_tax_amount = D(0)
+    if state_estate_tax and state_estate_block:
+        s_exempt = D(state_estate_block.get("exemption", 0))
+        s_rate = D(state_estate_block.get("top_rate", "0.16"))
+        cliff = bool(state_estate_block.get("cliff", False))
+        if cliff and taxable_estate > s_exempt * D("1.05"):
+            state_taxable = taxable_estate                # cliff: whole estate taxed
+        else:
+            state_taxable = taxable_estate - s_exempt
+        if state_taxable < 0:
+            state_taxable = D(0)
+        state_estate_tax_amount = state_taxable * s_rate
 
     # Strategy modeling — only meaningful when there's a taxable overage.
     donees = int((profile.get("estate", {}) or {}).get("donees", 0) or 0)
@@ -108,19 +130,23 @@ def analyze(profile: dict, params: dict, as_of) -> dict:
         "gross_estate": str(whole(g["gross"])),
         "debts": str(whole(g["debts"])),
         "taxable_estate": str(whole(taxable_estate)),
+        "prior_taxable_gifts": str(whole(prior_gifts)),
         "applicable_exemption": str(whole(exemption)),
         "amount_over_exemption": str(whole(over_exemption)),
         "projected_federal_estate_tax": str(whole(federal_tax)),
         "has_federal_estate_tax_exposure": over_exemption > 0,
         "state_estate_tax_applies": state_estate_tax,
+        "projected_state_estate_tax": str(whole(state_estate_tax_amount)),
         "state_inheritance_tax_applies": state_inheritance_tax,
+        "total_projected_estate_tax": str(whole(federal_tax + state_estate_tax_amount)),
         "annual_gift_exclusion": str(whole(annual_excl)),
         "strategies": strategies,
         "citation": "OBBBA 2025 / IRS estate & gift tax (2026)",
-        "note": "Federal estate tax modeled at the 40% top rate above the applicable "
-                "exemption; couples assume full portability. State estate/inheritance "
-                "tax is flagged but not dollar-modeled in Phase 3. Confirm with an "
-                "estate attorney.",
+        "note": "Federal estate tax at the 40% top rate above the applicable exemption "
+                "(reduced by prior taxable gifts). Couples assume full portability, which "
+                "REQUIRES a timely Form 706 DSUE election at the first death. State estate "
+                "tax is dollar-modeled only where the state overlay provides an exemption "
+                "+ rate (approximate; the NY cliff is simplified). Confirm with an estate attorney.",
     }
 
 

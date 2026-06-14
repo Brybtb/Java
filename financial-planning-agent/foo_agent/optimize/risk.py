@@ -93,20 +93,49 @@ def stress_test(investable, equity_pct) -> list[dict]:
     return rows
 
 
-def analyze(profile: dict) -> dict:
+def risk_capacity_number(profile: dict, projection: dict | None) -> int:
+    """Capacity = the ABILITY to take risk, from the plan (time horizon + funding),
+    distinct from tolerance (willingness, from the questionnaire). 1-99."""
+    age = int((profile.get("household", {}) or {}).get("primary_age", 0) or 0)
+    retire_age = 65
+    for g in profile.get("goals", []) or []:
+        if g.get("type") == "retirement" and g.get("target_age"):
+            retire_age = int(g["target_age"])
+            break
+    horizon = max(retire_age - age, 0)
+    horizon_score = (D(min(horizon, 40)) / D(40)) * D(50)   # 0..50
+
+    funded = D("0.5")
+    if projection and projection.get("funded_ratio") is not None:
+        funded = D(projection["funded_ratio"])
+    funded_score = (min(funded, D(2)) / D(2)) * D(49)        # 0..49
+
+    rn = int((horizon_score + funded_score + 1).quantize(D("1")))
+    return max(1, min(99, rn))
+
+
+def analyze(profile: dict, projection: dict | None = None) -> dict:
     equity_pct = _equity_pct(profile)
     portfolio_rn = risk_number_from_allocation(equity_pct)
 
+    # Tolerance (willingness) — ONLY trustworthy from the questionnaire.
     answers = (profile.get("risk", {}) or {}).get("questionnaire", {}) or {}
     tol = questionnaire_risk_number(answers)
     tolerance_rn = tol.get("risk_number")
-    # Fall back to the stated tolerance band if no questionnaire was answered.
-    if tolerance_rn is None:
+    if tolerance_rn is not None:
+        tolerance_source = "questionnaire"
+    else:
+        # Weak fallback to the stated band, clearly labeled (not circular with
+        # the portfolio: it reflects the stated tolerance, not the allocation).
         tolerance_rn = risk_number_from_allocation(
-            TOLERANCE_EQUITY.get((profile.get("risk", {}) or {}).get("tolerance", "moderate"), D("0.60"))
-        )
+            TOLERANCE_EQUITY.get((profile.get("risk", {}) or {}).get("tolerance", "moderate"), D("0.60")))
+        tolerance_source = "stated_band_fallback"
 
-    gap = portfolio_rn - tolerance_rn
+    capacity_rn = risk_capacity_number(profile, projection)
+    # Recommended risk is the lesser of willingness and ability.
+    recommended_rn = min(tolerance_rn, capacity_rn)
+
+    gap = portfolio_rn - recommended_rn
     if abs(gap) <= 10:
         alignment = "aligned"
     elif gap > 10:
@@ -114,15 +143,23 @@ def analyze(profile: dict) -> dict:
     else:
         alignment = "portfolio_too_conservative"
 
+    constraint = "capacity" if capacity_rn < tolerance_rn else "tolerance"
+
     investable = _investable_total(profile)
     return {
         "tolerance_risk_number": tolerance_rn,
+        "tolerance_source": tolerance_source,
+        "capacity_risk_number": capacity_rn,
+        "recommended_risk_number": recommended_rn,
+        "binding_constraint": constraint,
         "portfolio_risk_number": portfolio_rn,
         "equity_pct": str(equity_pct),
         "alignment": alignment,
         "investable_assets": str(whole(investable)),
         "stress_tests": stress_test(investable, equity_pct),
-        "citation": "risk-tolerance questionnaire + historical episode returns",
-        "note": "Risk Number is a 1-99 scale; stress tests apply historical/hypothetical "
-                "episode returns to current investable assets. Past results are not predictive.",
+        "citation": "risk capacity (plan) vs tolerance (questionnaire) + historical episodes",
+        "note": "Risk Number is 1-99. Capacity (ability, from horizon + funding) and "
+                "tolerance (willingness, from the questionnaire) are distinct; the "
+                "recommendation is the lesser. Provide a questionnaire for a true tolerance. "
+                "Stress tests apply historical/hypothetical episode returns. Not predictive.",
     }

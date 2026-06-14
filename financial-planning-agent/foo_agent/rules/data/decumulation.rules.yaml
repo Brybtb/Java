@@ -1,0 +1,48 @@
+# Decumulation (retirement income) ruleset — band 1000+. These fire once the
+# household is in/near retirement, addressing what the accumulation FOO never did:
+# RMDs, tax-efficient drawdown order, and using low-bracket years.
+rules:
+  - id: decum.rmd.take_required_distribution
+    title: "Take your Required Minimum Distribution (RMD)"
+    order: 1000
+    priority: 10
+    discipline: ["CFP", "enrolled_agent", "tax_attorney"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "derived.rmd_active == true"
+    action: { type: recommend_distribution, calculator: rmd.due, target_account: tax_deferred }
+    rationale_key: rmd_avoid_excise_penalty
+    verification: { verdict: supported, last_verified: "2026-06-14" }
+    citations: [130, 131]
+    confidence: high
+    assumptions: ["RMD age 73 (75 if born 1960+); Uniform Lifetime Table; Roth IRA exempt."]
+
+  - id: decum.drawdown.tax_efficient_order
+    title: "Draw retirement income tax-efficiently (taxable, then deferred, then Roth)"
+    order: 1010
+    priority: 10
+    discipline: ["CFP", "CFA"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "derived.in_retirement == true"
+    action: { type: recommend_drawdown, calculator: decumulation.drawdown_order }
+    rationale_key: drawdown_order_preserves_compounding
+    verification: { verdict: supported, last_verified: "2026-06-14" }
+    citations: [6]
+    confidence: high
+    assumptions: ["RMDs must still be satisfied from tax-deferred regardless of order."]
+
+  - id: decum.tax.fill_low_brackets
+    title: "Use low-bracket years for Roth conversions / gains harvesting (watch IRMAA)"
+    order: 1020
+    priority: 10
+    discipline: ["enrolled_agent", "tax_attorney", "CFP"]
+    jurisdiction: us_federal
+    effective_date: "2026-01-01"
+    condition: "derived.in_retirement == true and derived.has_tax_deferred == true"
+    action: { type: recommend_tax_planning, calculator: decumulation.bracket_fill }
+    rationale_key: bracket_fill_smooths_lifetime_tax
+    verification: { verdict: supported, last_verified: "2026-06-14" }
+    citations: [5, 132]
+    confidence: medium
+    assumptions: ["Recognized income can raise IRMAA Medicare premiums two years later."]

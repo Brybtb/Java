@@ -7,7 +7,8 @@ from __future__ import annotations
 from typing import Callable
 
 from .context import CalcContext
-from . import contributions, debt, emergency_fund, employer_match, protection, tax
+from . import (contributions, debt, decumulation, emergency_fund, employer_match,
+               magi, protection, rmd, tax)
 
 # name -> pure function(CalcContext) -> dict
 CALCULATORS: dict[str, Callable[[CalcContext], dict]] = {
@@ -21,6 +22,10 @@ CALCULATORS: dict[str, Callable[[CalcContext], dict]] = {
     "contributions.taxable_brokerage": contributions.taxable_brokerage,
     "protection.review": protection.review,
     "tax.marginal_rate": tax.marginal_rate,
+    "magi.estimate": magi.magi,
+    "rmd.due": decumulation.rmd_due,
+    "decumulation.drawdown_order": decumulation.drawdown_order,
+    "decumulation.bracket_fill": decumulation.bracket_fill,
 }
 
 

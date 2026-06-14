@@ -3,8 +3,8 @@
   "annual_spend_retire": "155064",
   "balance_at_retirement": "856467",
   "cma_version": "2026.0",
-  "depleted_age": 67,
-  "end_age": 95,
+  "depleted_age": 66,
+  "end_age": 97,
   "ending_balance": "0",
   "funded_ratio": "0.221",
   "goal": {
@@ -123,27 +123,27 @@
     },
     {
       "age": 61,
-      "balance": "752791"
+      "balance": "725427"
     },
     {
       "age": 62,
-      "balance": "639018"
+      "balance": "581964"
     },
     {
       "age": 63,
-      "balance": "514445"
+      "balance": "425218"
     },
     {
       "age": 64,
-      "balance": "378325"
+      "balance": "254276"
     },
     {
       "age": 65,
-      "balance": "229863"
+      "balance": "68166"
     },
     {
       "age": 66,
-      "balance": "68215"
+      "balance": "0"
     },
     {
       "age": 67,
@@ -259,6 +259,14 @@
     },
     {
       "age": 95,
+      "balance": "0"
+    },
+    {
+      "age": 96,
+      "balance": "0"
+    },
+    {
+      "age": 97,
       "balance": "0"
     }
   ],

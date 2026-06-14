@@ -1,0 +1,14 @@
+# AR jurisdiction overlay. Binary facts from established sources; income-tax
+# brackets are not yet filled for progressive states (flagged). Estate/inheritance
+# status from the 2026-verified lists. effective 2026.
+versions:
+  - state: "AR"
+    effective_date: "2026-01-01"
+    expiry_date: null
+    income_tax:
+      has_income_tax: true
+      flat_rate: null
+      brackets: null
+    community_property: false
+    estate_or_inheritance_tax: false
+    notes: "Progressive income tax; brackets PLACEHOLDER pending Parallel.ai verification."

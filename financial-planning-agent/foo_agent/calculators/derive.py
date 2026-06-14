@@ -7,7 +7,27 @@ from __future__ import annotations
 
 from .context import CalcContext
 from .money import D
+from .rmd import rmd_amount, rmd_start_age
 from . import contributions, debt, emergency_fund
+
+_TAX_DEFERRED_KEYS = ("employer_401k", "ira", "traditional_ira", "403b")
+
+
+def _retire_age(ctx: CalcContext) -> int:
+    for g in ctx.get("goals", []) or []:
+        if g.get("type") == "retirement" and g.get("target_age"):
+            return int(g["target_age"])
+    return 65
+
+
+def _tax_deferred_balance(ctx: CalcContext) -> D:
+    accts = ctx.get("accounts", {}) or {}
+    bal = D(0)
+    for k in _TAX_DEFERRED_KEYS:
+        a = accts.get(k)
+        if isinstance(a, dict):
+            bal += D(a.get("balance", 0))
+    return bal
 
 
 def _estimated_net_worth(ctx: CalcContext) -> D:
@@ -56,4 +76,12 @@ def derive(ctx: CalcContext) -> dict:
     threshold = D(ctx.param("estate.review_threshold", 2000000))
     d["estimated_net_worth"] = str(net_worth)
     d["high_net_worth"] = net_worth >= threshold
+
+    # Decumulation facts (C3).
+    age = ctx.age()
+    d["in_retirement"] = age >= _retire_age(ctx)
+    birth_year = ctx.as_of.year - age if age else None
+    td_balance = _tax_deferred_balance(ctx)
+    d["has_tax_deferred"] = td_balance > 0
+    d["rmd_active"] = age >= rmd_start_age(birth_year) and td_balance > 0
     return d

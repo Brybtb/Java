@@ -11,6 +11,10 @@ versions:
     community_property: true
     homestead_exemption: "county_median_value"
     estate_or_inheritance_tax: true
+    estate_tax:
+      exemption: 3000000      # WA exclusion raised to $3M (2025); APPROX pending verification
+      top_rate: 0.35          # WA raised top estate rate to 35% (2025)
+      cliff: false
     capital_gains_excise:
       applies: true
       rate: 0.07

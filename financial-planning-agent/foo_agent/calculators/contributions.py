@@ -6,6 +6,7 @@ the math here never hard-codes a dollar figure that drifts.
 from __future__ import annotations
 
 from .context import CalcContext
+from .magi import magi as _magi
 from .money import cents, D
 
 
@@ -42,7 +43,7 @@ def ira_max(ctx: CalcContext) -> dict:
     out = _headroom(limit, ctx.get("contributions.roth_ira.annual", 0))
 
     filing = ctx.get("household.filing_status", "single")
-    magi = D(ctx.get("income.gross_annual", 0))  # MAGI proxy in Phase 1
+    magi = D(_magi(ctx)["_magi"])  # estimated MAGI (C1: no longer raw gross proxy)
     start = ctx.param(f"phaseouts.roth_ira.{filing}.start")
     end = ctx.param(f"phaseouts.roth_ira.{filing}.end")
     if start is None or end is None:
@@ -54,7 +55,7 @@ def ira_max(ctx: CalcContext) -> dict:
     else:
         route = "roth_partial"
     out["roth_route"] = route
-    out["magi_proxy"] = str(cents(magi))
+    out["magi"] = str(cents(magi))
     return out
 
 

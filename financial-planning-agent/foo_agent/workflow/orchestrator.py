@@ -100,7 +100,7 @@ def run(profile: dict, as_of=None, *, seed: int | None = None, trials: int | Non
 
     optimizers: dict = {}
     if "risk" in module_ids:
-        optimizers["risk"] = risk_analyze(profile)
+        optimizers["risk"] = risk_analyze(profile, result.get("projection"))
     if "estate" in module_ids:
         optimizers["estate"] = estate_analyze(profile, params, as_of_d)
     if "roth_conversion" in module_ids:

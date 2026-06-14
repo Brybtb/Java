@@ -98,7 +98,7 @@
     }
   ],
   "requires_advisor_review": true,
-  "ruleset_checksum": "sha256:aa95e858e0c01d70cf8ccab62b6434ae4f54804f442853c8379ffa4d5ff6e6a0",
+  "ruleset_checksum": "sha256:38f65119b96f9695c9d12ef6632595df5a14fda93d8238f275746eb6954857e1",
   "ruleset_version": "2026.06.3",
   "schema_version": "1.0.0",
   "sources": [
@@ -192,9 +192,24 @@
         "condition_result": false,
         "fired": false,
         "rule_id": "foo.protect.review_coverage"
+      },
+      {
+        "condition_result": false,
+        "fired": false,
+        "rule_id": "decum.rmd.take_required_distribution"
+      },
+      {
+        "condition_result": false,
+        "fired": false,
+        "rule_id": "decum.drawdown.tax_efficient_order"
+      },
+      {
+        "condition_result": false,
+        "fired": false,
+        "rule_id": "decum.tax.fill_low_brackets"
       }
     ],
-    "rules_evaluated": 10,
+    "rules_evaluated": 13,
     "rules_fired": 3,
     "skipped": [
       {
@@ -231,6 +246,21 @@
         "condition_result": false,
         "fired": false,
         "rule_id": "foo.protect.review_coverage"
+      },
+      {
+        "condition_result": false,
+        "fired": false,
+        "rule_id": "decum.rmd.take_required_distribution"
+      },
+      {
+        "condition_result": false,
+        "fired": false,
+        "rule_id": "decum.drawdown.tax_efficient_order"
+      },
+      {
+        "condition_result": false,
+        "fired": false,
+        "rule_id": "decum.tax.fill_low_brackets"
       }
     ]
   }
