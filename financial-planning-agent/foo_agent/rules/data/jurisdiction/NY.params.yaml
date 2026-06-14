@@ -20,4 +20,8 @@ versions:
     community_property: false
     homestead_exemption: 204825
     estate_or_inheritance_tax: true
-    notes: "Has a separate NY state estate tax with a 'cliff' near the exemption. Income brackets are PLACEHOLDERS pending verification."
+    estate_tax:
+      exemption: 7160000      # NY basic exclusion (APPROX, pending verification)
+      top_rate: 0.16
+      cliff: true             # no exemption if estate > 105% of the threshold
+    notes: "Separate NY estate tax with a 'cliff' above 105% of the exemption. Estate exemption + income brackets are APPROX/PLACEHOLDER pending Parallel.ai verification."

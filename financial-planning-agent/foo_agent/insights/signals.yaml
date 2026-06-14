@@ -29,9 +29,27 @@ signals:
 
   - id: roth_backdoor_candidate
     severity: opportunity
-    condition: "derived.roth_backdoor_candidate == true"
+    condition: "derived.roth_backdoor_candidate == true and derived.in_retirement == false"
     message: "Income appears above the Roth IRA phase-out; consider a backdoor Roth or traditional IRA strategy."
     citations: [5]
+
+  - id: rmd_due
+    severity: warning
+    condition: "derived.rmd_active == true"
+    message: "You are at/over RMD age — take your Required Minimum Distribution to avoid the excise penalty."
+    citations: [130]
+
+  - id: retirement_drawdown
+    severity: info
+    condition: "derived.in_retirement == true"
+    message: "In retirement: draw taxable accounts first, tax-deferred next, Roth last; use low-bracket years for conversions."
+    citations: [6]
+
+  - id: estate_review_hnw
+    severity: caution
+    condition: "derived.high_net_worth == true"
+    message: "Net worth is significant — review estate documents, beneficiaries, and potential federal/state estate-tax exposure."
+    citations: [9]
 
   - id: retirement_behind
     severity: warning

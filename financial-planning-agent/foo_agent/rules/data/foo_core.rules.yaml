@@ -40,7 +40,7 @@ rules:
     discipline: ["CFP", "CFA"]
     jurisdiction: us_federal
     effective_date: "2026-01-01"
-    condition: "accounts.employer_401k.match_offered == true and contributions.employer_401k.pct < accounts.employer_401k.match_pct_cap"
+    condition: "accounts.employer_401k.match_offered == true and contributions.employer_401k.pct < accounts.employer_401k.match_pct_cap and derived.in_retirement == false"
     action: { type: recommend_contribution, calculator: employer_match.capture_full, target_account: employer_401k }
     rationale_key: employer_match_is_free_money
     verification: { verdict: supported, last_verified: "2026-06-14" }
@@ -85,7 +85,7 @@ rules:
     discipline: ["CFP", "CFA"]
     jurisdiction: us_federal
     effective_date: "2026-01-01"
-    condition: "accounts.hsa.eligible == true and derived.emergency_full_funded == true and derived.has_high_interest_debt == false and derived.hsa_maxed == false"
+    condition: "accounts.hsa.eligible == true and derived.emergency_full_funded == true and derived.has_high_interest_debt == false and derived.hsa_maxed == false and derived.in_retirement == false"
     action: { type: recommend_contribution, calculator: contributions.hsa_max, target_account: hsa }
     rationale_key: hsa_triple_tax_advantage
     verification: { verdict: supported, last_verified: "2026-06-14" }
@@ -100,13 +100,13 @@ rules:
     discipline: ["CFP", "CFA"]
     jurisdiction: us_federal
     effective_date: "2026-01-01"
-    condition: "derived.emergency_full_funded == true and derived.has_high_interest_debt == false and (derived.hsa_maxed == true or derived.hsa_eligible == false) and derived.ira_maxed == false"
+    condition: "derived.emergency_full_funded == true and derived.has_high_interest_debt == false and (derived.hsa_maxed == true or derived.hsa_eligible == false) and derived.ira_maxed == false and derived.in_retirement == false"
     action: { type: recommend_contribution, calculator: contributions.ira_max, target_account: roth_ira }
     rationale_key: ira_tax_advantaged_growth
     verification: { verdict: partially_supported, last_verified: "2026-06-14" }
     citations: [2, 5]
     confidence: high
-    assumptions: ["MAGI proxied by gross income in Phase 1"]
+    assumptions: ["MAGI estimated from gross less pre-tax deferrals + HSA (Roth-specific add-backs not modeled)"]
 
   - id: foo.employer_plan.max
     title: "Max the employer retirement plan up to the annual limit"
@@ -115,7 +115,7 @@ rules:
     discipline: ["CFP", "CFA"]
     jurisdiction: us_federal
     effective_date: "2026-01-01"
-    condition: "derived.emergency_full_funded == true and derived.has_high_interest_debt == false and derived.ira_maxed == true and derived.employer_plan_maxed == false"
+    condition: "derived.emergency_full_funded == true and derived.has_high_interest_debt == false and derived.ira_maxed == true and derived.employer_plan_maxed == false and derived.in_retirement == false"
     action: { type: recommend_contribution, calculator: contributions.employer_plan_max, target_account: employer_401k }
     rationale_key: maximize_tax_advantaged_space
     verification: { verdict: partially_supported, last_verified: "2026-06-14" }
@@ -130,7 +130,7 @@ rules:
     discipline: ["CFP", "CFA"]
     jurisdiction: us_federal
     effective_date: "2026-01-01"
-    condition: "derived.ready_for_taxable == true"
+    condition: "derived.ready_for_taxable == true and derived.in_retirement == false"
     action: { type: recommend_contribution, calculator: contributions.taxable_brokerage, target_account: taxable }
     rationale_key: taxable_for_flexible_growth
     verification: { verdict: partially_supported, last_verified: "2026-06-14" }

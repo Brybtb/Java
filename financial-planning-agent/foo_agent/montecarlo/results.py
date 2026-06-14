@@ -9,12 +9,14 @@ def _pct(arr: np.ndarray, q: float) -> int:
     return int(round(float(np.percentile(arr, q))))
 
 
-def summarize(ending: np.ndarray, at_retirement: np.ndarray, seed: int, trials: int, pi) -> dict:
+def summarize(ending: np.ndarray, at_retirement: np.ndarray, seed: int, trials: int, pi,
+              return_model: str = "normal") -> dict:
     success = float(np.mean(ending > 0.0))
     return {
         "probability_of_success": round(success, 4),
         "trials": int(trials),
         "seed": int(seed),
+        "return_model": return_model,
         "horizon_years": int(pi.end_age - pi.start_age),
         "retire_age": int(pi.retire_age),
         "end_age": int(pi.end_age),

@@ -20,6 +20,7 @@ BANDS: list[tuple[int, str, int]] = [
     (700, "Max employer retirement plan", 800),
     (800, "Hyper-accumulation (taxable / mega-backdoor / 529)", 900),
     (900, "Estate, insurance & advanced steps", 1000),
+    (1000, "Decumulation (retirement income)", 1100),
 ]
 
 

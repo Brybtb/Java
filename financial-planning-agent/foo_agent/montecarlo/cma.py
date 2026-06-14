@@ -21,9 +21,11 @@ class CMA:
     mean_return: float
     stdev: float
     longevity_age: int
+    longevity_age_joint: int
     default_retirement_age: int
     spending_replacement: float
     portfolio: str
+    retirement_tax_rate: float
 
 
 def load_cma(as_of: date, risk_tolerance: str = "moderate", data_dir: str | None = None) -> CMA:
@@ -57,7 +59,9 @@ def load_cma(as_of: date, risk_tolerance: str = "moderate", data_dir: str | None
         mean_return=float(port["mean_return"]),
         stdev=float(port["stdev"]),
         longevity_age=int(chosen.get("longevity_age", 95)),
+        longevity_age_joint=int(chosen.get("longevity_age_joint", chosen.get("longevity_age", 95))),
         default_retirement_age=int(chosen.get("default_retirement_age", 65)),
         spending_replacement=float(chosen.get("spending_replacement", 0.8)),
         portfolio=risk_tolerance if risk_tolerance in portfolios else "moderate",
+        retirement_tax_rate=float(chosen.get("retirement_tax_rate", 0.15)),
     )

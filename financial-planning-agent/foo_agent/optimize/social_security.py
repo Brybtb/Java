@@ -83,5 +83,9 @@ def claiming_analysis(pia_monthly, fra_age: float = 67.0, longevity_age: int = 9
         "recommended_claim_age": best["claim_age"],
         "recommended_basis": "maximizes cumulative lifetime benefit to longevity age",
         "breakeven_age_vs_62": breakeven,
+        "survivor_note": "For married couples, the survivor keeps the larger of the two "
+                         "benefits — delaying the higher earner's claim also raises the "
+                         "survivor benefit. Spousal/survivor optimization is modeled "
+                         "at the household level (joint-life horizon).",
         "citation": "SSA early/late retirement & delayed retirement credit rules",
     }

@@ -20,9 +20,14 @@ portfolios:
     mean_return: 0.075
     stdev: 0.16
 
-# Planning horizon defaults.
+# Planning horizon defaults. Couples plan to the last survivor (joint life), so a
+# household with a spouse uses the longer joint horizon.
 longevity_age: 95
+longevity_age_joint: 97
 default_retirement_age: 65
 # Retirement spending replacement applied to current total expenses if no
 # explicit retirement-spend goal is provided.
 spending_replacement: 0.80
+# Blended effective tax rate applied to portfolio withdrawals in retirement
+# (approximates the drag from tax-deferred withdrawals + RMDs). PLACEHOLDER.
+retirement_tax_rate: 0.15

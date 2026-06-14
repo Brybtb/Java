@@ -1135,6 +1135,34 @@
       "publish_date": null,
       "discipline": "behavioral_finance",
       "source_type": "unknown"
+    },
+    {
+      "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/required-minimum-distributions",
+      "title": "Required Minimum Distributions (RMDs)",
+      "domain": "irs.gov",
+      "source_type": "primary",
+      "n": 130
+    },
+    {
+      "url": "https://www.irs.gov/retirement-plans/retirement-topics-required-minimum-distributions-rmds",
+      "title": "Retirement topics \u2014 RMDs",
+      "domain": "irs.gov",
+      "source_type": "primary",
+      "n": 131
+    },
+    {
+      "url": "https://www.ssa.gov/benefits/medicare/medicare-premiums.html",
+      "title": "Medicare premiums: IRMAA income-related adjustment",
+      "domain": "ssa.gov",
+      "source_type": "primary",
+      "n": 132
+    },
+    {
+      "url": "https://www.irs.gov/instructions/i706",
+      "title": "Form 706 instructions \u2014 portability / DSUE election",
+      "domain": "irs.gov",
+      "source_type": "primary",
+      "n": 133
     }
   ]
 }

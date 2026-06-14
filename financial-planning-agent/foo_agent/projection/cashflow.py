@@ -14,6 +14,9 @@ def project_deterministic(pi: PlanInputs) -> dict:
     r = D(str(pi.mean_return))
     spend0 = D(str(pi.annual_spend_retire))
 
+    ss0 = D(str(pi.ss_annual))           # today's-dollar SS benefit at claim age
+    tax_rate = D(str(pi.retirement_tax_rate))
+
     path = []
     balance_at_retirement = None
     depleted_age = None
@@ -23,9 +26,16 @@ def project_deterministic(pi: PlanInputs) -> dict:
             bal = bal * (D(1) + r) + contribution
             contribution = contribution * (D(1) + infl)
         else:
-            years_in_ret = age - pi.retire_age
-            spend = spend0 * (D(1) + infl) ** years_in_ret
-            bal = bal * (D(1) + r) - spend
+            years_since_start = age - pi.start_age
+            spend = spend0 * (D(1) + infl) ** (age - pi.retire_age)
+            # C6: Social Security offsets the spending need once claimed; the
+            # portfolio covers the gap, grossed up for a blended tax rate.
+            ss = (ss0 * (D(1) + infl) ** years_since_start) if (pi.ss_claim_age and age >= pi.ss_claim_age) else D(0)
+            net_need = spend - ss
+            if net_need < 0:
+                net_need = D(0)
+            gross_draw = net_need / (D(1) - tax_rate) if tax_rate < 1 else net_need
+            bal = bal * (D(1) + r) - gross_draw
             if bal < 0:
                 bal = D(0)
                 if depleted_age is None:
