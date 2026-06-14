@@ -120,15 +120,19 @@ function renderPlan(d, target){
       <div><b>${money(d.projection.balance_at_retirement)}</b>at age ${d.projection.retire_age}</div></div>`;
     const bk=d.projection.buckets;
     if(bk) html += `<p class="note">At retirement by tax treatment — taxable ${money(bk.taxable)} · tax-deferred ${money(bk.tax_deferred)} · tax-free/Roth ${money(bk.tax_free)} (taxable drag ${(Number(bk.taxable_drag)*100).toFixed(2)}%/yr).</p>`;
+    html += projChart(d.projection) + mcCone(d.monte_carlo||{}) + assetMap(d.projection);   // C06 parity
   }
   html += `<h3>Recommended next actions</h3><table><tr><th>#</th><th>Action</th><th>Sources</th></tr>` +
     (d.recommendations||[]).map(r=>`<tr><td>${_h(r.step)}</td><td>${_h(r.headline)}</td><td>${_h((r.citations||[]).join(', '))}</td></tr>`).join('') + `</table>`;
+  html += recDetail(d.recommendations);              // C06: per-rec computed detail
   if(d.proposed) html += renderProposed(d.proposed);
   const o=d.optimizers||{};
   if(o.risk) html += `<p><b>Risk:</b> tolerance ${_h(o.risk.tolerance_risk_number)} vs capacity ${_h(o.risk.capacity_risk_number)} vs portfolio ${_h(o.risk.portfolio_risk_number)} → ${_h((o.risk.alignment||'').replace(/_/g,' '))}</p>`;
   if(o.social_security?.recommended_claim_age) html += `<p><b>Social Security:</b> claim at age ${_h(o.social_security.recommended_claim_age)}</p>`;
   if(o.estate) html += `<p><b>Estate:</b> projected total estate tax ${money(o.estate.total_projected_estate_tax||o.estate.projected_federal_estate_tax)}</p>`;
+  html += optTables(o);                               // C06: full optimizer tables
   if((d.insights||[]).length){ html += `<h3>Insights</h3>` + d.insights.map(i=>`<div style="margin:3px 0"><span class="pill ${_h(i.severity)}">${_h(i.severity)}</span>${_h(i.message)}</div>`).join(''); }
+  html += sourcesList(d.sources);                     // C06: clickable primary sources
   html += `<div style="margin:14px 0"><button class="send secondary" onclick="downloadPdf()">Download white-labeled PDF</button></div>`;
   html += (d.disclosures||[]).map(x=>`<div class="disc">${_h(x)}</div>`).join('') + `</div>`;
   target.innerHTML = html;
@@ -170,6 +174,66 @@ function renderDecum(dq){
       `</table><p class="note">Low-bracket years before RMDs/Social Security begin are prime for Roth conversions or 0%-capital-gains harvesting (watch IRMAA). Fund the most tax-efficient bucket next to cut lifetime tax drag.</p>`;
   }
   return h;
+}
+/* ---------------- C06: on-screen parity with the PDF (charts, tables, sources) ---- */
+function projChart(proj){
+  const pts=(proj&&proj.path||[]).map(p=>({age:+p.age,bal:+p.balance})).filter(p=>isFinite(p.bal));
+  if(pts.length<2) return '';
+  const W=620,H=180,P=38, xs=pts.map(p=>p.age), x0=Math.min(...xs),x1=Math.max(...xs),ymax=Math.max(...pts.map(p=>p.bal),1);
+  const sx=a=>P+(a-x0)/((x1-x0)||1)*(W-2*P), sy=b=>H-P-(b/ymax)*(H-2*P);
+  const poly=pts.map(p=>sx(p.age).toFixed(1)+','+sy(p.bal).toFixed(1)).join(' ');
+  const rx=sx(+proj.retire_age);
+  return `<h3>Projection</h3><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Projected balance by age">
+    <polyline fill="none" stroke="var(--a)" stroke-width="2" points="${poly}"/>
+    <line x1="${rx.toFixed(1)}" y1="${P}" x2="${rx.toFixed(1)}" y2="${H-P}" stroke="#c62828" stroke-dasharray="4"/>
+    <text x="${rx.toFixed(1)}" y="${P-6}" font-size="10" fill="#c62828" text-anchor="middle">retire ${_h(proj.retire_age)}</text>
+    <text x="${P}" y="${H-10}" font-size="10">age ${_h(x0)}</text>
+    <text x="${W-P}" y="${H-10}" font-size="10" text-anchor="end">age ${_h(x1)}</text>
+    <text x="4" y="${P}" font-size="10">${money(ymax)}</text></svg>`;
+}
+function mcCone(mc){
+  const pc=mc&&mc.ending_balance_percentiles; if(!pc) return '';
+  const order=['p90','p75','p50','p25','p10'], max=Number(pc.p90)||1;
+  const rows=order.filter(k=>pc[k]!=null).map(k=>{const w=Math.max(1,Math.min(100,Number(pc[k])/max*100));
+    return `<div style="display:flex;align-items:center;gap:8px;margin:2px 0"><span class="note" style="width:30px">${_h(k)}</span><span style="background:var(--a);height:12px;width:${w.toFixed(1)}%;display:inline-block;border-radius:2px"></span><span class="note">${money(pc[k])}</span></div>`;}).join('');
+  return `<h3>Monte Carlo — ending-balance range <span class="note">(P(success) ${fundedPct(mc.probability_of_success)})</span></h3>${rows}<p class="note">${_h(mc.trials)} trials · ${_h(mc.return_model)} returns · seed ${_h(mc.seed)}</p>`;
+}
+function assetMap(proj){
+  const bk=proj&&proj.buckets; if(!bk) return '';
+  const seg=[['Taxable',Number(bk.taxable),'#ef6c00'],['Tax-deferred',Number(bk.tax_deferred),'#3d7ea6'],['Tax-free/Roth',Number(bk.tax_free),'#2e7d32']];
+  const tot=seg.reduce((s,x)=>s+(x[1]||0),0)||1;
+  const bar=seg.map(([n,v,c])=>v>0?`<span title="${_h(n)} ${money(v)}" style="background:${c};width:${(v/tot*100).toFixed(1)}%;display:inline-block;height:18px"></span>`:'').join('');
+  const leg=seg.map(([n,v,c])=>`<span class="note" style="margin-right:12px"><span style="background:${c};display:inline-block;width:10px;height:10px;border-radius:2px"></span> ${_h(n)} ${money(v)}</span>`).join('');
+  return `<h3>Asset map (at retirement)</h3><div style="display:flex;border-radius:4px;overflow:hidden">${bar}</div><div style="margin-top:5px">${leg}</div>`;
+}
+function recDetail(recs){
+  const withC=(recs||[]).filter(r=>r.computed&&Object.keys(r.computed).length);
+  if(!withC.length) return '';
+  return `<h3>Recommendation detail</h3>`+withC.map(r=>{
+    const facts=Object.entries(r.computed).filter(([,v])=>typeof v!=='object').slice(0,6)
+      .map(([k,v])=>`<span class="note" style="margin-right:12px"><b>${_h(k.replace(/_/g,' '))}</b> ${_h(v)}</span>`).join('');
+    return `<div style="margin:6px 0"><b>${_h(r.step)}. ${_h(r.headline)}</b><div>${facts}</div></div>`;
+  }).join('');
+}
+function optTables(o){
+  let h='';
+  if(o.withdrawal_plan){const wp=o.withdrawal_plan,dr=wp.first_year_draw||{};
+    h+=`<h3>Withdrawal plan</h3><p class="note">Order: ${(wp.order||[]).map(_h).join(' → ')} · annual need ${money(wp.annual_need)}</p>
+      <table><tr><th>Bucket</th><th>Balance</th><th>First-year draw</th></tr>`+
+      Object.keys(wp.buckets||{}).map(b=>`<tr><td>${_h(b.replace(/_/g,' '))}</td><td>${money(wp.buckets[b])}</td><td>${money(dr[b]||0)}</td></tr>`).join('')+`</table>`;}
+  if(o.roth_conversion){const rc=o.roth_conversion,ft=rc.fill_targets||[];
+    h+=`<h3>Roth conversion</h3><p class="note">Taxable income ${money(rc.taxable_income)} · marginal ${_h(rc.current_marginal_rate)}</p>`;
+    if(ft.length) h+=`<table><tr><th>Fill to rate</th><th>Conversion room</th><th>Incremental tax</th></tr>`+
+      ft.map(t=>`<tr><td>${_h(t.fill_to_bracket_below_rate)}</td><td>${money(t.conversion_room)}</td><td>${money(t.incremental_tax)}</td></tr>`).join('')+`</table>`;}
+  if(o.risk){const rk=o.risk;
+    h+=`<h3>Risk</h3><table><tr><th>Tolerance</th><th>Capacity</th><th>Portfolio</th><th>Recommended</th><th>Binding</th></tr>
+      <tr><td>${_h(rk.tolerance_risk_number)}</td><td>${_h(rk.capacity_risk_number)}</td><td>${_h(rk.portfolio_risk_number)}</td><td>${_h(rk.recommended_risk_number)}</td><td>${_h((rk.binding_constraint||'').replace(/_/g,' '))}</td></tr></table>`;}
+  return h;
+}
+function sourcesList(s){
+  const safe=(s||[]).filter(x=>x&&/^https?:\/\//.test(x.url||''));   // only http(s) links (no javascript:)
+  if(!safe.length) return '';
+  return `<h3>Sources</h3><div class="note">`+safe.map(x=>`[${_h(x.n)}] <a href="${_h(x.url)}" target="_blank" rel="noopener noreferrer">${_h(x.title||x.url)}</a>`).join('<br>')+`</div>`;
 }
 async function downloadPdf(){
   const r = await fetch('/api/report.pdf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({profile:copilotProfile})});

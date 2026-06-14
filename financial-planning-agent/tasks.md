@@ -157,12 +157,13 @@ id: C06
 title: web UI to PDF parity (charts, optimizer tables, sources)
 tier: "10^3"
 depends_on: [C04]
-files: [web/index.html, web/app.py]
+files: [web/index.html, web/app.py, tasks.md, rubrics/C06.yaml]
 dod:
   - "on-screen projection chart, Monte Carlo cone, Asset-Map, recommendation detail, optimizer tables, clickable sources"
+  - "client-side render from the engine result (projection.path, mc percentiles, buckets, optimizers, sources); no fabricated numbers; XSS-safe; http(s)-only source links"
 gates: { code: required, ui: required, experts: [risk_quant, cfp_decumulation] }
 expert_rubric: rubrics/C06.yaml
-status: todo
+status: in_progress
 ```
 
 ## tax-aware multi-bucket (owner direction 2026-06-14): keep more, grow longer, least tax drag
