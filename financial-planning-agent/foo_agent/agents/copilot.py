@@ -69,8 +69,12 @@ def turn(state: dict, user_input=None, *, llm=None, as_of: str | None = None,
         history.append({"role": "user", "content": str(user_input)})
 
     if llm is not None:
-        return _llm_turn(profile, history, llm, seed, trials)
-    return _deterministic_turn(profile, history, user_input, seed, trials)
+        out = _llm_turn(profile, history, llm, seed, trials)
+        out["llm_used"] = True   # reached only if the LLM path ran to a reply (D2)
+        return out
+    out = _deterministic_turn(profile, history, user_input, seed, trials)
+    out["llm_used"] = False
+    return out
 
 
 # --------------------------------------------------------------------------- #
