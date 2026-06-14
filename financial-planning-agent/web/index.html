@@ -50,6 +50,7 @@
       <input id="cinput" placeholder="Type your answer…" autocomplete="off">
       <button class="send" onclick="sendCopilot()">Send</button>
     </div>
+    <label class="note" style="display:block"><input type="checkbox" id="aimode"> AI mode (Gemini) — free-form chat; requires GEMINI_API_KEY on the server. Off = deterministic guided Q&amp;A.</label>
     <div id="cplan"></div>
     <div class="note">No data is stored; this is a stateless demo. The copilot only states figures returned by the engine.</div>
   </div>
@@ -76,8 +77,9 @@ const chat = document.getElementById('chat');
 function bubble(text, who){ const d=document.createElement('div'); d.className='msg '+who; d.textContent=text; chat.appendChild(d); chat.scrollTop=chat.scrollHeight; }
 
 async function copilotTurn(message){
-  const body = copilotState ? {state:copilotState, message, trials:2000}
-                            : {profile:{}, as_of:TODAY, message, trials:2000};
+  const ai = document.getElementById('aimode') && document.getElementById('aimode').checked;
+  const body = copilotState ? {state:copilotState, message, trials:2000, llm:ai}
+                            : {profile:{}, as_of:TODAY, message, trials:2000, llm:ai};
   const r = await fetch('/api/copilot/turn',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
   const d = await r.json();
   if(d.error){ bubble('Error: '+d.error,'bot'); return; }

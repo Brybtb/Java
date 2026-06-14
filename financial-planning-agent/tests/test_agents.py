@@ -89,3 +89,55 @@ def test_guard_allows_numbers_present_across_results():
 def test_guard_clean_prose_passes():
     assert validate("Capture your full employer match first, then build reserves.",
                     {"recommendations": [], "insights": []})
+
+
+# --- Copilot LLM mode (stub) + Gemini adapter --------------------------------
+_COMPLETE_PROFILE = {
+    "schema_version": "1.0.0", "as_of": AS_OF,
+    "household": {"filing_status": "single", "state": "TX", "primary_age": 40},
+    "income": {"gross_annual": 120000}, "expenses": {"monthly_essential": 4000},
+    "accounts": {"cash_emergency": {"balance": 20000},
+                 "employer_401k": {"balance": 100000, "match_offered": True,
+                                   "match_rate": 0.5, "match_pct_cap": 0.06}},
+    "contributions": {"employer_401k": {"pct": 0.03}}, "risk": {"tolerance": "moderate"},
+}
+
+
+def test_copilot_llm_mode_calls_tools_then_finals():
+    calls = []
+
+    def stub(prompt):
+        calls.append(prompt)
+        if len(calls) == 1:
+            return json.dumps({"tool": "workflow_run", "args": {}})
+        return json.dumps({"final": "Here is your plan. Capture your employer match first."})
+
+    state = start(profile=dict(_COMPLETE_PROFILE), as_of=AS_OF)
+    res = turn(state, "what's my plan?", llm=stub, as_of=AS_OF, seed=1, trials=300)
+    assert res["status"] == "ready"
+    assert [t["tool"] for t in res["tool_results"]] == ["workflow_run"]
+    assert "employer match" in res["reply"]
+
+
+def test_copilot_llm_guard_blocks_fabricated_number():
+    def stub(prompt):
+        return json.dumps({"final": "You'll definitely have $9,999,999 saved."})
+
+    state = start(profile=dict(_COMPLETE_PROFILE), as_of=AS_OF)
+    with pytest.raises(GuardError):
+        turn(state, "how much?", llm=stub, as_of=AS_OF, seed=1, trials=300)
+
+
+def test_gemini_adapter_requires_key(monkeypatch):
+    from foo_agent.agents import llm as llm_mod
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    with pytest.raises(RuntimeError):
+        llm_mod.make_gemini()
+
+
+def test_gemini_extract_text():
+    from foo_agent.agents.llm import _extract_text
+    ok = {"candidates": [{"content": {"parts": [{"text": '{"final":"hi"}'}]}}]}
+    assert _extract_text(ok) == '{"final":"hi"}'
+    blocked = {"promptFeedback": {"blockReason": "SAFETY"}}
+    assert "SAFETY" in _extract_text(blocked)
