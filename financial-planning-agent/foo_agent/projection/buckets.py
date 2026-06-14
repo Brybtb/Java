@@ -51,10 +51,9 @@ def bucket_balances_d(profile: dict) -> dict:
 def bucket_contributions_d(profile: dict) -> dict:
     """Annual contributions per bucket (Decimal, exact).
 
-    Mirrors the pre-C07 ``_annual_contribution`` arithmetic exactly, but routes each
-    flow to its bucket: 401(k) deferral + captured employer match -> tax_deferred;
-    Roth IRA -> tax_free; HSA -> tax_free. (No taxable-brokerage contribution input
-    exists yet; that arrives with C09, so the taxable bucket's contribution is 0.)
+    Routes each flow to its bucket: 401(k) deferral + captured employer match ->
+    tax_deferred; Roth IRA + HSA -> tax_free; taxable-brokerage contribution
+    (contributions.taxable.annual, C9) -> taxable.
     """
     gross = D(profile.get("income", {}).get("gross_annual", 0))
     contrib = profile.get("contributions", {}) or {}
@@ -69,8 +68,10 @@ def bucket_contributions_d(profile: dict) -> dict:
 
     roth = D(contrib.get("roth_ira", {}).get("annual", 0))
     hsa = D(contrib.get("hsa", {}).get("annual", 0))
+    taxable = D(contrib.get("taxable", {}).get("annual", 0))   # C9: taxable surplus is now an input
 
     out = _empty()
+    out["taxable"] = taxable
     out["tax_deferred"] = deferral + match
     out["tax_free"] = roth + hsa
     return out

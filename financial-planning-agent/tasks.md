@@ -225,12 +225,13 @@ id: C09
 title: asset-location + decumulation surface; un-strand C04 advisory rows (taxable/Roth routing become modeled)
 tier: "10^3"
 depends_on: [C08]
-files: [foo_agent/projection/proposed.py, foo_agent/agents/engine_tools.py, web/index.html, tests/test_proposed.py, tasks.md, rubrics/C09.yaml]
+files: [foo_agent/projection/proposed.py, foo_agent/projection/buckets.py, foo_agent/agents/engine_tools.py, web/index.html, tests/test_proposed.py, tasks.md, rubrics/C09.yaml]
 dod:
-  - "proposed.py: taxable.hyper_accumulate and ira-routing become MODELED now that buckets exist (their advisory reasons removed); lifetime-tax delta shown alongside funded_ratio/P(success)"
+  - "proposed.py: taxable.hyper_accumulate becomes MODELED now that buckets exist (advisory reason removed); lifetime-tax + after-tax-terminal deltas shown alongside funded_ratio/P(success)"
   - "web shows the bucket breakdown, the year-by-year drawdown/tax schedule, Roth-conversion windows, and least-tax-drag next-dollar guidance"
-  - "deltas + decumulation are deterministic and guarded; no fabricated tax numbers"
+  - "deltas + decumulation are deterministic and guarded; no fabricated tax numbers; decumulation tool exposed on the engine-tool plane"
+tests_to_add: [test_taxable_surplus_is_now_modeled, test_no_modeled_recs_means_zero_delta, test_proposed_carries_decumulation_delta, test_decumulation_tool_is_callable]
 gates: { code: required, ui: required, experts: [tax_cpa, cfp_decumulation, risk_quant] }
 expert_rubric: rubrics/C09.yaml
-status: todo
+status: in_progress
 ```
