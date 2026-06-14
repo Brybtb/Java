@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1280" viewBox="0 0 960 1280" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="The 10-Year RIA AI Leadership Sequence infographic">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="found" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1d4ed8"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="quick" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="diff"  x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <linearGradient id="scale" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#059669"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+    <filter id="sh" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.35"/></filter>
+  </defs>
+
+  <rect width="960" height="1280" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="48" y="64" fill="#f8fafc" font-size="34" font-weight="700">The 10-Year RIA AI Leadership Sequence</text>
+  <text x="48" y="98" fill="#94a3b8" font-size="18">Most cost-effective path for an RIA to lead in a decade · ranked by compounding ROI per dollar</text>
+
+  <!-- Thesis banner -->
+  <rect x="48" y="120" width="864" height="64" rx="10" fill="#facc15"/>
+  <text x="480" y="150" fill="#1e293b" font-size="20" font-weight="700" text-anchor="middle">SEQUENCE BEATS SPEND</text>
+  <text x="480" y="173" fill="#334155" font-size="15" text-anchor="middle">Proprietary foundation models aren't cost-justified except for the largest incumbents.</text>
+
+  <!-- Phase legend -->
+  <g font-size="13" fill="#cbd5e1">
+    <rect x="48"  y="204" width="14" height="14" rx="3" fill="url(#found)"/><text x="68"  y="216">Foundation</text>
+    <rect x="178" y="204" width="14" height="14" rx="3" fill="url(#quick)"/><text x="198" y="216">Quick ROI</text>
+    <rect x="300" y="204" width="14" height="14" rx="3" fill="url(#diff)"/><text x="320" y="216">Differentiation</text>
+    <rect x="452" y="204" width="14" height="14" rx="3" fill="url(#scale)"/><text x="472" y="216">Scale (last)</text>
+    <text x="912" y="216" text-anchor="end" fill="#64748b" font-size="12">Arrow up = compounding advantage</text>
+  </g>
+
+  <!-- Steps: each row is a rung. y from 244 stepping by 132, x indent grows to imply a staircase. -->
+  <!-- Helper geometry: bar width 700, height 96 -->
+
+  <!-- 1 Data foundation -->
+  <g filter="url(#sh)">
+    <rect x="48" y="244" width="760" height="96" rx="12" fill="url(#found)"/>
+  </g>
+  <circle cx="92" cy="292" r="26" fill="#0f172a"/><text x="92" y="301" fill="#fff" font-size="26" font-weight="700" text-anchor="middle">1</text>
+  <text x="138" y="282" fill="#fff" font-size="21" font-weight="700">Modern data foundation first</text>
+  <text x="138" y="307" fill="#dbeafe" font-size="14">Lakehouse / client-360. Every downstream AI use case rides on this. The non-negotiable base.</text>
+  <text x="138" y="328" fill="#bfdbfe" font-size="13" font-weight="700">~$200K–$2M setup + $50K–$500K/yr · payback 12–36 mo</text>
+
+  <!-- 2 Buy copilots -->
+  <g filter="url(#sh)"><rect x="78" y="376" width="760" height="96" rx="12" fill="url(#quick)"/></g>
+  <circle cx="122" cy="424" r="26" fill="#0f172a"/><text x="122" y="433" fill="#fff" font-size="26" font-weight="700" text-anchor="middle">2</text>
+  <text x="168" y="414" fill="#082f49" font-size="21" font-weight="700">Buy vendor copilots / workflow automation</text>
+  <text x="168" y="439" fill="#082f49" font-size="14">Fastest time-to-value. 30–60% faster research &amp; admin (Jump/Zocks-class tools).</text>
+  <text x="168" y="460" fill="#0c4a6e" font-size="13" font-weight="700">SaaS $5K–$50K+/mo + $50K–$500K integration</text>
+
+  <!-- 3 Advisor RAG -->
+  <g filter="url(#sh)"><rect x="108" y="508" width="760" height="96" rx="12" fill="url(#quick)"/></g>
+  <circle cx="152" cy="556" r="26" fill="#0f172a"/><text x="152" y="565" fill="#fff" font-size="26" font-weight="700" text-anchor="middle">3</text>
+  <text x="198" y="546" fill="#082f49" font-size="21" font-weight="700">Advisor-assist AI (LLM copilots + RAG)</text>
+  <text x="198" y="571" fill="#082f49" font-size="14">RAG over your own docs. High advisor time savings.</text>
+  <text x="198" y="592" fill="#0c4a6e" font-size="13" font-weight="700">Pilot $25K–$250K · prod $100K–$1M+/yr · payback 6–24 mo</text>
+
+  <!-- 4 Hybrid build alpha -->
+  <g filter="url(#sh)"><rect x="138" y="640" width="760" height="96" rx="12" fill="url(#diff)"/></g>
+  <circle cx="182" cy="688" r="26" fill="#0f172a"/><text x="182" y="697" fill="#fff" font-size="26" font-weight="700" text-anchor="middle">4</text>
+  <text x="228" y="678" fill="#fff" font-size="21" font-weight="700">Hybrid: build ONLY the proprietary "alpha" layer</text>
+  <text x="228" y="703" fill="#ede9fe" font-size="14">Buy the core; build tax-aware planning / private-markets valuation. Long-run margin + moat.</text>
+  <text x="228" y="724" fill="#ddd6fe" font-size="13" font-weight="700">Build $500K–$5M+ · highest defensibility</text>
+
+  <!-- 5 Governance -->
+  <g filter="url(#sh)"><rect x="168" y="772" width="760" height="96" rx="12" fill="url(#diff)"/></g>
+  <circle cx="212" cy="820" r="26" fill="#0f172a"/><text x="212" y="829" fill="#fff" font-size="26" font-weight="700" text-anchor="middle">5</text>
+  <text x="258" y="810" fill="#fff" font-size="21" font-weight="700">Early governance &amp; model-risk controls</text>
+  <text x="258" y="835" fill="#ede9fe" font-size="14">Cheap insurance. Prevents fines; enables safe scaling of agentic workflows.</text>
+  <text x="258" y="856" fill="#ddd6fe" font-size="13" font-weight="700">$50K–$500K setup + $50K–$300K/yr</text>
+
+  <!-- 6 Agentic OS last -->
+  <g filter="url(#sh)"><rect x="198" y="904" width="760" height="96" rx="12" fill="url(#scale)"/></g>
+  <circle cx="242" cy="952" r="26" fill="#0f172a"/><text x="242" y="961" fill="#fff" font-size="26" font-weight="700" text-anchor="middle">6</text>
+  <text x="288" y="942" fill="#fff" font-size="21" font-weight="700">Agentic operating systems — only after foundations</text>
+  <text x="288" y="967" fill="#d1fae5" font-size="14">Highest long-run upside (end-to-end automation); worst ROI if sequenced too early.</text>
+  <text x="288" y="988" fill="#a7f3d0" font-size="13" font-weight="700">Pilot $100K–$1M+ · prod $1M–$10M+</text>
+
+  <!-- 7 Talent -->
+  <g filter="url(#sh)"><rect x="228" y="1036" width="730" height="96" rx="12" fill="url(#scale)"/></g>
+  <circle cx="272" cy="1084" r="26" fill="#0f172a"/><text x="272" y="1093" fill="#fff" font-size="26" font-weight="700" text-anchor="middle">7</text>
+  <text x="318" y="1074" fill="#fff" font-size="21" font-weight="700">Lean talent + partnerships</text>
+  <text x="318" y="1099" fill="#d1fae5" font-size="14">Internal talent compounds proprietary pipelines; partnerships de-risk the upfront spend.</text>
+  <text x="318" y="1120" fill="#a7f3d0" font-size="13" font-weight="700">ML engineer ~$180K–$250K+ · core team $600K–$1.8M/yr</text>
+
+  <!-- Upward compounding arrow on the right -->
+  <line x1="912" y1="1090" x2="912" y2="300" stroke="#facc15" stroke-width="4"/>
+  <polygon points="912,284 904,308 920,308" fill="#facc15"/>
+  <text x="930" y="700" fill="#facc15" font-size="14" font-weight="700" transform="rotate(90 930 700)" text-anchor="middle">COMPOUNDING ADVANTAGE</text>
+
+  <!-- Footer -->
+  <line x1="48" y1="1168" x2="912" y2="1168" stroke="#334155" stroke-width="1"/>
+  <text x="48" y="1196" fill="#94a3b8" font-size="13">FinLink · RIA M&amp;A Intelligence — 2026-06-13 · Source: Parallel.ai deep research (Task API, medium confidence)</text>
+  <text x="48" y="1218" fill="#64748b" font-size="12">Informational only — not investment, legal, tax or compliance advice. Cost ranges are directional 2026 estimates, not quotes, and are unverified third-party figures.</text>
+  <text x="48" y="1238" fill="#64748b" font-size="12">No endorsements. Verify against primary sources before acting.</text>
+</svg>

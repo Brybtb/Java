@@ -1,0 +1,311 @@
+{
+  "generated_utc": "20260613T202355Z",
+  "window": "last 7 days (2026-06-06 to 2026-06-13)",
+  "analysis": [
+    {
+      "id": "leaders_laggards",
+      "run_id": "trun_1753e291a9bd42e3beca8cbe83f0b17c",
+      "status": "completed",
+      "content": {
+        "leaders": [
+          "Charles Schwab / Schwab Advisor Services \u2014 Clear leader: launched a public \"Schwab Advisor AI in Action\" program and published a study showing rapid RIA adoption, signaling platform-level investment, advisor enablement, and go-to-market support.",
+          "BlackRock (Aladdin) \u2014 Leader: Aladdin has added generative-AI capabilities (Aladdin Copilot), showing platform-scale integration of AI into investment and risk workflows.",
+          "Envestnet \u2014 Leader among aggregators: public multi-year roadmap emphasizing R&D and AI investments, positioning it to embed AI across advisor tools and investment products.",
+          "Apex Group (wealthtech platform) \u2014 Leader in wealthtech innovation: launched an AI-driven WealthTech platform to expand retail access to private markets, demonstrating productized AI offerings.",
+          "SS&C / Intralinks \u2014 Leader in private capital workflows: market research and product messaging highlights AI as a differentiator for private-capital fundraising and platform services."
+        ],
+        "laggards": [
+          "Small independent RIAs (broad cohort) \u2014 Laggards in capability and scale: Schwab\u2019s study notes most firms are still in early stages despite adoption rising, meaning many RIAs remain tactical users, not strategic AI adopters.",
+          "Non-differentiated custodial platforms and legacy vendors (category) \u2014 Laggards when they lack visible programmatic AI investments or public roadmaps; absent clear announcements in the last week, these vendors are at risk of falling behind."
+        ],
+        "most_cost_effective": [
+          "1) Advisor-facing copilots and workflow automation \u2014 Cost signal: low-to-moderate initial investment (API integrations + prompt engineering); Rationale: fastest path to advisor productivity gains and measurable ROI, defensible by distribution relationships.",
+          "2) Data consolidation, normalization and API-first platforms \u2014 Cost signal: moderate ongoing investment (engineering, data warehousing); Rationale: creates long-lived data advantages and enables multiple AI services (analytics, models, personalization).",
+          "3) Verticalized model + productization (e.g., private markets valuation models, tax-aware planning engines) \u2014 Cost signal: high (data, labeling, model ops); Rationale: highest strategic defensibility and pricing power over a decade but requires sustained investment.",
+          "4) Proprietary foundational models and research labs \u2014 Cost signal: very high (compute, talent); Rationale: can yield differentiation but only cost-justified for the largest incumbents or deep-tech specialists."
+        ],
+        "confidence": "medium",
+        "summary": "Across the last week\u2019s reporting and recent press, major custodians and platform vendors (Schwab, BlackRock/Aladdin, Envestnet, Apex, SS&C) stand out as leaders because they publish programmatic AI roadmaps, roll out advisor-facing copilots or platform-level AI features, and fund research/market messaging. In contrast, most small RIAs and vendors without public AI roadmaps remain laggards\u2014adopting point tools but not yet building platform-level advantage. The most cost-effective path to decade-long leadership is to start with advisor-facing copilots and automated workflows, then capture data into API-first platforms and selectively invest in verticalized, proprietary models."
+      },
+      "basis": [
+        {
+          "field": "leaders",
+          "citations": [
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles",
+              "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+              "excerpts": []
+            },
+            {
+              "title": "BlackRock reports 68% of advisors use AI in their practices",
+              "url": "http://cryptobriefing.com/blackrock-advisors-ai-adoption",
+              "excerpts": [
+                "BlackRock's Aladdin platform now features generative AI tools. Two notable additions are Aladdin Copilot"
+              ]
+            },
+            {
+              "title": "Envestnet Newsroom - Newsroom",
+              "url": "http://newsroom.envestnet.com/",
+              "excerpts": [
+                "Envestnet Announces Five-Year Strategic Roadmap, Marked by Investments in Research & Development, Client Support and AI"
+              ]
+            },
+            {
+              "title": "Apex Group Launches AI-Driven WealthTech Platform",
+              "url": "http://apexgroup.com/insights/apex-group-launches-ai-driven-wealthtech-platform-to-expand-retail-access-to-private-markets",
+              "excerpts": [
+                "Apex Group launches AI-Driven WealthTech platform to expand retail access to private markets."
+              ]
+            },
+            {
+              "title": "2026 Private Capital Fundraising Trends Favor AI-Savvy ...",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/2026-private-capital-fundraising-trends-130000216.html?fr=sycsrp_catchall",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "Firms were identified as leaders based on the publication of programmatic AI roadmaps, the rollout of specific AI products (like Aladdin Copilot or Apex's WealthTech platform), and industry-leading research on AI adoption.",
+          "confidence": "medium"
+        },
+        {
+          "field": "laggards",
+          "citations": [
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But ...",
+              "url": "https://baytobaynews.com/stories/schwab-study-reveals-ria-ai-adoption-more-than-doubles-but-most-firms-still-in-early-stages,288654",
+              "excerpts": [
+                "AI adoption among independent registered investment advisors (RIAs) has more than doubled since 2023, with 63% now using AI tools in some capacity, according to a new study released today by Schwab Advisor Services\u2122."
+              ]
+            }
+          ],
+          "reasoning": "Laggard status is assigned to smaller RIAs based on the Schwab study indicating they are still in early stages of adoption, and to legacy vendors who have not published AI roadmaps during the observation window.",
+          "confidence": "medium"
+        },
+        {
+          "field": "most_cost_effective",
+          "citations": [
+            {
+              "title": "Structured Data Results (20 entities)",
+              "url": "https://addepar.com",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "The ranking prioritizes quick-win productivity tools (copilots) first, followed by foundational data infrastructure, then highly specialized vertical models, and finally high-risk/high-cost proprietary research.",
+          "confidence": "medium"
+        },
+        {
+          "field": "confidence",
+          "citations": [
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles",
+              "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+              "excerpts": [
+                "Schwab Study Reveals RIA AI Adoption More Than Doubles"
+              ]
+            },
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But ...",
+              "url": "https://baytobaynews.com/stories/schwab-study-reveals-ria-ai-adoption-more-than-doubles-but-most-firms-still-in-early-stages,288654",
+              "excerpts": [
+                "AI adoption among independent registered investment advisors (RIAs) has more than doubled since 2023, with 63% now using AI tools in some capacity, according to a new study released today by Schwab Advisor Services\u2122."
+              ]
+            },
+            {
+              "title": "Envestnet Newsroom - Newsroom",
+              "url": "http://newsroom.envestnet.com/",
+              "excerpts": [
+                "Envestnet Announces Five-Year Strategic Roadmap, Marked by Investments in Research & Development, Client Support and AI"
+              ]
+            },
+            {
+              "title": "Apex Group Launches AI-Driven WealthTech Platform",
+              "url": "http://apexgroup.com/insights/apex-group-launches-ai-driven-wealthtech-platform-to-expand-retail-access-to-private-markets",
+              "excerpts": [
+                "Apex Group launches AI-Driven WealthTech platform to expand retail access to private markets."
+              ]
+            },
+            {
+              "title": "2026 Private Capital Fundraising Trends Favor AI-Savvy ...",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/2026-private-capital-fundraising-trends-130000216.html?fr=sycsrp_catchall",
+              "excerpts": []
+            },
+            {
+              "title": "Schwab Rolling Out AI Initiatives for Advisors, Investors - ThinkAdvisor",
+              "url": "https://www.thinkadvisor.com/2026/04/16/schwab-rolling-out-ai-initiatives-for-advisors-investors",
+              "excerpts": [
+                "Charles Schwab is rapidly expanding technology offerings this year, including several new artificial intelligence initiatives"
+              ]
+            },
+            {
+              "title": "BlackRock reports 68% of advisors use AI in their practices",
+              "url": "http://cryptobriefing.com/blackrock-advisors-ai-adoption",
+              "excerpts": [
+                "BlackRock's Aladdin platform now features generative AI tools. Two notable additions are Aladdin Copilot"
+              ]
+            }
+          ],
+          "reasoning": "The assessment is grounded in press releases and trade coverage from the June 6-13, 2026 window, as well as a verified Apex Group briefing from May 20, 2026. The moderate confidence reflects that while leaders are overt about roadmaps, many other firms remain quiet or tactical.",
+          "confidence": "medium"
+        },
+        {
+          "field": "summary",
+          "citations": [
+            {
+              "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles",
+              "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+              "excerpts": []
+            },
+            {
+              "title": "BlackRock reports 68% of advisors use AI in their practices",
+              "url": "http://cryptobriefing.com/blackrock-advisors-ai-adoption",
+              "excerpts": [
+                "BlackRock's Aladdin platform now features generative AI tools. Two notable additions are Aladdin Copilot"
+              ]
+            },
+            {
+              "title": "Envestnet Newsroom - Newsroom",
+              "url": "http://newsroom.envestnet.com/",
+              "excerpts": [
+                "Envestnet Announces Five-Year Strategic Roadmap, Marked by Investments in Research & Development, Client Support and AI"
+              ]
+            },
+            {
+              "title": "Apex Group Launches AI-Driven WealthTech Platform",
+              "url": "http://apexgroup.com/insights/apex-group-launches-ai-driven-wealthtech-platform-to-expand-retail-access-to-private-markets",
+              "excerpts": [
+                "Apex Group launches AI-Driven WealthTech platform to expand retail access to private markets."
+              ]
+            }
+          ],
+          "reasoning": "The summary provides an analytical overview of the current AI competitive landscape in 2026, contrasting strategic leaders with tactical laggards and outlining a phased investment strategy for long-term success.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "cost_effective",
+      "run_id": "trun_1753e291a9bd42e3830177262e5201fe",
+      "status": "completed",
+      "content": {
+        "leaders": [
+          "BlackRock / Aladdin: scale and integrated platform enabling Aladdin Copilot and firm-level operational integration for AI.",
+          "Envestnet (Insights Engine): integrated advisor insights across data sources to enable fast advisor value.",
+          "Orion Advisor / Denali AI: integrated advisor tooling and intelligence layered into advisor workflows.",
+          "WealthTech vendors (InvestCloud, personal-fintechs): vendors enabling rapid deployment of AI-powered experiences."
+        ],
+        "laggards": [
+          "Small legacy RIAs reliant on bespoke legacy stacks and manual processes: slow integration, high technical debt and compliance fear slows adoption.",
+          "Firms delaying governance or data investments: adoption stalls due to integration and regulatory risk."
+        ],
+        "most_cost_effective": [
+          "1) Build a modern data foundation (lakehouse/warehouse, customer 360): $200k\u2013$2M initial + $50k\u2013$500k/year. ROI: Rapid operational ROI; payback 12\u201336 months; enables all downstream AI use cases.",
+          "2) Vendor (buy) solutions plus integrations for immediate augmentation: SaaS fees $5k\u2013$50k+/month; integration $50k\u2013$500k. ROI: Immediate efficiency gains (30\u201360% faster research); faster time-to-value.",
+          "3) Advisor-assist AI (LLM copilots/RAG) over indexed documents: Pilot $25k\u2013$250k; Production $100k\u2013$1M+/yr. ROI: High advisor time savings; payback 6\u201324 months.",
+          "4) Pragmatic build-vs-buy hybrid playbook (Buy core SaaS, build proprietary models for alpha): Build $500k\u2013$5M+; Buy lower upfront. ROI: Long-term higher margins and bespoke client outcomes.",
+          "5) Early governance, compliance, and model risk controls: $50k\u2013$500k setup; $50k\u2013$300k/yr ongoing. ROI: Prevents regulatory fines and enables safe scaling of agentic workflows.",
+          "6) Agentic operating systems / autonomous agents (pilot after foundations are solid): Pilot $100k\u2013$1M+; Production $1M\u2013$10M+. ROI: High long-term upside via end-to-end workflow automation.",
+          "7) Lean talent + partnerships: ML engineer comp ~$180k\u2013$250k+; core team $600k\u2013$1.8M/yr. ROI: Internal talent compounds value via proprietary pipelines while partnerships reduce upfront risk."
+        ],
+        "confidence": "medium",
+        "summary": "The most cost-effective path to AI leadership for RIAs centers on prioritizing a modern data foundation to enable compounding ROI across all subsequent AI initiatives. A hybrid 'buy-to-start' approach allows for immediate advisor productivity gains, while selective proprietary builds and early investment in governance ensure long-term differentiation and regulatory safety. This sequence culminates in the deployment of agentic operating systems once the data and safety infrastructure are mature."
+      },
+      "basis": [
+        {
+          "field": "leaders",
+          "citations": [
+            {
+              "title": "Envestnet Reveals Top AI-Driven Insights for Advisors in 2024",
+              "url": "https://newsroom.envestnet.com/2025-01-16-Envestnet-Reveals-Top-AI-Driven-Insights-for-Advisors-in-2024",
+              "excerpts": [
+                "Envestnet's continued leadership in integrating AI through its Insights Engine, helping advisors uncover data and make more informed, actionable decisions."
+              ]
+            },
+            {
+              "title": "Orion Advisor Solutions | WealthTech for Advisors",
+              "url": "https://orion.com/",
+              "excerpts": [
+                "Denali AI brings data, workflows, and insights across the Orion ecosystem into a unified intelligence layer"
+              ]
+            }
+          ],
+          "reasoning": "The leaders were identified by reviewing vendor product pages and press releases that explicitly describe AI-enabled features and integration layers (e.g., Denali AI, Envestnet Insights Engine).",
+          "confidence": "high"
+        },
+        {
+          "field": "laggards",
+          "citations": [
+            {
+              "title": "AI laggards gain traction as fatigue sets in for Magnificent ...",
+              "url": "https://www.investmentnews.com/ria-news/ai-laggards-gain-traction-as-fatigue-sets-in-for-magnificent-seven/255456",
+              "excerpts": []
+            }
+          ],
+          "reasoning": "Analysis of industry reports from Deloitte and Investment News highlights that technical debt and lack of governance are the primary drivers of slow AI adoption in the wealth management sector.",
+          "confidence": "medium"
+        },
+        {
+          "field": "most_cost_effective",
+          "citations": [
+            {
+              "title": "Cost-Effective AI: Total Cost of Ownership for LLM ...",
+              "url": "https://hub.stabilarity.com/cost-effective-ai-total-cost-of-ownership-for-llm-deployments-a-practitioners-calculator",
+              "excerpts": [
+                "a comprehensive TCO framework specifically designed for LLM deployments, incorporating direct costs (API calls, compute, storage), indirect costs (engineering time, mai"
+              ]
+            },
+            {
+              "title": "Machine Learning Engineer Salary Benchmarks - US Market (2025 ...",
+              "url": "https://www.signifytechnology.com/news/machine-learning-engineer-salary-benchmarks-us-market-2025-2026",
+              "excerpts": [
+                "Average salaries for AI engineers surged to $206,000 in 2025"
+              ]
+            },
+            {
+              "title": "Document Agents For Finance: Use Cases & Workflows | LlamaIndex",
+              "url": "https://www.llamaindex.ai/industry/finance",
+              "excerpts": [
+                "LlamaIndex helps financial institutions build agents over contracts, filings, and research docs"
+              ]
+            }
+          ],
+          "reasoning": "The strategy was ranked by identifying the foundational requirements (data and governance) that reduce the cost and risk of later, more complex implementations (agentic AI), utilizing TCO and salary benchmarks to assign cost signals.",
+          "confidence": "medium"
+        },
+        {
+          "field": "confidence",
+          "citations": [
+            {
+              "title": "Cost-Effective AI: Total Cost of Ownership for LLM ...",
+              "url": "https://hub.stabilarity.com/cost-effective-ai-total-cost-of-ownership-for-llm-deployments-a-practitioners-calculator",
+              "excerpts": [
+                "Cost-Effective AI: Total Cost of Ownership for LLM ...\nThis article presents a comprehensive TCO framework specifically designed for LLM deployments"
+              ]
+            },
+            {
+              "title": "Announcements | Databricks Blog",
+              "url": "https://www.databricks.com/blog/category/platform/announcements",
+              "excerpts": [
+                "Making AI More Accessible: Up to 80% Cost Savings with Meta Llama 3.3 on Databricks"
+              ]
+            }
+          ],
+          "reasoning": "The confidence is based on the alignment between multiple sources of evidence, including TCO calculators from Stabilarity, BenchLM, and GPUTracker, as well as product announcements from Snowflake, Databricks, and Envestnet.",
+          "confidence": "medium"
+        },
+        {
+          "field": "summary",
+          "citations": [
+            {
+              "title": "Snowflake for Asset and Wealth Management",
+              "url": "https://www.snowflake.com/en/solutions/industries/financial-services/asset-wealth-management",
+              "excerpts": [
+                "Snowflake for Asset and Wealth Management\nDeliver personalized investment strategies through AI-powered product analysis"
+              ]
+            }
+          ],
+          "reasoning": "The summary was constructed by synthesizing the ranked strategies and the common themes identified across consulting reports (Deloitte), vendor platforms (Snowflake/Databricks), and TCO frameworks.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

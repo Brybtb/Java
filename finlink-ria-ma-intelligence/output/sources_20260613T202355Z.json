@@ -1,0 +1,485 @@
+{
+  "generated_utc": "20260613T202355Z",
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.devoeandcompany.com/inthenews",
+      "title": "In the News \u2014 DeVoe & Co.",
+      "domain": "devoeandcompany.com",
+      "publish_date": null,
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 2,
+      "url": "https://www.investmentnews.com/goria/practice-management/how-billion-dollar-rias-are-reshaping-us-wealth-management-landscape/266902",
+      "title": "How billion-dollar RIAs are reshaping the US wealth management landscape - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2026-06-08",
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 3,
+      "url": "https://riabiz.com/a/2026/6/11/thomas-h-lee-puts-hightower-rollup-back-on-the-market-with-goldman-sachs-as-sherpa-after-building-in-a-softer-more-organic-side-but-two-voracious-ria-giant-buyers-are-giving-it-a-hard-pass-for-now",
+      "title": "Thomas H. Lee puts Hightower rollup back on the market, with 'Goldman Sachs'  as sherpa, after building in a softer, more organic side but two voracious RIA giant buyers are giving it a hard pass -- for now | RIABiz",
+      "domain": "riabiz.com",
+      "publish_date": "2026-06-11",
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 4,
+      "url": "http://citywire.com/ria/news/captrust-in-talks-to-acquire-7-5bn-carnegie-investment-counsel-sources/a2483015",
+      "title": "Captrust in talks to acquire $7.5bn Carnegie Investment Counsel: sources",
+      "domain": "citywire.com",
+      "publish_date": "2026-02-02",
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 5,
+      "url": "http://connectmoney.com/stories/wealth-enhancement-acquires-4-3b-marcum-wealth",
+      "title": "Wealth Enhancement Acquires $4.3B Marcum Wealth\u00a0 - Connect Money",
+      "domain": "connectmoney.com",
+      "publish_date": "2025-03-28",
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 6,
+      "url": "https://www.investmentnews.com/ria-news/ria-ma-poised-for-another-record-year-in-2026-devoe-finds/263686",
+      "title": "RIA M&A poised for another record year in 2026, DeVoe finds - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2025-12-23",
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 7,
+      "url": "https://riabiz.com/",
+      "title": "RIABiz - News, Vision & Voice for the Advisory Community",
+      "domain": "riabiz.com",
+      "publish_date": null,
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 8,
+      "url": "http://citywire.com/ria/news/41bn-arax-investment-partners-refinances-its-debt/a2487797",
+      "title": "$41bn Arax Investment Partners refinances its debt - Citywire",
+      "domain": "citywire.com",
+      "publish_date": null,
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 9,
+      "url": "http://citywire.com/ria/events",
+      "title": "Events | Citywire Professional Buyer",
+      "domain": "citywire.com",
+      "publish_date": null,
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 10,
+      "url": "http://citywire.com/ria/news/analyzing-q1-ria-m-and-a-from-citywire-s-deals-database/a2487650",
+      "title": "Analyzing Q1 RIA M&A from Citywire's Deals Database",
+      "domain": "citywire.com",
+      "publish_date": "2026-04-10",
+      "first_seen_topic": "RIA M&A deals \u2014 last 7 days"
+    },
+    {
+      "n": 11,
+      "url": "https://www.investmentnews.com/ria-news/minority-investments-in-rias-shift-toward-smaller-firms-devoe-data-show/266216",
+      "title": "Minority investments in RIAs shift toward smaller firms, DeVoe data show - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2026-04-20",
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 12,
+      "url": "https://www.wealthmanagement.com/ria-news/ria-crystal-ball-reveals-creative-pe-funding-mid-market-mergers-and-big-breakaways",
+      "title": "RIA Sector Poised for PE Growth, Mergers, Breakaways in 2026",
+      "domain": "wealthmanagement.com",
+      "publish_date": "2026-02-13",
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 13,
+      "url": "https://www.insidermonkey.com/blog/5-under-the-radar-ai-stocks-to-buy-in-2026-1778220/",
+      "title": "5 Under-the-Radar AI Stocks to Buy in 2026 - Insider Monkey",
+      "domain": "insidermonkey.com",
+      "publish_date": "2026-06-11",
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 14,
+      "url": "http://titanwh.com/en-GB/global/news/titan-wealth-acquires-sound-financial-management-limited",
+      "title": "Titan Wealth acquires Sound Financial Management Limited",
+      "domain": "titanwh.com",
+      "publish_date": null,
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 15,
+      "url": "https://www.infomoney.com.br/mercados/banco-do-brasil-csn-braskem-casas-bahia-e-mais-acoes-para-acompanhar-hoje",
+      "title": "Banco do Brasil, CSN, Braskem, Casas Bahia e mais ...",
+      "domain": "infomoney.com.br",
+      "publish_date": null,
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 16,
+      "url": "https://www.investmentnews.com/ria-news/ria-moves-steward-partners-hails-historic-hire-with-24b-ex-wirehouse-team/266943",
+      "title": "RIA moves: Steward Partners hails historic hire with $2.4B ex-wirehouse team - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2026-06-10",
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 17,
+      "url": "https://www.wealthmanagement.com/ria-news/hb-wealth-lifts-out-15b-charlotte-team-from-j-p-morgan",
+      "title": "HB Wealth Lifts Out $15B Team From J.P. Morgan",
+      "domain": "wealthmanagement.com",
+      "publish_date": "2025-11-03",
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 18,
+      "url": "http://imdealsblog.sewkis.com/ep-wealth-acquires-longview",
+      "title": "EP Wealth Acquires LongView - IM Deals Blog",
+      "domain": "imdealsblog.sewkis.com",
+      "publish_date": null,
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 19,
+      "url": "https://www.investmentnews.com/ria-news",
+      "title": "RIA News for Registered Independent Advisors and those considering the move! - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": null,
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 20,
+      "url": "https://www.instagram.com/p/DZCXeklKQ-t",
+      "title": "Estas s\u00e3o as a\u00e7\u00f5es que est\u00e3o no radar dos Investidores ...",
+      "domain": "instagram.com",
+      "publish_date": null,
+      "first_seen_topic": "Overlooked / under-covered RIA deals & moves \u2014 last 7 days"
+    },
+    {
+      "n": 21,
+      "url": "https://www.wealthmanagement.com/ria-news/panel-how-ai-is-driving-organic-growth-opportunity-accountability",
+      "title": "How AI Is Driving Organic Growth Opportunity, Accountability",
+      "domain": "wealthmanagement.com",
+      "publish_date": "2026-02-27",
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 22,
+      "url": "https://www.talentmsh.com/insights/ai-in-recruitment",
+      "title": "AI Recruitment Trends & Statistics In 2026 | MSH",
+      "domain": "talentmsh.com",
+      "publish_date": null,
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 23,
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/from-ai-table-stakes-to-ai-advantage-building-competitive-moats",
+      "title": "From AI table stakes to AI advantage: Building competitive moats",
+      "domain": "mckinsey.com",
+      "publish_date": "2026-05-15",
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 24,
+      "url": "https://www.ey.com/content/dam/ey-unified-site/ey-com/en-gl/campaigns/wealth-asset-management-business-transformation/documents/ey-gl-future-of-asset-management-study-01-2026.pdf",
+      "title": "1 2026 EY Future of Asset Management Study",
+      "domain": "ey.com",
+      "publish_date": null,
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 25,
+      "url": "https://www.investmentnews.com/fintech/how-finnys-new-hunter-agent-targets-ria-advisors-organic-growth-problem/266130",
+      "title": "How FINNY's new 'Hunter' agent targets RIA advisors' organic growth problem - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2026-04-14",
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 26,
+      "url": "https://x1wealth.com/compare/advisor-platforms-2026",
+      "title": "Best Advisor Technology Platforms in 2026: 8 Platforms Compared for RIAs and Wealth Managers",
+      "domain": "x1wealth.com",
+      "publish_date": "2026-06-11",
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 27,
+      "url": "https://www.investmentnews.com/goria/technology/billion-dollar-rias-lean-on-ai-and-data-to-keep-growth-going/265073",
+      "title": "Billion-dollar RIAs lean on AI and data to keep growth going - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2026-01-30",
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 28,
+      "url": "https://wifitalents.com/ai-in-the-wealth-management-industry-statistics/",
+      "title": "AI In The Wealth Management Industry: 2026 Verified Stats",
+      "domain": "wifitalents.com",
+      "publish_date": "2026-02-12",
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 29,
+      "url": "https://gregoryagency.com/news-insights/ria-organic-growth/",
+      "title": "RIA Organic Growth: How Top Firms Scale Strategically",
+      "domain": "gregoryagency.com",
+      "publish_date": "2026-05-14",
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 30,
+      "url": "https://www.cnbc.com/2025/12/25/how-the-ai-market-could-splinter-in-2026-.html",
+      "title": "Monetizers vs manufacturers: How the AI market could splinter in 2026",
+      "domain": "cnbc.com",
+      "publish_date": "2026-06-10",
+      "first_seen_topic": "How AI differentiates RIAs in 2026"
+    },
+    {
+      "n": 31,
+      "url": "https://informaconnect.com/edge/",
+      "title": "Wealth Management EDGE | A wealth management conference focused on investment, technology & practice management",
+      "domain": "informaconnect.com",
+      "publish_date": null,
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 32,
+      "url": "https://www.vestmark.com/rias",
+      "title": "Who We Serve: RIAs | Vestmark",
+      "domain": "vestmark.com",
+      "publish_date": null,
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 33,
+      "url": "https://www.morningstar.com/news/pr-newswire/20260519ny63276/envestnet-enhances-wealth-data-platform-with-new-ai-explainability-workflow-explainability-and-advisor-decisioning-capabilities-at-elevate-2026",
+      "title": "Envestnet Enhances Wealth Data Platform with New AI Explainability, Workflow Explainability, and Advisor Decisioning Capabilities at Elevate 2026 | Morningstar",
+      "domain": "morningstar.com",
+      "publish_date": "2026-05-19",
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 34,
+      "url": "https://ketodietapp.com/first-dry/Morgan-Stanley-Opens-1-Trillion-Wealth-Platform-to-AI-Agents-Marking-Wall-Street-First-31-12116",
+      "title": "Morgan Stanley Opens $1 Trillion Wealth Platform to AI Agents ...",
+      "domain": "ketodietapp.com",
+      "publish_date": null,
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 35,
+      "url": "https://www.altamira.ai/blog/ai-for-wealth-management-platforms",
+      "title": "AI for wealth management platforms in North America - Altamira",
+      "domain": "altamira.ai",
+      "publish_date": null,
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 36,
+      "url": "http://devoeandcompany.com/company",
+      "title": "Company - DeVoe & Company",
+      "domain": "devoeandcompany.com",
+      "publish_date": null,
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 37,
+      "url": "https://www.investmentnews.com/fintech/tech-firm-takes-generative-ai-to-the-ria-space/253028",
+      "title": "Tech firm takes generative AI to the RIA space - InvestmentNews",
+      "domain": "investmentnews.com",
+      "publish_date": "2024-07-09",
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 38,
+      "url": "https://www.advisorhub.com/resources/2026-ria-firms-old/",
+      "title": "50 RIA Firms to Watch in 2026 - AdvisorHub",
+      "domain": "advisorhub.com",
+      "publish_date": "2026-02-02",
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 39,
+      "url": "https://finance.yahoo.com/sectors/technology/articles/ai-powered-era-registers-ria-154259624.html",
+      "title": "AI-Powered Era Registers as RIA, Targets Mass Affluent",
+      "domain": "finance.yahoo.com",
+      "publish_date": "2026-03-19",
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 40,
+      "url": "https://www.cnbc.com/2026/06/03/ai-agents-morgan-stanley-wealth-management-funnel.html",
+      "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
+      "domain": "cnbc.com",
+      "publish_date": "2026-06-13",
+      "first_seen_topic": "AI leaders among RIAs / wealth platforms"
+    },
+    {
+      "n": 41,
+      "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages/default.aspx",
+      "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages | Charles Schwab",
+      "domain": "pressroom.aboutschwab.com",
+      "publish_date": null,
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 42,
+      "url": "https://fintech.global/2026/04/17/ai-in-wealth-management-closing-the-implementation-gap/",
+      "title": "AI in wealth management: closing the implementation gap",
+      "domain": "fintech.global",
+      "publish_date": "2026-04-17",
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 43,
+      "url": "https://www.businesswire.com/news/home/20260122602006/en/Schwab-Study-Reveals-RIA-AI-Adoption-More-Than-Doubles---But-Most-Firms-Still-in-Early-Stages",
+      "title": "Schwab Study Reveals RIA AI Adoption More Than Doubles - But Most Firms Still in Early Stages",
+      "domain": "businesswire.com",
+      "publish_date": "2026-01-22",
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 44,
+      "url": "https://www.businesswire.com/news/home/20260609427811/en/New-Research-Reveals-the-Next-Wealth-Management-Divide-AI-Rewards-Firms-Built-to-Scale",
+      "title": "New Research Reveals the Next Wealth Management Divide: AI Rewards Firms Built to Scale",
+      "domain": "businesswire.com",
+      "publish_date": "2026-06-10",
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 45,
+      "url": "http://noesion.ai/ai-adoption-statistics-2026",
+      "title": "AI Adoption Statistics 2026 | Sourced Data on Enterprise AI ROI Gap",
+      "domain": "noesion.ai",
+      "publish_date": null,
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 46,
+      "url": "http://aboutschwab.com/advisor-ai-in-action-2026",
+      "title": "2026 RIA & AI Research Study: Advisor AI in Action - Charles Schwab",
+      "domain": "aboutschwab.com",
+      "publish_date": null,
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 47,
+      "url": "https://www.minneapolisfed.org/article/2026/ai-adoption-in-business-grows-steadily-but-unevenly",
+      "title": "AI adoption in business grows steadily but unevenly | Federal Reserve Bank of Minneapolis",
+      "domain": "minneapolisfed.org",
+      "publish_date": null,
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 48,
+      "url": "https://ventionteams.com/solutions/ai/adoption-statistics",
+      "title": "AI Adoption Statistics Q1 2026: All Figures - ventionteams.com",
+      "domain": "ventionteams.com",
+      "publish_date": null,
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 49,
+      "url": "http://richturrin.substack.com/p/the-ai-value-gap-why-90-of-companies",
+      "title": "The AI Value Gap: Why 90% of Companies Aren't Seeing Returns (And Financial Services Is Dead Last)",
+      "domain": "richturrin.substack.com",
+      "publish_date": "2026-04-01",
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 50,
+      "url": "https://alicelabs.ai/reports/global-ai-adoption-index-2026",
+      "title": "Global AI Adoption Statistics 2026: Country Rankings & Data | Alice Labs",
+      "domain": "alicelabs.ai",
+      "publish_date": "2026-05-16",
+      "first_seen_topic": "AI laggards / risks among RIAs"
+    },
+    {
+      "n": 51,
+      "url": "https://www.contus.com/blog/build-vs-buy-ai/",
+      "title": "Build vs Buy AI Solution in 2026: Cost, ROI & Decision Guide",
+      "domain": "contus.com",
+      "publish_date": "2026-05-04",
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    },
+    {
+      "n": 52,
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era",
+      "title": "State of AI trust in 2026: Shifting to the agentic era",
+      "domain": "mckinsey.com",
+      "publish_date": null,
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    },
+    {
+      "n": 53,
+      "url": "https://www.ey.com/en_us/insights/financial-services/generative-ai-transforming-wealth-and-asset-management",
+      "title": "Generative AI transforming wealth and asset management | EY - US",
+      "domain": "ey.com",
+      "publish_date": "2026-05-21",
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    },
+    {
+      "n": 54,
+      "url": "https://www.techaheadcorp.com/blog/enterprise-ai-build-vs-buy-vs-partner",
+      "title": "Build vs Buy vs Partner AI: The Enterprise AI Decision Framework for 2026",
+      "domain": "techaheadcorp.com",
+      "publish_date": "2026-05-04",
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    },
+    {
+      "n": 55,
+      "url": "https://dust.tt/blog/build-vs-buy-ai-agents",
+      "title": "Build vs. buy AI agents: What 1,000+ enterprise deployments taught us about the real costs<!-- --> | Dust Blog",
+      "domain": "dust.tt",
+      "publish_date": "2026-01-16",
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    },
+    {
+      "n": 56,
+      "url": "http://afternoon.co.uk/",
+      "title": "Afternoon | The data and AI first operating model for financial advice firms",
+      "domain": "afternoon.co.uk",
+      "publish_date": null,
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    },
+    {
+      "n": 57,
+      "url": "http://afternoon.co.uk/our-story",
+      "title": "Our story - afternoon",
+      "domain": "afternoon.co.uk",
+      "publish_date": null,
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    },
+    {
+      "n": 58,
+      "url": "https://www.alphabold.com/ai-buy-vs-build",
+      "title": "AI Buy vs Build in 2026: Enterprise Cost, ROI & Decision Guide",
+      "domain": "alphabold.com",
+      "publish_date": "2025-10-14",
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    },
+    {
+      "n": 59,
+      "url": "https://hatchworks.com/blog/gen-ai/build-vs-buy-framework/",
+      "title": "The Build vs Buy Framework in the Age of AI",
+      "domain": "hatchworks.com",
+      "publish_date": "2026-01-28",
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    },
+    {
+      "n": 60,
+      "url": "https://www.digitalapplied.com/blog/ai-build-vs-buy-2026-decision-framework-agency-stack",
+      "title": "AI Build vs Buy in 2026: A Decision Framework for Agencies",
+      "domain": "digitalapplied.com",
+      "publish_date": "2026-06-04",
+      "first_seen_topic": "Cost-effective AI strategies for RIAs"
+    }
+  ]
+}
