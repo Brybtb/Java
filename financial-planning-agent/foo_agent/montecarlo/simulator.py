@@ -37,26 +37,42 @@ def simulate(pi: PlanInputs, seed: int, trials: int,
 
     # Pre-compute the contribution and spending schedules (nominal). Retirement
     # outflow nets Social Security and is grossed up for a blended tax rate (C6).
+    # C7: split accumulation contributions into the taxable bucket (which grows net
+    # of the tax drag) and the untaxed buckets (tax-deferred + Roth). With a drag of
+    # 0 (or no taxable money) this reproduces the pre-C7 single-pot path exactly.
     infl = pi.inflation
     tax_rate = pi.retirement_tax_rate
-    contrib_sched = np.zeros(years)
+    drag = pi.taxable_drag
+    taxable_c = np.zeros(years)
+    untaxed_c = np.zeros(years)
     spend_sched = np.zeros(years)
+    untaxed_contrib0 = pi.deferred_contrib + pi.free_contrib
     for t in range(years):
         age = pi.start_age + t
         if age < pi.retire_age:
-            contrib_sched[t] = pi.annual_contribution * ((1 + infl) ** t)
+            taxable_c[t] = pi.taxable_contrib * ((1 + infl) ** t)
+            untaxed_c[t] = untaxed_contrib0 * ((1 + infl) ** t)
         else:
             spend = pi.annual_spend_retire * ((1 + infl) ** (age - pi.retire_age))
             ss = (pi.ss_annual * ((1 + infl) ** t)) if (pi.ss_claim_age and age >= pi.ss_claim_age) else 0.0
             net = max(spend - ss, 0.0)
             spend_sched[t] = net / (1 - tax_rate) if tax_rate < 1 else net
 
-    bal = np.full(trials, float(pi.initial_balance))
+    taxed = np.full(trials, float(pi.taxable_balance))
+    untaxed = np.full(trials, float(pi.deferred_balance + pi.free_balance))
+    bal = taxed + untaxed
     bal_at_retirement = None
     for t in range(years):
-        bal = bal * (1 + draws[:, t])
-        bal = bal + contrib_sched[t] - spend_sched[t]
-        np.maximum(bal, 0.0, out=bal)
+        if pi.start_age + t < pi.retire_age:
+            taxed = taxed * (1 + draws[:, t] - drag) + taxable_c[t]
+            untaxed = untaxed * (1 + draws[:, t]) + untaxed_c[t]
+            np.maximum(taxed, 0.0, out=taxed)
+            np.maximum(untaxed, 0.0, out=untaxed)
+            bal = taxed + untaxed
+        else:
+            # Collapsed (blended) decumulation — bucket-aware drawdown is C08.
+            bal = bal * (1 + draws[:, t]) - spend_sched[t]
+            np.maximum(bal, 0.0, out=bal)
         if pi.start_age + t + 1 == pi.retire_age:
             bal_at_retirement = bal.copy()
 

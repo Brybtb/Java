@@ -177,15 +177,16 @@ id: C07
 title: multi-bucket accumulation (taxable / tax-deferred / Roth + HSA), per-bucket growth & tax drag
 tier: "10^2"
 depends_on: [C04]
-files: [foo_agent/projection/accounts.py, foo_agent/projection/buckets.py, foo_agent/projection/__init__.py, foo_agent/montecarlo/__init__.py, tests/test_buckets.py, tasks.md, rubrics/C07.yaml]
+files: [foo_agent/projection/buckets.py, foo_agent/projection/accounts.py, foo_agent/projection/cashflow.py, foo_agent/montecarlo/simulator.py, foo_agent/montecarlo/cma.py, foo_agent/rules/data/assumptions/cma.2026.yaml, tests/test_buckets.py, tests/golden/expected/young_saver_TX.projection.json, tests/golden/GOLDEN_CHANGELOG.md, tasks.md, rubrics/C07.yaml]
 dod:
   - "PlanInputs splits initial_balance + annual_contribution into 3 buckets: taxable, tax_deferred (pre-tax 401k/trad IRA), tax_free (Roth IRA/Roth 401k); HSA folded into tax_free for retirement use"
   - "coexisting contributions route correctly: a Roth IRA + a pre-tax 401k + employer match land in the right buckets simultaneously"
   - "taxable bucket nets an annual tax drag on growth (dividends/turnover); tax-deferred & Roth compound untaxed; deterministic, seeded"
   - "projection + Monte Carlo track the 3 balances and sum to today's single-bucket total when tax treatment is neutralized (golden parity guard) -> any golden change carries a WHY"
+tests_to_add: [test_balances_route_to_the_right_buckets, test_contributions_route_pretax_401k_and_match_vs_roth_and_hsa, test_drag_zero_makes_bucket_placement_irrelevant_parity, test_taxable_drag_lowers_taxable_bucket_growth, test_projection_reports_buckets_that_sum_to_balance_at_retirement, test_young_saver_has_no_taxable_bucket, test_projection_is_deterministic]
 gates: { code: required, ui: skip, experts: [tax_cpa, risk_quant, cfp_decumulation] }
 expert_rubric: rubrics/C07.yaml
-status: todo
+status: in_progress
 ```
 ```yaml
 id: C08

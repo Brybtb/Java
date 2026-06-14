@@ -1,0 +1,1 @@
+- young_saver_TX.projection.json: C07: projection now reports the per-bucket (taxable/tax_deferred/tax_free) balance-at-retirement + taxable_drag; only the additive 'buckets' key is new — all prior values unchanged (young_saver has no taxable bucket, so the tax drag is inert => parity).
