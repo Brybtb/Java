@@ -1,15 +1,1149 @@
 {
-  "generated_utc": "20260614T000000Z",
-  "note": "Seed citation registry. research/source_rules.py + verify_rules.py will expand and attach verdicts to these. URLs are the authoritative primary sources each rule should ultimately cite.",
+  "generated_utc": "20260614T073000Z",
+  "note": "Curated rule citations (1-9) plus a discipline-sourced reference library gathered + deduped by research/source_rules.py (Parallel.ai Search, 2026-06-14).",
   "sources": [
-    { "n": 1, "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits", "title": "401(k) contribution limits", "domain": "irs.gov", "source_type": "primary" },
-    { "n": 2, "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits", "title": "IRA contribution limits", "domain": "irs.gov", "source_type": "primary" },
-    { "n": 3, "url": "https://www.consumerfinance.gov/about-us/blog/an-essential-guide-to-building-an-emergency-fund/", "title": "Building an emergency fund", "domain": "consumerfinance.gov", "source_type": "primary" },
-    { "n": 4, "url": "https://www.irs.gov/publications/p969", "title": "Pub 969 — HSAs and other tax-favored health plans", "domain": "irs.gov", "source_type": "primary" },
-    { "n": 5, "url": "https://www.irs.gov/retirement-plans/amount-of-roth-ira-contributions-that-you-can-make-for-the-current-year", "title": "Roth IRA contribution phase-outs", "domain": "irs.gov", "source_type": "primary" },
-    { "n": 6, "url": "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest", "title": "Save and invest — investor.gov", "domain": "investor.gov", "source_type": "primary" },
-    { "n": 7, "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-the-debt-snowball-and-debt-avalanche-en-2103/", "title": "Debt avalanche vs snowball", "domain": "consumerfinance.gov", "source_type": "primary" },
-    { "n": 8, "url": "https://www.dol.gov/general/topic/retirement/typesofplans", "title": "Employer retirement plan types & matching", "domain": "dol.gov", "source_type": "primary" },
-    { "n": 9, "url": "https://www.usa.gov/wills-estates", "title": "Wills, estates, and probate — USAGov", "domain": "usa.gov", "source_type": "primary" }
+    {
+      "n": 1,
+      "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits",
+      "title": "401(k) contribution limits",
+      "domain": "irs.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 2,
+      "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+      "title": "IRA contribution limits",
+      "domain": "irs.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 3,
+      "url": "https://www.consumerfinance.gov/about-us/blog/an-essential-guide-to-building-an-emergency-fund/",
+      "title": "Building an emergency fund",
+      "domain": "consumerfinance.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 4,
+      "url": "https://www.irs.gov/publications/p969",
+      "title": "Pub 969 \u2014 HSAs and other tax-favored health plans",
+      "domain": "irs.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 5,
+      "url": "https://www.irs.gov/retirement-plans/amount-of-roth-ira-contributions-that-you-can-make-for-the-current-year",
+      "title": "Roth IRA contribution phase-outs",
+      "domain": "irs.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 6,
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest",
+      "title": "Save and invest \u2014 investor.gov",
+      "domain": "investor.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 7,
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-the-debt-snowball-and-debt-avalanche-en-2103/",
+      "title": "Debt avalanche vs snowball",
+      "domain": "consumerfinance.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 8,
+      "url": "https://www.dol.gov/general/topic/retirement/typesofplans",
+      "title": "Employer retirement plan types & matching",
+      "domain": "dol.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 9,
+      "url": "https://www.usa.gov/wills-estates",
+      "title": "Wills, estates, and probate \u2014 USAGov",
+      "domain": "usa.gov",
+      "source_type": "primary"
+    },
+    {
+      "n": 10,
+      "url": "https://ftp.kontos.com/I7t/807/bestJud98wFinancialOrderOfOperations",
+      "title": "FINANCIAL ORDER OF OPERATIONS",
+      "domain": "ftp.kontos.com",
+      "publish_date": "2026-05-11",
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 11,
+      "url": "https://www.cfp.net/-/media/files/cfp-board/standards-and-ethics/compliance-resources/case-studies/case-study-c4-practice-standards-step-4-developing-recommendation.pdf",
+      "title": "1: CONSIDERING THE ASSUMPTIONS AND ESTIMATES ...",
+      "domain": "cfp.net",
+      "publish_date": null,
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 12,
+      "url": "https://www.mymoneyblog.com/retirement-savings-account-priority-list.html",
+      "title": "401(k) Match Done, Now What? A Retirement Account Priority List - My Money Blog",
+      "domain": "mymoneyblog.com",
+      "publish_date": "2025-09-23",
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 13,
+      "url": "https://www.cnbc.com/select/step-by-step-emergency-fund-plan/",
+      "title": "Feeling Overwhelmed By Saving? A CFP's 3-Step Emergency Fund Plan",
+      "domain": "cnbc.com",
+      "publish_date": "2025-12-19",
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 14,
+      "url": "https://www.cnbc.com/2024/03/12/cfp-how-much-money-to-start-with-in-your-emergency-fund.html",
+      "title": "CFP: How much money to start with in your emergency fund",
+      "domain": "cnbc.com",
+      "publish_date": "2024-03-12",
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 15,
+      "url": "https://moneyguy.com/guide/foo/",
+      "title": "FOO - Your Ultimate Guide to Money Guy's Financial Order of Operations | Money Guy",
+      "domain": "moneyguy.com",
+      "publish_date": "2026-04-09",
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 16,
+      "url": "https://moneyguy.com/article/how-large-should-your-emergency-fund-be/",
+      "title": "How Large Should Your Emergency Fund Be? | Money Guy",
+      "domain": "moneyguy.com",
+      "publish_date": "2026-01-16",
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 17,
+      "url": "https://www.cfp.net/ethics/compliance-resources/2024/11/considering-the-assumptions-and-estimates-used-to-develop-the-recommendation",
+      "title": "Considering the Assumptions and Estimates Used to Develop the Recommendation | CFP Board\n",
+      "domain": "cfp.net",
+      "publish_date": "2024-11-19",
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 18,
+      "url": "https://www.cfp.net/-/media/files/cfp-board/standards-and-ethics/compliance-resources/guide-to-financial-planning-process.pdf",
+      "title": "GUIDE TO THE 7-STEP FINANCIAL PLANNING PROCESS A CASE STUDY ILLUSTRATION",
+      "domain": "cfp.net",
+      "publish_date": null,
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 19,
+      "url": "https://www.empower.com/the-currency/money/emergency-fund-how-much-should-i-save",
+      "title": "How much should you have in an emergency fund? | Empower",
+      "domain": "empower.com",
+      "publish_date": null,
+      "discipline": "CFP",
+      "source_type": "unknown"
+    },
+    {
+      "n": 20,
+      "url": "https://www.whitecoatinvestor.com/the-4-rule-safe-withdrawal-rates/",
+      "title": "description: The Trinity Study was key in determining that you can't spend 10% of your portfolio each year and expect it to last. How much can you spend? title: The 4% Rule and Safe Withdrawal Rates | White Coat Investor",
+      "domain": "whitecoatinvestor.com",
+      "publish_date": "2025-12-21",
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 21,
+      "url": "https://www.pyrfordfp.com/post/using-the-guyton-klinger-withdrawal-guardrails-for-retirement-income",
+      "title": "Using the Guyton-Klinger withdrawal guardrails for retirement.",
+      "domain": "pyrfordfp.com",
+      "publish_date": "2025-06-12",
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 22,
+      "url": "https://ungrindfi.com/blog/safe-withdrawal-rate",
+      "title": "Safe Withdrawal Rate 2026: Is the 4% Rule Now 3.9%? | UngrindFi",
+      "domain": "ungrindfi.com",
+      "publish_date": "2026-04-25",
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 23,
+      "url": "https://www.cnbc.com/select/guardrails-approach-retirement-withdrawal-strategy-how-it-works",
+      "title": "The guardrails approach is a flexible retirement withdrawal ...",
+      "domain": "cnbc.com",
+      "publish_date": "2026-05-27",
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 24,
+      "url": "https://enoughmoney.ai/retirement-calculator/trinity-study",
+      "title": "Trinity Study Safe Withdrawal Calculator (2026): An Honest Take",
+      "domain": "enoughmoney.ai",
+      "publish_date": null,
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 25,
+      "url": "https://www.portfoliolab.app/blog/safe-withdrawal-rate-trinity-study-2026",
+      "title": "The Updated Trinity Study: Safe Withdrawal Rates in 2026 \u2014 Portfolio Lab",
+      "domain": "portfoliolab.app",
+      "publish_date": "2026-03-01",
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 26,
+      "url": "https://www.youtube.com/watch?v=JY8F6qkmRKw",
+      "title": "Sequence of Returns Risk Solved! Karsten Jeske on Safe ... - YouTube",
+      "domain": "youtube.com",
+      "publish_date": null,
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 27,
+      "url": "https://www.thepeakfp.com/blog/sequence-of-returns-risk",
+      "title": "Certified Financial Planner in Los Angeles - Retire Confidently and Invest Smarter",
+      "domain": "thepeakfp.com",
+      "publish_date": null,
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 28,
+      "url": "https://research-center.amundi.com/topics/capital-market-assumptions",
+      "title": "Capital Market Assumptions - Amundi Research Center",
+      "domain": "research-center.amundi.com",
+      "publish_date": null,
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 29,
+      "url": "https://www.blackrock.com/institutions/en-us/insights/thought-leadership/capital-market-assumptions",
+      "title": "Capital market assumptions | BlackRock",
+      "domain": "blackrock.com",
+      "publish_date": null,
+      "discipline": "CFA",
+      "source_type": "unknown"
+    },
+    {
+      "n": 30,
+      "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500",
+      "title": "401(k) limit increases to $24,500 for 2026, IRA limit increases to $7,500 | Internal Revenue Service",
+      "domain": "irs.gov",
+      "publish_date": null,
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 31,
+      "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-catch-up-contributions",
+      "title": "Retirement topics - Catch-up contributions | Internal Revenue Service",
+      "domain": "irs.gov",
+      "publish_date": "2026-05-07",
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 32,
+      "url": "https://www.irs.gov/publications/p590a",
+      "title": "Publication 590-A (2025), Contributions to Individual Retirement Arrangements (IRAs) | Internal Revenue Service",
+      "domain": "irs.gov",
+      "publish_date": null,
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 33,
+      "url": "https://nauma.ai/knowledge/hsa-contribution-limits",
+      "title": "\n      HSA Contribution Limits 2026: Self-Only, Family, and Catch-Up | Nauma\n    ",
+      "domain": "nauma.ai",
+      "publish_date": null,
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 34,
+      "url": "https://nationaltaxtools.com/guides/hsa-tax-benefits-guide",
+      "title": "HSA Tax Benefits Guide 2026: Limits, HDHP Rules, Triple Tax ...",
+      "domain": "nationaltaxtools.com",
+      "publish_date": null,
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 35,
+      "url": "https://www.financetoolz.com/blog/roth-ira-2026-limits-strategies.html",
+      "title": "Roth IRA 2026: New $7,500 Limit, Phase-Outs, and Backdoor Strategies | FinanceToolz",
+      "domain": "financetoolz.com",
+      "publish_date": "2026-05-24",
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 36,
+      "url": "https://ourtaxpartner.com/revenue-procedure-2025-32-2026-inflation-adjustments-2025-modifications",
+      "title": "2026 HSA Contribution Limits: New IRS Maximums ($4,400/$8,750 ...",
+      "domain": "ourtaxpartner.com",
+      "publish_date": null,
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 37,
+      "url": "https://www.visaverge.com/taxes/2026-hsa-contribution-limits-self-only-4400-family-8750",
+      "title": "2026 HSA Contribution Limits: Self-Only $4,400, Family $8,750",
+      "domain": "visaverge.com",
+      "publish_date": null,
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 38,
+      "url": "https://taxcalchub.com/calculators/health/hsa-contribution-limit-calculator-2026",
+      "title": "HSA Contribution Limit Calculator 2026 (Self + Family + Catch-Up)",
+      "domain": "taxcalchub.com",
+      "publish_date": null,
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 39,
+      "url": "https://hsasmart.com/blog/hsa-contribution-limits-2026",
+      "title": "2026 HSA Contribution Limits (Self-Only, Family, Catch-Up) | HSA Smart",
+      "domain": "hsasmart.com",
+      "publish_date": "2026-02-10",
+      "discipline": "tax_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 40,
+      "url": "https://www.irs.gov/newsroom/estate-and-gift-tax-faqs",
+      "title": "Estate and Gift Tax FAQs | Internal Revenue Service",
+      "domain": "irs.gov",
+      "publish_date": "2026-05-12",
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 41,
+      "url": "https://www.mayoclinic.org/healthy-lifestyle/consumer-health/in-depth/living-wills/art-20046303",
+      "title": "Living wills and advance directives for medical decisions - Mayo Clinic",
+      "domain": "mayoclinic.org",
+      "publish_date": null,
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 42,
+      "url": "https://www.actec.org/estate-planning-essentials/advance-medical-directives/",
+      "title": "Advance Medical Directives | POA | Medical Orders",
+      "domain": "actec.org",
+      "publish_date": "2025-12-04",
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 43,
+      "url": "https://www.federatedinsurance.com/posts/its-your-life/estate-planning-exemptions",
+      "title": "New Federal Law Affects 2026 Estate Planning Exemptions | Estate Gift Tax Exemption and Gift Tax Exclusion",
+      "domain": "federatedinsurance.com",
+      "publish_date": "2025-12-16",
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 44,
+      "url": "https://www.investopedia.com/terms/s/stepupinbasis.asp",
+      "title": "Step-Up in Basis: Definition and How It Works for Inherited Property",
+      "domain": "investopedia.com",
+      "publish_date": "2025-11-10",
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 45,
+      "url": "https://vabeachlawgroup.com/blog/what-you-need-for-an-estate-plan-an-attorneys-perspective",
+      "title": "What Documents Should Be in Your Estate Plan?",
+      "domain": "vabeachlawgroup.com",
+      "publish_date": null,
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 46,
+      "url": "https://resources.evans-legal.com/?p=3627",
+      "title": "Federal Estate and Gift Tax Rates and Exclusions | Evans Estate Law Resources",
+      "domain": "resources.evans-legal.com",
+      "publish_date": null,
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 47,
+      "url": "https://www.sowardslawfirm.com/blog/2024-annual-gift-and-estate-tax-exemption-adjustments",
+      "title": "2024 Annual Gift and Estate Tax Exemption Adjustments | San Jose Estate Planning Lawyers",
+      "domain": "sowardslawfirm.com",
+      "publish_date": "2025-02-04",
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 48,
+      "url": "https://cap.unl.edu/news/estate-planning-stepped-tax-basis",
+      "title": "Estate Planning: Stepped-Up Tax Basis | Center for Agricultural Profitability | Nebraska",
+      "domain": "cap.unl.edu",
+      "publish_date": null,
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 49,
+      "url": "https://taxpolicycenter.org/briefing-book/what-difference-between-carryover-basis-and-step-basis",
+      "title": "What is the difference between carryover basis and a step-up in basis? | Tax Policy Center",
+      "domain": "taxpolicycenter.org",
+      "publish_date": null,
+      "discipline": "estate_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 50,
+      "url": "https://en.wikipedia.org/wiki/Community_property_in_the_United_States",
+      "title": "Community property in the United States - Wikipedia",
+      "domain": "en.wikipedia.org",
+      "publish_date": "2025-08-15",
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 51,
+      "url": "https://www.hrblock.com/tax-center/filing/states/states-with-no-income-tax/",
+      "title": "States With No Income Tax | H&R Block",
+      "domain": "hrblock.com",
+      "publish_date": "2023-03-11",
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 52,
+      "url": "https://www.sofi.com/learn/content/homestead-exemption-rules-by-state/",
+      "title": "Homestead Exemption Bankruptcy Rules, by State | SoFi",
+      "domain": "sofi.com",
+      "publish_date": "2026-03-20",
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 53,
+      "url": "https://www.bankruptcypower.com/blog/claiming-the-homestead-exemption-in-a-california-bankruptcy",
+      "title": "Claiming the Homestead Exemption in a California Bankruptcy",
+      "domain": "bankruptcypower.com",
+      "publish_date": null,
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 54,
+      "url": "https://www.lscarlsonlaw.com/articles/hoa-collections-and-your-bankruptcy-protection",
+      "title": "HOA Collections and Your Bankruptcy Protection in California | LS Carlson Law",
+      "domain": "lscarlsonlaw.com",
+      "publish_date": "2026-01-18",
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 55,
+      "url": "https://www.investopedia.com/financial-edge/0210/7-states-with-no-income-tax.aspx",
+      "title": "States With No Income Tax",
+      "domain": "investopedia.com",
+      "publish_date": "2025-11-17",
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 56,
+      "url": "https://www.colpittslawfirm.com/news-announcements/2025/october/effects-of-bankruptcy-on-homeownership-in-tulsa",
+      "title": "Effects of Bankruptcy on Homeownership in Tulsa",
+      "domain": "colpittslawfirm.com",
+      "publish_date": null,
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 57,
+      "url": "https://www.investopedia.com/personal-finance/which-states-are-community-property-states/",
+      "title": "These 9 Community Property States Require Equal Distribution of Assets in Divorce",
+      "domain": "investopedia.com",
+      "publish_date": "2025-09-12",
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 58,
+      "url": "https://www.nolo.com/legal-encyclopedia/oklahoma-bankruptcy-homestead-exemption.html",
+      "title": "Oklahoma Homestead Exemption in Bankruptcy (2026) - Nolo",
+      "domain": "nolo.com",
+      "publish_date": "2026-02-26",
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 59,
+      "url": "https://www.josephtosti.com/bankruptcy/homestead-exemption",
+      "title": "California Homestead Exemption 2021 - Irvine Bankruptcy Lawyer",
+      "domain": "josephtosti.com",
+      "publish_date": null,
+      "discipline": "state_attorney",
+      "source_type": "unknown"
+    },
+    {
+      "n": 60,
+      "url": "https://www.patientadvocate.org/explore-our-resources/maintaining-employment-employment-benefits/long-term-disability-and-its-benefits/",
+      "title": "Long Term Disability and Its Benefits - Patient Advocate Foundation",
+      "domain": "patientadvocate.org",
+      "publish_date": "2024-04-19",
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 61,
+      "url": "https://www.ramseysolutions.com/insurance/how-much-umbrella-insurance-do-I-need",
+      "title": "How Much Umbrella Insurance Do I Need? - Ramsey",
+      "domain": "ramseysolutions.com",
+      "publish_date": "2025-05-01",
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 62,
+      "url": "https://ritterim.com/blog/4-ways-to-calculate-your-clients-life-insurance-needs/",
+      "title": "4 Ways to Calculate Your Clients' Life Insurance Needs  | Ritter Insurance Marketing",
+      "domain": "ritterim.com",
+      "publish_date": "2025-09-23",
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 63,
+      "url": "https://www.waepa.org/resources/life-insurance-needs-analysis/",
+      "title": "Before Making a Purchase Use This Life Insurance Needs Calculator | WAEPA",
+      "domain": "waepa.org",
+      "publish_date": "2026-03-20",
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 64,
+      "url": "https://wheelertaylor.com/umbrella-liability-insurance-for-high-net-worth-families",
+      "title": "Umbrella Liability Insurance for High Net Worth Families - Wheeler & Taylor",
+      "domain": "wheelertaylor.com",
+      "publish_date": "2026-05-09",
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 65,
+      "url": "https://hicksinsurance.com/personal-insurance/umbrella-insurance",
+      "title": "description: Protect your assets with affordable umbrella insurance. Extra liability coverage beyond auto and home policies. Hicks Insurance Group compares 14+ carriers. Call (708) 532-7474 today. title: Umbrella Insurance in Illinois | Extra Liability Protection | Hicks Insurance image: https://img.aelieve.com/w:auto/h:auto/q:91/f:best/https://hicksinsurance.com/wp-content/uploads/LogoImageProfile.png",
+      "domain": "hicksinsurance.com",
+      "publish_date": null,
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 66,
+      "url": "https://www.preszlerlaw.com/faqs/how-much-of-my-income-will-ltd-replace/",
+      "title": "How Much Of My Income Will LTD Replace?",
+      "domain": "preszlerlaw.com",
+      "publish_date": "2025-11-20",
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 67,
+      "url": "https://www.ncdoi.gov/consumers/disability-income-insurance",
+      "title": "Disability Income Insurance | NC DOI",
+      "domain": "ncdoi.gov",
+      "publish_date": null,
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 68,
+      "url": "https://coverageadvisor.com/umbrella/umbrella-high-asset-future-earnings",
+      "title": "High Net Worth Umbrella Insurance | Assets & Future ...",
+      "domain": "coverageadvisor.com",
+      "publish_date": null,
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 69,
+      "url": "https://kellyinsurancegroup.com/10-million-umbrella-liability-insurance-policy-for-companies",
+      "title": "$10 Million Umbrella Excess Liability Insurance Policy for Companies - Kelly Insurance Group",
+      "domain": "kellyinsurancegroup.com",
+      "publish_date": "2026-05-11",
+      "discipline": "insurance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 70,
+      "url": "https://www.experian.com/blogs/ask-experian/should-i-pay-off-highest-balance-or-highest-interest-first/",
+      "title": "Paying Off Debt With the Highest APR vs. Highest Balance",
+      "domain": "experian.com",
+      "publish_date": "2026-06-01",
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 71,
+      "url": "https://www.usnews.com/banking/articles/whats-the-best-account-for-an-emergency-fund",
+      "title": "What's Better for an Emergency Fund: High-Yield Savings Account or Money Market Account? | Banking Advice | U.S. News",
+      "domain": "usnews.com",
+      "publish_date": "2025-09-16",
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 72,
+      "url": "https://www.monarch.com/blog/personal-finance/pay-off-debt-or-invest",
+      "title": "Pay Off Debt or Invest? How to Decide in 2026 | Monarch",
+      "domain": "monarch.com",
+      "publish_date": "2026-04-06",
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 73,
+      "url": "https://finance.yahoo.com/personal-finance/banking/article/where-to-keep-emergency-fund-222513004.html",
+      "title": "The 4 best (and worst) places to keep your emergency fund",
+      "domain": "finance.yahoo.com",
+      "publish_date": "2026-02-25",
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 74,
+      "url": "https://www.fdic.gov/resources/deposit-insurance/brochures/deposits-at-a-glance",
+      "title": "Deposit Insurance At A Glance | FDIC.gov",
+      "domain": "fdic.gov",
+      "publish_date": null,
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 75,
+      "url": "https://www.anthemeap.com/securitas/find-legal-support/resources/consumer-rights/legal-assist/fdic-insurance-how-safe-is-your-money",
+      "title": "FDIC Insurance: How Safe Is Your Money? - Securitas Security Services USA, Inc. EAP | Anthem",
+      "domain": "anthemeap.com",
+      "publish_date": null,
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 76,
+      "url": "https://www.rmous.org/news/what-is-fdic-insurance-your-2026-protection-guide",
+      "title": "What Is FDIC Insurance? Your 2026 Protection Guide | News - RMO",
+      "domain": "rmous.org",
+      "publish_date": null,
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 77,
+      "url": "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+      "title": "Understanding Deposit Insurance | FDIC.gov",
+      "domain": "fdic.gov",
+      "publish_date": null,
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 78,
+      "url": "https://www.investopedia.com/ask/answers/13/safe-liquid-investment-for-emergencies.asp",
+      "title": "Best Strategies to Invest Your Emergency Fund for Quick Access",
+      "domain": "investopedia.com",
+      "publish_date": "2026-03-06",
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 79,
+      "url": "https://www.forbes.com/advisor/banking/best-places-to-keep-your-emergency-fund/",
+      "title": "Best Places To Keep Your Emergency Fund \u2013 Forbes Advisor",
+      "domain": "forbes.com",
+      "publish_date": "2025-12-16",
+      "discipline": "banking_lending",
+      "source_type": "unknown"
+    },
+    {
+      "n": 80,
+      "url": "https://www.forbes.com/advisor/mortgages/pay-off-mortgage-early-vs-investing/",
+      "title": "Should You Pay Off Your Mortgage or Invest for Higher Returns? \u2013 Forbes Advisor",
+      "domain": "forbes.com",
+      "publish_date": "2025-05-07",
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 81,
+      "url": "https://www.rateleaf.com/blog/refinance-break-even-analysis-when-will-your-refi-start-saving-money",
+      "title": "Mortgage | Refinance Break-Even Analysis: When Will Your Refi Start Saving Money?",
+      "domain": "rateleaf.com",
+      "publish_date": "2025-05-29",
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 82,
+      "url": "https://www.altgage.com/blog/how-much-equity-do-you-need-to-remove-pmi",
+      "title": "How Much Equity Do You Need to Remove PMI? - Altgage",
+      "domain": "altgage.com",
+      "publish_date": "2025-08-26",
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 83,
+      "url": "https://www.rocketmortgage.com/learn/refinance-break-even",
+      "title": "What is the refinance break-even point? | Rocket Mortgage",
+      "domain": "rocketmortgage.com",
+      "publish_date": "2026-02-12",
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 84,
+      "url": "https://mytimecalculator.com/refinance-break-even-calculator",
+      "title": "Refinance Break Even Calculator \u2013 Monthly Savings, Closing ...",
+      "domain": "mytimecalculator.com",
+      "publish_date": null,
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 85,
+      "url": "https://www.navyfederal.org/makingcents/tools/mortgage-refinance-calculator.html",
+      "title": "Mortgage Refinance Calculator | Navy Federal Credit Union",
+      "domain": "navyfederal.org",
+      "publish_date": null,
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 86,
+      "url": "https://best-calculators.com/finance/refinance-calculator",
+      "title": "Refinance Calculator - Calculate Refinancing Savings",
+      "domain": "best-calculators.com",
+      "publish_date": null,
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 87,
+      "url": "https://www.rocketmortgage.com/learn/how-to-get-rid-of-pmi",
+      "title": "How to get rid of PMI | Rocket Mortgage",
+      "domain": "rocketmortgage.com",
+      "publish_date": "2026-02-09",
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 88,
+      "url": "https://www.rocketmortgage.com/learn/pay-off-mortgage-or-invest",
+      "title": "Is it best to pay off your mortgage or invest? | Rocket Mortgage",
+      "domain": "rocketmortgage.com",
+      "publish_date": "2026-03-03",
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 89,
+      "url": "https://payoffvsinvest.com/high-interest-mortgage-payoff",
+      "title": "High-Interest Mortgage: Pay Off or Invest? (2026 Math",
+      "domain": "payoffvsinvest.com",
+      "publish_date": null,
+      "discipline": "mortgage",
+      "source_type": "unknown"
+    },
+    {
+      "n": 90,
+      "url": "https://www.investopedia.com/terms/b/backdoor-roth-ira.asp",
+      "title": "Backdoor Roth IRA: Advantages and Tax Implications Explained",
+      "domain": "investopedia.com",
+      "publish_date": "2026-06-02",
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 91,
+      "url": "https://incomelaboratory.com/roth-conversion-strategy-2026-guide/",
+      "title": "Roth Conversion Strategy 2026: The Advisor's Complete Guide",
+      "domain": "incomelaboratory.com",
+      "publish_date": "2026-04-16",
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 92,
+      "url": "https://www.tiaa.org/public/institute/publication/2006/tax-efficient-sequencing-accounts-tap",
+      "title": "YOUR REQUEST HAS BEEN BLOCKED! Your Reference ID # is: 18.4192117.1781237754.15637538",
+      "domain": "tiaa.org",
+      "publish_date": null,
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 93,
+      "url": "https://247wallst.com/personal-finance/2026/04/13/the-pro-rata-rule-that-blindsides-high-income-backdoor-roth-converters",
+      "title": "The Pro-Rata Rule That Blindsides High-Income Backdoor Roth Converters - 24/7 Wall St.",
+      "domain": "247wallst.com",
+      "publish_date": "2026-04-13",
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 94,
+      "url": "https://finance.yahoo.com/markets/options/articles/pro-rata-rule-blindsides-high-141453910.html",
+      "title": "The Pro-Rata Rule That Blindsides High-Income Backdoor Roth Converters",
+      "domain": "finance.yahoo.com",
+      "publish_date": "2026-04-13",
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 95,
+      "url": "https://smartwealthplanning.net/roth-conversion-calculator",
+      "title": "Roth Conversion Calculator \u2014 Tax-Optimized Strategy 2026",
+      "domain": "smartwealthplanning.net",
+      "publish_date": null,
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 96,
+      "url": "https://ireap.naifa.org/blog/tax-efficient-withdrawal-strategies-during-retirement",
+      "title": "Tax-Efficient Withdrawal Strategies During Retirement",
+      "domain": "ireap.naifa.org",
+      "publish_date": null,
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 97,
+      "url": "https://taxsharkinc.com/can-you-do-a-backdoor-roth-over-the-income-limit-w-examples-faqs",
+      "title": "Can You Do a Backdoor Roth Over the Income Limit? (w/Examples ...",
+      "domain": "taxsharkinc.com",
+      "publish_date": null,
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 98,
+      "url": "https://www.themoneypocket.com/tools/roth-conversion-calculator",
+      "title": "Roth Conversion Calculator - Tax Bracket Analysis & Strategy(2026) | The Money Pocket",
+      "domain": "themoneypocket.com",
+      "publish_date": null,
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 99,
+      "url": "https://www.morningstar.com/retirement/retirement-withdrawal-sequencing-rules-road",
+      "title": "Retirement Withdrawal Sequencing Rules of the Road | Morningstar",
+      "domain": "morningstar.com",
+      "publish_date": "2026-03-06",
+      "discipline": "enrolled_agent",
+      "source_type": "unknown"
+    },
+    {
+      "n": 100,
+      "url": "https://www.ssa.gov/benefits/retirement/planner/delayret.html",
+      "title": "Benefits Planner: Retirement | Delayed Retirement Credits | SSA",
+      "domain": "ssa.gov",
+      "publish_date": null,
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 101,
+      "url": "https://www.ssa.gov/survivor",
+      "title": "Survivor benefits | SSA",
+      "domain": "ssa.gov",
+      "publish_date": "2024-06-13",
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 102,
+      "url": "https://www.ssa.gov/OP_Home/cfr20/404/404-0313.htm",
+      "title": "Code of Federal Regulations \u00a7 404.313",
+      "domain": "ssa.gov",
+      "publish_date": "2025-02-28",
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 103,
+      "url": "https://www.ssa.gov/OACT/quickcalc/early_late.html",
+      "title": "Early or Late Retirement - Social Security Administration",
+      "domain": "ssa.gov",
+      "publish_date": "2005-09-08",
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 104,
+      "url": "https://www.greenbushfinancial.com/all-blogs/social-security-spousal-benefits",
+      "title": "Social Security Spousal Benefit Rules 2026 Guide | Greenbush Financial Group",
+      "domain": "greenbushfinancial.com",
+      "publish_date": "2026-04-23",
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 105,
+      "url": "https://www.ssa.gov/benefits/retirement/planner/1956-delay.html",
+      "title": "Delayed Retirement | Born in 1956 | SSA",
+      "domain": "ssa.gov",
+      "publish_date": null,
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 106,
+      "url": "https://www.ssa.gov/survivor/amount",
+      "title": "What you could get from Survivor benefits | SSA",
+      "domain": "ssa.gov",
+      "publish_date": "2025-08-29",
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 107,
+      "url": "https://www.ssa.gov/benefits/retirement/planner/1943-delay.html",
+      "title": "Delayed Retirement | Born between 1943 and 1954 | SSA",
+      "domain": "ssa.gov",
+      "publish_date": null,
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 108,
+      "url": "https://www.ssa.gov/blog/en/posts/2026-03-12.html",
+      "title": "Our Survivor Benefits: Protection for Your Family | Social Security Matters | SSA",
+      "domain": "ssa.gov",
+      "publish_date": "2026-03-12",
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 109,
+      "url": "https://www.ssa.gov/pubs/EN-05-10084.pdf",
+      "title": "Survivors Benefits SSA.gov SSA.gov/myaccount",
+      "domain": "ssa.gov",
+      "publish_date": "2026-04-28",
+      "discipline": "social_security_medicare",
+      "source_type": "unknown"
+    },
+    {
+      "n": 110,
+      "url": "https://studentaid.gov/manage-loans/forgiveness-cancellation/public-service",
+      "title": "Public Student Loan Forgiveness (PSLF) program",
+      "domain": "studentaid.gov",
+      "publish_date": null,
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 111,
+      "url": "https://www.earnest.com/blog/what-protections-do-you-keep-refinancing-federal-loans",
+      "title": "Do you lose protections refinancing federal student loans? | Earnest",
+      "domain": "earnest.com",
+      "publish_date": "2026-03-31",
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 112,
+      "url": "https://www.reddit.com/r/StudentLoans/comments/1k0h2jj/is_refinancing_my_student_loans_worth_it_if_i/",
+      "title": "r/StudentLoans on Reddit: Is refinancing my student loans worth it if I lose federal protections?",
+      "domain": "reddit.com",
+      "publish_date": "2025-04-17",
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 113,
+      "url": "https://www.nerdwallet.com/student-loans/learn/public-service-loan-forgiveness",
+      "title": "Public Service Loan Forgiveness: What to Know in 2026 - NerdWallet",
+      "domain": "nerdwallet.com",
+      "publish_date": "2026-05-16",
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 114,
+      "url": "https://dfpi.ca.gov/news/insights/student-loan-borrowers-how-will-new-federal-laws-affect-my-income-driven-repayment-plan/",
+      "title": "Student Loan Borrowers: How will new federal laws affect my Income-Driven Repayment Plan? - DFPI",
+      "domain": "dfpi.ca.gov",
+      "publish_date": "2026-05-20",
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 115,
+      "url": "https://financialaid.tcnj.edu/update-on-federal-loan-changes-beginning-in-2026",
+      "title": "Update on Federal Loan Changes Beginning in 2026 | Financial Aid",
+      "domain": "financialaid.tcnj.edu",
+      "publish_date": null,
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 116,
+      "url": "https://www.savingforcollege.com/calculators/income-driven-repayment-calculator",
+      "title": "Income-Driven Repayment Calculator - Saving for College",
+      "domain": "savingforcollege.com",
+      "publish_date": null,
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 117,
+      "url": "https://studentaid.gov/manage-loans/repayment/plans/income-driven/questions",
+      "title": "loans/repayment/plans/income-driven/questions - Federal Student Aid",
+      "domain": "studentaid.gov",
+      "publish_date": null,
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 118,
+      "url": "https://studentaid.gov/manage-loans/repayment/plans/income-driven",
+      "title": "Federal Student Aid \u2014 Income-Driven Repayment Plans",
+      "domain": "studentaid.gov",
+      "publish_date": null,
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 119,
+      "url": "https://www.cnbc.com/2026/05/29/student-loan-borrowers-new-repayment-plans.html",
+      "title": "Student loan borrowers will have two new repayment options come July 1. Here's how to pick one",
+      "domain": "cnbc.com",
+      "publish_date": "2026-06-09",
+      "discipline": "student_loan",
+      "source_type": "unknown"
+    },
+    {
+      "n": 120,
+      "url": "https://commons.lib.jmu.edu/cgi/viewcontent.cgi?article=1672&context=honors201019",
+      "title": "Debt snowball vs. debt avalanche - JMU Scholarly Commons",
+      "domain": "commons.lib.jmu.edu",
+      "publish_date": null,
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 121,
+      "url": "https://en.wikibooks.org/wiki/Bestiary_of_Behavioral_Economics/Commitment_Devices",
+      "title": "Bestiary of Behavioral Economics/Commitment Devices - Wikibooks, open books for an open world",
+      "domain": "en.wikibooks.org",
+      "publish_date": null,
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 122,
+      "url": "https://themodernsavvycpa.com/automate-your-finances-in-5-easy-steps/",
+      "title": "How To Automate Your Finances in 5 Easy Steps (2026)",
+      "domain": "themodernsavvycpa.com",
+      "publish_date": "2026-03-26",
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 123,
+      "url": "https://cmeetit.com/blog/psychology-of-commitment-devices.html",
+      "title": "The Psychology of Commitment Devices: Why Putting Something at Stake Transforms Goal Achievement | C'Meet It Blog",
+      "domain": "cmeetit.com",
+      "publish_date": "2025-08-21",
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 124,
+      "url": "https://www.data4impactproject.org/blog/from-intentions-to-actions-using-commitment-devices-for-evidence-use",
+      "title": "From Intentions to Actions \u2013 Using Commitment Devices for Evidence Use\u00a0 - DataForImpactProject",
+      "domain": "data4impactproject.org",
+      "publish_date": "2024-10-11",
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 125,
+      "url": "https://www.hks.harvard.edu/publications/commitment-devices-using-initiatives-change-behavior-reply",
+      "title": "Commitment Devices: Using Initiatives to Change Behavior-Reply | Harvard Kennedy School",
+      "domain": "hks.harvard.edu",
+      "publish_date": null,
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 126,
+      "url": "https://en.wikipedia.org/wiki/Commitment_device",
+      "title": "Commitment device - Wikipedia",
+      "domain": "en.wikipedia.org",
+      "publish_date": "2026-03-23",
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 127,
+      "url": "https://www.investopedia.com/articles/personal-finance/080716/debt-avalanche-vs-debt-snowball-which-best-you.asp",
+      "title": "Debt Avalanche vs. Snowball: Which Debt Repayment Strategy Works Best?",
+      "domain": "investopedia.com",
+      "publish_date": "2025-10-23",
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 128,
+      "url": "https://katherinemilkman.squarespace.com/s/commitment-devices.pdf",
+      "title": "[PDF] Commitment Devices Using Initiatives to Change Behavior",
+      "domain": "katherinemilkman.squarespace.com",
+      "publish_date": null,
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    },
+    {
+      "n": 129,
+      "url": "https://www.navyfederal.org/makingcents/credit-debt/snowball-vs-avalanche-for-paying-down-debt.html",
+      "title": "Snowball vs. Avalanche Method for Paying Down Debt | Navy Federal Credit Union",
+      "domain": "navyfederal.org",
+      "publish_date": null,
+      "discipline": "behavioral_finance",
+      "source_type": "unknown"
+    }
   ]
 }

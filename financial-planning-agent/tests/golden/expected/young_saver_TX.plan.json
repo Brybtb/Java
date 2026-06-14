@@ -97,8 +97,8 @@
     }
   ],
   "requires_advisor_review": true,
-  "ruleset_checksum": "sha256:83515693b7aab982ba2a606b6309c997b85aaf9e259f06bdec1bf80d8a0c5a02",
-  "ruleset_version": "2026.06.1",
+  "ruleset_checksum": "sha256:aebe5f1bb3a0d603442db86ea7e05a77e8aeae8cd7410bee11911214c0904929",
+  "ruleset_version": "2026.06.2",
   "schema_version": "1.0.0",
   "sources": [
     {

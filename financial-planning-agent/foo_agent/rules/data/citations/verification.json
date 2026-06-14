@@ -1,0 +1,88 @@
+{
+  "generated_utc": "20260614T072948Z",
+  "processor": "base",
+  "engine": "Parallel.ai Task API",
+  "results": [
+    {
+      "rule_id": "foo.emergency_fund.starter",
+      "verdict": "partially_supported",
+      "best_practice_note": "Establishing a financial buffer before aggressive debt payoff is a widely accepted best practice to prevent a 'debt spiral' (relying on credit when emergencies occur).",
+      "primary_source": "CFP Board, CFPB",
+      "source_type": "primary",
+      "notes": "The strategic intent of the rule is supported by primary sources; however, the specific threshold of 'max(1 month essential expenses, $1,000)' is a common heuristic (e.g., Dave Ramsey's Baby Steps) rather than a formalized primary-source requirement. Official guidance from the CFP Board and CFPB primarily emphasizes a total goal of three to six months of essential expenses, although tiered goals are recognized as useful for those who find the full target daunting.",
+      "run_id": "trun_a99f33068a8a474fa8de2140e75eb5c8"
+    },
+    {
+      "rule_id": "foo.employer_match.capture_full",
+      "verdict": "supported",
+      "best_practice_note": "Maximize contributions to a retirement account up to the full amount the employer will match to secure an immediate, guaranteed return on investment.",
+      "primary_source": "CFP Board / CFA Institute",
+      "source_type": "primary",
+      "notes": "The rule is supported given the provided assumptions (non-discretionary match and vesting). In professional financial planning (CFP/CFA), capturing the employer match is considered a primary priority because it typically provides a 100% (or similar) instant return, which exceeds almost any other risk-adjusted investment opportunity. The distinction in the IRS guidelines between discretionary and mandatory matches confirms why the 'non-discretionary' assumption is critical to the rule's validity.",
+      "run_id": "trun_a99f33068a8a474f8e041a2844ab41f6"
+    },
+    {
+      "rule_id": "foo.debt.high_interest",
+      "verdict": "supported",
+      "best_practice_note": "The debt avalanche method\u2014prioritizing the payoff of balances with the highest interest rates first\u2014is the mathematically optimal strategy for minimizing total interest costs and is recognized by regulatory bodies like the CFPB as a primary debt reduction strategy.",
+      "primary_source": "Consumer Financial Protection Bureau (CFPB), U.S. Securities and Exchange Commission (SEC)",
+      "source_type": "primary",
+      "notes": "The 8% APR threshold for defining 'high-interest debt' is attributed to the U.S. Securities and Exchange Commission (SEC). While the CFPB also recognizes the 'snowball method' (paying smallest balances first) as a valid behavioral strategy, the avalanche method remains the standard for financial efficiency and cost minimization.",
+      "run_id": "trun_a99f33068a8a474fa98a02527f54eb90"
+    },
+    {
+      "rule_id": "foo.emergency_fund.full",
+      "verdict": "supported",
+      "best_practice_note": "The recommendation to maintain an emergency fund of 3-6 months of expenses is a standard professional benchmark explicitly advised by the CFP Board.",
+      "primary_source": "CFP Board and Consumer Financial Protection Bureau (CFPB)",
+      "source_type": "primary",
+      "notes": "The rule's assumption to 'tune by job stability' is consistent with the CFPB's guidance that the required amount depends on an individual's specific situation and past experience with unexpected expenses.",
+      "run_id": "trun_a99f33068a8a474fa6f0e60a082c25de"
+    },
+    {
+      "rule_id": "foo.hsa.max",
+      "verdict": "supported",
+      "best_practice_note": "Maxing the HSA is considered a top-tier best practice in financial planning due to its unique 'triple tax advantage'. It is typically prioritized immediately after capturing a 401(k) employer match, as no other account combines pre-tax contributions, tax-deferred growth, and tax-free withdrawals (for qualified medical expenses).",
+      "primary_source": "IRS Rev. Proc. 2025-19; IRS Notice n-26-05",
+      "source_type": "primary",
+      "notes": "The rule is accurate for the 2026 tax year. According to IRS Notice n-26-05, the annual contribution limits for 2026 are $4,400 for self-only coverage and $8,750 for family coverage. The 'triple tax advantage' is a recognized and primary benefit for those eligible for and covered by a qualified HDHP.",
+      "run_id": "trun_a99f33068a8a474f81477e03182a1d65"
+    },
+    {
+      "rule_id": "foo.ira.max",
+      "verdict": "partially_supported",
+      "best_practice_note": "CFP and CFA best practices suggest a priority hierarchy: first maximize employer matching in a 401(k), then contribute to an HSA, and then to IRAs. The 'routing' between Roth and Traditional IRAs should be based on a comparison of current marginal tax rates versus expected future rates (tax bracket arbitrage), in addition to income eligibility thresholds.",
+      "primary_source": "IRS",
+      "source_type": "primary",
+      "notes": "For the 2026 tax year, the 'routing' is influenced by specific limits: Traditional IRA deductibility for those covered by a workplace plan phases out between $81,000 and $91,000 for single filers and $129,000 and $149,000 for joint filers. Roth IRA contributions phase out for single filers between $153,000 and $168,000, and for joint filers between $242,000 and $252,000. High earners exceeding these limits typically utilize a 'Backdoor Roth' strategy via non-deductible contributions and subsequent conversion.",
+      "run_id": "trun_a99f33068a8a474f9e440c5301c3df69"
+    },
+    {
+      "rule_id": "foo.employer_plan.max",
+      "verdict": "partially_supported",
+      "best_practice_note": "Maximizing the employer retirement plan is a standard goal for accumulating tax-advantaged space, but it is not the absolute first priority. Best practice dictates a prioritized sequence: capturing the full employer match first, funding emergency reserves, and maximizing a Health Savings Account (HSA) before filling the remainder of the retirement plan limit.",
+      "primary_source": "Internal Revenue Service (IRS)",
+      "source_type": "primary",
+      "notes": "The rule is directionally correct but lacks critical nuance: (1) Priority: It should follow the employer match and HSA. (2) Catch-ups: Under the SECURE 2.0 Act, individuals aged 60-63 have higher 'super catch-up' limits in 2026. (3) HCE Limits: Highly Compensated Employees may have their contributions capped by plan-level non-discrimination (ADP/ACP) testing, making it impossible to 'max' the plan despite the IRS limit.",
+      "run_id": "trun_a99f33068a8a474fbcad1dcd5e6a974f"
+    },
+    {
+      "rule_id": "foo.taxable.hyper_accumulate",
+      "verdict": "partially_supported",
+      "best_practice_note": "The rule aligns with the general hierarchy of wealth accumulation but lacks the mandatory 'maximization' threshold for tax-advantaged accounts and the prerequisite of a fully funded emergency fund.",
+      "primary_source": "IRS (Statutory Contribution Limits); CFP Board/CFA Institute (Financial Order of Operations Standards)",
+      "source_type": "primary",
+      "notes": "The rule is directionally right in suggesting a taxable brokerage for flexible growth. However, it is only considered 'best practice' if the 'current tax-advantaged contributions' are actually maximized to their IRS statutory limits. As written, the rule allows for investing in a taxable account even if tax-advantaged space is still available, which contradicts the professional 'Financial Order of Operations' taught by CFP and CFA standards.",
+      "run_id": "trun_a99f33068a8a474fb45c62202126ad3b"
+    },
+    {
+      "rule_id": "foo.protect.review_coverage",
+      "verdict": "partially_supported",
+      "best_practice_note": "Periodic review of insurance coverage and estate documents is a core best practice in financial planning. However, professional standards strongly advocate for a comprehensive needs analysis to determine appropriate coverage levels, whereas heuristic targets (e.g., multiples of income) are only acceptable as preliminary approximations.",
+      "primary_source": "CFP Board (Practice Standards Reference Guide; Guide to the 7-Step Financial Planning Process)",
+      "source_type": "primary",
+      "notes": "The procedural action of reviewing protection and estate documents is fully supported by the CFP Board's framework for risk management and estate planning. However, the a-priori assumption of using 'heuristic coverage targets' instead of a 'full needs analysis' is a deviation from the highest professional standard, as the 'needs approach' is the industry gold standard for determining precise insurance requirements.",
+      "run_id": "trun_a99f33068a8a474f9cd24996e67b4d80"
+    }
+  ]
+}
