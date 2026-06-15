@@ -179,3 +179,48 @@ def test_pdf_render_is_lock_serialized():                   # B17
     from foo_agent.report import pdf
     import threading as _t
     assert isinstance(pdf._PDF_EPOCH_LOCK, type(_t.Lock()))
+
+
+# --- C12: the balance-sheet/liabilities intake feeds a sane plan -------------
+def _guided_base():
+    # what the guided Q&A collects BEFORE the C12 balance-sheet step
+    return {"schema_version": "1.0.0", "as_of": AS_OF,
+            "household": {"filing_status": "single", "state": "TX", "primary_age": 35},
+            "income": {"gross_annual": 120000}, "expenses": {"monthly_essential": 4000},
+            "accounts": {"cash_emergency": {"balance": 20000},
+                         "employer_401k": {"match_offered": False}, "hsa": {"eligible": False}}}
+
+
+def test_balances_lift_funded_ratio_out_of_the_floor():
+    from foo_agent.workflow.orchestrator import run
+    import copy
+    without = run(copy.deepcopy(_guided_base()), AS_OF, trials=300)
+    withp = copy.deepcopy(_guided_base())
+    withp["accounts"]["taxable"] = {"balance": 50000}
+    withp["accounts"]["employer_401k"]["balance"] = 100000
+    withp["accounts"]["roth_ira"] = {"balance": 30000}
+    withb = run(withp, AS_OF, trials=300)
+    assert without["status"] == "ready" and withb["status"] == "ready"
+    fr0 = float(without["projection"]["funded_ratio"])
+    fr1 = float(withb["projection"]["funded_ratio"])
+    assert fr1 > fr0 * 2          # real balances move the needle out of the ~0 floor
+    # and the buckets reflect the collected accounts (C07 routing)
+    assert float(withb["projection"]["buckets"]["taxable"]) > 0
+
+
+def test_collected_high_interest_debt_fires_foo_rule():
+    from foo_agent.workflow.orchestrator import run
+    p = _guided_base()
+    p["accounts"]["taxable"] = {"balance": 50000}
+    p["debts"] = [{"id": "credit_card", "type": "credit_card", "balance": 9000, "apr": 0.2299}]
+    r = run(p, AS_OF, trials=300)
+    rule_ids = {rec["rule_id"] for rec in r["recommendations"]}
+    assert "foo.debt.high_interest" in rule_ids       # the collected debt drives the FOO step
+
+
+def test_bad_apr_from_intake_is_rejected_400():
+    # the UI converts % -> fraction (<=2); a raw out-of-range apr must fail closed, not slip through
+    bad = _guided_base()
+    bad["debts"] = [{"id": "x", "type": "credit_card", "balance": 9000, "apr": 22.99}]  # should be 0.2299
+    code, _, _ = app.handle_post("/api/workflow", json.dumps({"profile": bad}).encode())
+    assert code == 400

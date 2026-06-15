@@ -248,6 +248,7 @@ async function downloadPdf(){
 let guidedStarted=false;
 let gProfile={schema_version:"1.0.0",as_of:TODAY};
 let gAnswered=0;                                  // questions answered so far (for the counter)
+let gAssetsCollected=false;                       // C12: balance-sheet step shown once after the Q&A
 const app=document.getElementById('app');
 const US_STATES=["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA",
   "KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND",
@@ -260,7 +261,47 @@ async function step(){
   const res=await fetch('/api/workflow',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({profile:gProfile,trials:2000})});
   const d=await res.json();
   if(d.error){app.innerHTML=`<div>Error: ${esc(d.error)}</div>`;return;}
-  if(d.status==='collecting') await gQuestion(d); else { copilotProfile=gProfile; renderPlan(d, app); }
+  if(d.status==='collecting') await gQuestion(d);
+  else if(!gAssetsCollected) gBalanceSheet();        // C12: collect the balance sheet before the plan
+  else { copilotProfile=gProfile; renderPlan(d, app); }
+}
+
+/* ---------------- C12: grouped balance-sheet + liabilities intake ---------------- */
+function gBalanceSheet(){
+  const eligibleHSA = gProfile.accounts && gProfile.accounts.hsa && gProfile.accounts.hsa.eligible;
+  const accRow=(id,label)=>`<div style="display:flex;justify-content:space-between;align-items:center;margin:6px 0"><label>${label}</label><input id="${id}" type="number" min="0" step="any" placeholder="$0" style="width:160px"></div>`;
+  const liabRow=(id,label,apr)=>`<div style="display:flex;gap:8px;align-items:center;margin:6px 0"><label style="flex:1">${label}</label><input id="${id}_bal" type="number" min="0" step="any" placeholder="balance $" style="width:120px"><input id="${id}_apr" type="number" min="0" max="99" step="any" value="${apr}" style="width:64px" title="APR %"><span class="note">% APR</span></div>`;
+  app.innerHTML=`<h3 style="color:var(--p)">Your accounts &amp; debts</h3>
+    <p class="note">Balances power your real funded ratio and the tax-aware plan. Leave blank if none — nothing is stored.</p>
+    <div class="card"><b>Investments &amp; savings</b>
+      ${accRow('acc_taxable','Taxable / brokerage')}
+      ${accRow('acc_401k','401(k) / 403(b)')}
+      ${accRow('acc_ira','Traditional IRA')}
+      ${accRow('acc_roth','Roth IRA')}
+      ${eligibleHSA?accRow('acc_hsa','HSA'):''}
+    </div>
+    <div class="card"><b>Debts</b><p class="note">High-interest debt is paid before investing (Financial Order of Operations).</p>
+      ${liabRow('liab_cc','Credit cards',22.99)}
+      ${liabRow('liab_sl','Student loans',6.5)}
+      ${liabRow('liab_auto','Auto loan',7)}
+      ${liabRow('liab_mort','Mortgage',6.5)}
+    </div>
+    <div style="margin-top:12px"><button class="send" onclick="gBalanceSubmit()">See my plan →</button></div>`;
+}
+function gNum(id){ const el=document.getElementById(id); const v=el?parseFloat(el.value):NaN; return isFinite(v)&&v>0?v:0; }
+function gBalanceSubmit(){
+  const ACC={taxable:'acc_taxable', employer_401k:'acc_401k', ira:'acc_ira', roth_ira:'acc_roth', hsa:'acc_hsa'};
+  for(const [k,id] of Object.entries(ACC)){ const v=gNum(id); if(v>0) setPath(gProfile,'accounts.'+k+'.balance',v); }
+  const LIAB=[['credit_card','liab_cc'],['student_loan','liab_sl'],['auto_loan','liab_auto'],['mortgage','liab_mort']];
+  const debts=[];
+  for(const [type,id] of LIAB){
+    const bal=gNum(id+'_bal'); if(bal<=0) continue;
+    let apr=parseFloat((document.getElementById(id+'_apr')||{}).value);
+    apr=isFinite(apr)?Math.min(2,Math.max(0,apr/100)):0;            // percent -> fraction, clamp to schema [0,2]
+    debts.push({id:type, type:type, balance:bal, apr:apr});
+  }
+  if(debts.length) gProfile.debts=debts;
+  gAssetsCollected=true; step();
 }
 
 function gProgress(d){
