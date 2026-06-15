@@ -1,0 +1,8 @@
+chunk: C12
+personas: [intake_correctness, cfp_decumulation, risk_quant]
+items:
+  R1: "The guided flow collects per-account investable balances (taxable, 401k/403b, traditional IRA, Roth IRA, HSA) and liabilities (credit card / student / auto / mortgage, each balance + APR) in ONE grouped balance-sheet step shown after the basic Q&A — not 20 separate questions."
+  R2: "Collected balances flow into the engine: a guided-only profile WITH balances yields a funded_ratio well above the ~0 floor a balance-less profile produces (the projection consumes accounts.*.balance), and the buckets reflect the entered accounts."
+  R3: "A collected high-interest debt fires the FOO debt.high_interest rule: the UI builds debts[] as {id,type,balance,apr}, APR entered as a percent is stored as a fraction (22.99% -> 0.2299) and clamped to the schema range [0,2]."
+  R4: "Out-of-range / invalid intake fails closed at the boundary (e.g. an apr outside [0,2] -> 400, never a degenerate plan); deterministic; all rendering XSS-safe (per C02); no fabricated numbers."
+block_if_any: [R2, R3, R4]

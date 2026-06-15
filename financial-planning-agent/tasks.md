@@ -16,14 +16,16 @@ id: C12
 title: balance-sheet + liabilities intake (the critical gap — assets & debts in the guided flow)
 tier: "10^2"
 depends_on: [C05]
-files: [foo_agent/interview/questions.yaml, foo_agent/interview/statemachine.py, web/index.html, web/app.py, foo_agent/schemas/profile.schema.json, tests/test_interview.py, tests/test_web_app.py, tasks.md, rubrics/C12.yaml]
+files: [web/index.html, tests/test_web_app.py, tasks.md, rubrics/C12.yaml]
 dod:
-  - "intake collects per-account balances (taxable, traditional IRA, Roth IRA, 401k, HSA, cash) and liabilities (mortgage, student, auto, credit card: balance + apr) as a grouped structured step, not 20 separate questions"
-  - "schema validates the new fields; the projection's _investable_total + debt high-interest rule now have real inputs from a guided plan"
-  - "a guided-only profile produces a sane funded_ratio (not ~0); deterministic; XSS-safe; no fabricated numbers"
+  - "intake collects per-account balances (taxable, traditional IRA, Roth IRA, 401k, HSA) and liabilities (mortgage, student, auto, credit card: balance + apr) as ONE grouped structured step after the basic Q&A, not 20 separate questions"
+  - "collected balances flow to the engine (accounts.*.balance, debts[]); a guided-only profile produces a funded_ratio well above the ~0 floor; high-interest debt fires the FOO debt rule"
+  - "APR % -> fraction (clamped [0,2]); out-of-range fails closed (400); deterministic; XSS-safe; no fabricated numbers"
+notes: "Engine + profile.schema already consume accounts.*.balance + debts[]; this chunk is the intake UX (grouped balance-sheet step in the guided form). questions.yaml/statemachine/schema unchanged on purpose (kept existing tests + interview length stable). Foundation the C-wedge Plaid aggregation will auto-fill."
+tests_to_add: [test_balances_lift_funded_ratio_out_of_the_floor, test_collected_high_interest_debt_fires_foo_rule, test_bad_apr_from_intake_is_rejected_400]
 gates: { code: required, ui: required, experts: [intake_correctness, cfp_decumulation, risk_quant] }
 expert_rubric: rubrics/C12.yaml
-status: todo
+status: in_progress
 ```
 ```yaml
 id: C13
